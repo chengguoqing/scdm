@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>偏好设定</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+        <h1 class="mui-title red">偏好设定</h1>
+
+    </header>
+
+    <div class="mui-content " id="bhsd">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                自动转账
+
+                <div class="mui-switch  mui-active" id="mySwitch">
+                    <div class="mui-switch-handle"></div>
+                </div>
+            </li>
+        </ul>
+
+
+        <p class="pd cg_ssdw">
+            <a class="mui-btn mui-btn-red w100 pt10 pm10 fz16 mt80 cen yj4">
+          储存
+            </a>
+        </p>
+
+    </div>
+
+    <script src="../js/mui.min.js"></script>
+    <script>
+        //        存储按钮点击
+        mui(".cg_ssdw").on("tap", "a", function() {
+            var isActive = document.getElementById("mySwitch").classList.contains("mui-active");
+            if (isActive) {
+                mui.toast('打开状态');
+            } else {
+                mui.toast('关闭状态');
+            }
+        })
+
+    </script>
+</body>
+
+</html>

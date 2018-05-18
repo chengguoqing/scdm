@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/mui.indexedlist.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <title>菜品管理</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden
+        }
+        
+        .mui-bar {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="app">
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <section class="mui-title pd ">
+
+                选择菜品
+            </section>
+            <span class="mui-btn-link mui-pull-right cf" v-on:click="succ_xsrx">完成</span>
+        </header>
+
+        <div class="mui-content">
+            <div id='list' class="mui-indexed-list">
+                <div class="mui-indexed-list-search mui-input-row mui-search">
+                    <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索机场">
+                </div>
+                <div class="mui-indexed-list-bar">
+                    <a v-for="s_i in sh_sd.mk_i" v-text="s_i"></a>
+
+                </div>
+                <div class="mui-indexed-list-alert"></div>
+                <div class="mui-indexed-list-inner">
+                    <div class="mui-indexed-list-empty-alert">没有数据</div>
+                    <ul class="mui-table-view dfg_xsd_xdx">
+                        <section v-for="q_i in sh_sd.cs_oi">
+                            <li v-bind:data-group="q_i.fl_name" class="mui-table-view-divider mui-indexed-list-group">{{q_i.fl_name}}</li>
+                            <section v-for="x_s in q_i.cm_sf">
+                                <li v-bind:data-value="q_i.fl_name" v-bind:data-tags="q_i.fl_name" class="mui-table-view-cell mui-indexed-list-item pr">{{x_s.name}}
+                                    <p class="fz18 sdd_xsd_xdrertx" v-if="x_s.num>0">
+                                        <i class="fa fa-minus-circle red" v-on:click="x_s.num-=1"></i>
+                                        <span class="fz14 z14" v-text="x_s.num"></span>
+                                        <i class="fa fa-plus-circle red" v-on:click="x_s.num+=1"></i>
+                                    </p>
+                                    <p class="fz18 sdd_xsd_xdrertx" v-if="x_s.num<=0">
+                                        <i class="fa fa-plus-circle red" v-on:click="x_s.num+=1"></i>
+                                    </p>
+
+                                </li>
+                            </section>
+                        </section>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/mui.indexedlist.js"></script>
+    <script src="../js/base.js"></script>
+    <script>
+        var sd_iuiu = {} //选择菜品
+        sd_iuiu.mk_i = ['A', 'B', 'C', 'D', 'E']
+        sd_iuiu.cs_oi = [{
+                "fl_name": "A",
+                cm_sf: [{
+                    "name": "A菜名",
+                    "num": 0,
+                    "id": 0,
+                    "id": 0
+                }, {
+                    "name": "A菜名",
+                    "num": 0,
+                    "id": 1
+                }, {
+                    "name": "A菜名",
+                    "num": 0,
+                    "id": 2
+                }, {
+                    "name": "A菜名",
+                    "num": 0,
+                    "id": 3
+                }, {
+                    "name": "A菜名",
+                    "num": 0,
+                    "id": 5
+                }]
+            },
+            {
+                "fl_name": "B",
+                cm_sf: [{
+                    "name": "B菜名",
+                    "num": 0,
+                    "id": 5
+                }, {
+                    "name": "B菜名",
+                    "num": 0,
+                    "id": 6
+                }, {
+                    "name": "B菜名",
+                    "num": 0,
+                    "id": 7
+                }, {
+                    "name": "B菜名",
+                    "num": 0,
+                    "id": 8
+                }, {
+                    "name": "B菜名",
+                    "num": 0,
+                    "id": 9
+                }]
+            },
+            {
+                "fl_name": "C",
+                cm_sf: [{
+                    "name": "C菜名",
+                    "num": 0,
+                    "id": 10
+                }, {
+                    "name": "C菜名",
+                    "num": 0,
+                    "id": 11
+                }, {
+                    "name": "C菜名",
+                    "num": 0,
+                    "id": 12
+                }, {
+                    "name": "C菜名",
+                    "num": 0,
+                    "id": 13
+                }, {
+                    "name": "C菜名",
+                    "num": 0,
+                    "id": 14
+                }]
+            },
+            {
+                "fl_name": "D",
+                cm_sf: [{
+                    "name": "D菜名",
+                    "num": 0,
+                    "id": 15
+                }, {
+                    "name": "D菜名",
+                    "num": 0,
+                    "id": 16
+                }, {
+                    "name": "D菜名",
+                    "num": 0,
+                    "id": 17
+                }, {
+                    "name": "D菜名",
+                    "num": 0,
+                    "id": 18
+                }, {
+                    "name": "D菜名",
+                    "num": 0,
+                    "id": 19
+                }]
+            },
+            {
+                "fl_name": "E",
+                cm_sf: [{
+                    "name": "E菜名",
+                    "num": 0,
+                    "id": 20
+                }, {
+                    "name": "E菜名",
+                    "num": 0,
+                    "id": 21
+                }, {
+                    "name": "E菜名",
+                    "num": 0,
+                    "id": 22
+                }, {
+                    "name": "E菜名",
+                    "num": 0,
+                    "id": 23
+                }, {
+                    "name": "E菜名",
+                    "num": 0,
+                    "id": 24
+                }]
+            }
+
+        ]
+        var shf_s = localStorage.cmjh
+        try{
+               shf_s = JSON.parse(shf_s)  
+        }catch(e){
+            window.location.href='product-package-edit.html'
+        }
+   
+        
+        if (shf_s == undefined) {
+            history.go(-1)
+        }
+        $(shf_s.data_r[shf_s.id].caiming.s_iix).map(function() {
+            var id_o = this
+            $(sd_iuiu.cs_oi).map(function() {
+                $(this.cm_sf).map(function() {
+                    if (this.id == id_o.id) {
+                        this.num = id_o.num
+                    }
+                })
+
+            })
+        })
+
+        var km = new Vue({
+            el: '#app',
+            data: {
+                sh_sd: sd_iuiu
+            },
+            methods: {
+                succ_xsrx: function() {
+                    var id = shf_s.id,
+                        sdxe_iu = "",
+                        ddf_uy = false;
+                    $(sd_iuiu.cs_oi).map(function() {
+                        $(this.cm_sf).map(function() {
+                            if (this.num > 0) {
+                                ddf_uy = true
+                                var a_iyu = this,
+                                    ssd_dc = true;
+                                sdxe_iu = shf_s.data_r[id].caiming.s_iix
+                                for (var i = 0; i < sdxe_iu.length; i++) {
+                                    if (sdxe_iu[i].num == 0) {
+                                        console.log(i)
+                                        sdxe_iu.splice(i, 1)
+
+
+                                    }
+
+                                    if (a_iyu.id == sdxe_iu[i].id) {
+                                        sdxe_iu[i].num = a_iyu.num;
+                                        ssd_dc = false
+                                        break;
+                                    }
+                                }
+                                if (ssd_dc) {
+                                    sdxe_iu.push(a_iyu)
+                                }
+
+
+
+
+
+                            }
+                        })
+                    })
+                    if (ddf_uy) {
+
+                        shf_s.data_r[id].caiming.s_iix = sdxe_iu
+                        localStorage.hgf_s = JSON.stringify(shf_s.data_r);
+                        history.go(-1)
+                    } else {
+                        alert("请选择菜品")
+                    }
+                }
+            }
+
+        })
+
+
+
+
+
+        df_id()
+
+        function df_id() {
+            var header = document.querySelector('header.mui-bar');
+            var list = document.getElementById('list');
+            //calc hieght
+            list.style.height = ((document.body.offsetHeight - header.offsetHeight) + 40) + 'px';
+            //create
+            window.indexedList = new mui.IndexedList(list);
+
+
+        }
+    
+
+    </script>
+</body>
+
+</html>

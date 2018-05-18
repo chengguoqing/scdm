@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>公共-咱内信</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+			.mui-table-view li {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="pullrefresh" class=" mui-scroll-wrapper  bgff">
+			<div class="mui-scroll" id="gonggao">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" v-for=" dt in date_lisrt" @tap="zhu('ddtgxq_c','',{title_s:dt.name,time:dt.time})">
+						<a class="mui-navigate-right">
+							<p class="f_b dian dsf_sdf_sd dian">{{dt.name}}</p>
+							<span class="z9 fz12 fr mr20">{{dt.time}}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/page/xiaoxi/gonggao.js"></script>
+	
+	</body>
+
+</html>

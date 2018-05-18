@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的消息</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+
+
+    </style>
+</head>
+
+<body> 
+
+    <div class="mui-content ">
+
+        <section class="pd pt10 pm10 bgff pr ">
+            <div class="mui-segmented-control ">
+                <a class="mui-control-item mui-active" data-wid="chunkuan.html?id=0"> 
+						存款记录
+					</a>
+                <a class="mui-control-item" data-wid="zzjl.html?id=1">
+						转账记录
+					</a>
+                <a class="mui-control-item" data-wid="zzjl.html?id=2">
+						提现记录
+					</a>
+					    <a class="mui-control-item" data-wid="touzhujl.html?id=3">
+						投注记录
+					</a>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/webviewGroup.js"></script>
+    <script>
+        var caidan = [{
+                name: "存款记录",
+                id: 0,
+                url: "chunkuan.html"
+            }, {
+                name: "转账记录",
+                id: 1,
+                url: "zzjl.html"
+            }, {
+                name: "提现记录",
+                id: 2,
+                url: "zzjl.html"
+            }, {
+                name: "投注记录",
+                id: 3,
+                url: "touzhujl.html"
+            }],
+            _self = ""
+        mui.plusReady(function() {
+            _self = plus.webview.currentWebview();
+            var sd_dsd = []
+            caidan.map(function(a) {
+                var sd_sff = {}
+                sd_sff.id = a.url + "?id=" + a.id
+                sd_sff.url = a.url
+                sd_sff.extras = {
+                    chanshu: a.id
+                }
+                sd_dsd.push(sd_sff)
+            })
+
+            var group = new webviewGroup(_self.id, {
+                items: sd_dsd,
+                onChange: function(obj) {
+                    var c = document.querySelector(".mui-control-item.mui-active");
+                    if (c) {
+                        c.classList.remove("mui-active");
+                    }
+                    var target = document.querySelector(".mui-control-item:nth-child(" + (parseInt(obj.index) + 1) + ")");
+                    target.classList.add("mui-active");
+                }
+            }, 55, 0);
+            mui(".mui-segmented-control").on("tap", ".mui-control-item", function(e) {
+                var wid = this.getAttribute("data-wid");
+                group.switchTab(wid);
+            });
+
+        })
+
+    </script>
+</body>
+
+</html>

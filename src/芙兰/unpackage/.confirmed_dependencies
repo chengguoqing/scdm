@@ -1,0 +1,80 @@
+{
+  "index.html": {
+    "resources": [
+      "css/base.css",
+      "css/swiper3.07.min.css",
+      "js/mui.min.js",
+      "js/swiper3.07.min.js",
+      "css/mui.min.css",
+      "img/icosousuo.png",
+      "css/style.css",
+      "img/logo.png",
+      "img/saoma2.png",
+      "index_er.html"
+    ],
+    "refer": [
+      "index_er.html",
+      "catalog.html",
+      "article_cat_list.html",
+      "gwc/flow.html",
+      "user/user_center.html"
+    ]
+  },
+  "index_er.html": {
+    "resources": [
+      "com/index.html"
+    ],
+    "refer": [
+      "com/index.html",
+      "saoma.html"
+    ]
+  },
+  "article_cat_list.html": {
+    "resources": [
+      "com/dianzhulist.html"
+    ],
+    "refer": [
+      "com/dianzhulist.html",
+      "saoma.html",
+      "searchindex.html"
+    ]
+  },
+  "user/user_center.html": {
+    "refer": [
+      "user/zhaq.html"
+    ]
+  },
+  "gwc/flow.html": {
+    "refer": [
+      "xiangqing/gouwuche.html",
+      "gwc/queren.html"
+    ]
+  },
+  "com/index.html": {
+    "refer": [
+      "category.html",
+      "goods.html",
+      "article_cat_xq.html"
+    ]
+  },
+  "category.html": {
+    "refer": [
+      "goods.html"
+    ]
+  },
+  "goods.html": {
+    "resources": [
+      "xiangqing/shangping.html"
+    ],
+    "refer": [
+      "xiangqing/shangping.html",
+      "xiangqing/gouwuche.html",
+      "xiangqing/xiangq.html"
+    ]
+  },
+  "catalog.html": {
+    "refer": [
+      "category.html"
+    ]
+  }
+}

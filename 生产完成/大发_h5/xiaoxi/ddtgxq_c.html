@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的消息</title>
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav asd_uy_dftx">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+			<h1 class="mui-title red" id="titkesd"></h1>
+
+		</header>
+		<div class="mui-content ">
+			<section class="pd pt10 pm10 bgff">
+				<p class="z3 mt10">
+					尊敬的客户您好，为了保障客户能够体验更好的游戏乐趣，现本公司已经整体系统升级，感谢您对我们大发的支持，祝您游戏愉快！
+				</p>
+
+				<section class="mt20 btm pt10 pm20 fz14 z6">
+
+					活动推广
+					<span class="fr" id="time_sdf">
+          
+        </span>
+				</section>
+			</section>
+
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script>
+	   var wen_sd= decodeURI(window.location.search),
+           title_s=wen_sd.split("title_s=")[1].split("&")[0],
+           time=wen_sd.split("time=")[1].split("&")[0]
+				document.getElementById("titkesd").innerHTML = title_s
+				document.getElementById("time_sdf").innerHTML =time
+	
+		</script>
+	</body>
+
+</html>

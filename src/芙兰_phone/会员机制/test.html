@@ -1,0 +1,103 @@
+<!--个人中心-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+/*
+        .highcharts-grid-line,
+        .highcharts-yaxis,
+        .highcharts-yaxis-labels,
+        .highcharts-credits,
+        .highcharts-xaxis,
+        .highcharts-legend,
+        .highcharts-button {
+            display: none !important
+        }
+*/
+        .dsf_sd_sdgf.ab{
+            background: red;
+        }
+
+        #container {
+            width: 1000px;
+            height: 500px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+
+    <script>
+        var sd_sd = [0, 300, 200, 1500, 4000, 12000, 30000, 60000, 120000]
+
+       $('#container').highcharts({
+                     chart: {
+                            type: 'area'
+                        },
+
+                title: {
+                    text: '对数折线图',
+                    style: {
+                        display: "none"
+                    }
+                },
+                xAxis: {
+                    tickInterval: 1,
+          categories:["9月","10月","11月","12月","当前"],
+                    labels: {
+                        formatter: function() {
+                             console.log(this.value) //把 categories输出来 自定义 x轴的名称
+                            return   this.value;
+                        }
+                    }
+
+                },
+                yAxis: {
+
+
+
+                },
+                tooltip: {
+                    headerFormat: '',
+                    pointFormat: '{point.y}'
+                },
+                plotOptions: {
+                    series: {
+                        allowPointSelect: true
+                    },
+                    line: {
+                        dataLabels: {
+                            enabled: true,
+                            color: "#fff",
+                            formatter: function() {
+                                return "<i class='f_a dsf_sd_sdgf'> " + this.y + "</i>";
+                            },
+                            useHTML: true
+                        }
+                    }
+                },
+                series: [{
+                    data: [0, 300, 900, 3600, 7200, 13000, 14000, 15000, 30000],
+                    pointStart: 0,
+                    lineWidth: 4, //线条宽度
+                    stickyTracking: false,
+                }]
+            });
+    </script>
+</body>
+
+</html>

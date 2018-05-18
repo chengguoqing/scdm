@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <title>系统设置</title>
+    <style>
+        body{
+            background: #EFEFF4;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <section class="mui-title pd ">
+            店铺管理
+
+        </section>
+        <span class="mui-btn-link mui-pull-right cf sx fz30">+</span>
+    </header>
+        <div class="mui-content " id="app">
+           <ul class="sd_sc_ssdf">
+           <li class="bbm pt10 pm10 pd pr mb10 bgff" v-for="sd in 10">
+               <img src="../../img/neus.jpg" class="sc_img_xdrfx fl">
+               <section class="ov dian dfd_xsd_xdrfx pl10">
+                   <p class="z14 fz15">
+                      
+小城味道食铺（标准版） 
+                   </p>
+              
+                   
+                   <p class="fz12 z14 mt10">
+                      时间：2017-04-07~2018-04-07
+                   </p>
+                      <p class="fz12  mt5 ls_2">
+                     服务中
+                   </p>
+               </section>
+              
+               
+               <i class="fa fa-angle-right df_xs_xrtxr fz24 zc"></i>
+               <p class="qc"></p>
+               <section class="mt10 pt10 btm fz15">
+                   店铺状态
+                   
+                    <div class="mui-switch fr df_xsf_xdettx">
+                    <div class="mui-switch-handle"></div>
+                </div>
+               </section>
+           </li>
+           
+            </ul>
+        
+        </div>
+            <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+        <script src="../../js/jquery-1.11.3.min.js"></script>
+        <script src="../../js/mui.min.js"></script>
+        <script src="../../js/vue.js"></script>
+        <script src="../../js/base.js"></script>
+        <script>
+    
+          var km = new Vue({
+                el: '#app',
+                data: {
+                    
+                },
+                methods: {
+                   
+                }
+            })
+        </script>
+    </body>
+</html>

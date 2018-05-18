@@ -1,0 +1,132 @@
+<!--会员认证-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>会员认证</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">会员认证</h1>
+		</header>
+		<div class="mui-content" id="boarduser">
+			<section class="bgff pd mt10 pt10 pm10">
+				<p class="z3">温馨提示：</p>
+				<p class="z6 fdg_ds_sdrxcx">
+					租灵宝承诺对认证图片及信息的严格保密义务。 承诺未经您的明确授权不得将认证图片及信息用于租 灵网平台之外使用，请您放心。 </p>
+				<p class="ye fdg_ds_sdrxcx ">请跟进自己实际情况选择所要认证的会员信息!</p>
+			</section>
+
+			<section class="mt10 pd mui-row">
+				<section class="mui-col-xs-6 dff_ddf_sd_df" v-for="(km,idx) in ssd_sdf" @tap="jhg_sdf(idx,km.cls)">
+					<section class="dsf_dd_sdrx " :class="km.cls">
+						<img src="img/ys.png" class="dsf_d_setc" v-if=" km.is_verify==1">
+						<span v-else>
+							
+						<img src="img/wz.png" class="dsf_d_setc" v-if="km.topay==0">
+						<img src="img/ws.png" class="dsf_d_setc" v-else>
+						
+							
+						</span>
+
+						<p class="sfg_sd_sdrxcc">
+							<i class="f_i cdg_dfds" :class="km.leixu"></i>
+						</p>
+						<div v-html="km.bq"></div>
+					</section>
+				</section>
+
+			</section>
+
+			<section class="mt10 bgff pd pt10 pm10 fz14 z6">
+				<p class="fz15 z3 pm5">会员特权：</p>
+				1、专属顾问为您服务<br> 2、项目资源优先对接服务
+				<br> 3、免费查看信息资源联系方式
+				<br> 4、企业会员享有专属店铺
+
+			</section>
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			var km = new Vue({
+				el: '#boarduser',
+				data: {
+					ssd_sdf: [{
+							"leixu": "",
+							"cls": "",
+							"is_verify": 0, //0未认证 1已认证
+							"bq": '<p class="cen fz15">个人会员认证</p>'
+						},
+						{
+							"leixu": "ab",
+							"cls": "",
+							"is_verify": 0,
+							"bq": '<p class="cen fz15">企业会员认证</p><p class="cen ye mt2">赠：专属店铺</p>'
+						}
+					],
+					sd_Sdf: ""
+				},
+				methods: {
+					jhg_sdf: function(as_s, bsd) {
+						if(!this.sd_Sdf) {
+							if(as_s == 0) {
+								this.zhu('ge_authentication')
+							} else {
+								this.zhu('authentication')
+							}
+							return
+						}
+						if(bsd) {
+							if(as_s == 0) {
+								this.zhu('ge_authentication', "", {
+									member: 1
+								})
+							} else {
+								this.zhu('authentication', "", {
+									member: 2
+								})
+							}
+						}
+
+					}
+				},
+				created: function() {
+					var view = {},
+						ad_sd = this
+					view.Services = "usercompany.view"
+					view.usertoken = getusertoken()
+					m_ajax(view, function(data) {
+						if(data.member == 1) {
+							ad_sd.ssd_sdf[0].cls = "act"
+							ad_sd.ssd_sdf[0].is_verify = data.is_verify
+						}
+						if(data.member == 2) {
+							ad_sd.ssd_sdf[1].cls = "act"
+							ad_sd.ssd_sdf[1].is_verify = data.is_verify
+							ad_sd.ssd_sdf[1].topay = data.topay
+						}
+						ad_sd.sd_Sdf = data.member
+					})
+				}
+
+			})
+
+			mui.plusReady(function() {
+				window.addEventListener('ref_dfresh', function(e) {
+					location.reload();
+				})
+			})
+		</script>
+	</body>
+
+</html>

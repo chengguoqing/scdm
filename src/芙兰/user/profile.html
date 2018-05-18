@@ -1,0 +1,72 @@
+<!--用户中心-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>信息修改</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="profile">
+        <header_p :title="'信息修改'"></header_p>
+    <div class="mui-content">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>用户名</label>
+                <input type="text" class="mui-input-clear" placeholder="请输入用户名" value="独行工匠">
+            </div>
+            <div class="mui-input-row chusqirws">
+                <label>出生日期</label>
+                <input type="text" class="mui-input-clear" placeholder="请选择出生日期">
+            </div>
+
+            <div class="mui-input-row chusqirws">
+                <label>性别</label>
+                <section class="ov dsf_kh_sertx">
+                    <span class="fz14 z9 act">
+                   <i class="dx icon-bugouxuan "></i>
+                      保密
+                      
+                   </span>
+
+                    <span class="fz14 z9 ml20">
+                   <i class="dx icon-bugouxuan "></i>
+                      男
+                      
+                   </span>
+                    <span class="fz14 z9 ml20">
+                   <i class="dx icon-bugouxuan "></i>
+                      女
+                      
+                   </span>
+                </section>
+            </div>
+
+            <div class="mui-input-row">
+                <label>手机</label>
+                <input type="text" class="mui-input-clear" placeholder="请输入用户名" value="13538190372">
+            </div>
+
+            <p class="pd pt30 pm20">
+                <a class="mui-btn mui-btn-red w100 fz16  ">确认修改</a>
+            </p>
+        </form>
+
+
+    </div>
+</section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/vue.js"></script>
+        <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/profile.js"> </script>
+</body>
+
+</html>

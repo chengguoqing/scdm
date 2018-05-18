@@ -1,0 +1,64 @@
+<!--预约管理-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>预约管理</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约管理</h1>
+		</header>
+		<div class="mui-content" id="make_user_list">
+			<section class="pd bgff box pt10 pm10">
+				<p class="box_a gff_sd" v-for="(sz,idx) in sd_sdzs">
+					<span class="dsfdf_d  yj20" v-text="sz.name" :class="sz.cls" @tap="fenlei_sd(idx,sz.type)"> </span>
+				</p>
+
+			</section>
+
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper xiy_zuysdf ab ac">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mt5 df_d_dsdfxc" id="dsf_d_dfg">
+						<li class="mui-table-view-cell" v-for="mn in mare_list">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-primary fz18" @tap="zhu('make_user_details','',{i_d:mn.id})">编辑</a>
+							</div>
+							<div class="mui-slider-handle">
+								<p class="fz15 z0 dian">{{mn.name}}</p>
+								<section class="mui-row mt5">
+									<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_sdgx ac"></i> 联系人: <span class="ye">{{mn.contacts}}</span>
+									</p>
+									<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_sdgx ad"></i> 电话: <span class="ye">{{mn.tel}} </span>
+									</p>
+
+								</section>
+							</div>
+						</li>
+					</ul>
+
+					<section class="cen mt40 ds_d_dd_dfw" id="ds_d_dd_dfw">
+						<img src="img/meiyou.png" class="df_dd_drt" />
+						<p class="ls fz20">
+							暂无记录！
+						</p>
+					</section>
+				</div>
+			</div>
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/make_user_list.js"></script>
+	</body>
+
+</html>

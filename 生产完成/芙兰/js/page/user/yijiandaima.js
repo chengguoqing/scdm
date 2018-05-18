@@ -1,0 +1,1 @@
+"use strict";var km=new Vue({el:"#yijiandaima",data:{},methods:{},mounted:function(){mui(".mui-scroll-wrapper").scroll({})}});

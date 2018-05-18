@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.mui-action-back {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<nav class="mui-bar mui-bar-tab" id="index_sdsd" style="background: #fff;">
+			<a class="mui-tab-item mui-active" href="index_r.html">
+				<span class="mui-icon ">
+        <i class="f_i dsf_dsd_ds"></i>
+        </span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="fujing.html">
+				<span class="mui-icon ">
+          <i class="f_i dsf_dsd_ds ab"></i>
+        </span>
+				<span class="mui-tab-label">附近</span>
+			</a>
+			<a class="mui-tab-item" href="lease.html">
+				<span class="mui-icon ">
+          <i class="f_i dsf_dsd_ds ac"></i>
+        </span>
+				<span class="mui-tab-label">租赁</span>
+			</a>
+			<a class="mui-tab-item" href="wanted.html">
+				<span class="mui-icon ">
+          <i class="f_i dsf_dsd_ds ad"></i>
+        </span>
+				<span class="mui-tab-label">求租</span>
+			</a>
+			<a class="mui-tab-item" href="user_center.html" id="user_sd_df">
+				<span class="mui-icon ">
+          <i class="f_i dsf_dsd_ds ae"></i>
+        </span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script type="text/javascript">
+		
+			var subpagestyle = {
+				"top": "0px",
+				"bottom": "50px"
+			}
+			var sd_sd = ["index_r.html", "fujing.html", "wanted.html", "lease.html"]
+			if(getusertoken()) {
+				sd_sd.push("user_center.html")
+			}
+			mui.init()
+			var self = "";
+			mui.plusReady(function() {
+				self = plus.webview.currentWebview();
+				mui.each(sd_sd, function(a) {
+					var sd_ops = {}
+					if(sd_sd[a] == "wanted.html") {
+						sd_ops = {
+							"idx": 2,
+							"tile": "求租",
+							"lie": true
+						}
+					} else if(sd_sd[a] == "lease.html") {
+						sd_ops = {
+							"idx": 1,
+							"tile": "租赁",
+							"lie": true
+						}
+					}
+					var sub = plus.webview.create(sd_sd[a], sd_sd[a], subpagestyle, sd_ops)
+					self.append(sub);
+					sub.hide(); //隐藏
+				})
+				plus.webview.show("index_r.html", "fade-in", 100); //显示  第一参数  要显示的ID  2 动画
+
+			})
+
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href'),
+					sd_sdf = true
+				mui.each(self.__view_array__, function(a, b) {
+					if(b.id == targetTab) {
+						sd_sdf = false
+					}
+				})
+				if(sd_sdf) {
+
+					var sub = plus.webview.create(targetTab, targetTab, subpagestyle)
+					self.append(sub);
+				} else {
+					var register = plus.webview.getWebviewById(targetTab);
+					plus.webview.show(register)
+					//					plus.webview.show(targetTab, "fade-in", 100); //显示  第一参数  要显示的ID  2 动画
+				}
+
+			})
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!--预约详情-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>预约详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约管理</h1>
+		</header>
+		<div class="mui-content" id="make_user_details">
+			<div class="mui-input-group dsf_d_sdffgxc pr10">
+				<div class="mui-input-row">
+					<label>标题名称：</label>
+					<p class="siuut_d_sdf ls">
+						{{da_ta.name}}
+					</p>
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>预约时间：
+</label>
+					<p class="siuut_d_sdf ">
+						{{da_ta.pretime}}
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>使用工期：</label>
+					<p class="siuut_d_sdf ">
+						{{da_ta.timelimit}}
+					</p>
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>需求人：</label>
+					<p class="siuut_d_sdf ">
+						{{da_ta.contacts}}
+
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>
+联系电话：</label>
+					<p class="siuut_d_sdf ls">
+						{{da_ta.tel}}
+						<i class="f_i tel_phone_d ml5"></i>
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>
+其它要求：</label>
+					<p class="siuut_d_sdf ov dsf_s_sdfvgx">
+						{{da_ta.notes}}
+					</p>
+					<p class="qc"></p>
+				</div>
+			</div>
+
+			<div class="mui-input-group dsf_d_sdffgxc pr10 mt10">
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>供应商：</label>
+					<p class="siuut_d_sdf ls dsf_s_sdfvgx ov">
+						{{da_ta.company}} <span class="ye" v-if="da_ta.is_verify==1">[已认证]</span>
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>负责人：</label>
+					<p class="siuut_d_sdf  dsf_s_sdfvgx ov">
+						{{da_ta.realname}}
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>联系电话：</label>
+
+					<p class="siuut_d_sdf ls">
+						{{da_ta.mobile}}
+						<i class="f_i tel_phone_d ml5"></i>
+					</p>
+					<p class="qc"></p>
+				</div>
+
+			</div>
+
+			<div class="mui-input-group dsf_d_sdffgxc pr10 mt10">
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>进度状态：</label>
+
+					<p class="siuut_d_sdf ">
+						<span class="dsf_d_sdfc f_b pr">
+                    <input type="text" v-model="da_ta.state_name"  readonly @tap="chg_sdfd" >
+                      <i class="f_i down_icon_dr"></i>
+                        </span>
+
+					</p>
+
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>成交金额：</label>
+					<p class="siuut_d_sdf ">
+						<span class="dsf_d_sdfc f_b">
+                    <input type="text" v-model="da_ta.money" >
+                        </span>
+
+						<span>元</span>
+
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>跟进备注：</label>
+					<p class="siuut_d_sdf ">
+						<textarea rows="5" v-model="da_ta.details"></textarea>
+					</p>
+					<p class="qc"></p>
+				</div>
+
+			</div>
+			<p class="pd mt20">
+				<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20" @tap="tijiao_sdf">确定</button>
+			</p>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			mui.init({
+				beforeback: function() {
+					//获得列表界面的webview  
+					var list = plus.webview.currentWebview().opener();
+					//触发列表界面的自定义事件（refresh）,从而进行数据刷新  
+					mui.fire(list, 'refresh');
+					//返回true，继续页面关闭逻辑  
+					return true;
+				}
+			});
+			var i_sdd = 0
+			var picker_f = new mui.PopPicker({
+				"layer": [1]
+			});
+			var km = new Vue({
+				el: '#make_user_details',
+				data: {
+					da_ta: "",
+					as_sd: [{
+						value: "1",
+						"text": "未处理"
+					}, {
+						value: "2",
+						"text": "跟进中"
+					}, {
+						value: "3",
+						"text": "已签约"
+					}, {
+						value: "4",
+						"text": "无效单"
+					}]
+				},
+				methods: {
+					chg_sdfd: function() {
+						var sd_sdf = this
+						picker_f.show(function(rl) {
+							sd_sdf.da_ta.state_name = rl[0].text
+							sd_sdf.da_ta.state = rl[0].value
+							
+						})
+					},
+					tijiao_sdf: function() {
+						var edit = {}
+						edit.Services = "preorder.edit"
+						edit.usertoken = getusertoken()
+						edit.id = i_sdd
+						edit.state = this.da_ta.state
+						edit.money = this.da_ta.money 
+						edit.details = this.da_ta.details
+						console.log(JSON.stringify(edit))
+						m_post(edit, function(data) {
+							mui.toast('编辑成功！');
+							mui.back()
+						})
+					}
+				},
+				created: function() {
+					var sd_sdf = this
+					mui.plusReady(function() {
+						var self = plus.webview.currentWebview();
+						i_sdd = self.i_d
+						var view = {}
+						picker_f.setData(sd_sdf.as_sd)
+						view.Services = "preorder.view"
+						view.usertoken = getusertoken()
+						view.id = i_sdd
+						m_ajax(view, function(data) {
+							data.state_name = sd_sdf.as_sd[data.state - 1].text
+							sd_sdf.da_ta = data
+						})
+					})
+
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

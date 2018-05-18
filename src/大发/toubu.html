@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav asd_uy_dftx">
+			<a class="dx icon-hanbao red hanao_sdrrx f_b " id="caidna_s"></a>
+
+			<h1 class="mui-title z3">
+            <img src="img/logo.png" class="logo_sdsrtc">
+        </h1>
+
+			<span class="fr red sd_h_eretxc fz15">
+            <span>登录</span>
+			<span class="ml5">注册</span>
+			</span>
+		</header>
+
+<script src="js/mui.min.js"></script>
+<script>
+			mui.init()
+		
+
+			var menu = "",
+				mask = mui.createMask(function() {
+					main.setStyle({
+						left: '0',
+						transition: {
+							duration: 150
+						}
+					});
+					try {
+						menu.hide();
+					} catch(e) {
+
+					}
+
+					showMenu = false
+				}),
+				showMenu = false,
+				main = ""
+			mui.plusReady(function() {
+
+				main = plus.webview.currentWebview();
+				setTimeout(function() {
+					menu = mui.preload({
+						id: 'cebian.html',
+						url: 'cebian.html',
+						styles: {
+							left: 0,
+							width: '70%',
+							zindex: 9997
+						}
+					});
+				}, 300)
+
+				document.getElementById("caidna_s").addEventListener('tap', openMenu);
+				window.addEventListener("swiperight", openMenu);
+				//主界面向左滑动，若菜单已显示，则关闭菜单；否则，不做任何操作；
+				window.addEventListener("swipeleft", mask.close());
+
+				window.addEventListener("tap", function() {
+					cloisd()
+				});
+
+			})
+
+			/**
+			 * 显示菜单菜单
+			 */
+			function openMenu(e) {
+				try {
+					e.stopPropagation();
+				} catch(e) {
+
+				}
+
+				if(!showMenu) {
+					document.getElementById("caidna_s").classList.remove("icon-hanbao")
+					document.getElementById("caidna_s").classList.add("icon-kefu-tuichu-")
+					//侧滑菜单处于隐藏状态，则立即显示出来；
+					//显示完毕后，根据不同动画效果移动窗体；
+					menu.show('none', 0, function() {
+						main.setStyle({
+							left: '70%',
+							transition: {
+								duration: 150
+							}
+						});
+					});
+					//显示遮罩
+					//					mask.show();
+					showMenu = true;
+				} else {
+					cloisd()
+				}
+			}
+
+			function cloisd() {
+				document.getElementById("caidna_s").classList.remove("icon-kefu-tuichu-")
+				document.getElementById("caidna_s").classList.add("icon-hanbao")
+				main.setStyle({
+					left: '0',
+					transition: {
+						duration: 150
+					}
+				});
+				try {
+					menu.hide();
+				} catch(e) {
+
+				}
+
+				showMenu = false
+			}
+		</script>
+	</body>
+
+</html>

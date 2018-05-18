@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>性别</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <ul class="mui-table-view sdefds_dsfdf mt20">
+        <li class="mui-table-view-cell act">
+            男
+            <i class="fa fa-check ls"></i>
+        </li>
+        <li class="mui-table-view-cell">
+            女
+            <i class="fa fa-check ls"></i>
+        </li>
+    </ul>
+
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script>
+        $(function() {
+            $(".sdefds_dsfdf li").on("click", function() {
+                $(".sdefds_dsfdf li").removeClass("act")
+                $(this).addClass("act")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

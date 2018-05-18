@@ -1,0 +1,182 @@
+<!--预约-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约</h1>
+		</header>
+		<div class="mui-content" id="appointment">
+			<p class="ds_d_dgf">
+				<img src="img/logo.png">
+			</p>
+
+			<section class="pd mt20 ">
+				<section class="pr dsf_d_sdsf">
+					<span class="dsf_sdf"></span>
+					<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary dfs_d_dfgx">
+						<a class="mui-control-item mui-active" href="#item1">立即预约 </a>
+
+					</div>
+				</section>
+				<section class="mui-control-content  mui-active" id="item1">
+					<ul class="dsf_fort">
+						<li class="mui-input-row">
+							<input type="text" placeholder="材料或设备名称默认读取" class="dsf_s_sdf mui-input-clear" :value="cilia" readonly>
+						</li>
+						<li class="mui-input-row pr ds_dfgfc">
+							<input type="tel" placeholder="选择预约时间" v-model="dtas" class="dsf_s_sdf mui-input-clear" readonly @tap="time_sdf">
+							<span class="fz12 dsf_d_dfgx dddf">
+                     		<i class="f_i dsf_oiiu_s "></i>
+                        </span>
+						</li>
+						<li class="mui-input-row">
+							<input type="text" placeholder="使用工期" v-model="timelimit" class="dsf_s_sdf mui-input-clear">
+						</li>
+						<li class="mui-input-row">
+							<input type="text" placeholder="联系人" v-model="contacts" class="dsf_s_sdf mui-input-clear">
+						</li>
+						<li class="mui-input-row">
+							<input type="text" placeholder="联系电话" v-model="tel" class="dsf_s_sdf mui-input-clear">
+						</li>
+						<li class="mui-input-row">
+							<textarea placeholder="其它要求备注" v-model="notes" rows="5" class="br fz14"></textarea>
+						</li>
+						<li class=" pr pt10">
+							<button type="button" class="mui-btn mui-btn-primary w100 fz16 yj20 pt wdf_dfg" @tap="daoji">立即预约</button>
+						</li>
+
+				</section>
+
+			</section>
+
+			<section class="dsf_d_dr_d bgff yj4 cen" :class="ze_sd">
+				<p class="cen ds_oiu_wer">
+					<i class="f_i succes_sd"></i>
+
+				</p>
+				<p class="cen z3 fz18">
+					预约已提交成功
+				</p>
+				<p class="mt15 dsf_dsd_dsdf">
+					专职顾问会在1工作日内为您对接<br> 客服热线：
+					<a class="ls">021-6669-5007</a><br> {{sd_dd_df}} 秒
+					<a class="ls" @tap="blck"> 立即返回</a>
+				</p>
+
+			</section>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			mui.init()
+			var mask = mui.createMask(function() {
+
+			});
+			var self = {}
+
+			var km = new Vue({
+				el: '#appointment',
+				data: {
+					dtas: "", //预约时间
+					ze_sd: "", //蔗照
+					sd_dd_df: 5, //倒计时
+					cilia: "",
+					timelimit: "", //使用工期
+					contacts: "", //联系人
+					tel: "", //联系人电话
+					notes: "" //备注
+				},
+				methods: {
+					time_sdf: function() {
+						var sd_dd = this
+						plus.nativeUI.pickDate(function(e) {
+							var d = e.date;
+							sd_dd.dtas = (d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+
+						});
+					},
+					daoji: function() {
+						var sd_de = this
+						if(!this.dtas) {
+							alert("预约时间不能为空");
+							return
+						}
+						if(!this.timelimit) {
+							alert("使用工期不能为空");
+							return
+						}
+						if(!this.contacts) {
+							alert("联系人不能为空");
+							return
+						}
+						if(!this.tel) {
+							alert("联系电话不能为空");
+							return
+						}
+						if(!this.notes) {
+							alert("备注不能为空");
+							return
+						}
+
+						var preorder = {}
+						preorder.Services = "good.preorder"
+						preorder.usertoken = getusertoken()
+						preorder.good_id = self.t_id
+						preorder.pretime = this.dtas
+						preorder.timelimit = this.timelimit
+						preorder.contacts = this.contacts
+						preorder.tel = this.tel
+						preorder.notes = this.notes
+						m_ajax(preorder, function(data) {
+							sd_de.ze_sd = "show"
+							mask.show()
+							if(sd_de.sd_dd_df >= 5) {
+								var sd_sd = setInterval(function() {
+									if(sd_de.sd_dd_df-- <= 0) {
+										sd_de.sd_dd_df = 5
+										sd_de.ze_sd = ""
+										clearTimeout(sd_sd)
+										mask.close()
+										mui.back()
+									}
+								}, 1000)
+							}
+
+						})
+
+					},
+					blck: function() {
+						mui.back()
+					}
+				},
+				created: function() {
+					var sd_sdf = this
+					mui.plusReady(function() {
+						self = plus.webview.currentWebview();
+						sd_sdf.cilia = self.title
+						var user = getuser()
+						sd_sdf.tel = user.mobile
+						sd_sdf.contacts = user.realname
+					})
+
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

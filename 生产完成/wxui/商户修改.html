@@ -1,0 +1,66 @@
+<!--商户修改-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商户修改</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/weui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <p class="weui-cells__title">信息修改</p>
+    <section class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">店铺名称</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text"  placeholder="请输入店铺名称">
+            </div>
+        </div>
+    </section>
+    <p class="weui-cells__title">结算及费率</p>
+    <section class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">结算卡号</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input " id="cardNo" type="text"  placeholder="请输入结算卡号">
+            </div>
+        </div>
+    </section>
+    <p class="weui-cells__tips">
+        如需修改其他信息，可直接在微信中回复即可
+    </p>
+
+    <div class="weui-btn-area">
+        <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips"><span>确定</span></a>
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/weui.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+         var $tooltips = $('.js_tooltips');
+
+        $('#showTooltips').on('click', function() {
+            if ($tooltips.css('display') != 'none') return;
+
+            // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+            $('.page.cell').removeClass('slideIn');
+
+            $tooltips.css('display', 'block');
+            setTimeout(function() {
+                $tooltips.css('display', 'none');
+            }, 2000);
+        });
+        
+        
+      
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+   
+
+ 
+
+
+
+<style>
+    .sd_xs{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: red;
+    }
+    </style>
+
+</head>
+
+<body translate="no">
+
+
+
+    <div class="m-sidebar">
+        <div class="cart">
+            <i id="end"></i>
+            <span>购物车</span>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="sd_xsdffxxc"></div>
+
+
+    <script src='http://libs.baidu.com/jquery/1.9.1/jquery.min.js'></script>
+    <script src='https://rawgit.com/amibug/fly/master/dist/jquery.fly.js'></script>
+
+    <script>
+        $('html,body').on('click', addProduct);
+
+        function addProduct(event) {
+            var offset = $(".sd_xsdffxxc").offset(),
+                flyer = $('<p class="sd_xs"></p>');
+            flyer.fly({
+                start: {
+                    left: event.pageX,
+                    top: event.pageY
+                },
+                end: {
+                    left: offset.left,
+                    top: offset.top,
+                    width: 0,
+                    height: 0
+                }
+            });
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

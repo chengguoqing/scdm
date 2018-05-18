@@ -1,0 +1,144 @@
+<!--子产品列表-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加信息-含信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			body {
+				background: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">添加信息-含信息</h1>
+		</header>
+		<div class="mui-content" id="tuwensan">
+
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper xiy_zuysdf ae">
+				<div class="mui-scroll">
+
+					<ul class="mui-table-view mt5 df_d_dsdfxc" id="dsf_d_dfg">
+						<li class="mui-table-view-cell" v-for="(cn,idx) in dasf_list">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-primary fz18" @tap="zhu('tuwener','fade-in',{good_id:good_id,'zi_id':cn.id})">编辑</a>
+								<a class="mui-btn mui-btn-yellow fz18" @tap="sanchu(cn.id,idx)">删除</a>
+							</div>
+							<div class="mui-slider-handle">
+								<p class="fz15 z0 dian">{{cn.name}} </p>
+								<section class="mui-row mt5">
+									<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_jsf"></i>
+										<span class="ye">{{cn.budgetprice+ cn.measure_unit}}</span>
+									</p>
+									<p class="fz12 mui-col-xs-6 ye"> <i class="f_i dsf_jsf ad"></i> {{cn.rentstatus|zh}}
+									</p>
+								</section>
+							</div>
+						</li>
+					</ul>
+
+					<section class="cen mt40 ds_d_dd_dfw" id="ds_d_dd_dfw">
+						<img src="img/meiyou.png" class="df_dd_drt" />
+						<p class="ls fz20">
+							暂无记录！
+						</p>
+					</section>
+				</div>
+			</div>
+			<p class="bgff dsf_ddf_df" @tap="tianjia ">
+				<i class="f_i add_iconsd"></i>
+				<span class="ye fz16">添加信息</span>
+			</p>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefreshts
+					}
+				},
+				beforeback: function() {
+					var user_fx_list = plus.webview.getWebviewById('user_fx_list');
+					mui.fire(user_fx_list, 'refr_sdresh');
+					return true;
+				}
+			});
+
+			var self = {}
+			var km = new Vue({
+				el: '#tuwensan',
+				data: {
+					dasf_list: "",
+					good_id: ""
+				},
+				methods: {
+					tianjia: function() {
+						this.zhu('tuwener', '', {
+							good_id: self.good_id
+						})
+					},
+					sanchu: function(id, idex) {
+						var sd_sdf = this,
+							gooddel = {}
+						gooddel.Services = "usergood.goodproductdel"
+						gooddel.usertoken = getusertoken()
+						gooddel.id = id
+
+						var sd_ssdf = confirm("确认删除？")
+						if(sd_ssdf) {
+							sd_sdf.dasf_list.splice(idex, 1)
+							m_ajax(gooddel, function() {
+								mui(".mui-table-view-cell").each(function() {
+									mui.swipeoutClose(this)
+								})
+								mui.toast("删除成功")
+							})
+						}
+
+					}
+				},
+				created: function() {
+					var sd_sdf = this
+					mui.plusReady(function() {
+						var ws = plus.webview.currentWebview();
+						plus.webview.close("tuwener")
+						plus.webview.close("tuwen")
+						self = plus.webview.currentWebview();
+						sd_sdf.good_id = self.good_id
+						var view = {}
+						view.Services = "usergood.view"
+						view.usertoken = getusertoken()
+						view.good_id = self.good_id
+						m_ajax(view, function(data) {
+							sd_sdf.dasf_list = data.goodproduct
+						})
+					})
+
+				}
+
+			})
+
+			function pullupRefreshts() {
+				this.endPullupToRefresh(false)
+
+			}
+		</script>
+	</body>
+
+</html>

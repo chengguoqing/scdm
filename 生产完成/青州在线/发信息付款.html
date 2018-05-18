@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>发信息付款</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/mui.picker.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    </style>
+
+</head>
+
+<body>
+    <header class="mui-bar dsf_xdsdfx mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left cf">
+
+            <span class="fz16 dsf_xsd_xrf">返回</span>
+        </a>
+        <h1 class="mui-title cf">
+
+            发信息付款
+        </h1>
+      
+
+    </header>
+
+    <div class="mui-content">
+       <section class="mt10 btm bbm pd bgff">
+           <p class="pt10 pm10 fz16 z14">
+               掌上信息
+           </p>
+           <section class="pt10 pm10 btm">
+               <i class="f_i ssd_xsdfgfxf fl"></i>
+               <section class="ov pl10">
+                   <p class="z14 fz16">默默兔兔了</p>
+                   <p class="mt40 tr fz15">
+                       总价格：￥1.15
+                   </p>
+               </section>
+               
+               <p class="qc"></p>
+           </section>
+           
+       </section> 
+       
+              <section class="mt10 btm bbm pd bgff">
+           <p class="pt10 pm10 fz16 z14">
+               需要支付：<span class="red">￥1.15</span>
+           </p>
+           
+           <ul class="ddff_xsdsfgx">
+              <li class="pt10 pm10 btm pr">
+                  <span class="fl">
+                   <i class="f_i dsf_ssdfx"></i>
+                   <i class="f_i dsfds_xssdx"></i>
+                   </span>
+                   <section class="ov pl10">
+                        <p class="fz16">
+                            余额不足
+                        </p>
+                        <p class="zc fz12 ">
+                            可用余额：￥0.27元
+                        </p>
+                       
+                   </section>
+                   <span class="ssd_iuiu_xsffx">
+                       <span class="ls_2 fz14">充值</span>
+                       <i class="fa fa-angle-right fz26 zc"></i>
+                   </span>
+                   <p class="qc"></p>
+              </li>
+              <li class="pt10 pm10 btm pr">
+                  <span class="fl">
+                   <i class="f_i dsf_ssdfx act"></i>
+                   <i class="f_i dsfds_xssdx ab"></i>
+                   </span>
+                   <section class="ov pl10">
+                        <p class="fz16">
+                            微信支付
+                        </p>
+                        <p class="zc fz12 ">
+                           使用微信支付，简单方便
+                        </p>
+                       
+                   </section>
+                  
+                   <p class="qc"></p>
+              </li>
+               
+           </ul>
+           
+        </section>
+        
+        <section class="pd mt20">
+            <button  class="mui-btn mui-btn-red w100 fz16 pt10 pm10 acqwe_zsdf">安全支付</button>
+            
+        </section>
+        
+   
+   <script src="js/jquery-1.11.3.min.js"></script>
+   <script src="js/mui.min.js"></script>
+   <script>
+        $(function(){
+            var sd_iu=1;//0余额支付 1微信支付
+            $(".ddff_xsdsfgx li").on("click",function(){
+                $(".dsf_ssdfx").removeClass("act")
+                sd_iu=$(this).index()
+                $(this).find(".dsf_ssdfx").addClass("act")
+            })
+            /*安全支付按钮触发*/
+            $(".acqwe_zsdf").on("click",function(){
+                if(sd_iu==1){
+                    mui.alert("选择了微信支付")
+                }else if(sd_iu==0){
+                      mui.alert("选择了余额支付")
+                }
+            })
+        })
+        </script>
+    </div>
+    </body>
+</html>

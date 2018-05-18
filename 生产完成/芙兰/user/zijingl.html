@@ -1,0 +1,112 @@
+<!--资金管理-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>资金管理</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body {}
+
+    </style>
+</head>
+
+<body>
+    <section id="zijingl">
+        <header_p :title="'资金管理'"></header_p>
+        <div class="mui-content ">
+
+            <section class="bgred pd pt10 pm10 pr">
+                <p class="cf ">
+                    账户余额
+                </p>
+                <p class="cf fz26 mt10">
+                    ￥0.00
+                </p>
+
+                <i class="dx icon-qian2  d_jg_df b"></i>
+            </section>
+
+            <p class="bgff pd pt5 pm5">
+                <i class="dx icon-jifen cz"></i>
+                <span class="ml5">
+            积分：3
+            </span>
+            </p>
+
+
+            <section class="mui-row bgff mt10 btm">
+                <section class="mui-col-xs-6 dsf_h_sertxc" @tap="zhu('hongbao')">
+                    <p class="df_jh_dserx">
+                        <span class="pr ">
+                        <span class="yj honghnumd">3</span>
+                        <i class="dx icon-hongbao red fz40 cz"></i>
+                        </span>
+
+                    </p>
+                    <p>
+                        红包
+                    </p>
+
+                </section>
+
+                <section class="mui-col-xs-6 dsf_h_sertxc" @tap="zhu('chongzhi')">
+                    <p class="df_jh_dserx">
+
+
+                        <i class="dx icon-chongzhi1 ls fz44 cz"></i>
+
+
+                    </p>
+                    <p>
+                        在线充值
+                    </p>
+
+                </section>
+
+
+
+                <section class="mui-col-xs-6 dsf_h_sertxc" @tap="zhu('zhanghumx')">
+                    <p class="df_jh_dserx">
+
+                        <i class="dx icon-mingxi ls fz40 cz"></i>
+
+
+                    </p>
+                    <p>
+                        账户明细
+                    </p>
+
+                </section>
+                <section class="mui-col-xs-6 dsf_h_sertxc"  @tap="zhu('shenqingjl')">
+                    <p class="df_jh_dserx">
+                        <span class="pr ">
+                     
+                      <i class="dx icon-qian red fz34 cz"></i>
+                    </span>
+
+                    </p>
+                    <p>
+                        我的明细
+                    </p>
+
+                </section>
+
+            </section>
+
+        </div>
+    </section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/zijingl.js"></script>
+
+</body>
+
+</html>

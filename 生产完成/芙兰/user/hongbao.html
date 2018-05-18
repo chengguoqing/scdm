@@ -1,0 +1,75 @@
+<!--我的红包-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的红包</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="hongbao">
+        <header_p :title="'我的红包'"></header_p>
+ 
+
+        <section class="bgff pd pt10 pm10 mui-row btm hong_set">
+            <section class="mui-col-xs-8 sehgf_ghonbg_ha">
+                <input type="text" placeholder="请输入红包序列号">
+            </section>
+            <section class="mui-col-xs-4 pl10 add_btn_h">
+                <a class="mui-btn mui-btn-red w100 fz14">添加一个红包</a>
+            </section>
+        </section>
+
+
+      <div id="pullrefresh" class="mui-content mui-scroll-wrapper oiuu_rr_drtx">
+            <div class="mui-scroll">
+
+
+
+            <ul class="hpongbaist ">
+                <li class="pr" v-for="ho in hongbao">
+                    <section class="mui-row">
+                        <section class="mui-col-xs-8 ">
+                            <p class="biaoqiane">
+                                红包序号：N/A<br> 发行店铺：网站自营
+                                <br> 使用条件：满10.10可用
+                                <br> 有效时间：2017-10-26
+                            </p>
+
+                        </section>
+
+                    </section>
+
+                    <section class="mui-col-xs-4 rihg_ee cen bgred">
+                        <p class="cf mt30">
+                            ￥<span class="fz28">100</span>
+                        </p>
+                        <p class="cf ">
+                            已过期
+                        </p>
+                    </section>
+
+
+
+                </li>
+            </ul>
+                
+          </div>
+          
+
+        </div>
+    </section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/hongbao.js"></script>
+</body>
+
+</html>

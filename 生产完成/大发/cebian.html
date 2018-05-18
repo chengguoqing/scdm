@@ -1,0 +1,113 @@
+<!--侧边栏-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<section class="pd bg_kjhg_sert pt10 mui-row pm10">
+			<img src="img/login_logo.png" class="logo_klh_sd fl">
+			<section class="ov pr10">
+				<p class="fz16 cf tr mt30">
+					游客，欢迎您！
+				</p>
+				<p class="cf tr mt20 fz12 tyer_swr">
+					账户余额<br> ￥
+					<span class="fz30">0</span>
+				</p>
+			</section>
+		</section>
+		<ul class="mui-table-view" id="cebian">
+			<li class="mui-table-view-cell" @tap="zhu_er('user/xiugai','fade-in',{id_s:0,title:'修改登录密码'})">
+				<a class="mui-navigate-right">
+					<span class="f_b sjh_icosdr"><i class="dx icon-ren fz28 cz"></i></span>
+					<span class="fz16 z3">
+                    修改登录密码
+                </span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell" @tap="zhu_er('user/xiugai','fade-in',{id_s:1,title:'修改支付密码'})">
+				<a class="mui-navigate-right">
+					<span class="f_b sjh_icosdr"><i class="dx icon-yaochi fz28 cz"></i></span>
+					<span class="fz16 z3">
+                    修改支付密码
+                </span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell" @tap="zhu_er('user/bangka','fade-in')">
+				<a class="mui-navigate-right">
+					<span class="f_b sjh_icosdr"><i class="dx icon-yinhangqia fz24 cz"></i></span>
+					<span class="fz16 z3">
+                    银行卡管理
+                </span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell" @tap="zhu_er('user/bhsd','fade-in')">
+				<a class="mui-navigate-right">
+					<span class="f_b sjh_icosdr"><i class="dx icon-shezhishedingpeizhichilun fz28 cz"></i></span>
+					<span class="fz16 z3">
+                    偏好设定
+                </span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell" @tap="zhu_er('user/bangzhu','fade-in')">
+				<a class="mui-navigate-right">
+					<span class="f_b sjh_icosdr"><i class="dx icon-bangzhu fz24 cz"></i></span>
+					<span class="fz16 z3">
+                    帮助说明
+                </span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					<span class="f_b sjh_icosdr"><i class="dx icon-tuichu fz20 cz"></i></span>
+					<span class="fz16 z3">
+                    登入
+                </span>
+				</a>
+			</li>
+		</ul>
+		<span class="sd_jgh_sdr bgred cf">
+    V4.0.8
+    </span>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script>
+			var km = new Vue({
+				el: '#cebian',
+				data: {
+
+				},
+				methods: {
+					zhu_er: function(url, don, zhi) {
+						var menu = plus.webview.currentWebview().opener(); 
+						
+						menu.evalJS("cloisd();");
+						mui.openWindow({
+							url: url + '.html',
+							id: url,
+							show: {
+								aniShow: don ? don : "pop-in", //动画
+								duration: 300 //持续时间
+							},
+							extras: zhi
+						});
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

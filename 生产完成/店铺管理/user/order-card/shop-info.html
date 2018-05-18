@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/cssamin.css" rel="stylesheet" />
+    <title>店铺信息</title>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">店铺信息</h1>
+        <span class="mui-btn-link mui-pull-right cf ">关闭</span>
+    </header>
+    <div class="mui-content  a-fadein bgff" id="app">
+        <section class="basd_ssd_xdrtx">
+            <section class="">
+
+            </section>
+
+
+            <div class="swiper-container sd_uyt_xsdf_xdfx">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="br in df_iu.banner"><img v-bind:src="br"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+
+        </section>
+
+        <p class="fz16 cen z14 pt20 pm20">
+            小城味道食铺
+        </p>
+
+        <ul class="mui-table-view sd_uyu_ul mt0   ">
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf zc fz16  tl">
+
+                    营业时间：
+                </p>
+                <section class="ov fz16">
+                    09:00 - 18:00
+                </section>
+            </li>
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf zc fz16  tl">
+
+                    餐厅地址：
+                </p>
+                <section class="ov fz16">
+                    白云区燕山红镇云环中路
+                    <a class="sd_iuy_xsrfx fz14">查看</a>
+                </section>
+            </li>
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf zc fz16  tl">
+
+                    餐厅电话：
+                </p>
+                <section class="ov fz16">
+                    18188106440
+                    <a class="sd_iuy_xsrfx fz14" href="tel:18188106440">拨打</a>
+                </section>
+            </li>
+
+        </ul>
+
+
+        <section class="pd pt10 pm10 z14 fz16  sd_xsd_xrtx ">
+            订单备注
+            <a class="fr zc" href="#topPopover">
+                <i class="fa fa-angle-down fz24"></i>
+            </a>
+        </section>
+        <p class="pd pt10 pm10 bgff bbm">
+            <textarea class="fz16 mpt0" rows="4" placeholder="这里是餐厅介绍信息" v-text="df_iu.yijian_text"></textarea>
+        </p>
+        <div id="topPopover" class="mui-popover">
+            <div class="mui-popover-arrow"></div>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view">
+
+
+                        <li class="mui-table-view-cell" v-for="yj in  df_iu.tishi" v-on:click="xiug_uj(yj)">
+                            <a href="#" v-text="yj"></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <p class="pd mt30">
+            <button class="w100 bgred fz16 pt10 pm10">保存</button>
+        </p>
+
+
+    </div>
+   <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js">
+
+
+    </script>
+    <script src="../../js/mui.picker.min.js"></script>
+    <script src="../../js/swiper3.07.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/base.js"></script>
+    <script>
+        
+      
+
+         var sd_oii={}
+         sd_oii.tishi=['界面显示错乱', '启动缓慢,卡出翔了', '偶发性崩溃', 'UI无法直视,丑哭了']; //初始化快捷输入的提示
+         sd_oii.yijian_text=""
+         sd_oii.banner=["../../img/banner.jpg",'../../img/banner2.jpg','../../img/banner3.jpg','../../img/banner4.jpg','../../img/banner5.jpg']
+        
+        var km = new Vue({
+            el: '#app',
+            data: {
+                df_iu:sd_oii
+                
+            },
+            methods: {
+                xiug_uj:function(x){
+                     mui('#topPopover').popover('toggle'); //隐藏弹出层
+                     sd_oii.yijian_text = x
+                }
+            }
+        })
+        
+        
+          var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 2000, //自动滑动 滚动速度
+            loop: true, //循环
+            pagination: '.swiper-pagination', //分页器的class的名字
+        })
+        
+    </script>
+
+</body>
+
+</html>

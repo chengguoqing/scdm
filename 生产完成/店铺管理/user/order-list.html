@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/cssamin.css" rel="stylesheet" />
+    <title>确认下单</title>
+    <style>
+        body {
+            background: #EFEFF4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">确认订单</h1>
+    </header>
+    
+     <div class="mui-content  a-fadein" id="app">
+       <section class="pd pt10 pm10 bgff">
+           <ul>
+               <li>
+                   <p class="mui-col-xs-3 fz15 tr  fl">下单时间:</p>
+                   <p class="ov z14 fz16 pl10">03-25 12:14</p>
+                   <p class="qc"></p>
+               </li>
+                 <li class="mt5">
+                   <p class="mui-col-xs-3 fz15 tr  fl">下单用户:</p>
+                   <p class="ov z14 fz16 pl10">他说微信昵称</p>
+                   <p class="qc"></p>
+               </li>
+                 <li class="mt5">
+                   <p class="mui-col-xs-3 fz15 tr  fl">就餐桌台:</p>
+                   <p class="ov z14 fz16 pl10">客满楼</p>
+                   <p class="qc"></p>
+               </li>
+                 <li class="mt5">
+                   <p class="mui-col-xs-3 fz15 tr  fl">订单状态:</p>
+                   <p class="ov z14 fz16 pl10">已确认</p>
+                   <p class="qc"></p>
+               </li>
+           </ul>
+       </section>
+       
+        <section class="   pd bgff mt10">
+            <ul class="sd_dff_xdfrtx">
+                  <li class="pt10 pm10 bbm" >
+                    <p class="mui-col-xs-8 fl fz16 z14">
+                      名称
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                      数量
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        小计
+                    </p>
+                    <p class="qc"></p>
+                </li>
+                
+                
+                <li class="pt10 pm10 bbm" v-for="jkm in sd_iuux.gwc">
+                    <p class="mui-col-xs-8 fl fz16 z14">
+                        {{jkm.name}}
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        {{jkm.sd_p}}
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                          {{'￥'+(jkm.sd_p*jkm.dj)}}
+                    </p>
+                    <p class="qc"></p>
+                    <section class="mt10 btm df_xsd_xsrtx" v-if="jkm.type==2">
+                        <p class="pt5 pm5" v-for="sdf in jkm.tc_iius">{{sdf.name+"x"+(sdf.num*jkm.sd_p)}}</p>
+                    </section>
+                         <!--<section class="mt10 btm df_xsd_xsrtx" v-if="jkm.type==1">
+                        <p class="pt10 pm10 bbm" v-for="sdf in jkm.guige" v-if="sdf.num>0">{{sdf.name+"x"+(sdf.num*jkm.sd_p)}}</p>
+                    </section>-->
+                </li>
+            </ul>
+            
+            <section class="mui-col-xs-4 fr pm20">
+               <section class="sd_iuy_row mt10">
+                <p class="mui-col-xs-6 z14 fz15 fl">
+                    合计:
+                </p>
+                <p class="ov z14 cen">￥{{sd_iuux.zj}}</p>
+                <p class="qc"></p>
+                </section>
+                   <section class="sd_iuy_row mt5">
+                <p class="mui-col-xs-6 z14 fz15 fl">
+                    现金:
+                </p>
+                <p class="ov z14 cen">￥40</p>
+                <p class="qc"></p>
+                </section>
+                   <section class="sd_iuy_row mt5">
+                <p class="mui-col-xs-6 z14 fz15 fl">
+                    待付:
+                </p>
+                <p class="ov z14 cen">￥40</p>
+                <p class="qc"></p>
+                </section>
+            </section>
+            
+            
+            <p class="qc"></p>
+
+        </section>
+        
+        
+        
+      <!--底部-->
+       <footer class="sd_uyty_xsdx ab btm">
+             <a class="mui-btn bgred act"><span>订单列表</span></a>
+           <a class="mui-btn bgred" href="order-list.html">会员中心</a>
+           <a class="fa fa-plus-circle red df_xsd_Xrrx"></a>
+       </footer>
+       
+           <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+    </div>
+     <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script>
+    
+        
+         var sd_iuux=""
+         try{
+             sd_iuux=JSON.parse(localStorage.gwc) 
+         }catch(e){
+                 window.location.href="order-index.html"
+         }
+        var km = new Vue({
+            el: '#app',
+            data: {
+                sd_iuux:sd_iuux
+            },
+            methods: {
+                xiug_uj:function(x){
+                     mui('#topPopover').popover('toggle'); //隐藏弹出层
+                     sd_oii.yijian_text = x
+                }
+            }
+        })
+
+    </script>
+    </body>
+</html>

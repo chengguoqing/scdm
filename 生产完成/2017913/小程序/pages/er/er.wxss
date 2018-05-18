@@ -1,0 +1,11 @@
+/* pages/er/er.wxss */
+page{
+  background: #fff
+}
+.dsf_iuy_df{
+  width: 240rpx;
+  height: 200rpx;
+}
+.dsf_d_sdf{
+  width: 480rpx;
+}

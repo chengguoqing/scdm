@@ -1,0 +1,76 @@
+<!--搜索-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .mui-search:before {
+            margin-top: -10px;
+        }
+	.mui-search:before{
+				top: 26% !important;
+			}
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left z3 fz"></a>
+        <h1 class="mui-title z3">关键词搜索</h1>
+
+    </header>
+    <div class="mui-content" id="ser_sdf">
+
+        <section class="pd mt40">
+            <p class="search_type">
+                <span>宝贝</span>
+            </p>
+
+
+            <div class="mui-input-row mui-search se_sd_srtx bgff">
+                <input type="search" class="mui-input-clear w100" placeholder="请输入关键词">
+            </div>
+
+          
+
+        </section>
+        <section class="pl10">
+          <p class="mt30">
+                <i class="dx icon-huo"></i>
+                <span>热门搜索</span>
+            </p>
+            <section class="mt10">
+                <span class="dsf_jh_dtxc" v-for="sd in 10">
+                男装 女装 风衣
+                </span>
+            </section>
+        </section>
+
+
+    </div>
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        var km = new Vue({
+            el: '#ser_sdf',
+            data: {
+
+            },
+            methods: {
+
+            },
+            mounted() {}
+        })
+
+    </script>
+</body>
+
+</html>

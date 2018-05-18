@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <section class="mui-bar-tab bgff dfg_dfdf_sdfg pd">
+        <a class="mui-tab-item mui-active" href="#th1">未完成</a>
+        <a class="mui-tab-item" href="#th2">已完成</a>
+    </section>
+
+
+    <section class="mui-content pd pr">
+        <section id="th1" class="mui-control-content  mui-active">
+            <p class="sdsf_dfdggx">
+            <img src="img/chads_s.png" >
+            </p>
+            
+            <p class="zd fz16 cen mt40">
+            暂时没有任何记录！
+            </p>
+
+        </section>
+        <section id="th2" class="mui-control-content ">
+
+            <section class="sd_dfd_row ">
+                <p class="fz15 pt10 pm10">
+                    订单号: 613051524
+                </p>
+                <section class="yj4 bgff pd pm10">
+                    <section class="bbm pm5 pt5 pr">
+                        <i class="f_i dsf_df_fdgx fl"></i>
+                        <span class="fz17  ml10 mt2 fl sdsf_sd_dgf">已完成</span>
+
+                        <a href="#share_pp" class="f_i fdng_icon"></a>
+                        <p class="qc"> </p>
+                    </section>
+
+                    <section class="ze fz16 dsf_dff_dggxc pt10 pm10">
+                        日期 : 22015.05.25<br> 时间段 : 09:00-11-00（营业段）<br> 费用总计 :<span class="ls"> 35元</span>
+
+                    </section>
+
+                    <sectipn class="sd_fdf_dfdgx">
+                        <a class="yj4 fl">删除订单</a>
+                        <a class="yj4 act fr">查看订单</a>
+                        <p class="qc"></p>
+                    </sectipn>
+
+
+
+
+
+
+                </section>
+
+            </section>
+        </section>
+
+
+    </section>
+
+
+
+    <div id="share_pp" class="mui-popover mui-popover-bottom mui-popover-action ">
+        <section class="bgff pd">
+            <p class="cen pt10 pm10 fz16 z14">分享到</p>
+            <section class="box mt20">
+                <a class="box_a cen z14 fz16">
+                    <i class="f_i sdf_dsf_dsf"></i><br> QQ
+                </a>
+                <a class="box_a cen z14 fz16">
+                    <i class="f_i sdf_dsf_dsf ab"></i><br> QQ空间
+                </a>
+                <a class="box_a cen z14 fz16">
+                    <i class="f_i sdf_dsf_dsf ac"></i><br> 新浪微博
+                </a>
+                <a class="box_a cen z14 fz16">
+                    <i class="f_i sdf_dsf_dsf ad"></i><br> 微信
+                </a>
+            </section>
+            <section class="mt30 pm20 sd_fdf_dfdgx">
+                <a class="yj4 mui-block cen pt10 pm10 fz16" href="#share_pp">取消</a>
+            </section>
+
+        </section>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script>
+        $(function() {
+            $(".dfs_df_Dgfx i").on("click", function() {
+                var idx = $(this).index();
+                $(".dsf_df_dgfx").removeClass("act")
+                for (var i = 0; i <= idx; i++) {
+                    $(".dsf_df_dgfx").eq(i).addClass("act")
+                }
+            })
+
+            /*评价订单按钮触发*/
+            $(".dsf_df_fgxc").on("click", function() {
+                $(".sd_fdg_dfgdgfc").addClass("show")
+            })
+            $(".dsf_dff_dsfgx").on("click", function() {
+                $(".sd_fdg_dfgdgfc").removeClass("show")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

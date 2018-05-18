@@ -1,0 +1,90 @@
+<!--求租详情-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>求租详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<section id="Inquiry_details">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">{{deiy_s.title}}</h1>
+		</header>
+		<div class="mui-content" >
+			<section class="bgff">
+				<section class="pd pt10 ">
+					<p class="fz16 z3 ">
+						{{deiy_s.title}}
+					</p>
+
+					<section class="mt15">
+						<p class="fz12"> 
+							<span class="sdf_label">租 金：</span>
+							<span class="ye">{{good.budgetprice}}</span>
+						</p>
+						<p class=" mt5 fz12">
+							<span class="sdf_label">有效期：</span>{{good.leasetime}}
+							<span class="fr">浏览： {{good.total_click}}</span>
+						</p>
+					</section>
+				</section>
+
+				<section class="mt10 btm pt10 pd ">
+					<img :src="good.logo" class="yj df_iy_ddfg fl">
+					<p class="fl mui-col-xs-8 pl10 z3 mt10">
+						{{good.realname}}
+						<span class="sdsr_uysd yj4 pr" v-if="good.is_verify==1">认</span>
+					</p>
+					<p class="ov tr pt10" @tap="zhu('store','',{'user_id':good.user_id,'shopid':good.shopid})">
+						<a class="ye ">[商家店铺]</a>
+					</p>
+					<p class="qc"></p>
+
+					<p class="mt10 z3 fz15 z6">
+						电话：
+							<a class="mui-btn mui-btn-yellow yj20 fz14 df_liu_sdf cz" @tap="lijic(good.good_id,good.coatmoney)" v-if="!sd_sd_tel">立即查看</a>
+							<a :href="'tel:'+sd_sd_tel">{{sd_sd_tel}}</a>
+					</p>
+
+					<p class="mt10 z3 fz15 z6">
+						数量：{{good.number}}
+					</p>
+					
+					<p class="mt10 z3 fz15 z6 pm10"> 施工地点： {{good.mapaddr}}
+					</p>
+
+				</section>
+			</section>
+
+			<section class="mt10 bgff">
+				<p class="pt10 pm10 fz16 z3 sdf_d_sdfggx">
+					<span class="pd pm10">求租详情</span>
+				</p>
+				<!--<textarea placeholder="出租详情描述未录入..." class="das_d_sdgfgx mt5" rows="5"></textarea>-->
+
+<p class="dsf_sd_sdfg pd pt10" v-html="good.content">
+						
+					</p>
+			</section>
+
+			<button class="mui-btn mui-btn-primary fz16 dsf_sdddgx" @tap="sd_iy_d(deiy_s.title,good.id)">
+        	<i class="f_i dsf_iuysd"></i>立即预约
+        </button>
+
+		</div>
+</section>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/Inquiry_details.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!-- 提交订单 -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 提交订单 </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <section id="dingdansc">
+
+      <header_p :title="'提交订单'"></header_p>
+
+        <div class="mui-content " id="gwc_id_sd">
+            <section class="tio_iu_dertt pd">
+                <p class="cf fz20  pt30">
+                订单提交成功！
+                </p>
+                <p class="cf fz16 mt10">
+                您的包裹整装待发~~~
+                </p>
+            </section>
+            
+            <section class="pd bgff">
+                    <p class="pt10 pm10 z3 bbm">
+                您的商品将由申通快递为您配送
+                </p>
+                
+                <p class="ding_ersdrtt">
+                订单号：2017122690717<br>
+                    线下支付：0.00<br>
+                    配送方式：<span class="red">申通快递</span>
+                </p>
+                
+               <section class="mui-row mt10">
+                    <p class="mui-col-xs-6 pr10">
+                   <a class="mui-btn w100 fz14" @tap="c_index">
+                        返回首页
+                        </a>
+                   </p>
+                   
+                    <p class="mui-col-xs-6 pl10 pm20">
+                   <a class="mui-btn w100 fz14" @tap="zhu('/user/order_list','',{cn_id:0})">
+                        查看订单
+                        </a>
+                   </p>
+                </section>
+            </section>
+
+        </div>
+    </section>
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script>
+        var km = new Vue({
+            el: '#dingdansc',
+            data: {
+
+            },
+            methods: {
+
+            }
+        })
+
+    </script>
+
+
+
+
+</body>
+
+</html>

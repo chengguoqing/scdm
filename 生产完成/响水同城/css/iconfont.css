@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: "dx";
+  src: url('../fonts/iconfont.ttf?t=1510539697292') format('truetype')
+}
+
+.dx {
+  font-family:"dx" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phoneinner:before { content: "\e616"; }
+
+.icon-htbarrowright02:before { content: "\e6b4"; }
+
+.icon-cycle-qiche:before { content: "\e6ae"; }
+

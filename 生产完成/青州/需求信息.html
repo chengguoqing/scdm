@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="mui-input-row time bgff">
+        <label>预约时间</label>
+        <input type="text" class="mui-input-clear" readonly>
+    </div>
+
+
+
+
+    <p class="pd pt10 pm10 fz16">
+        早间段
+    </p>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell z">
+            06:00--8:30
+            <span class="red fz16 fr pr dsdf_sdfgx act">
+            预约已满
+                <i class="f_i dff_dffx"></i>
+            </span>
+        </li>
+    </ul>
+    <p class="pd pt10 pm10 fz16">
+        营业段
+    </p>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell z">
+            09:00--11:30
+            <span class="ls fz16 fr pr dsdf_sdfgx">
+            预约已满
+                <i class="f_i dff_dffx"></i>
+            </span>
+        </li>
+        <li class="mui-table-view-cell z">
+            11:00--13:00
+            <span class="ls fz16 fr pr dsdf_sdfgx">
+            
+                <i class="f_i dff_dffx"></i>
+            </span>
+        </li>
+        <li class="mui-table-view-cell z">
+            13:00--15:00
+            <span class="ls fz16 fr pr dsdf_sdfgx">
+            
+                <i class="f_i dff_dffx"></i>
+            </span>
+        </li>
+    </ul>
+
+    <p class="pd pt10 pm10 fz16">
+        晚间段
+    </p>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell z">
+            20:00--06:00（次日）
+            <span class="red fz16 fr pr dsdf_sdfgx">
+            
+                <i class="f_i dff_dffx"></i>
+            </span>
+        </li>
+    </ul>
+
+
+    <p class="mt30 pd">
+        <button class="bgls w100 fz18 pt10 pm10 cf">确定</button>
+    </p>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script>
+        $(function() {
+            var dtPicker = new mui.DtPicker({
+                "type": "date",
+                "beginYear": "1950" //开始时间
+
+            });
+            $('.time').on("tap", function() {
+                var hgp = $(this)
+                dtPicker.show(function(rs) {
+                    $(hgp).find("input").val(rs.text)
+                })
+
+            })
+
+            $(".dsdf_sdfgx").on("click", function() {
+                $(".dsdf_sdfgx").removeClass("act")
+                $(this).addClass("act")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

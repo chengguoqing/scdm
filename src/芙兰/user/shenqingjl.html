@@ -1,0 +1,67 @@
+<!--申请记录   -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>申请记录 </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="shenqingjl">
+   <header_p :title="'申请记录'"></header_p>
+        <section class="pd pt10 pm10 bgff z6 df_jh_swertx btm">
+            账户余额 <span class="red fz28">0.00</span>
+        </section>
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper dsf_kjh_dert ">
+            <div class="mui-scroll">
+
+        
+        <div class="mui-card m0 mycard mt10" v-for="sf in sd_sdf">
+				<div class="mui-card-header">
+                    充值
+                    <span class="z9 fz12 fr">2018-01-06</span>
+            
+            </div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner pr">
+						
+                        <ul class="sd_jihg_sert">
+                            <li>
+                                金额： <span class="red fz16 b">500.00</span>
+                            </li>
+                               <li>
+                                会员备注：购买一件代发会员
+                            </li>
+                               <li>
+                               管理员备注：N/A
+                            </li>
+                               <li>
+                               状态：未确认
+                                 
+                            </li>
+                        </ul>
+                          <a class="mui-btn quxiaoser">取消</a>
+					</div>
+				</div>
+				
+			</div>
+        
+            </div>
+        
+        
+    </div>
+</section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/shenqingjl.js"></script>
+</body>
+
+</html>

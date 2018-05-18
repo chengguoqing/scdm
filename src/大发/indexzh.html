@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+	
+
+		<div class="mui-scroll-wrapper mui-content" id="index_ise">
+			<div class="mui-scroll">
+				<!--        banner-->
+				<section class="banner_sdf">
+					<div class="swiper-container df_sd_sdgxc">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"> <img src="img/20171227115559_1905.jpg?v=1"> </div>
+							<div class="swiper-slide"> <img src="img/20171220103709_6191.jpg?v=1"></div>
+							<div class="swiper-slide"> <img src="img/20170620130916_7016.png"></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</section>
+				<section class="bgred pd pt5 pm5 mui-row">
+					<i class="dx icon-laba cf fl labdfgfxc"></i>
+					<section class="ov pl5">
+						<marquee class="cf fz14 c_s_sdrttxc">尊敬的客户您好，为了保障客户能够体验更好的游戏乐趣，现本公司已经整体系统升级，感谢您对我们大发的支持，祝您游戏愉快！ </marquee>
+					</section>
+				</section>
+
+				<section class="pd pt10 pm10 bgff">
+
+					<section class="fen_le_top pr">
+						        <section class="mui-bar-tab df_jh_ser_ds pr">
+                                <a class="mui-tab-item" :class="idx==0?'mui-active':''" v-for="(st,idx) in sd_srt" @tap="qieguna(idx)">
+                                {{st.name}}
+                                </a>
+
+                                <p class="qc"></p>
+                            </section>
+
+						<span class="red fz12 gengdu_serxr" onclick="zhuer('suoyouyx.html')">更多<i class="dx icon-gengduo cz fz14"></i></span>
+					</section>
+
+					<section class="mui-content">
+                        
+                                <section class="mui-row mt10">
+                                    <section class="mui-col-xs-6 dsf_jhkh_as " v-for="list in sd_srt[num_s].data" @tap="lcoal_s(list.url)" >
+                                        <p class="dsf_jgh_sdrt">
+                                            <span class="yj bgred df_khg_eerc">{{list.num}}</span>
+                                            <img :src="list.img">
+                                        </p>
+                                        <section class="dsf_unhwer">
+                                            <p class="dianer dsf_uh_sd z3">
+                                               {{list.name}}
+                                            </p>
+
+                                        </section>
+                                    </section>
+                                    
+                                 
+                       
+
+                                    <section v-if="!sd_srt[num_s].data">
+                                  <p class="cen pt20 pm20">
+                                          <i class="dx icon-warningAlert fz18 cz"></i>
+                                        您尚未收藏游戏
+                                        </p>
+                                    </section>
+
+
+
+                                </section>
+                        
+					</section>
+
+				</section>
+			</div>
+
+		</div> 
+
+	    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/swiper3.07.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/page/idnex.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 5000,
+				loop: true,
+				pagination: '.swiper-pagination',
+				paginationClickable: true
+			})
+			mui('.mui-scroll-wrapper').scroll({
+
+			});
+			
+			
+		</script>
+	</body>
+
+</html>

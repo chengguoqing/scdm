@@ -1,0 +1,80 @@
+<!--商户修改-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商户修改</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/weui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <p class="weui-cells__title">信息修改</p>
+    <section class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">店铺名称</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入店铺名称" value="小明擦餐厅" readonly>
+            </div>
+        </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">店铺地址</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入店铺地址" value="店铺地址">
+            </div>
+        </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">法人姓名</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入店铺名称" value="叶晓明">
+            </div>
+        </div>
+    </section>
+    
+    
+        <p class="weui-cells__title">结算及费率</p>
+    <section class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">结算银行</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入结算银行" value="招商银行">
+            </div>
+        </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">结算卡号</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  id="cardNo" placeholder="请输入结算卡号" value="结算卡号">
+            </div>
+        </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label d_sr_srtxc">手续费(微信、支付宝)</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入手续费" value="0.25%">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label d_sr_srtxc">手续费(银行卡支付)</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入手续费" value="0.55%">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label d_sr_srtxc">手续费(小额银行卡支付)</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tr z6" type="text"  placeholder="请输入手续费" value="0.39%">
+            </div>
+        </div>
+    </section>
+    
+    
+     <div class="weui-btn-area">
+          <a class="weui-btn weui-btn_default" href="javascript:" id="showTooltips">修改信息</a>
+        <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">返回</a>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/base.js"></script>
+    </body>
+</html>

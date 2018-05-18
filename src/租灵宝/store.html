@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.sdf_d_dfgg {
+				background: #F6F6F6 !important;
+			}
+			
+			.adsfdfdc {
+				padding: 20px;
+			}
+			
+			.lie_hsd {
+				width: 22px;
+				height: 16px;
+				background-position: -149px -36px;
+			}
+			
+			.lie_hsd.mkoisd {
+				background-position: -85px -291px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section id="store">
+			<top_menu @meh="mehf_ddf"></top_menu>
+			<section class="index_banner pr mt45">
+				<banner :ba_r="banner"></banner>
+			</section>
+
+			<section v-if="sd_sdf==1">
+				<section v-for="sx in sd_dfx">
+					<meiti :title="sx.title" :jixie="sx.list"></meiti>
+				</section>
+
+			</section>
+			<section class="cen mt40" id="fdsf_df_dsdff">
+				<img src="img/meiyou.png" class="df_dd_drt" />
+				<p class="ls fz20">
+					暂无记录！
+				</p>
+			</section>
+			<section v-if="sd_sdf==2">
+				<p class="dsf_d_dfc cen mt20"><span>关于我们</span></p>
+				<section v-html="guyu" class="pd pt10 "></section>
+			</section>
+
+			<section v-if="sd_sdf==3" class="pd">
+				<graphic_list :title="'工程案例'" :jixie="case_anli"></graphic_list>
+			</section>
+
+			<section v-if="sd_sdf==4" class="pd">
+				<graphic_list :title="'服务团队'" :jixie="df_sdfx"></graphic_list>
+			</section>
+
+			<section v-if="sd_sdf==5">
+				<p class="dsf_d_dfc cen mt20"><span>关于我们</span></p>
+
+				<ul class="mui-table-view mt0">
+
+					<li class="mui-table-view-cell">
+
+						公司名称
+						<span class="z9 fr mr15 fz14">
+                    {{lianix.company}}
+                    </span>
+
+					</li>
+					<li class="mui-table-view-cell">
+
+						真实姓名
+						<span class="z9 fr mr15 fz14">
+                       {{lianix.realname}}
+                    </span>
+
+					</li>
+					<li class="mui-table-view-cell">
+
+						电话
+						<span class="z9 fr mr15 fz14">
+                        {{lianix.tel}}
+                    </span>
+
+					</li>
+					<li class="mui-table-view-cell">
+
+						营业时间
+						<span class="z9 fr mr15 fz14">
+                        {{lianix.ervicetime}}
+                    </span>
+
+					</li>
+					<li class="mui-table-view-cell">
+
+						<span class="fl" style="height: 60px;width: 80px;">
+							详细地址
+						</span>
+						<span class="z9 ov   mr15 fz14 tl">
+                        {{lianix.adder}}
+                    </span>
+
+					</li>
+				</ul>
+			</section>
+
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script src="js/swiper3.07.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/component/top_menuw.js"></script>
+		<script src="js/component/banner.js"></script>
+		<script src="js/component/media_list.js"></script>
+		<script src="js/component/graphic_list.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/store.js"></script>
+
+	</body>
+
+</html>

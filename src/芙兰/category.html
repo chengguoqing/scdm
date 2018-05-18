@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/pi_cs.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.mui-pull-top-pocket {
+				top: 125px;
+			}
+			
+			body,
+			html {
+				height: 100%;
+				overflow: hidden;
+			} 
+			
+			#pullrefresh,
+			#ss_listd {
+				height: 100%;
+			}
+			
+			#f_uty_er_drt {
+				background: #fff;
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		<div id="ss_listd">
+			<section class="gd " id="f_uty_er_drt">
+				
+				<header class="mui-bar mui-bar-nav asd_uy_dftx bbm">
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+					<h1 class="mui-title z3 df_iy_rttc">
+                    <input type="search" placeholder="请输入商品名称 货号">
+                    <i class="mui-icon mui-icon-search"></i>
+                </h1>
+					<a class="mui-icon  mui-pull-right z9 fz16 mt5">
+						筛选
+					</a>
+				</header>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted quyu_srtx ab dsf_iuy_erttxc">
+
+					<div class=" mui-scroll ">
+
+						<a class="mui-control-item" v-for="(cn,idx) in caidan" :class="idx==0?'mui-active':''">
+							{{cn.name}}
+						</a>
+					</div>
+				</div>
+
+				<section class="soiy_srtxcf">
+					<section class="pd   bgff box cen fz16 df_juhg_drtxc btm ">
+
+						<a class="z6 box_a sore_sdf " v-for="(sh,idx) in sd_dsdf" @tap="sd_uiyd(idx)" :class="[sh.cls,sh.ty]">
+							<span class="hm_s"> 
+                        <span>{{sh.name}}</span>
+							<span class="pr sdf_ih_sdertxc" v-if="sh.ty">
+                      <i class="dx icon-paixu-copy"></i>
+                  <i class="dx icon-paixu-copy "></i>
+                 </span>
+							</span>
+
+						</a>
+						<a class="z6 box_a blm df_ih_drtc" @tap="dsf_iy_s">
+							<i class="dx icon-fenlei_liebiao fz22" v-if="sd_iyd"></i>
+							<i class="dx icon-fenleiliebiao  fz22" v-else></i>
+						</a>
+					</section>
+				</section>
+
+			</section>
+
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper top_iuty_drt">
+				<div class="mui-scroll" :class="sd_iyd"> 
+
+					<list_tu_p :df_sd_sd="df_sd_sd"></list_tu_p>
+
+				</div>
+			</div>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+				<script src="js/base.js"></script>
+		<script src="js/components/list_tu_p.js"></script>
+		<script src="js/page/category.js"></script>
+
+	</body>
+
+</html>

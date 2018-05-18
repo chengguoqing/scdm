@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+   <section id="app">
+    <section class="sd_iiu_xsd pd">
+        <img src="../img/neus.jpg" class="sd_iuu_xsdx fl yj">
+        <section class="ov pl20 pt10">
+            <p class="cf fz18">微距科技 张强 </p>
+            <p class="mt10 dsdsd_xdsx ">
+                小城味道（管理员）
+            </p>
+        </section>
+        <p class="qc"></p>
+        <section class="box mt20 cen sd_xsdxrex">
+            <p class="box_a cf">
+                <span class="fz24">0</span><br> 今日订单
+            </p>
+            <p class="box_a cf">
+                <span class="fz24">0</span><br> 今日总营业额
+            </p>
+            <p class="box_a cf">
+                <span class="fz24">0</span><br> 今日总收入
+            </p>
+
+        </section>
+    </section>
+
+    <section>
+        <ul class="mui-table-view mui-grid-view mui-grid-9 bgff dfs_xsd_crx">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="shop-set.html">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <div class="mui-media-body">店铺设置</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="table-manage.html">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <div class="mui-media-body">餐台管理</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="product-manage.html">
+                    <span class="mui-icon mui-icon-chatbubble"></span>
+                    <div class="mui-media-body">菜品管理</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="clerk-manage.html">
+                    <span class="mui-icon mui-icon-location"></span>
+                    <div class="mui-media-body">员工管理</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="discount.html">
+                    <span class="mui-icon mui-icon-search"></span>
+                    <div class="mui-media-body">优惠设置</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="comment.html">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <div class="mui-media-body">评论管理</div>
+                </a>
+            </li>
+
+
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="printer-set.html">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <div class="mui-media-body">打印设置</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="#">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <div class="mui-media-body">数据统计</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <a href="advanced-set.html">
+                    <span class="mui-icon mui-icon-phone"></span>
+                    <div class="mui-media-body">高级设置</div>
+                </a>
+            </li>
+        </ul>
+
+
+    </section>
+<!--
+    <nav class="mui-bar mui-bar-tab sdfdd_xssd">
+        <a class="mui-tab-item mui-active">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">主页</span>
+        </a>
+
+        <a class="mui-tab-item">
+            <span class="mui-icon mui-icon-email"></span>
+            <span class="mui-tab-label">动态</span>
+        </a>
+        <a class="mui-tab-item">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">切换店铺</span>
+        </a>
+    </nav>-->
+    
+    <my-component></my-component>
+    </section>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/mokuai.js"></script>
+    <script>
+        Vue.component('my-component', {
+            template: dibu
+        })
+
+        var km = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.message = "程国庆"
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

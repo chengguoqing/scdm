@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <style>
+        #bside_left {
+            width: 260px;
+            height: 510px;
+            padding: 10px 0px 10px 10px;
+            float: left;
+            overflow: auto;
+        }
+
+        #bside_rgiht {
+            width: 631px;
+            height: 530px;
+            margin-left: 10px;
+            border-left: 1px solid #5688CB;
+            float: left;
+            font-size: 12px;
+        }
+
+        #container {
+            width: 621px;
+            height: 520px;
+            border: 5px solid #fff;
+        }
+
+        #no_value {
+            color: red;
+            position: relative;
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="height:53px;">
+        <div class="search">
+            <div class="search_c"><input type="text" class="search_t" onKeyPress="if(event.keyCode==13) {btnSearch.click();return false;}" /></div>
+            <div id="btn_search" class="btn">搜索</div>
+        </div>
+        <div class="poi">
+            <div class="poi_note">当前坐标：</div>
+            <input type="text" id="poi_cur" />
+            <div class="poi_note">当前地址：</div>
+            <input type="text" id="addr_cur" />
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="bside_left">
+            <div id="txt_pannel">
+                <h3>功能简介：</h3>
+
+                <p>1、支持地址 精确/模糊 查询；</p>
+
+                <p>2、支持POI点坐标显示；</p>
+
+                <p>3、坐标鼠标跟随显示；</p>
+
+                <h3>使用说明：</h3>
+
+                <p>在搜索框搜索关键词后，地图上会显示相应poi点，同时左侧显示对应该点的信息，点击某点或某信息，右上角会显示相应该点的坐标和地址。</p>
+            </div>
+
+        </div>
+        <div id="bside_rgiht">
+            <div id="container"></div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+    <script src="js/ditu.js"></script>
+</body>
+
+</html>

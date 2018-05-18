@@ -1,0 +1,324 @@
+<!--确认支付-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>确认支付</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav asd_uy_dftx bbm">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+			<h1 class="mui-title z3">确认支付</h1>
+
+		</header>
+
+		<div class="mui-scroll-wrapper mt45" id="queren">
+			<div class="mui-scroll">
+				<section class="pd pt10 pm10 top_iu_sdf">
+
+					<i class="dx icon-map cf fz30 fl mt20"></i>
+					<section class="ov pr40 pl20 pr" @tap="zhu('consignee')">
+						<a class="dx icon-biji bianhj_sdfx"></a>
+						<p class="cf fz16">
+							收货人：独行工匠
+						</p>
+						<p class="cf fz12 dfxiang_sd">
+							收货地址：中国广东广州白云区白云区石井街道红星工业路17号
+						</p>
+
+					</section>
+
+					<p class="qc"></p>
+				</section>
+				<section class="pd bgff pt10 pm10 mt10 mui-action-back">
+					<a class="z6 fz14 " >
+						<i class="dx icon-fanhui1 z6 fz20 cz"></i>
+						<span>返回购物车</span>
+					</a>
+					<a class="fr z9 fz14">
+						修改购物信息
+					</a>
+				</section>
+
+				<section class=" pt10 pm10 bgff mt10">
+
+					<p class="pd">
+						<span class="dx icon-ziying qian_sdfx yj4"></span>
+						<span class="z3 ml5">网站自营</span>
+					</p>
+
+					<p class="pd red pt5 pm10 btm mt10">
+						现货区
+					</p>
+					<ul class="mui-table-view dsf_jhj_s bgff">
+						<!--            li加act编辑-->
+						<li class="mui-table-view-cell ">
+
+							<div class="mui-slider-handle h100">
+
+								<img src="https://m.flan1688.com/images/201712/thumb_img/1876_thumb_G_1513797122642.jpg" class="jhgf_sdrx fl">
+								<section class="ov pl10 pr">
+									<p class="dianer df_h_sderx">
+
+										木子衣芭2017秋装 | 100件/份
+									</p>
+									<p class="z9 fz12">
+										颜色:杂色 尺码:标准码
+									</p>
+									<p class="fz12 red">
+										48.00
+										<del class="z9 ml5">96</del>
+										<span class="fr z9">X100</span>
+									</p>
+
+								</section>
+								<p class="qc"></p>
+							</div>
+						</li>
+						<li class="mui-table-view-cell ">
+
+							<div class="mui-slider-handle h100">
+
+								<img src="https://m.flan1688.com/images/201712/thumb_img/1876_thumb_G_1513797122642.jpg" class="jhgf_sdrx fl">
+								<section class="ov pl10 pr">
+									<p class="dianer df_h_sderx">
+
+										木子衣芭2017秋装 | 100件/份
+									</p>
+									<p class="z9 fz12">
+										颜色:杂色 尺码:标准码
+									</p>
+									<p class="fz12 red">
+										48.00
+										<del class="z9 ml5">96</del>
+										<span class="fr z9">X100</span>
+									</p>
+
+								</section>
+								<p class="qc"></p>
+							</div>
+						</li>
+
+					</ul>
+
+					<section class="btm pt10 pm10 pd df_sd_srrsxd " :class="dfdf_a"> 
+						<p class="pr" @tap="dfdf_a?dfdf_a='':dfdf_a='act'">
+							<span class="dx icon-youhuiquan qian_sdfx yj4 ab"></span>
+							<span class="yeer ml5">使用店铺优惠券/积分</span>
+							<i class="mui-icon mui-icon-arrowdown fz18 fr xng_dsd_sftx"></i>
+						</p>
+						<section class="btm mt10 pt10 df_jh_erdrtxc">
+							<p class="pr">
+								<i class="mui-icon mui-icon-arrowdown fz18 fr down_ssdr"></i>
+								<select>
+									<option>使用店铺优惠券/积分</option>
+									<option>使用店铺优惠券/积分</option>
+								</select>
+							</p>
+
+							<p class="pr">
+								<input type="text" placeholder="使用积分">
+							</p>
+							<p>
+
+								您的积分:223 积分，本订单可用484800 积分
+							</p>
+							<p>
+								或 <span class="yeer">直接输入优惠券号</span>
+							</p>
+
+							<section class="mui-row dsf_jh_drtxc mt10">
+								<p class="mui-col-xs-9 pr5">
+									<input type="text" placeholder="输入优惠券">
+								</p>
+								<p class="mui-col-xs-3 pl5">
+									<a class="mui-btn mui-btn-red fz16">使用</a>
+								</p>
+							</section>
+
+						</section>
+
+					</section>
+
+					<section class="btm pt10  pd">
+						<p class="pr pm10 bbm">
+							<span class="dx icon-peisong qian_sdfx yj4 ab fz18"></span>
+							<span class="yeer ml5">选择配送方式</span>
+						</p>
+
+						<p class="fangh_sd_dfx">
+							<a v-for="(ki,idx) in kuidi" :class="ki.cls" @tap="zjg_sd_d(idx)">{{ki.name}}</a>
+							
+						</p>
+
+						<p class="mt10">
+							由商家选择合作快递为您配送： 免邮
+						</p>
+
+					</section>
+
+				</section>
+
+				<section class="bgff mt10">
+					<section class="btm pt10 pm10 pd df_sd_srrsxd " :class="dfdf_b">
+						<p class="pr"  @tap="dfdf_b?dfdf_b='':dfdf_b='act'">
+							<span class="dx icon-quehuo qian_sdfx yj4 "></span>
+							<span class="z3 ml5">缺货处理</span>
+							<span class="fr">
+                     缺货处理
+                          <i class="mui-icon mui-icon-arrowdown fz18  xng_dsd_sftx"></i>
+                     </span>
+
+						</p>
+						<section class="btm mt10 pt10 df_jh_erdrtxc">
+
+							<p class="dsfer_jh_dr " :class="ql.cls" v-for="(ql,idx) in quhql" @tap="zjg_sd(idx)">
+								<i class="dx icon-bugouxuan gouxinsdrx fz22 act cz"></i>
+								{{ql.name}}
+							</p>
+						
+
+						</section>
+
+					</section>
+
+					<section class="btm pt10 pm10 pd df_sd_srrsxd " :class="dfdf_c">
+						<p class="pr" @tap="dfdf_c?dfdf_c='':dfdf_c='act'">
+							<span class="dx icon-jiahao1 qian_sdfx yj4 fz18 "></span>
+							<span class="z3 ml5">订单备注</span>
+							<span class="fr">
+                     
+                          <i class="mui-icon mui-icon-arrowdown fz18  xng_dsd_sftx"></i>
+                     </span>
+
+						</p>
+						<section class="btm mt10 pt10 df_jh_erdrtxc">
+
+							<textarea placeholder="请输入订单备注" class="dingd_dsdtxc"></textarea>
+
+						</section>
+
+					</section>
+
+				</section>
+
+				<section class="bgff mt10">
+					<section class="btm pt10 pm10 pd df_sd_srrsxd " :class="dfdf_d">
+						<p class="pr" @tap="dfdf_d?dfdf_d='':dfdf_d='act'">
+							<span class="dx icon-shizhong qian_sdfx yj4 "></span>
+							<span class="z3 ml5">送货时间</span>
+							<span class="fr">
+                     请选择送货时间
+                          <i class="mui-icon mui-icon-arrowdown fz18  xng_dsd_sftx"></i>
+                     </span>
+
+						</p>
+						<section class="btm mt10 pt10 df_jh_erdrtxc">
+
+							<p class="dsfer_jh_dr " :class="ql.cls" v-for="(ql,idx) in shsj" @tap="zjg_sd_b(idx)">
+								<i class="dx icon-bugouxuan gouxinsdrx fz22 act cz"></i>
+								{{ql.name}}
+							</p>
+
+							<p class="mt10">
+								送货时间仅作参考，快递公司会尽量满足您的要求
+							</p>
+						</section>
+
+					</section>
+
+					<section class="btm pt10 pm10 pd df_sd_srrsxd " :class="dfdf_e">
+						<p class="pr"  @tap="dfdf_e?dfdf_e='':dfdf_e='act'">
+							<span class="dx icon-yue qian_sdfx yj4  "></span>
+							<span class="z3 ml5">
+                  <i class="dx icon-bugouxuan icon-gou3 f_ih_drttxc fz22 act cz"></i>  使用账户余额支付
+                </span>
+							<span class="fr">
+                     
+                          <i class="mui-icon mui-icon-arrowdown fz18  xng_dsd_sftx"></i>
+                     </span>
+
+						</p>
+						<section class="btm mt10 pt10 df_jh_erdrtxc">
+
+							<section class="z3 fz14 box df_jhg_drtxc">
+								<span class=" box_a">输入余额:</span>
+								<p class="box_b">
+									<input type="text">
+								</p>
+								<span class="box_b pl10">元</span>
+							</section>
+							<p class="red mt10">
+								您当前的可用余额为:￥591.21
+							</p>
+							<p class="fz12">
+								未开通余额安全支付,请在电脑端登录开通
+							</p>
+
+						</section>
+
+					</section>
+
+				</section>
+
+				<section class="bgff mt10 pt10 pm10 tr pd">
+					<p>
+
+						*该订单完成后，您将获得 5643积分 <br> 以及价值0.00的红包 <br> 付款成功后，您将获得564.30元退换券 <br> 省配送费用
+						<span class="yeer">(满588包邮)：<del>92.00 </del></span><br>
+						<span class="yeer">- 使用余额：591.21</span>
+					</p>
+					<p class="btm mt10 pt10 df_jh_drerttx">
+						商品总价： 5643.00<br> 应付款金额：
+						<span class="fz18 yeer">5051.79</span>
+
+					</p>
+
+				</section>
+
+				<section class="bgff mt10">
+					<section class="btm pt10 pm10 pd df_sd_srrsxd act">
+						<p class="pr">
+							<span class="dx icon-zhifubao qian_sdfx yj4 fz18"></span>
+							<span class="z3 ml5">支付方式 :<span class="z6">请选择支付方式</span> </span>
+							<span class="fr">
+                     <span class="bgred cf fz12 df_ou_dfrxc yj4">必填</span>
+							<i class="mui-icon mui-icon-arrowdown fz18  xng_dsd_sftx"></i>
+							</span>
+
+						</p>
+						<section class="btm mt10 pt10 df_jh_erdrtxc">
+
+							<p class="dsfer_jh_dr " v-for="(zi,idx) in zhifu" :class="zi.cls" @tap="zjg_sd_c(idx)">
+								<i class="dx icon-bugouxuan gouxinsdrx fz22 act cz"></i> {{zi.name}}
+								<span class="red" v-if="zi.id==1">(仅实体店店员使用)</span>
+							</p>
+							
+
+						</section>
+
+					</section>
+
+				</section>
+
+				<p class="mt20 pm40 pd">
+					<button class="mui-btn-red w100 fz16 pt10 pm10" @tap="tijiao_sd">提交订单</button>
+				</p>
+
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+			<script src="../js/page/gwc/queren.js"></script>
+	</body>
+
+</html>

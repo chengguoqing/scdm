@@ -1,0 +1,1 @@
+"use strict";function pullupRefresh(){var a=km.jg_sdf,b=this;setTimeout(function(){for(var c=0;c<8;c++)km.jg_sdf.push(a[0]);b.endPullupToRefresh(!1)},3e3)}mui.init({pullRefresh:{container:"#pullrefresh",up:{contentrefresh:"正在加载...",callback:pullupRefresh}}});var km=new Vue({el:"#article_cat_lm",data:{jg_sdf:[1,2,3,4,5]},methods:{},mounted:function(){}});

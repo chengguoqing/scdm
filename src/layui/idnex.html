@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+ 
+    <title></title>
+    <meta name="renderer" content="webkit">
+   
+ 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <link rel="stylesheet" href="css/cssamin.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">logo
+            </div>
+
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">基本资料</a></dd>
+                        <dd><a href="">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">退了</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">所有商品</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">列表一</a></dd>
+                            <dd><a href="javascript:;">列表二</a></dd>
+                            <dd><a href="javascript:;">列表三</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">解决方案</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">列表一</a></dd>
+                            <dd><a href="javascript:;">列表二</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="">云市场</a></li>
+                    <li class="layui-nav-item"><a href="">发布商品</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+
+            <div style="padding: 15px;">
+                <div class="layui-row">
+
+                    <span class="fz22 fl name_iu_s">张晓明</span>
+                    <div class="sd_jh_right_s layui-row layui-col-space10">
+
+                        <div class="layui-col-xs2 ">
+                            <p class="br z3 fz16">
+                                客户状态<br>
+                                <span class="ls fz14">认证</span>
+                            </p>
+                        </div>
+
+                        <div class="layui-col-xs2 ">
+                            <p class="br z3 fz16">
+                                售前状态<br>
+                                <span class="ls fz14">潜客</span>
+                            </p>
+                        </div>
+                        <div class="layui-col-xs2 ">
+                            <p class="br z3 fz16">
+                                售后状态<br>
+                                <span class="ls fz14">新车主</span>
+                            </p>
+                        </div>
+                        <div class="layui-col-xs2 ">
+                            <p class="br z3 fz16">
+                                会员等级<br>
+                                <span class="ls fz14">白金卡</span>
+                            </p>
+                        </div>
+                        <div class="layui-col-xs2 ">
+                            <p class="br z3 fz16">
+                                会员积分<br>
+                                <span class="ls fz14">19000</span>
+                            </p>
+                        </div>
+                        <div class="layui-col-xs2 ">
+                            <p class="br z3 fz16">
+                                储值金额<br>
+                                <span class="ls fz14">￥3000.00</span>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                    <p class="qc"></p>
+                </div>
+
+                <div class="mt20 df_jh_rowe ">
+                    <div class=" sd_jh_rowds pr ">
+                        <div class="layui-row layui-col-space10  titke_sdf">
+
+                            <div class="layui-col-xs3 pl20 dsf_kjh_eer_s ">
+                                <span class="">
+                                    <img src="images/add.png " class="fas_sdertx aa">
+                                     <img src="images/jian.png " class="fas_sdertx ab">
+                                </span>
+                                <span class="ml10 fz16 mt10 cz">
+                                意向车型：雷克萨斯LC
+                                    
+                                </span>
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                当前状态：潜在客户
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                联系经销商：深圳深业雷克萨斯4S店
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                联系顾问：杨颖
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class=" mt40 pl20 pr20 ds_jh_we_ser">
+
+                        <div class="jindu_kh_se layui-row pr" data-cls="jd5">
+                            <p class="jinh_sd gdwe ">
+                                <img src="images/qiche.png" class="xiaohg_ser">
+                            </p>
+
+                            <span class="yj aa cz_w gdwe">
+                                <span class="cz_a">潜客<br>开发</span>
+                            </span>
+                            <span class="yj ab cz_w gdwe">
+                               <span class="cz_a">潜客<br>管理</span>
+                            </span>
+
+
+                            <span class="yj ac cz_w gdwe">
+                                <span class="cz_a">销售<br>跟进</span>
+                            </span>
+                            <span class="yj ad cz_w gdwe">
+                             <span class="cz_a">试驾</span>
+                            </span>
+
+                            <span class="yj ae cz_w gdwe">
+                                   <span class="cz_a">签单</span>
+                            </span>
+
+                            <span class="yj af af cz_w gdwe">
+                            <span class="cz_a">交车</span>
+                            </span>
+                        </div>
+
+                        <div class="mt40 layui-row">
+                              <div class="layui-col-xs4  brm">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否到店？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否试驾？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    计划购买时间？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              2018
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                            
+                            
+                              <div class="layui-col-xs4  brm pl30">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    预算？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              100万-150万
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否考虑其他类型？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               奥迪A8
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    颜色偏好？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              蓝色、黑色
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                            
+                            
+                            
+                            
+                              <div class="layui-col-xs4  pl30">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否接受车型消息？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    下次跟进时间？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    下次跟进形式？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              2018
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+                
+                
+                
+                
+                
+                <div class="mt10 df_jh_rowe ">
+                    <div class=" sd_jh_rowds pr ">
+                        <div class="layui-row layui-col-space10  titke_sdf">
+
+                            <div class="layui-col-xs3 pl20 dsf_kjh_eer_s ">
+                                <span class="">
+                                    <img src="images/add.png " class="fas_sdertx aa">
+                                     <img src="images/jian.png " class="fas_sdertx ab">
+                                </span>
+                                <span class="ml10 fz16 mt10 cz">
+                                意向车型：雷克萨斯LC
+                                    
+                                </span>
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                当前状态：潜在客户
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                联系经销商：深圳深业雷克萨斯4S店
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                联系顾问：杨颖
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class=" mt40 pl20 pr20 ds_jh_we_ser">
+
+                        <div class="jindu_kh_se layui-row pr" data-cls="jd4">
+                            <p class="jinh_sd gdwe ">
+                                <img src="images/qiche.png" class="xiaohg_ser">
+                            </p>
+
+                            <span class="yj aa cz_w gdwe">
+                                <span class="cz_a">潜客<br>开发</span>
+                            </span>
+                            <span class="yj ab cz_w gdwe">
+                               <span class="cz_a">潜客<br>管理</span>
+                            </span>
+
+
+                            <span class="yj ac cz_w gdwe">
+                                <span class="cz_a">销售<br>跟进</span>
+                            </span>
+                            <span class="yj ad cz_w gdwe">
+                             <span class="cz_a">试驾</span>
+                            </span>
+
+                            <span class="yj ae cz_w gdwe">
+                                   <span class="cz_a">签单</span>
+                            </span>
+
+                            <span class="yj af af cz_w gdwe">
+                            <span class="cz_a">交车</span>
+                            </span>
+                        </div>
+
+                        <div class="mt40 layui-row">
+                              <div class="layui-col-xs4  brm">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否到店？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否试驾？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    计划购买时间？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              2018
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                            
+                            
+                              <div class="layui-col-xs4  brm pl30">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    预算？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              100万-150万
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否考虑其他类型？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               奥迪A8
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    颜色偏好？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              蓝色、黑色
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                            
+                            
+                            
+                            
+                              <div class="layui-col-xs4  pl30">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否接受车型消息？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    下次跟进时间？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    下次跟进形式？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              2018
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+                
+                <div class="mt10 df_jh_rowe ">
+                    <div class=" sd_jh_rowds pr ">
+                        <div class="layui-row layui-col-space10  titke_sdf">
+
+                            <div class="layui-col-xs3 pl20 dsf_kjh_eer_s ">
+                                <span class="">
+                                    <img src="images/add.png " class="fas_sdertx aa">
+                                     <img src="images/jian.png " class="fas_sdertx ab">
+                                </span>
+                                <span class="ml10 fz16 mt10 cz">
+                                意向车型：雷克萨斯LC
+                                    
+                                </span>
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                当前状态：潜在客户
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                联系经销商：深圳深业雷克萨斯4S店
+                            </div>
+                            <div class="layui-col-xs3 dsf_kjh_eer_s">
+                                联系顾问：杨颖
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class=" mt40 pl20 pr20 ds_jh_we_ser">
+
+                        <div class="jindu_kh_se layui-row pr" data-cls="jd3">
+                            <p class="jinh_sd gdwe ">
+                                <img src="images/qiche.png" class="xiaohg_ser">
+                            </p>
+
+                            <span class="yj aa cz_w gdwe">
+                                <span class="cz_a">潜客<br>开发</span>
+                            </span>
+                            <span class="yj ab cz_w gdwe">
+                               <span class="cz_a">潜客<br>管理</span>
+                            </span>
+
+
+                            <span class="yj ac cz_w gdwe">
+                                <span class="cz_a">销售<br>跟进</span>
+                            </span>
+                            <span class="yj ad cz_w gdwe">
+                             <span class="cz_a">试驾</span>
+                            </span>
+
+                            <span class="yj ae cz_w gdwe">
+                                   <span class="cz_a">签单</span>
+                            </span>
+
+                            <span class="yj af af cz_w gdwe">
+                            <span class="cz_a">交车</span>
+                            </span>
+                        </div>
+
+                        <div class="mt40 layui-row">
+                              <div class="layui-col-xs4  brm">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否到店？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否试驾？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    计划购买时间？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              2018
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                            
+                            
+                              <div class="layui-col-xs4  brm pl30">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    预算？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              100万-150万
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否考虑其他类型？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               奥迪A8
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    颜色偏好？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              蓝色、黑色
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                            
+                            
+                            
+                            
+                              <div class="layui-col-xs4  pl30">
+                                <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    是否接受车型消息？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    下次跟进时间？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                               是
+                                    </p>
+                                  </div>
+                                  <div class="df_dd_row layui-row">
+                                    <p class="layui-col-xs6">
+                                    下次跟进形式？
+                                    </p>
+                                          <p class="layui-col-xs6">
+                              2018
+                                    </p>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+            
+                
+                <div class="mt20">
+                    
+                    <div class="df_iu_rled">
+                        <p class="ls fz18">
+                            <img src="images/zzt.png" class="sd_jgh_lis cz">
+                           <span class="ml5 cz">基本信息</span>  
+                        </p>
+                        
+                        <div class="s_jy_lef_d mt10 layui-row ">
+                            <div class="layui-col-xs6 pl10">
+                                <p>性别</p>
+                                  <p>年龄</p>
+                                  <p>联系方式</p>
+                                  <p>联系地址</p>
+                                       <p>电子邮箱</p>
+                                  <p>微信id</p>
+                            </div>
+                            
+                                <div class="layui-col-xs6">
+                                <p> 男</p>
+                                  <p>40</p>
+                                  <p>13689897777</p>
+                                  <p class="dian">深圳市宝安区同安路3号</p>
+                                    <p>51523516@qq.com</p>
+                                    <p>37655442</p>
+                            </div>
+                            
+                           
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                      <div class="ov ">
+                        <p class="ls fz18">
+                            <img src="images/zzt.png" class="sd_jgh_lis cz">
+                           <span class="ml5 cz">历史记录</span>  
+                        </p>
+                          <div class="mt10">
+                            <p class="f_b pr dsf_jgh_det">
+                                <select class="sz">
+                                    <option>所有类型1</option>
+                                    <option>所有类型2</option>
+                                    <option>所有类型3</option>
+                                </select>
+                             <span>所有类型</span>  <i class="layui-icon fz16"></i>
+                              </p>
+                              <span class="blm ml5 pl10">新增</span>
+                          
+                              
+                              <div class="fr">
+                              <span class="sdUs_y_ser">
+                                <i class="yj4 cz"></i>
+                                  售前
+                                  </span>
+                                  
+                                   <span class="sdUs_y_ser ml10 ab">
+                                <i class="yj4 cz"></i>
+                                  售后
+                                  </span>
+                                  <img src="images/down.png" class="down_sdert ml10 sz">
+                                   <img src="images/paixu.png" class="down_sdert ml10 sz">
+                                   <img src="images/rili.png" class="down_sdert ml10 sz">
+                                  
+                              </div>
+                          </div>
+                        
+                          
+                          
+<table class="layui-table" lay-even lay-skin="nob">
+ 
+  <tbody>
+    <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+       <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+       <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+       <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+      
+    </tbody>
+                          </table>
+                          
+                          
+                    </div>
+                    
+                    <p class="qc"></p>
+                </div>
+                
+                
+                <div class="mt20">
+                    
+                    <div class="df_iu_rled">
+                        <p class="ls fz18">
+                            <img src="images/zzt.png" class="sd_jgh_lis cz">
+                           <span class="ml5 cz">基本信息</span>  
+                        </p>
+                        
+                        <div class="s_jy_lef_d mt10 layui-row ">
+                            <div class="layui-col-xs6 pl10">
+                                <p>性别</p>
+                                  <p>年龄</p>
+                                  <p>联系方式</p>
+                                  <p>联系地址</p>
+                                       <p>电子邮箱</p>
+                                  <p>微信id</p>
+                            </div>
+                            
+                                <div class="layui-col-xs6">
+                                <p> 男</p>
+                                  <p>40</p>
+                                  <p>13689897777</p>
+                                  <p class="dian">深圳市宝安区同安路3号</p>
+                                    <p>51523516@qq.com</p>
+                                    <p>37655442</p>
+                            </div>
+                            
+                           
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                      <div class="ov ">
+                        <p class="ls fz18">
+                            <img src="images/zzt.png" class="sd_jgh_lis cz">
+                           <span class="ml5 cz">历史记录</span>  
+                        </p>
+                          <div class="mt10">
+                            <p class="f_b pr dsf_jgh_det">
+                                <select class="sz">
+                                    <option>所有类型1</option>
+                                    <option>所有类型2</option>
+                                    <option>所有类型3</option>
+                                </select>
+                             <span>所有类型</span>  <i class="layui-icon fz16"></i>
+                              </p>
+                              <span class="blm ml5 pl10">新增</span>
+                          
+                              
+                              <div class="fr">
+                              <span class="sdUs_y_ser">
+                                <i class="yj4 cz"></i>
+                                  售前
+                                  </span>
+                                  
+                                   <span class="sdUs_y_ser ml10 ab">
+                                <i class="yj4 cz"></i>
+                                  售后
+                                  </span>
+                                  <img src="images/down.png" class="down_sdert ml10 sz">
+                                   <img src="images/paixu.png" class="down_sdert ml10 sz">
+                                   <img src="images/rili.png" class="down_sdert ml10 sz">
+                                  
+                              </div>
+                          </div>
+                        
+                          
+                          
+<table class="layui-table" lay-even lay-skin="nob">
+ 
+  <tbody>
+    <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+       <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+       <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+       <tr>
+      <td>雷克萨斯LS</td>
+      <td>完成首次保养</td>
+      <td>2017-11-28</td>
+    </tr>
+      
+    </tbody>
+                          </table>
+                          
+                          
+                    </div>
+                    
+                    <p class="qc"></p>
+                </div>
+                
+                
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="layui.js" charset="utf-8"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use(['element', "layer"], function() {
+            var element = layui.element;
+            var $ = layui.jquery
+            //            $(".jindu_kh_se").map(function() {
+            //                var sd_sd = $(this).attr("data-cls"),
+            //                    sd_ser = $(this)
+            //                $(this).addClass(sd_sd)
+            //                setTimeout(function() {
+            //                    $(sd_ser).find(".jinh_sd img").remove()
+            //                }, 3500)
+            //            })
+
+            $(".sd_jh_rowds").on("click", function() {
+                var s_sd_drrt = $(this).parents(".df_jh_rowe").find(".jindu_kh_se"),
+                    cls_ser = $(s_sd_drrt).attr("data-cls")
+                $(this).toggleClass("act")
+                if ($(this).hasClass("act")) {
+                   $(this).parents(".df_jh_rowe").addClass("asd_sds")
+                    $(s_sd_drrt).addClass(cls_ser)
+                    $(s_sd_drrt).find("img").show()
+                    setTimeout(function() {
+                        $(s_sd_drrt).find("img").hide()
+                    }, 3500)
+                } else {
+                     $(this).parents(".df_jh_rowe").removeClass("asd_sds")
+                    $(s_sd_drrt).removeClass(cls_ser)
+                }
+            })
+            
+            
+            $(".dsf_jgh_det select").on("change",function(){
+                $(this).parent().find("span").text($(this).val())
+            })
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<template name="top">
+<view class="toubu_df pl20">
+  <image src='/img/home_logo.png' class='logo_iisd'></image>
+  <view class='dsf_uy_dsdf box fl'>
+    <view class='box_a fz26 cf dfs_d_sd tr dian dsf_d_dfggx'>
+
+      <view class='dian dsf_d_dsdfx f_b'>北京</view>
+
+      <image src='/img/down.png' class="dsf_ds_dsdf "></image>
+    </view>
+
+    <view class='box_a sdf_f_ddfgfgx pr '>
+
+      <icon type="search" size='20' class='dsf_ssd_sdf'></icon>
+      <input type='text' placeholder='司机'></input>
+    </view>
+
+  </view>
+  <view class='ov cf cen'>
+    <image src='/img/bm.png' class='sdf_iuy_sd'></image>
+    <view class='fz26'>发布</view>
+  </view>
+</view>
+</template>
+
+
+<template name="bottom">
+<view class='pd cen pt20 pm20 btm z6 fz22 mt20 bgff'>
+海淀公安局网络备案编号：1101081759 京ICP证110986号 京ICP备11045189 乙测资字11011018 违法信息举报4008180133 jbpt@58ganji.com
+</view>
+</template>
+
+
+

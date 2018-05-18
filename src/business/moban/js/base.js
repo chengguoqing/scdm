@@ -1,0 +1,1 @@
+$(function(){$(".dsf_xdf_xdfgfx").on("click",function(){var a=$(this).index();$(".dsf_xdf_xdfgfx").removeClass("act").eq(a).addClass("act"),$(".sd_xff_xcfgx").removeClass("show").eq(a).addClass("show")})});

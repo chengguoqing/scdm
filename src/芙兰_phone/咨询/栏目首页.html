@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        .mui-scroll-wrapper {
+            padding-top: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">文章列表页</h1>
+        <a class="mui-icon mui-icon-redo mui-pull-right z3"></a>
+    </header>
+    <div class="mui-content ">
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <section class="pd bgff pt10 pm10 btm">
+                    <section class="mui-row">
+                        <p class="sd_left yj fl">
+                            促销
+                        </p>
+                        <section class="ov pl10 pr">
+                            <p class="fz20 z6 mt10">活动/促销</p>
+                            <p class="fz14 mt10">
+                                <span class="fz16">6535</span> 人订阅.
+                                <span class="fz16">183</span> 篇内容
+                            </p>
+                            <a class="mui-btn mui-btn-red dinguie_sd">+订阅</a>
+                        </section>
+                    </section>
+
+                    <p class="mt10 z3">
+                        每天都上新品，惊喜不断，欢迎随时关注！希望能给大家带来更多惊喜！
+                    </p>
+
+                </section>
+
+                <section class="mt10 btm  pt10  bgff">
+                    <p class="z3 fz16 pd">内容</p>
+
+                    <section class="mt10 dsf_jugh_sdf">
+
+                        <section class="khjg_row btm  pd mui-row">
+                            <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                            <section class="df_iyh_df ov pr10">
+                                <p class="dianer fz16 dfs_iyh_sdf">
+                                    智能加热毛巾架，为你打造健康美妙的生活
+                                </p>
+                                <p class="fz12 mt35">
+                                    1275次浏览
+                                </p>
+                            </section>
+                        </section>
+                        <section class="khjg_row btm  pd mui-row">
+                            <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                            <section class="df_iyh_df ov pr10">
+                                <p class="dianer fz16 dfs_iyh_sdf">
+                                    智能加热毛巾架，为你打造健康美妙的生活
+                                </p>
+                                <p class="fz12 mt35">
+                                    1275次浏览
+                                </p>
+                            </section>
+                        </section>
+                        <section class="khjg_row btm  pd mui-row">
+                            <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                            <section class="df_iyh_df ov pr10">
+                                <p class="dianer fz16 dfs_iyh_sdf">
+                                    智能加热毛巾架，为你打造健康美妙的生活
+                                </p>
+                                <p class="fz12 mt35">
+                                    1275次浏览
+                                </p>
+                            </section>
+                        </section>
+                        <section class="khjg_row btm  pd mui-row">
+                            <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                            <section class="df_iyh_df ov pr10">
+                                <p class="dianer fz16 dfs_iyh_sdf">
+                                    智能加热毛巾架，为你打造健康美妙的生活
+                                </p>
+                                <p class="fz12 mt35">
+                                    1275次浏览
+                                </p>
+                            </section>
+                        </section>
+                        <section class="khjg_row btm pd mui-row"> <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                            <section class="df_iyh_df ov pr10">
+                                <p class="dianer fz16 dfs_iyh_sdf"> 智能加热毛巾架，为你打造健康美妙的生活 </p>
+                                <p class="fz12 mt35"> 1275次浏览 </p>
+                            </section>
+                        </section>
+                        <section class="khjg_row btm  pd mui-row">
+                            <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                            <section class="df_iyh_df ov pr10">
+                                <p class="dianer fz16 dfs_iyh_sdf">
+                                    智能加热毛巾架，为你打造健康美妙的生活
+                                </p>
+                                <p class="fz12 mt35">
+                                    1275次浏览
+                                </p>
+                            </section>
+                        </section>
+
+                    </section>
+
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        mui.init({
+            pullRefresh: {
+                container: '#pullrefresh',
+                up: {
+                    contentrefresh: '正在加载...',
+                    callback: pullupRefresh
+                }
+            }
+        });
+        /**
+         * 上拉加载具体业务实现
+         */
+        function pullupRefresh() {
+            var th = this
+            setTimeout(function() {
+                for (var i = 0; i < 5; i++) {
+                    $(".dsf_jugh_sdf").append('   <section class="khjg_row btm pd mui-row"> <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr"> <section class="df_iyh_df ov pr10"> <p class="dianer fz16 dfs_iyh_sdf"> 智能加热毛巾架，为你打造健康美妙的生活 </p> <p class="fz12 mt35"> 1275次浏览 </p> </section> </section>')
+                }
+                th.endPullupToRefresh(false)
+            }, 2000)
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

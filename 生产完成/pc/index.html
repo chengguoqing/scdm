@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--    导航-->
+    <div class="tao_uyt_sd">
+        <img src="img/logo.png" class="cz mt20 ml100">
+        <p class="f_b dsf_s_dsf_sdfgx">
+            <a href="index.html" class="act">首页</a>
+            <a href="%E5%93%81%E7%89%8C.html">品牌</a>
+            <a href="%E4%BA%A7%E5%93%81.html">产品</a>
+            <a href="%E8%81%94%E7%B3%BB.html">联系</a>
+        </p>
+    </div>
+    1
+    <div class="df_dsdsdss_r">
+        <div class="fullSlide">
+            <div class="bd">
+                <ul>
+                    <li style="background:url(img/banner.png) 50% 50%  no-repeat #fff;background-size: 100%">
+
+                    </li>
+                     <li style="background:url(img/banner.png) 50% 50%  no-repeat #fff;background-size: 100%">
+
+                    </li>
+                </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        jQuery(".fullSlide").slide({
+            titCell: ".hd ul", //轮播图的点点
+            mainCell: ".bd ul",
+            effect: "fold",
+            autoPlay: true,
+            autoPage: true,
+            trigger: "click", //mouseover
+            interTime: 3000,
+            prevCell: ".sPrev", //上一页
+            nextCell: ".sNext", //下一页
+        });
+
+    </script>
+
+</body>
+
+</html>

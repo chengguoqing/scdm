@@ -1,0 +1,113 @@
+<!--账号安全-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>账号安全</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav bbm">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">账号安全</h1>
+
+    </header>
+    <div class="mui-content " id="zhaq"> 
+        <section class="bgff  pt10 ">
+            <section class="mui-row pd">
+                <span class="mui-col-xs-3   fz16 z3">安全级别：</span>
+                <section class="mui-col-xs-9 fz16 z6">
+                    比较危险
+                    <i class="ana ab"> </i>
+                </section>
+            </section>
+
+            <p class="pt5 mt5 btm fz12 pd">
+                提示： 建议启动全部安全设置，保障账户及资金安全
+            </p>
+
+            <ul class="mui-table-view mt5">
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right z6 fz16"  @tap="zhu('zhaq_b','',{title_s:'修改登录密码'})">
+                        <i class="dx icon-gou ls cz"></i> 登录密码
+                    </a>
+                </li>
+                <li class="mui-table-view-cell"  @tap="zhu('zhaq_b','',{title_s:'修改手机验证'})">
+                    <a class="mui-navigate-right z6 fz16">
+                        <i class="dx icon-gou ls cz"></i> 手机验证
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="bgff mt10 pt10 pm10 ">
+            <p class="pd red">小提示</p>
+            <section class="fdg_h_sd_d">
+                <section class="mui-row pd ">
+                    <span class="mui-col-xs-3   fz16 z3">登录密码：</span>
+                    <section class="mui-col-xs-9 fz16 z6">
+                        互联网账号存在被盗风险，建议您定期更改密码以保护账户安全。
+
+                    </section>
+                </section>
+
+
+                <section class="mui-row pd ">
+                    <span class="mui-col-xs-3   fz16 z3">邮箱验证：</span>
+                    <section class="mui-col-xs-9 fz16 z6">
+                        验证后，可用于快速找回登录密码，接收账户余额变动提醒
+
+                    </section>
+                </section>
+
+
+
+                <section class="mui-row pd ">
+                    <span class="mui-col-xs-3   fz16 z3">手机验证：</span>
+                    <section class="mui-col-xs-9 fz16 z6">
+                        您验证的手机：135*****372,若已丢失或停用，请立即更换，避免账户被盗
+
+                    </section>
+                </section>
+
+
+                <section class="mui-row pd  ">
+                    <span class="mui-col-xs-3   fz16 z3">余额支付：</span>
+                    <section class="mui-col-xs-9 fz16 z6">
+                        开启后，可保障您账户余额支付的安全
+
+                    </section>
+                </section>
+                 
+                  <section class="mui-row pd  ">
+                    <span class="mui-col-xs-3   fz16 z3">&nbsp;</span>
+                    <section class="mui-col-xs-9 fz16 z6">
+                      <span class="red fz14 fl"  @tap="zhu('zhaq_b','',{title_s:'修改登录密码'})">忘记密码？</span>
+   <span class="red fz14 fr"  @tap="zhu('zhaq_b','',{title_s:'修改支付密码'})">修改支付密码</span>
+                    </section>
+                </section>
+                
+                
+                
+            </section>
+        </section>
+
+    </div>
+
+
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/zhaq.js"></script>
+</body>
+
+</html>

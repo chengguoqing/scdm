@@ -1,0 +1,95 @@
+<import src="/tem/moban.wxml" />
+<!-- 引入头部 -->
+<template is="top" />
+
+
+<view class='pd pt120 bgff pm20'>
+
+
+
+  <view class='fz34 dsf_uy_sdd'>
+    <text>基本信息</text>
+  </view>
+  <view class='br mt20 pd pt20 pm20'>
+    <view class='fz28'>昌平区大酒店</view>
+    <image src='/img/dsf_adfa.jpg' class='sd_iyu_sdf mt20'></image>
+    <view class='fz26 dsf_d_dsfxc'>
+      <text>最低价格：￥29800元/套</text>
+      <text>详细地址：昌平区南口镇对面|距离市区45公里</text>
+      <text>公墓特色：北京市环境最好的陵园</text>
+      <text>购墓团购：购墓团购购墓团购购墓团购购墓团购购墓团购购墓团购：购墓团购购墓团购购墓团购购墓团购购墓团购</text>
+      <text> 购墓班车：购墓班车购墓班车购墓班车购墓班车购墓班车</text>
+      <text> 购墓时间：购墓时间购墓时间购墓时间购墓时间</text>
+      <text> 购墓保障：购墓保障购墓保障购墓保障购墓保障购墓保障</text>
+      <text> 购墓保障：购墓保障购墓保障购墓保障购墓保障购墓保障</text>
+      <text> 购墓电话：400-6869-851</text>
+    </view>
+
+  </view>
+
+
+</view>
+
+<view class='mt20 bgff pd pt20 pm20'>
+  <view class='fz34 dsf_uy_sdd'>
+    <text>酒店介绍</text>
+  </view>
+  <view class='pd pt20 pm20 sdf_d_dsfgxc fz26 z6 mt20'>
+    酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍酒店介绍
+  </view>
+</view>
+
+
+
+
+<view class='mt20 bgff pd pt20 pm20'>
+  <view class='fz34 dsf_uy_sdd'>
+    <text>最新动态</text>
+  </view>
+  <view class='br  z6 mt20 bm0'>
+
+    <view class='pt20 pm20 bbm pd' wx:for="111111">
+      <view class='df_d_sdggxc fl fz32'>最新动态最新动态</view>
+      <view class='ov tr fz24'>
+        2017-9-13
+      </view>
+      <view class='qc'></view>
+    </view>
+
+  </view>
+</view>
+
+
+<view class='mt20 bgff pd pt20 pm20'>
+  <view class='fz34 dsf_uy_sdd'>
+    <text>环境</text>
+  </view>
+  <view class='mt20 br pd  pm20'>
+    <image src='/img/dsf_adfa.jpg' class='dsf_d_sdggx' wx:for="1111" mode="center"></image>
+    <view class='qc'></view>
+  </view>
+</view>
+
+<view class='mt20 bgff pd pt20 pm20'>
+  <view class='fz34 dsf_uy_sdd'>
+    <text>展示</text>
+  </view>
+  <view class='mt20 br pd  pm20'>
+    <image src='/img/dsf_adfa.jpg' class='dsf_d_sdggx' wx:for="1111" mode="center"></image>
+    <view class='qc'></view>
+  </view>
+</view>
+
+
+<view class='mt20 bgff pd pt20 pm20'>
+  <view class='fz34 dsf_uy_sdd'>
+    <text>位置</text>
+  </view>
+
+
+<map id="myMap" show-location class='dsfd_dsfdsgx mt20'/>
+  
+</view>
+
+
+<template is="bottom" />

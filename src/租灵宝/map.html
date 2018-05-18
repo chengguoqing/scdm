@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+
+    <link href="css/mui.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+	<div id="allmap" style="width: 100%; height:600px;">
+    地图加载中...
+</div>
+
+<script src="http://api.map.baidu.com/api?v=2.0&ak=p9YwDt2rxK43zEUyfrdy54lSafdBi9cS"></script>
+
+<script src="js/mui.min.js"></script>
+ <script type="text/javascript"> 
+      var chengs='', map,point,pageIndex=1;   var pids=0; 
+	map = new BMap.Map("allmap",{enableMapClick:false,minZoom:10});    // 创建Map实例
+    point=new BMap.Point(121.469889,31.240751);
+    map.centerAndZoom(point,12);
+    map.enableScrollWheelZoom(true);
+	
+	  function showList(){
+        var b = map.getBounds();
+        var p1 = b.getSouthWest();
+        var p2 = b.getNorthEast();
+        var params = {
+            minlat: p1.lat,
+            minlng: p1.lng,
+            maxlat: p2.lat,
+            maxlng: p2.lng ,
+            pids:pids,
+            page:pageIndex};
+        mui.get('http://api.zulingbao.com/webface/?Services=goodmap.getgoodlist&webface_access_token=buddhaaccesstoken', params, function (result) {
+        	   var json=JSON.parse(result)
+        	   		json=json.data;
+            mui.each(myOverlayList,function(idx,item){
+                map.removeOverlay(item);
+            });
+            console.log(myOverlayList)
+            myOverlayList=[];
+            mui.each(json, function (idx, item) {
+                var txt = item.name,
+                    mouseoverTxt = txt ;
+                var myCompOverlay = new ComplexCustomOverlay(new BMap.Point(item.lng, item.lat), txt, mouseoverTxt, item.id,item.rentstatus);
+
+                map.addOverlay(myCompOverlay);
+                myOverlayList.push(myCompOverlay);
+            });
+        });
+            
+
+    }
+	  showList();
+    
+
+
+   
+</script> 
+</body>
+</html>

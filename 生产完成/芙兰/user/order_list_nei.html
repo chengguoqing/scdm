@@ -1,0 +1,82 @@
+<!--我的订单-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body{
+            background: #F6F6F6
+        }
+    </style>
+</head>
+
+<body>
+    <section id="order_list_nei">
+
+        <section v-for="(gs,idx) in list_data" class="mb10">
+            <section class="pd pt10 pm10 bgff">
+               <i class="dx  icon-dianpu cz fz20 "></i>
+                <span class="z9 fz14">{{gs.name}}</span>
+              
+            </section>
+
+            <ul class="mui-table-view dsf_jhj_s bgff" :class="!gs.bianji||'act'">
+                <!--            li加act编辑-->
+                <li class="mui-table-view-cell pr" v-for="(l_s,ied) in gs.list_s">
+                   
+
+                      
+                            <img :src="l_s.img" class="jhgf_sdrx fl">
+                            <section class="ov pl10  pr60">
+                                <p class="dianer df_h_sderx">
+                                    {{l_s.title}}
+                                </p>
+                                <p class="z9 fz12">
+                                    颜色:{{l_s.yanse}} 尺码:{{l_s.cima}}
+                                    
+                                    <span class="red ml10">{{l_s.daoqi}}</span>
+                                </p>
+                                <p class="fz12 ">
+                                    {{l_s.cimas}}
+                                </p>
+ 
+                             
+                            </section>
+                    <section class="s_jgh_drttc">
+                        <p class="z3 fz16">{{l_s.xjia}}</p>
+                        <p class="z9 fz12">x{{l_s.jian}}</p>
+                    </section>
+                           
+                       
+                </li>
+
+            </ul>
+            
+            <section class="pd bgff pt10 pm10 fz14 tr">
+            共{{gs.zj}}件商品 实付：<span class="red b fz16">{{gs.zongjia}}</span>
+            </section>
+            <p class="btm pt10 pm10 bgff tr pd">
+                <a class="mui-btn-red mui-btn fz12">立即付款</a>
+                      <a class=" mui-btn fz12">取消订单</a>
+            </p>
+
+        </section>
+    </section>
+
+
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/page/user/order_list_nei.js"></script>
+
+</body>
+
+</html>

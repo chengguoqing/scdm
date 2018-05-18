@@ -1,0 +1,122 @@
+<!--我的施工项目添加-->
+<!--添加信息-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">添加信息</h1>
+		</header>
+		<div class="mui-content" id="post_message">
+			<div class="mui-input-group dsf_d_sdffgxc pr10">
+				<div class="mui-input-row">
+					<label>标题：</label>
+					<input type="text" class="mui-input-clear" v-model="kmhs.name">>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>预算：</label>
+					<input type="number" class="mui-input-clear" v-model="kmhs.budget">
+
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>工程名称：</label>
+					<input type="text" class="mui-input-clear" v-model="kmhs.projectname">
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>工程类型：</label>
+					<input type="text" class="mui-input-clear" v-model="kmhs.type">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>投标截止：</label>
+					<!--<input type="datetime-local" class="mui-input-clear" v-model="kmhs.deadline">-->
+					<input type="text" class="mui-input-clear" v-model="kmhs.deadline" readonly @tap="tytew_sd(1)">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>项目编号：</label>
+					<input type="text" class="mui-input-clear" v-model="kmhs.projectcode">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>招标编号：</label>
+					<input type="text" class="mui-input-clear" v-model="kmhs.biddingcode">
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>开标时间：</label>
+					<!--<input type="datetime-local" class="mui-input-clear" v-model="kmhs.time">-->
+					<input type="text" class="mui-input-clear" v-model="kmhs.time" readonly @tap="tytew_sd(2)">
+					<p class="qc"></p>
+				</div>
+			
+				<div class="mui-input-row">
+					<label> 招标方式：</label>
+					<p class="siuut_d_sdf  dsf_s_sdfvgx ov pt0">
+						<span class="pr dsf_d_sdfc f_b cz">
+							 <input v-model="method_a" readonly @tap="feni_sdfx"/>
+                        <i class="f_i down_icon_dr"></i>
+                    </span>
+					</p>
+					<p class="qc"></p>
+				</div>
+					<div class="mui-input-row">
+					<label>工程类别：</label>
+					<p class="siuut_d_sdf  dsf_s_sdfvgx ov pt0">
+						<span class="pr dsf_d_sdfc f_b cz">
+							 <input v-model="method_b" readonly @tap="feni_sdfx_b"/>
+                        <i class="f_i down_icon_dr"></i>
+                    </span>
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>所在区域：</label>
+					<input type="text" placeholder="请选择" @tap="xsd_sdgfx" v-model="sheng_a" readonly />
+					<i class="f_i down_icon_dr"></i>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>详细地址：</label>
+					<input type="text" class="mui-input-clear" v-model="kmhs.address">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>项目详情：</label>
+					<textarea rows="5" v-model="kmhs.content"></textarea>
+					<p class="qc"></p>
+				</div>
+			</div>
+
+			<p class="pd mt20" @tap="dsf_iuy_s">
+				<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20">确定</button>
+			</p>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/city.data.js"></script>
+		<script src="js/page/shigongadd.js"></script>
+
+	</body>
+
+</html>

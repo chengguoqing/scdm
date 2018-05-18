@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/guns.css" rel="stylesheet" />
+    <link href="../css/cssamin.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <title>小城味道</title>
+    <style>
+        body {
+            background: #EFEFF4;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="mui-content mui-row mui-fullscreen pt30 fd_xdsf_xdtxr a-fadein" id="app">
+
+        <section class="sd_iuy_xdtx pd  show">
+            <i class="fa fa-bullhorn hs fl "></i>
+            <section class="fl mui-col-xs-11 z14 dsfds_xssrf_fx fz14 pl10 fz12">
+                当前桌号：A99 共2人扫码点餐，已点25道菜
+            </section>
+            <!--
+                <i class="fa fa-times-circle ye df_ddertx" ></i>-->
+        </section>
+
+
+        <div class="mui-col-xs-3 df_xsdsf_Xsdf">
+            <div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical f_ddf_cxrtc">
+
+                <a v-for="s_u in ss_iu" class="mui-control-item pr" v-bind:data-index="s_u.id" v-bind:href="'#content'+s_u.id" v-bind:class="s_u.c_i"><span v-text="s_u.name"></span>
+      
+             
+                </a>
+
+            </div>
+        </div>
+        <div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+            <div v-for="(s_u,inda) in ss_iu" v-bind:id="'content'+s_u.id" class="mui-control-content">
+                <p class="ssd_iuiu_xsdf pd">
+                    {{s_u.name}}
+                </p>
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell" v-for="(l_u,indb) in s_u.ul_liu">
+                        <img v-bind:src="l_u.images" class="sd_iuy_xsdfx fl" v-on:click="jhg_xsf_x(inda,indb,0)">
+                        <section class="ov pl10">
+                            <p class="dian z14 fz17" v-text="l_u.name"> </p>
+
+                            <section class="mt20  fz14 b pr">
+                                <p class="red" v-text="'￥'+l_u.dj+'/'+l_u.xse">
+
+                                </p>
+
+                            </section>
+                            <a class="sd_uyt_xd" v-if="l_u.type==1" v-on:click="jhg_xsf_x(inda,indb,1)">选规格
+                                
+                                <span class="ssd_uiu_xdf yj" v-if="l_u.sd_p>0">{{l_u.sd_p}}</span>
+                                </a>
+                            <a class="sd_uyt_xd" v-if="l_u.type==2" v-on:click="jhg_xsf_x(inda,indb,2)">选套餐
+                                
+                                <span class="ssd_uiu_xdf yj" v-if="l_u.sd_p>0">{{l_u.sd_p}}</span>
+                                </a>
+
+                            <section class="fz14 ls dfd_iuiu_xsdffx" v-if="l_u.type<=0">
+
+                                <span class="ssd_uiyt_xd aa" v-bind:class="l_u.sd_p>=1?'act':''">
+                                 <!--   <i class="df_add_as mui-icon-minus yj" v-on:click="add_xsds(inda,indb,0)"></i>-->
+                                    <i class="df_add_as mui-icon-minus yj " v-on:click="add_xsds(inda,indb,0)">-</i>
+                                    <span class="fz12 z14 df_xsdsf_xdfx" >{{l_u.sd_p}}</span>
+                                <i class="df_add_as yj fei_xsffx" v-on:click="add_xsds(inda,indb,1)">+</i>
+                                </span>
+
+                            </section>
+                        </section>
+                        <p class="qc"></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- 底部-->
+        <footer class="sd_uiuy_xsrx_x pd">
+            <section class="sd_xssdf_xzsfs show " v-if="gwc_s.sf_sh==0" v-bind:class="gwc_s.zs>0?'act':''">
+                <a class="ssdf_ijuh_xdf yj gd" href="#share_wp">
+                    <img src="../img/gwc.png">
+                    <span class="yj sd_xsd_xdtxf">{{gwc_s.zs}}</span>
+                </a>
+                <span class="cf ml30 fdf_xsd_xdertx" v-if="gwc_s.zs>0">
+              共￥{{gwc_s.zj}}元
+          </span>
+                <span class="cf ml30 fdf_xsd_xdertx" v-if="gwc_s.zs<=0">
+            
+购物车是空的
+          </span>
+
+                <button type="button" class="mui-btn mui-btn-red qsd_xsd_xdf fz16" v-if="gwc_s.zs<=0">请点餐</button>
+                <button type="button" class="mui-btn mui-btn-red qsd_xsd_xdf fz16" v-if="gwc_s.zs>0" v-on:click="xhl_oi">选好了</button>
+            </section>
+
+            <section class="sd_xssdf_xzsfs  cen cf fz16 show" v-if="gwc_s.sf_sh==1">
+                店铺休息中···
+            </section>
+
+
+        </footer>
+
+
+        <!--详情弹出层-->
+        <div id="share_pp" class="mui-popover mui-popover-bottom mui-popover-action  aas_xsdftx">
+            <section class="sd_iuyu_xsrftx">
+
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <section class="sd_uiuy_xsfgx pr">
+                            <a class="fa fa-times-circle z14 dss_xsd_xdrfx" href="#share_pp"></a>
+                            <img v-bind:src="dek_s.images" class="sd_uiuy_Xserx">
+                        </section>
+
+                        <section class="pd pt10 pm10 mt10">
+                            <p class="z14 fz18">{{dek_s.name}}</p>
+                            <section class="mt10">
+                                <span class="red fz16">￥{{dek_s.dj}}</span>
+
+                                <p class="fr" v-if="dek_s.type==0">
+                                    <span class="ssd_uiyt_xd aa" v-bind:class="dek_s.sd_p>=1?'act':''">
+                                 
+                                <i class="df_add_as mui-icon-minus yj" v-on:click="add_xsds(arr_ad.x,arr_ad.y,0)">-</i>
+                                        <span class="fz12 z14 df_xsdsf_xdfx" >{{dek_s.sd_p}}</span>
+                                    <i class="df_add_as yj fei_xsffx" v-on:click="add_xsds(arr_ad.x,arr_ad.y,1)">+</i>
+                                    </span>
+                                </p>
+                                <!-- 222222222-->
+                                <p class="fr dsf_xsd_xdr5rxx" v-if="dek_s.type==1">
+                                    <a class="sd_uyt_xd" v-on:click="jhg_xsf_x(arr_ad.x,arr_ad.y,1)">选规格
+                                
+                                <span class="ssd_uiu_xdf yj" v-if="dek_s.sd_p>0">{{dek_s.sd_p}}</span>
+                                </a>
+                                </p>
+
+                                <p class="fr dsf_xsd_xdr5rxx" v-if="dek_s.type==2">
+                                    <a class="sd_uyt_xd" v-on:click="jhg_xsf_x(arr_ad.x,arr_ad.y,2)">选套餐
+                                
+                                  <span class="ssd_uiu_xdf yj" v-if="dek_s.sd_p>0">{{dek_s.sd_p}}</span>
+                                </a>
+                                </p>
+
+
+
+                            </section>
+                        </section>
+
+                        <section class="pd mt20  btm">
+                            <p class="cen fz16 z14">
+                                <span class="bgff sd_iuyh_xd pl20 pr20">菜品评价</span>
+                            </p>
+
+                            <p class="fz16 z14 cen">
+                                好评率 <span class="red">{{dek_s.pjd}}</span><span class="fz12 zc">（共{{dek_s.pjr}}人评价）</span>
+                            </p>
+                            <section class="mt10 ddf_xdf_xrtxd yj4">
+                                <p class="sd_uyy_xsd_xrt yj4" v-bind:style="'width:'+dek_s.pjd"></p>
+                            </section>
+                        </section>
+
+
+                        <section class="pd mt20  btm mt40">
+                            <p class="cen fz16 z14">
+                                <span class="bgff sd_iuyh_xd pl20 pr20">菜品描述</span>
+                            </p>
+
+                            <section v-html="dek_s.pj"></section>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <!--购物车弹出层-->
+        <div id="share_wp" class="mui-popover mui-popover-bottom mui-popover-action">
+            <section class="bgff ssd_xsd_xdrxrx">
+                <section class="pd pt10 pm10 bbm">
+                    <span class="zc fz16">已选菜品</span>
+
+                    <span class="fr z14 fz15" v-on:click="qq_kong">
+                       <i class="mui-icon mui-icon-trash"></i>
+                       清空购物车
+                   </span>
+                </section>
+
+                <div class="mui-scroll-wrapper df_xsd_Xdrtxcf">
+                    <div class="mui-scroll">
+                        <ul class="sd_uyt_ul">
+                            <li class="pd pt10 pm10 bbm " v-for="gw in gwc_s.gwc" v-if="gw.num>0">
+                                <p class="fz15 z14 mui-col-xs-7  dian fl">{{gw.name}}</p>
+                                <p class=" mui-col-xs-2 fl fz14 red">
+                                    ￥{{gw.dj}}
+                                </p>
+                                <!--        <section class="sd_xsdf_xsdfx" v-if="gw.type==0">
+                                    <span class="ssd_uiyt_xd aa" v-bind:class="gw.sd_p>=1?'act':''">
+                                <i class="df_add_as mui-icon-minus yj" v-on:click="add_xsds(gw.arr_adx,gw.arr_ady,0);gw.sd_p--">-</i>
+                                        <span class="fz12 z14 df_xsdsf_xdfx" >{{gw.sd_p}}</span>
+                                    <i class="df_add_as yj fei_xsffx" v-on:click="add_xsds(gw.arr_adx,gw.arr_ady,1);gw.sd_p++">+</i>
+                                    </span>
+
+
+                                </section>-->
+                                <!--   5555-->
+
+                                <section class="sd_xsdf_xsdfx" v-if="gw.type==0||gw.type==1">
+                                    <span class="ssd_uiyt_xd aa" v-bind:class="gw.num>=1?'act':''">
+                                <i class="df_add_as mui-icon-minus yj" v-on:click="add_xsds_g(gw.zb_a,0,gw.dj);gw.num--">-</i>
+                                        <span class="fz12 z14 df_xsdsf_xdfx" >{{gw.num}}</span>
+                                    <i class="df_add_as yj fei_xsffx" v-on:click="add_xsds_g(gw.zb_a,1,gw.dj);gw.num++">+</i>
+                                    </span>
+                                </section>
+
+                                <section class="sd_xsdf_xsdfx" v-if="gw.type==2">
+                                    <span class="ssd_uiyt_xd aa" v-bind:class="gw.sd_p>=1?'act':''">
+                                    <i class="df_add_as mui-icon-minus yj" v-on:click="add_xsds_g(gw.zb_a,0,gw.dj);gw.num-=1">-</i>
+                                        <span class="fz12 z14 df_xsdsf_xdfx" >{{gw.num}}</span>
+                                    <i class="df_add_as yj fei_xsffx" v-on:click="add_xsds_g(gw.zb_a,1,gw.dj);gw.num+=1">+</i>
+                                    </span>
+
+
+                                </section>
+
+                                <p class="qc"></p>
+
+                                <section v-if="gw.type==2">
+                                    <p class="zc  fz12 " v-for="sdf in gw.tc_iius">
+                                        {{sdf.name+"x"+(sdf.num*gw.sd_p)}}
+                                    </p>
+                                </section>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!--规格弹出层-->
+        <div id="share_gg" class="mui-popover mui-popover-bottom mui-popover-action ssd_xsff_xrttx">
+            <section class="bgff ">
+                <p class="pd pt10 pm15 z14 fz18">
+                    {{dek_s.name}}
+                    <a class="fa fa-times-circle fz26 fr z14" href="#share_gg"></a>
+                </p>
+                <div class="mui-scroll-wrapper df_xsd_Xdrtxcf">
+                    <div class="mui-scroll">
+
+                        <section class=" pd mt10 sdf_xsdf_cfgg bbm">
+
+                            <span class="fz16 fl mt15">规格</span>
+                            <span class="fz15 sd_iiu_xsdfxc" v-for="(ghd,lko) in dek_s.guige" v-bind:class="ghd.acls" v-on:click="df_iuydx(arr_ad.x,arr_ad.y,lko);dek_s.dj=ghd.jiner;dek_s.xig_x=ghd.num">
+                          {{ghd.name}}
+                      </span>
+                            <p class="qc"></p>
+                        </section>
+
+
+                        <section class="pd pt20">
+                            <span class="fz18 red">
+                               <!-- {{'￥'+dek_s.dj*dek_s.sd_p}}-->
+                               {{'￥'+dek_s.dj}}
+                                
+                            </span>
+
+                            <p class="fr">
+                                <span class="ssd_uiyt_xd aa" v-bind:class="dek_s.xig_x>=1?'act':''">
+                                <i class="df_add_as mui-icon-minus yj" v-on:click="guigej(arr_ad.x,arr_ad.y,0);">-</i>
+                                        <span class="fz12 z14 df_xsdsf_xdfx" >{{dek_s.xig_x}}</span>
+                                <i class="df_add_as yj fei_xsffx" v-on:click="guigej(arr_ad.x,arr_ad.y,1);">+</i>
+                                </span>
+
+
+                            </p>
+                        </section>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- 套餐弹出层-->
+        <div id="share_tc" class="mui-popover mui-popover-bottom mui-popover-action ssd_xsff_xrttx">
+            <section class="bgff ">
+                <p class="pd pt10 pm15 z14 fz18">
+                    {{dek_s.name}}
+                    <a class="fa fa-times-circle fz26 fr z14" href="#share_tc"></a>
+                </p>
+                <section class="sd_iuyt_xsdttx">
+                    <div class="mui-scroll-wrapper df_xsd_Xdrtxcf">
+                        <div class="mui-scroll">
+
+                            <section class=" pd mt10 sdf_xsdf_cfgg bbm">
+
+                                <section class="pm10" v-for="(s_sd,ida) in dek_s.tq_ssd">
+                                    <p class="z14 fz16">{{s_sd.name}}<span class="red" v-tc_ix="s_sd.type"></span></p>
+                                    <p class="sd_iuyuxsdf">
+                                        <span class="fz15 sd_iiu_xsdfxc" v-for="(afg,idb) in s_sd.desd" v-bind:class="afg.acls" v-on:click="tc_iudx(arr_ad.x,arr_ad.y,ida,idb)"> {{afg.name}} <span v-if="afg.num>0">{{'x'+afg.num}}</span></span>
+
+                                    </p>
+                                    <p class="qc"></p>
+                                </section>
+
+
+
+                            </section>
+
+
+                            <section class="pd pt20">
+                                <span class="fz18 red">{{'￥'+dek_s.dj}}</span>
+                                <!--6666666666-->
+                                <p class="fr">
+                                    <span class="ssd_uiyt_xd aa" v-bind:class="guig>=1?'act':''">
+                                    <i class="df_add_as mui-icon-minus yj" v-on:click="tcadd_s(arr_ad.x,arr_ad.y,0,dek_s.dj);">-</i>
+                                        <span class="fz12 z14 df_xsdsf_xdfx" >{{guig}}</span>
+                                    <i class="df_add_as yj fei_xsffx" v-on:click="tcadd_s(arr_ad.x,arr_ad.y,1,dek_s.dj);">+</i>
+                                    </span>
+
+
+                                </p>
+                            </section>
+                            <!-- <p class="pd mt20">
+                                <button class="w100 bgred fz16 pt10 pm10" v-on:click="tcadd_s(arr_ad.x,arr_ad.y,1);">确定</button>
+                            </p>-->
+
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!--   <div class="ssd_uyy_xsdf_xdff yj4 bgff  pt10 pm10 bgff a-bouncein">
+        <p class="fz18 cen z14">
+            餐厅公告
+        </p>
+        <p class="fz13 mt10">
+
+            这里是餐厅公告显示信息这里是餐厅公告显示信息这里是餐厅公告显示信息这里是餐厅公告显示信息这里是餐厅公告显示信息这里是餐厅公告显示信息
+        </p>
+
+        <p class="mt10">
+            <button class="w100 bgred fz16 pt5 pm5 " onclick="mask.close()">
+开始点餐</button>
+        </p>
+    </div>-->
+
+    <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+
+
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src='../js/jquery.fly.min.js'></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/mui.gd.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src=".././js/moni.js"></script>
+    <script src="../js/base.js"></script>
+    <script>
+        var mask = mui.createMask(function() {
+            $(".ssd_uyy_xsdf_xdff").remove()
+        });
+        /*mask.show();*/ //显示遮罩
+
+        Vue.directive('tc_ix', {
+            inserted: function(el, binding) {
+                // 聚焦元素
+                if (binding.value == 0) {
+                    el.innerHTML = "(全选)"
+                    return
+                }
+                el.innerHTML = "(任选" + binding.value + ")"
+            }
+        })
+
+        var km = new Vue({
+            el: '#app',
+            data: {
+                ss_iu: moni,
+                dek_s: "", //详情弹出层的值
+                guig: 0, //规格弹出层选择的个数
+                tc_oius: true, //套餐开关
+                hjh_o: 0,
+                arr_ad: {
+                    x: 0,
+                    y: 0
+                }, //列表点击的时候获取一级下标和二级下标 
+                gwc_s: {
+                    "zs": 0,
+                    "zj": 0,
+                    "gwc": [],
+                    "sf_sh": 0,
+                    "sf_sa": ""
+                } //购物车信息 zs商品总数量  zj总价 gwc是用户勾选的商品  sf_sh和sf_sa购物车底部交互   sf_sh==1店铺休息中
+            },
+            methods: {
+                jhg_xsf_x: function(x, y, z) { //
+                    /**
+                    x==数组的一级下标
+                    y==2级数组下标
+                    z==0列表图片点击事件 1规格
+                    **/
+                    this.arr_ad.x = x
+                    this.arr_ad.y = y
+                    this.dek_s = moni[x].ul_liu[y];
+                    if (z == 0) {
+                        mui('#share_pp').popover('toggle');
+                    } else if (z == 1) {
+                        var ajhg_s = 0; //选中规格的下标
+                        $(moni[x].ul_liu[y].guige).map(function(er) {
+                            if (this.acls == "act") {
+                                ajhg_s = er
+                            }
+                        })
+                        moni[x].ul_liu[y].xig_x = moni[x].ul_liu[y].guige[ajhg_s].num
+
+
+
+                        mui('#share_gg').popover('toggle');
+
+                    } else if (z == 2) {
+                        this.guig = 0
+                        this.tc_oius = false
+                        mui('#share_tc').popover('toggle');
+
+                    }
+
+
+                },
+                add_xsds_g: function(x, y, z) { //规格的加号和减号  x=坐标  y=类型  3333 z=金额
+
+                    if (y == 1) {
+                        this.gwces(1, z)
+                        moni[x[0]].ul_liu[x[1]].sd_p++
+                    } else if (y == 0) {
+                        this.gwces(0, z)
+                        moni[x[0]].ul_liu[x[1]].sd_p--
+                    }
+                    if (x[2] >= 0 && y == 1) {
+                        moni[x[0]].ul_liu[x[1]].guige[x[2]].num++
+                            console.log(moni[x[0]].ul_liu[x[1]].guige[x[2]].num)
+                    } else if (x[2] >= 0 && y == 0) {
+                        moni[x[0]].ul_liu[x[1]].guige[x[2]].num--
+                    }
+
+                },
+                add_xsds: function(x, y, z) { //加号按钮触发事件222222
+                    /**
+                    x==数组的一级下标
+                    y==2级数组下标
+                    z==类型  0是减  1是加
+                    **/
+                    var xqsd_xs = moni[x].ul_liu[y],
+                        wybs = (x + "a" + y + "b"); //唯一的标示
+                    if (z == 1) {
+                        xqsd_xs.sd_p++
+                            this.gwces(1, xqsd_xs.dj)
+                        kjhds_w = {}
+                        kjhds_w.zb_a = [x, y]; //坐标
+                        kjhds_w.name = xqsd_xs.name; //菜名加规格
+                        kjhds_w.dj = xqsd_xs.dj; //此规格的金额
+                        kjhds_w.num = xqsd_xs.sd_p; //购买的数量
+                        kjhds_w.sd_p = xqsd_xs.sd_p;
+                        kjhds_w.wybs = wybs
+                        kjhds_w.type = 0;
+
+                        var sd_iu = false, //判读购物车里是否有改条记录
+                            kmj_ox = 0; //获取相同的值的下标
+                        $(this.gwc_s.gwc).map(function(wer) {
+                            try {
+                                if (this.wybs == wybs) {
+                                    sd_iu = true;
+                                    kmj_ox = wer
+                                }
+                            } catch (e) {
+
+                            }
+
+                        })
+                        if (!sd_iu) { //没有相同的记录就添加 否则只加数量
+                            this.gwc_s.gwc.push(kjhds_w)
+                        } else {
+                            this.gwc_s.gwc[kmj_ox].num = kjhds_w.num
+                        }
+
+
+
+                    } else {
+                        xqsd_xs.sd_p--
+                            this.gwces(0, xqsd_xs.dj)
+
+                    }
+
+
+
+                },
+                qq_kong: function() { //清空购物车
+                    $(moni).map(function() {
+                        $(this.ul_liu).map(function() {
+                            this.sd_p = 0
+                            $(this.guige).map(function() {
+                                this.num = 0
+                            })
+                        })
+                    })
+                    this.gwc_s = {
+                        "zs": 0,
+                        "zj": 0,
+                        "gwc": [],
+                        "sf_sh": 0,
+                        "sf_sa": ""
+                    }
+                    mui('#share_wp').popover('toggle');
+                },
+                guigej: function(x, y, z) { //规格弹出层的加减触发   11111111
+                    var ajhg_s = 0; //选中规格的下标
+                    $(moni[x].ul_liu[y].guige).map(function(er) {
+                        if (this.acls == "act") {
+                            ajhg_s = er
+                        }
+                    })
+                    var sd_ixu = moni[x].ul_liu[y].guige[ajhg_s],
+                        wybs = (x + "a" + y + "b" + sd_ixu.name); //唯一的标示
+
+
+                    if (z == 1) {
+                        sd_ixu.num += 1
+                        this.gwces(1, sd_ixu.jiner)
+                        kjhds_w = {}
+                        kjhds_w.zb_a = [x, y, ajhg_s]; //坐标
+                        kjhds_w.name = moni[x].ul_liu[y].name + "(" + sd_ixu.name + ")"; //菜名加规格
+                        kjhds_w.dj = sd_ixu.jiner; //此规格的金额
+                        kjhds_w.num = sd_ixu.num; //购买的数量
+                        kjhds_w.wybs = wybs
+                        kjhds_w.type = 1;
+                        kjhds_w.sd_p = ++moni[x].ul_liu[y].sd_p;
+                        var sd_iu = false, //判读购物车里是否有改条记录
+                            kmj_ox = 0; //获取相同的值的下标
+                        $(this.gwc_s.gwc).map(function(wer) {
+                            try {
+                                if (this.wybs == wybs) {
+                                    sd_iu = true;
+                                    kmj_ox = wer
+                                }
+                            } catch (e) {
+
+                            }
+
+                        })
+                        if (!sd_iu) { //没有相同的记录就添加 否则只加数量
+                            this.gwc_s.gwc.push(kjhds_w)
+                        } else {
+                            this.gwc_s.gwc[kmj_ox].num = sd_ixu.num
+                        }
+
+
+
+                    } else if (z == 0) {
+                        sd_ixu.num -= 1;
+                        moni[x].ul_liu[y].sd_p--;
+                        this.gwces(0, sd_ixu.jiner)
+
+                    }
+
+                    moni[x].ul_liu[y].xig_x = moni[x].ul_liu[y].guige[ajhg_s].num
+                },
+                gwces: function(type, jine) { //购物车的公共方法
+                    $(".ssdf_ijuh_xdf").addClass("a-bouncein")
+                    setTimeout(function() {
+                        $(".ssdf_ijuh_xdf").removeClass("a-bouncein")
+                    }, 500)
+                    /* type 1:加  0减 jine=金额*/
+                    if (type == 1) {
+                        this.gwc_s.sf_sa = "act";
+                        this.gwc_s.zs += 1
+                        this.gwc_s.zj += jine
+                    } else {
+                        this.gwc_s.zs -= 1
+                        this.gwc_s.zj -= jine
+                        if (this.gwc_s.zs <= 0) {
+                            this.gwc_s.sf_sa = "";
+                        }
+                    }
+
+                },
+                df_iuydx: function(x, y, z) { //规格选择
+                    /**
+                    z==数组下标
+                    **/
+                    $(moni[x].ul_liu[y].guige).map(function() {
+                        this.acls = ""
+                    })
+                    moni[x].ul_liu[y].guige[z].acls = "act"
+                    this.guig = moni[x].ul_liu[y].guige[z].num
+
+                },
+                tc_iudx: function(x, y, z, k) { //套餐
+                    console.log(x + " " + y + " " + z + " " + k)
+                    var sd_iu = moni[x].ul_liu[y].tq_ssd[z].type, //类型  0是全选
+                        jkg_xd = 0,
+                        kfs_s = moni[x].ul_liu[y]
+
+                    if (sd_iu == 1) {
+                        $(moni[x].ul_liu[y].tq_ssd[z].desd).map(function() {
+                            this.acls = ""
+                        })
+                        moni[x].ul_liu[y].tq_ssd[z].desd[k].acls = "act"
+                    }
+                    if (sd_iu == 2) {
+
+                        if (this.hjh_o != k) {
+                            $(moni[x].ul_liu[y].tq_ssd[z].desd).map(function(ee) {
+                                this.acls = ""
+
+                            })
+                            moni[x].ul_liu[y].tq_ssd[z].desd[this.hjh_o].acls = "act"
+                            moni[x].ul_liu[y].tq_ssd[z].desd[k].acls = "act"
+                            this.hjh_o = k
+                        }
+                    }
+
+                    if (this.tc_oius) {
+                        var sdf_ius = this.gwc_s.gwc
+
+                        var tc_iius = []
+                        $(kfs_s.tq_ssd).map(function() {
+                            $(this.desd).map(function() {
+                                if (this.acls == "act") {
+                                    var s_odsd = {}
+                                    s_odsd.name = this.name;
+                                    s_odsd.num = this.num == 0 ? 1 : this.num
+                                    tc_iius.push(s_odsd)
+                                }
+                            })
+                        })
+                        sdf_ius[sdf_ius.length - 1].tc_iius = tc_iius
+
+
+
+                        console.log(sdf_ius)
+                    }
+                },
+                tcadd_s(x, y, z, k) {
+                    /**
+                    x==数组的一级下标
+                    y==2级数组下标
+                    z==类型  0是减  1是加
+                    **/
+                    var kfs_s = moni[x].ul_liu[y]
+                    if (z == 1) {
+                        this.guig++
+
+                            this.gwces(1, k)
+
+                        var sd_iusd = {}
+                        sd_iusd.zb_a = [x, y]; //坐标
+                        sd_iusd.name = kfs_s.name
+                        sd_iusd.dj = kfs_s.dj
+                        sd_iusd.type = 2
+                        sd_iusd.sd_p = this.guig
+                        sd_iusd.num = this.guig
+                        var tc_iius = []
+                        $(kfs_s.tq_ssd).map(function() {
+                            $(this.desd).map(function() {
+                                if (this.acls == "act") {
+                                    var s_odsd = {}
+                                    s_odsd.name = this.name;
+                                    s_odsd.num = this.num == 0 ? 1 : this.num
+                                    tc_iius.push(s_odsd)
+                                }
+                            })
+                        })
+                        sd_iusd.tc_iius = tc_iius
+
+                        if (!this.tc_oius) {
+                            this.gwc_s.gwc.push(sd_iusd)
+                            this.tc_oius = true;
+                        } else {
+                            var sdf_ius = this.gwc_s.gwc
+                            sdf_ius[sdf_ius.length - 1].num++
+                                sdf_ius[sdf_ius.length - 1].sd_p++
+                        }
+                        kfs_s.sd_p++
+                    } else if (z == 0) {
+                        this.gwces(0, k)
+                        this.guig--
+                            var sdf_ius = this.gwc_s.gwc
+                        sdf_ius[sdf_ius.length - 1].num--
+                            sdf_ius[sdf_ius.length - 1].sd_p--
+                            kfs_s.sd_p--
+
+                    }
+                },
+                xhl_oi: function() { //选好了按钮触发
+                    localStorage.gwcw = JSON.stringify(this.gwc_s);
+                    window.location.href = "order-confirm/order-confirm.html"
+                }
+            },
+            created: function() {
+                $("#app").addClass("show")
+
+            }
+
+
+        })
+
+
+
+
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        });
+        inyyt()
+
+
+
+
+
+        $("body").on("click", ".fei_xsffx", function(e) {
+            addProduct($(this))
+        })
+        /* $('html,body').on('click', addProduct);*/
+        function addProduct(xs) {
+            var offset = $(".ssdf_ijuh_xdf").offset(),
+                sd_xd = $(xs).offset(),
+                flyer = $('<p class="sd_xs"></p>');
+            flyer.fly({
+                start: {
+                    left: sd_xd.left,
+                    top: sd_xd.top
+                },
+                end: {
+                    left: offset.left,
+                    top: offset.top,
+                    width: 0,
+                    height: 0
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

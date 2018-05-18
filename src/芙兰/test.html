@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Payment Example</title>
+		<script type="text/javascript">
+			var channels = null,
+				payChanel = null
+			// 监听plusready事件  
+			document.addEventListener("plusready", function() {
+				// 扩展API加载完毕，现在可以正常调用扩展API
+				plus.payment.getChannels(function(s) {
+					channels = s;
+					for(var i in channels) {
+						if(channels[i].id == "wxpay") {
+							payChanel = channels[i];
+						}
+					}
+				}, function(e) {
+					alert("获取支付通道列表失败：" + e.message);
+				});
+			}, false);
+			// 请求支付操作
+			function requestPay() {
+			
+				// 必须从业务服务器获取支付信息
+				var statement = {}; 
+				statement.productid="测试"
+				statement.username="o665p2sdo"
+				statement.quantity="10"
+				plus.payment.request(payChanel, statement, function() {
+					alert("支付操作成功！");
+				}, function(e) {
+					alert("支付失败：" + e.message);
+				});
+			}
+			
+		</script>
+	</head>
+
+	<body>
+
+	<button id="DSf_sdr" onclick="requestPay()">fdsf22</button>
+	</body>
+
+</html>

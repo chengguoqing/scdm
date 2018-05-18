@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+
+
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #F1F1F1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="pd mt20">
+
+        <section class="bgff dsf_iudsf yj4 pd">
+            <span class="fz12 df_idf_d  yj4">拼</span>
+            <span class="fz16 cz">总金额</span>
+            <span class="df_d_dfgxc tr">
+            <input type="number" placeholder="0.00" class="sd_dd_sdfgx">
+                元
+            </span>
+        </section>
+
+        <section class="fz12 z9 mt15 pr">
+            当前代金券余额：222
+            <span class="dsf_iudf_dfx">
+               <button type="button" class="mui-btn mui-btn-warning">拼手气红包</button>
+            <button type="button" class="mui-btn">普通红包</button>
+            </span>
+
+        </section>
+
+        <section class="bgff dsf_iudsf yj4 pd mt15">
+            <span class="fz16 cz">红包个数</span>
+            <span class="df_d_dfgxc tr">
+            <input type="number" placeholder="0" class="dsf_d_dfgx">
+                个
+            </span>
+        </section>
+        <textarea rows="4" placeholder="恭喜发财，大吉大利！" class="dsf_iyu_dsf mt20"></textarea>
+
+        <p class="mt20 fz16 z3 cen ">
+            ￥<span class="fz32 dsf_d_dxc">0.00</span>
+        </p>
+
+        <section class="mt30">
+            <p>
+                <button type="button" class="mui-btn mui-btn-warning  fz16 w100 pt10 pm10"><i class="mui-icon mui-icon-weixin fz22 mr10"></i>分享给好友</button>
+            </p>
+            <p class="mt20">
+                <button type="button" class="mui-btn mui-btn-warning  fz16 w100 pt10 pm10"><i class="mui-icon mui-icon-pengyouquan fz22 mr10"></i>发送到朋友圈</button>
+            </p>
+        </section>
+
+    </section>
+
+    <p class="dsf_d_sff cen pt5 pm5 cf gd ">
+
+    </p>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function() {
+            $(".dsf_iudf_dfx button").on("click", function() {
+                $(".dsf_iudf_dfx button").removeClass("mui-btn-warning")
+                $(this).addClass("mui-btn-warning")
+            })
+
+//            总金额输入变化
+            $(".sd_dd_sdfgx").on("input", function() {
+                var sd_sd = $(this).val()
+                if (sd_sd > 20000) {
+                    $(".dsf_d_sff").addClass("act").text("单次支付总额不可超过20000")
+                    return
+
+                } else {
+                    $(".dsf_d_sff").removeClass("act")
+                }
+                if (sd_sd) {
+                    $(".dsf_d_dxc").text(sd_sd)
+                } else {
+                    $(".dsf_d_dxc").text("0.00")
+                }
+
+
+            })
+//            红包个数输入变化
+            $(".dsf_d_dfgx").on("input",function(){
+                    var sd_sd = $(this).val()
+                if (sd_sd > 100) {
+                    $(".dsf_d_sff").addClass("act").text("一次最多发100个红包")
+                    return
+
+                } else {
+                    $(".dsf_d_sff").removeClass("act")
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

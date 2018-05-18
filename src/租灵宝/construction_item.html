@@ -1,0 +1,147 @@
+<!--施工项目-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>施工项目</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">施工项目</h1>
+		</header>
+		<div class="mui-content" id="construction_item">
+			<section class="pd bgff box pt10 pm10">
+				<p class="box_a gff_sd">
+					<span class="dsfdf_d  yj20" data-lk="1">最新</span>
+				</p>
+				<p class="box_a gff_sd">
+					<span class="dsfdf_d  yj20" data-lk="2">热门</span>
+				</p>
+				<p class="box_a gff_sd">
+					<span class="dsfdf_d  yj20 " data-lk="3">金额<i class="f_i dsf_sdfgx"></i></span>
+				</p>
+				<p class="box_a tr dsf_d_dgfgx" @tap="fenlei_sd">
+					<span class="dsfdf_d  yj20">分类筛选</span>
+				</p>
+
+			</section>
+
+			<section class="pd bgff pt10 btm pm10">
+				<div class="mui-input-row mui-search pr">
+					<input type="search" class="mui-input-clear" placeholder="">
+				</div>
+			</section>
+
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper xiy_zuysdf">
+				<div class="mui-scroll">
+					<ul class="dfsd_df mt5 " id="dsf_d_dfg">
+						<li class="pd pt10 pm5 pd bgff mui-row" v-for="mr in qiu_a" @tap="zhu('construction_projects','',{i_d:mr.id})">
+							<p class="fz15 z0 dian">{{mr.name}}</p>
+							<section class="mui-row mt5">
+								<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_jsf"></i> 预算： <span class="ye">{{mr.budget}}</span>
+								</p>
+								<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_jsf ab"></i> {{mr.areaer}}
+								</p>
+
+								<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_sdgx ad"></i> 电话: <span class="ye">{{mr.mobile}} </span>
+								</p>
+							</section>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			var picker_b = new mui.PopPicker({
+				"layer": [1]
+			});
+			var qiuy_s = {}
+			qiuy_s.Services = "project.more"
+			qiuy_s.page = 1
+			var km = new Vue({
+				el: '#construction_item',
+				data: {
+					qiu_a: []
+				},
+				methods: {
+					sjh_sd: function(df, sd_sdf) {
+						var sd_sdfs = this
+						m_ajax(df, function(data) {
+							try {
+								sd_sdf(data.prolist.length)
+							} catch(e) {
+
+							}
+							data.prolist.map(function(a) {
+								sd_sdfs.more_df.push(a)
+							})
+
+						})
+					},
+					fenlei_sd: function() {
+						var sd_sdf = this
+						picker_b.show(function(rl) {
+							sd_sdf.qiu_a = []
+							var ids = rl[0].value
+							qiuy_s.cat_id = ids
+							indt(sd_sdf, qiuy_s)
+						})
+					}
+				},
+				created: function() {
+					indt(this, qiuy_s, "")
+					var projectlog = {},
+						sd_ois = this
+					projectlog.Services = "project.projectlog"
+					m_ajax(projectlog, function(data) { //获取分类信息
+						var sd_sds_b = []
+						data.projectlog.map(function(a) {
+							var sd_sdf = {}
+							sd_sdf.value = a.id
+							sd_sdf.text = a.name
+							sd_sds_b.push(sd_sdf)
+						})
+						picker_b.setData(sd_sds_b)
+					})
+				}
+			})
+
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			mui.ready(function() {
+				mui(".gff_sd").on("tap", ".dsfdf_d", function() {
+					var sd_d = document.getElementsByClassName("dsfdf_d")
+					mui.each(sd_d, function(index, item) {
+						item.classList.remove("act")
+					})
+					this.classList.add("act")
+					var sd_drfsd = parseInt(this.getAttribute("data-lk"))
+					chug(sd_drfsd)
+				})
+			})
+		</script>
+	</body>
+
+</html>

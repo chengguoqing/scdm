@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>下单</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="pd">
+        <section class="sdfd_df_sdfg mt15 yj4">
+            <p class="pd z14 pt10 pm10 fz16 bbm">
+                订单详情
+            </p>
+
+            <section class="mt10 pd asdf_Sd_dg pm10">
+
+                <p class="mui-col-xs-6 fl">称呼:于先生</p>
+                <p class="mui-col-xs-6 fl">电话:18588211589</p>
+                <p class="qc"></p>
+                <p>
+                    车辆：奥迪A6
+                    <span class="ml10">银白色</span>
+                    <span class="ml10">粤B3005s</span>
+                </p>
+                <p>
+                    洗车地址:深圳市宝安区锦夏花园
+                </p>
+                <p class="mui-col-xs-6 fl">
+                    预约时间：2015-05-25
+
+                </p>
+                <p class="mui-col-xs-6 fl">
+                    8:00-10:00
+
+                </p>
+
+
+                <p class="qc"></p>
+                <p class="z14 fz15 mt10">
+                    订单金额
+                </p>
+
+            </section>
+        </section>
+    </section>
+    <section class="mt10 btm bbm pt10 pm10 fz16 zd pd">
+        账户余额：0元
+        <span class="fr">还需支付：<span class="ls">35元</span></span>
+    </section>
+    <section class="">
+        <ul class="sdd_SDf_sd">
+            <li class="pt10 pm10 bbm pd">
+                <i class="f_i dsf_sfdf_s fl"></i>
+                <section class="ov pl10 pr">
+                    <p class="fz16 z14">微信支付</p>
+                    <p class="fz12">
+                        推荐安装微信5.0及以上版本
+                    </p>
+                    <i class="f_i sdf_Sf_sd act"></i>
+                </section>
+            </li>
+            <li class="pt10 pm10 bbm pd">
+                <i class="f_i dsf_sfdf_s fl ab"></i>
+                <section class="ov pl10 pr">
+                    <p class="fz16 z14">银行卡支付</p>
+                    <p class="fz12">
+                        支持储蓄卡信用卡，无需开通网银
+                    </p>
+                    <i class="f_i sdf_Sf_sd"></i>
+                </section>
+            </li>
+        </ul>
+    </section>
+    
+    
+    <p class="pd mt60">
+    <button class="bgls cf fz16 pt10 pm10 w100">确定</button>
+    </p>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function() {
+            $(".sdf_Sf_sd").on("click", function() {
+                $(".sdf_Sf_sd").removeClass("act")
+                $(this).addClass("act")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

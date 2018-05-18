@@ -1,0 +1,119 @@
+<!--商户修改-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商户修改</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/weui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .huoqu_sdfxc{
+            width: 118px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="weui-cells__title">信息修改</p>
+
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <input class="weui-input df_s_srrtx" type="text" value="直营" readonly>
+            </div>
+        </div>
+    </div>
+
+    <p class="weui-cells__title">基本信息</p>
+    <section class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">店铺名称</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="显示给付款人">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">店铺地址</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="店铺实际营业地址">
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">发人姓名</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="中文姓名">
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">身份证号码</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="法人有效身份证号码">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">结算卡号</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" id="cardNo" placeholder="收款结算银行卡号">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">手机号码</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="tel" placeholder="银行卡预留手机号">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd">
+                <label class="weui-label">手机验证码</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="tel" placeholder="点击按钮获取验证码">
+            </div>
+            <div class="weui-cell__ft">
+                <button class="weui-vcode-btn huoqu_sdfxc">获取验证码</button>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+ 
+    
+    <div class="weui-btn-area">
+        <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips"><span>注册</span></a>
+
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        /*60秒倒计时*/
+        var opu = 59,
+            jhgg = true;
+        $(".huoqu_sdfxc").on("click", function() {
+            var th=this
+            if (jhgg == true) {
+                jhgg = false
+                $(th).text("60s").addClass("sdsd_a")
+                var sdf_wer = setInterval(function() {
+                    $(th).text((opu--) + "s")
+                    if (opu < 0) {
+                        $(th).text("获取验证码").removeClass("sdsd_a")
+                        jhgg = true
+                        opu = 59
+                        clearTimeout(sdf_wer)
+                    }
+                }, 1000)
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!--店主圈列表-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>店主圈</title>
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/pi_cs.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="dianzhuquan" class="mui-slider">
+        <section>
+            <div class="bgff">
+                <img src="../img/df_sd.jpg" class="w100">
+            </div>
+            <section class="mui-row bgff pt5 pm10">
+                <a class="mui-col-xs-3 cen" @tap="zhu('../article_cat_lm')">
+                    <p class="dsf_ih_sd">
+                        <img src="../img/dsfdsf_a.png" class="cz">
+                    </p>
+                    <p class="z3">店铺装修</p>
+                </a>
+                <a class="mui-col-xs-3 cen" @tap="zhu('../article_cat_lm')">
+                    <p class="dsf_ih_sd">
+                        <img src="../img/dsfdsf_b.png" class="cz">
+                    </p>
+                    <p class="z3">进货技巧</p>
+                </a>
+                <a class="mui-col-xs-3 cen" @tap="zhu('../article_cat_lm')">
+                    <p class="dsf_ih_sd ab">
+                        <img src="../img/dsfdsf_c.png" class="cz">
+                    </p>
+                    <p class="z3">经营技巧</p>
+                </a>
+                <a class="mui-col-xs-3 cen" @tap="zhu('../article_cat_lm')">
+                    <p class="dsf_ih_sd ac">
+                        <img src="../img/dsfdsf_d.png" class="cz">
+                    </p>
+                    <p class="z3">活动/促销</p>
+                </a>
+
+            </section>
+
+            <section class="khjg_row btm  pd mui-row bgff mt10" v-for="sd in 5" @tap="zhu('../article_cat_xq')">
+                <img src="../img/5850f0a8Nfc8055c3.png" class="df_iy_sd_sdf fr">
+                <section class="df_iyh_df ov pr10">
+                    <p class="dianer fz16 dfs_iyh_sdf z3">
+                        智能加热毛巾架，为你打造健康美妙的生活
+                    </p>
+                    <p class="fz12 mt25">
+                        <img src="../img/dsfdsf_a.png" class="df_jhgh_sd cz">
+                        <span class="fz16 ml5">店铺装修</span> 1275次浏览
+                    </p>
+                </section>
+            </section>
+
+           
+
+        
+
+
+          
+
+
+        </section>
+
+    </div>
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/webviewGroup.js"></script>
+    <script>
+        var km = new Vue({
+            el: '#dianzhuquan',
+            data: {
+
+            },
+            methods: {
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

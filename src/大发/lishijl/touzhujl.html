@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>投注记录</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+			.mui-table-view li {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<section class="mui-row pd bgff ">
+			<section class="mui-col-xs-6 pr10">
+				<p class="pr fg_jgh_ert">
+					<input placeholder="日期" readonly id="riqisert">
+					<i class="mui-icon mui-icon-arrowdown fz16"></i>
+				</p>
+			</section>
+			<section class="mui-col-xs-6 pl10">
+				<p class="pr fg_jgh_ert">
+					<select>
+						<option>平台</option>
+						<option>Sunbet</option>
+						<option>MG</option>
+						<option>OG</option>
+						<option>CG</option>
+						<option>新冠体育</option>
+						<option>PT</option>
+						<option>HB</option>
+					</select>
+					<i class="mui-icon mui-icon-arrowdown fz16"></i>
+				</p>
+			</section>
+		</section>
+		<section class="mui-row pd bgff btm cen">
+
+			<section class="mui-col-xs-6 pt10 pm10 fz16">
+				总投资0
+			</section>
+			<section class="mui-col-xs-6 pt10 pm10 fz16">
+				总派奖0
+			</section>
+		</section>
+
+		<section class="btm ">
+
+			<p class="cen mt80 fz16">
+				没有更多了^_^
+			</p>
+		</section>
+
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script>
+			mui.plusReady(function() {
+				mui(".fg_jgh_ert").on("tap", "#riqisert", function() {
+					var th=this
+					plus.nativeUI.pickDate(function(e) {
+						var d = e.date,
+						ri_sd=d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
+						th.value=ri_sd
+					}, function(e) {
+
+					});
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

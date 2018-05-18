@@ -1,0 +1,280 @@
+<!--个人中心-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.user_iconsd {
+				overflow: hidden;
+				line-height: 70px;
+			}
+			
+			.user_iconsd img {
+				width: 100px;
+				height: 100px;
+				position: relative;
+				left: -15px;
+				bottom: 15px;
+			}
+			
+			.d_iiy_dsd_df .mui-col-xs-4 {
+				border-right: 1px solid #F7F7F7;
+				border-bottom: 1px solid #F7F7F7;
+				margin-bottom: 0px !important;
+				margin-top: 0px !important;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section id="user_center">
+			<header class="mui-bar mui-bar-nav" id="index_wersdsd">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">用户中心</h1>
+			</header>
+			<div class="mui-content" id="dsf_d_srertx">
+				<!--会员中心-->
+				<section class="dfd_sd_sd_a" id="dsfd_a">
+					<section class="user_top_bg pd pt20 cf pr">
+						<section class="user_iconsd yj fl">
+
+							<img :src="user.logo">
+						</section>
+						<section class="ov pl10" v-if="sd_sd_sdf">
+							<p class="ls_er mt10">
+								<span class="fz20 cf">您好!</span>
+								<span class="ml10">{{user.mobile}}</span>
+							</p>
+							<p class="ls_er mt5">
+								请完善您的信息，<span class="yellow" @tap="zhu('my_profile')">[立即完善]  </span>
+							</p>
+						</section>
+						<p v-else class="dfsf_s_sdfgfx pd ">
+
+							<button @tap="zhu('register')">立即登录</button>
+						</p>
+
+						<i class="f_i shezhi_icon" @tap="zhu('setting_install')" v-if="sd_sd_sdf"></i>
+						<p class="qc"></p>
+					</section>
+					<section class="bgff  cen d_iiy_dsd_df ">
+						<!-- -->
+						<section class="mui-col-xs-4 fl" v-for="km in leiys">
+							<section v-if="sd_sd_sdf" @tap="zhu('user_fx_list','',{ty_id:km.lx,name_i:km.name})">
+								<i class="f_i dsfd_ddf" :class="km.cls"></i>
+								<span class="ml10 fz16">
+          <span v-text="km.name"></span>
+								</span>
+							</section>
+							<section v-else>
+								<i class="f_i dsfd_ddf" :class="km.cls"></i>
+								<span class="ml10 fz16">
+          <span v-text="km.name"></span>
+								</span>
+							</section>
+
+						</section>
+
+						<p class="qc"></p>
+					</section>
+
+					<section class="mt10 bgff" v-if="sd_sd_sdf">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" @tap="zhu('my_profile')">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ab"></i>
+                </span> 我的信息
+								</a>
+							</li>
+							<li class="mui-table-view-cell" @tap="zhu('boarduser')">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ac"></i>
+                </span> 实名认证
+								</a>
+							</li>
+
+						</ul>
+					</section>
+
+					<section class="mt10 bgff" v-if="user.is_verify==1">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell" @tap="zhu('set_shop')">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ad"></i>
+                </span> 店铺信息
+
+								</a>
+							</li>
+							<li class="mui-table-view-cell" @tap="zhu('tuanduilist','',{type:1})">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ae"></i>
+                </span> 工程案例
+
+								</a>
+							</li>
+							<li class="mui-table-view-cell" @tap="zhu('tuanduilist','',{type:2})">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus af"></i>
+                </span> 服务团队
+								</a>
+							</li>
+						</ul>
+					</section>
+
+					<section class="mt10 bgff" v-if="sd_sd_sdf">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell" @tap="tuichu_sd">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ag"></i>
+                </span> 退出登录
+
+								</a>
+							</li>
+
+						</ul>
+					</section>
+
+				</section>
+				<!--业务员中心-->
+				<section class="dfd_sd_sd_a" id="dsfd_b">
+					<section class="user_top_bg pd pt20 cf pr cen ab">
+						<p>
+							<img :src="user.logo" class="yj user_iconsd">
+						</p>
+
+						<section class=" pl10">
+							<p class="ls_er mt10">
+								<span class="fz20 cf">{{user.realname}}</span>
+							</p>
+							<p class="ls_er mt5">
+								{{user.position}}
+								<span class="ml5">
+									{{user.mobile}}
+									
+								</span>
+							</p>
+						</section>
+						<!--	<i class="f_i shezhi_icon" @tap="zhu('setting_install')"></i>-->
+						<p class="qc"></p>
+					</section>
+
+					<section class="mt10 bgff">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" @tap="zhu('shigong')">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ab"></i>
+             </span> 施工项目
+								</a>
+							</li>
+							<li class="mui-table-view-cell" @tap="zhu('make_user_list')">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus"></i>
+              </span> 预约跟踪
+								</a>
+							</li>
+
+						</ul>
+					</section>
+
+					<section class="mt10 bgff">
+						<ul class="mui-table-view">
+
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" @tap="zhu('change_password')">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ba"></i>
+                </span> 修改密码
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" @tap="zhu('modify_binding')">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus bb"></i>
+                </span> 修改绑定手机
+								</a>
+							</li>
+
+						</ul>
+					</section>
+
+					<section class="mt10 bgff">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" @tap="zhu('my_profile')">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ab"></i>
+                </span> 我的信息
+								</a>
+							</li>
+
+						</ul>
+					</section>
+
+					<section class="mt10 bgff" v-if="user.is_verify==1">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ad"></i>
+                </span> 店铺信息
+
+								</a>
+							</li>
+							<li class="mui-table-view-cell" @tap="zhu('tuanduilist','',{type:1})">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ae"></i>
+                </span> 工程案例
+
+								</a>
+							</li>
+							<li class="mui-table-view-cell" @tap="zhu('tuanduilist','',{type:2})">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus af"></i>
+                </span> 服务团队
+								</a>
+							</li>
+						</ul>
+					</section>
+
+					<section class="mt10 bgff">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell" @tap="tuichu_sd">
+								<a class="mui-navigate-right">
+									<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ag"></i>
+                </span> 退出登录
+
+								</a>
+							</li>
+
+						</ul>
+					</section>
+				</section>
+
+			</div>
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/user_center.js"></script>
+	</body>
+
+</html>

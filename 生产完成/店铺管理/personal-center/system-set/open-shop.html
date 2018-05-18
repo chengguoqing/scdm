@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <title>系统设置</title>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <section class="mui-title pd ">
+            购买服务
+
+        </section>
+        <span class="mui-btn-link mui-pull-right cf sx">刷新</span>
+    </header>
+
+    <div class="mui-content bgff" id="app">
+        <section class="pd">
+            <ul class="xidf_iuy_xdf">
+                <li class="pd pt10 pm10 " v-for="(gu,idx) in gwfu" v-on:click="df_df(idx)" v-bind:class="gu.xz">
+                    <p class="z14 fz16" v-text="gu.name">
+
+                    </p>
+                    <p class="fz12 mt5" v-text="gu.shuoming">
+                    </p>
+                    <span class="fz16 z14 ssd_xsd_xdrx" v-text="gu.jiage+'元/年'"> </span>
+                </li>
+            </ul>
+        </section>
+
+
+
+
+        <ul class="mui-table-view sd_uyu_ul mt0   mt15">
+
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf z14 fz16 ">
+
+                    手机号：
+                </p>
+                <section class="ov">
+                    <input class="br0" placeholder="11位手机号码" type="tel">
+                </section>
+                <span class="red fz14 dxsd_xdrtx">发送验证码</span>
+            </li>
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf z14 fz16 ">
+
+                    验证码：
+                </p>
+                <section class="ov">
+                    <input class="br0" placeholder="6位数字">
+                </section>
+            </li>
+            <li class="mui-table-view-cell" v-on:click="gmqx">
+                <a class="mui-navigate-right">
+                    <p class="ssd_uuy_xsf z14 fz16 ">
+
+                        购买期限：
+                    </p>
+                    <span class="z14 fz14 fr mr20" v-text="sd_i.qx+'年'"></span>
+
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+
+                <p class="ssd_uuy_xsf z14 fz16 ">
+
+                    服务价格：
+                </p>
+                <section class="ov">
+                    <p>
+                        <span class="red fz16" v-text="'￥'+sd_i.youhui.jiage.toFixed(2)"></span>
+                    </p>
+                    <p>
+                        <span class="zc fz13" v-text="sd_i.youhui.name+'x'+sd_i.qx+'年'"></span>
+                    </p>
+                </section>
+            </li>
+
+            <li class="mui-table-view-cell">
+
+                <p class="ssd_uuy_xsf z14 fz16 ">
+
+                    优惠金额：
+                </p>
+                <section class="ov">
+                    <p>
+                        <span class="ls_2 fz16" v-text="'-￥'+((sd_i.youhui.jiage*sd_i.youhui.youhui)*sd_i.qx).toFixed(2)"></span>
+                    </p>
+                    <p>
+                        <span class="zc fz13" v-text="sd_i.youhui.hkj"></span><span class="red fz13" v-text="'（节省'+((sd_i.youhui.jiage*sd_i.youhui.youhui)*sd_i.qx).toFixed(2)+'）'"></span>
+                    </p>
+                </section>
+            </li>
+            <li class="mui-table-view-cell">
+
+                <p class="ssd_uuy_xsf z14 fz16 ">
+
+                    应付金额：
+                </p>
+                <section class="ov">
+                    <p class="fz16 red" v-text="'￥'+((sd_i.youhui.jiage-(sd_i.youhui.jiage*sd_i.youhui.youhui))*sd_i.qx)"></p>
+
+                </section>
+            </li>
+
+        </ul>
+        
+        
+        <p class="pd mt40">
+                <button class="w100 bgred fz16 pt10 pm10">
+立即购买</button>
+            </p>
+
+    </div>
+    <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/mui.picker.min.js"></script>
+    <script src="../../js/vue.js"></script>
+     <script src="../../js/base.js"></script>
+    <script>
+        /* 下拉框初始化*/
+        var picker = new mui.PopPicker({
+            "layer": [1]
+        });
+
+        var gwfu = [{
+                "id": "0",
+                "name": "标准版",
+                "shuoming": "适合普通餐厅，满足日常的点餐收银",
+                "jiage": 1800,
+                "xz": "act",
+                "youhui": 0.09,
+                "hkj": "新用户购买打9折"
+            },
+            {
+                "id": "1",
+                "name": "营销版",
+                "shuoming": "适合高级餐厅，满足日常的点餐收银营销",
+                "jiage": 4500,
+                "xz": "",
+                "youhui": 0.08,
+                "hkj": "新用户购买打8折"
+            },
+            {
+                "id": "2",
+                "name": "多门店版",
+                "shuoming": "适合连锁品牌餐厅，增加门店管理、店铺权限设置",
+                "jiage": 7800,
+                "xz": "",
+                "youhui": 0.07,
+                "hkj": "新用户购买打7折"
+            }
+        ]; //购买服务
+
+        var fus_d = {}
+        fus_d.qx = 1
+        fus_d.fuwja = {
+            "jiage": ('￥' + gwfu[0].jiage.toFixed(2)),
+            "name": gwfu[0].name
+        }; //服务价格
+        fus_d.youhui = gwfu[0] //优惠金额
+        var km = new Vue({
+            el: '#app',
+            data: {
+                gwfu: gwfu,
+                sd_i: fus_d
+            },
+            methods: {
+                df_df: function(x) { //服务列表点击
+                    var jg_s = this;
+                    $(gwfu).map(function() {
+                        this.xz = ""
+                    })
+                    gwfu[x].xz = "act"
+                    fus_d.youhui = gwfu[x]
+                },
+                gmqx: function() {
+                    picker.setData([1, 2, 3, 4])
+                    picker.show(function(rl) {
+                        fus_d.qx = rl[0]
+                    })
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

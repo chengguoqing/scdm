@@ -1,0 +1,154 @@
+<!--搜索-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<!--top-->
+		<section id="seek_app">
+			<section class="index_top pd bgff">
+				<i class="f_i logo_icon fl cz mui-action-back"></i>
+				<section class="sd_uy_sd fl pr pl10">
+					<input type="text" class="dsf_sdiue" placeholder="请输入产品关键字" v-model="see" @blur="sshdfgfx(see)" id="strName">
+					<i class="f_i sef_jinsd"></i>
+				</section>
+				<p class="ov tr ds_d_dfggx">
+					<i class="f_i lie_hsd" @click="zhu('classify')"></i>
+				</p>
+				<p class="qc"></p>
+			</section>
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper shuty_sdf">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mt10 sdf_d_dfgxc" id="liyut_sd">
+						<li class="mui-table-view-cell mui-media pr" v-for="se in search" @tap="ssd_sd_sdf(se)">
+							<div class="mui-media-body">
+								<span class="ye">[{{type[se.type-1].name}}]</span>{{se.name}}
+
+								<p class='dianer fz12 ds_d_wedfg mt5' v-text="se.brief">
+
+								</p>
+								<p class="fz12 mui-ellipsis pr mt2">
+									<i class="f_i map_icon_d"></i> {{se.mapaddr}}
+								</p>
+							</div>
+
+							<span class="sdsr_uysd yj4" v-if="se.is_verify==1">认</span>
+						</li>
+
+					</ul>
+				</div>
+			
+					<section class="cen mt40 ds_d_dd_dfw" id="ds_d_dd_dfw">
+							<img src="img/meiyou.png" class="df_dd_drt" />
+							<p class="ls fz20">
+								暂无记录！
+							</p>
+						</section>
+			
+			</div>
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			mui.init()
+
+			var search = {}
+			search.Services = "good.search"
+			search.h_display = 2
+			mui.ready(function() {
+				var self = {}
+				try {
+					self = plus.webview.currentWebview();
+				} catch(e) {
+					self.seer = ""
+				}
+
+				var km = new Vue({
+					el: '#seek_app',
+					data: {
+						search: "",
+						type: leiys,
+						see: ""
+					},
+					methods: {
+						ss_sd: function(se_sd) {
+							var sd_d = this
+							m_ajax(se_sd, function(data) {
+								if(data.goodlist.length<=0){
+									document.getElementById("ds_d_dd_dfw").classList.add("show")
+								}else{
+									document.getElementById("ds_d_dd_dfw").classList.remove("show")
+								}
+								sd_d.search = data.goodlist
+							})
+						},
+						ssd_sd_sdf: function(dat_s) {
+							var tyoe = dat_s.type,
+								sd_sdfx = ""
+							if(tyoe == 2 || tyoe == 4) {
+								sd_sdfx = "Inquiry_details"
+							} else {
+
+								sd_sdfx = "lease_details"
+							}
+							this.zhu(sd_sdfx, "", {
+								i_d: dat_s.id
+							})
+							console.log(JSON.stringify(dat_s))
+						},
+						sshdfgfx: function(a) {
+							if(!a) {
+								alert("搜索标题不能为空")
+								return
+							}
+							search.keyword = a
+							this.ss_sd(search)
+
+						}
+					},
+					created: function() {
+						var sd_ssdf = this
+						mui.plusReady(function() {
+							var self = plus.webview.currentWebview();
+							var kmn = self.img_w; //获取页面传过来的值
+							search.keyword = self.seer
+							if(search.keyword) {
+								sd_ssdf.ss_sd(search)
+							}
+							document.getElementById("strName").addEventListener("keydown", function(e) {
+								if(13 == e.keyCode) { //点击了“搜索” 
+									document.activeElement.blur(); //隐藏软键盘
+								}
+							}, false);
+						})
+
+					},
+					watch: {
+						search: {
+							handler: function() {
+								mui.init()
+								mui('.mui-scroll-wrapper').scroll({
+									deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+								});
+							}
+						}
+					}
+
+				})
+			})
+		</script>
+
+	</body>
+
+</html>

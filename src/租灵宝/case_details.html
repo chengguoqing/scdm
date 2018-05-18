@@ -1,0 +1,96 @@
+<!--案例详情-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>案例详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">案例详情</h1>
+		</header>
+		<div class="mui-content" id="case_details">
+			<img :src="casedetail.large" class="w100" />
+			<section class="bgff pm10">
+				<section class="pd pt10 ">
+					<p class="fz16 z3 ">
+						{{casedetail.name}}
+					</p>
+
+					<section class="mt15">
+						<p>
+							<span class="sdf_label fz12">添加时间：</span>
+							<span class="ye">{{casedetail.addtime}}</span>
+						</p>
+						<p class=" mt5 fz12">
+							<span class="sdf_label">施工地址：{{casedetail.adder}}</span>
+
+						</p>
+					</section>
+				</section>
+			</section>
+
+			<section class="mt10 bgff">
+				<p class="pt10 pm10 fz16 z3 sdf_d_sdfggx">
+					<span class="pd pm10">案例描述</span>
+				</p>
+				<section class=" pd pt20 pm10">
+					{{casedetail.brief}}
+
+				</section>
+			</section>
+			<section class="mt10 bgff">
+				<p class="pt10 pm10 fz16 z3 sdf_d_sdfggx">
+					<span class="pd pm10">案例详情</span>
+				</p>
+				<section class="dsf_sd_sdfg pd pt20" v-html="casedetail.content"></section>
+			</section>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/swiper3.07.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/component/banner.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			var self = {}
+			try {
+				self = plus.webview.currentWebview();
+			} catch(e) {
+				self.shop_id = 11
+				self.uid = 79
+				self.i_d = 1
+			}
+			var km = new Vue({
+				el: '#case_details',
+				data: {
+					casedetail: ""
+				},
+				methods: {
+
+				},
+				created: function() {
+					var ssdf_sd = {},
+						sd_ssd = this
+					ssdf_sd.Services = "shopindex.casedetail"
+					ssdf_sd.shop_id = self.shop_id
+					ssdf_sd.uid = self.uid
+					ssdf_sd.id = self.i_d
+					m_ajax(ssdf_sd, function(data) {
+						sd_ssd.casedetail = data
+					})
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

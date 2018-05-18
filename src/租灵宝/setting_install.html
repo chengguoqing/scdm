@@ -1,0 +1,162 @@
+<!--设置-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">设置</h1>
+		</header>
+		<div class="mui-content" id="setting_install">
+			<section class="mt10 bgff">
+				<ul class="mui-table-view">
+
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" @tap="zhu('change_password')">
+							<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus ba"></i>
+                </span> 修改密码
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" @tap="zhu('modify_binding')">
+							<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus bb"></i>
+                </span> 修改绑定手机
+						</a>
+					</li>
+
+				</ul>
+			</section>
+
+			<section class="mt10 bgff">
+				<ul class="mui-table-view">
+
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" @tap="zhu('About_Us')">
+							<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus bc"></i>
+                </span> 关于我们
+
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" @tap="zhu('feedback')">
+							<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus bd"></i>
+                </span> 建议反馈
+						</a>
+					</li>
+
+				</ul>
+			</section>
+
+			<section class="mt10 bgff">
+				<ul class="mui-table-view">
+
+					<li class="mui-table-view-cell" @tap="qingchu">
+						<a class="mui-navigate-right">
+							<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus be"></i>
+                </span> 清除缓存
+
+							<span class="fz15 z9 fr mr15 mt2">{{yhg_s}}</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+
+						<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus bf"></i>
+                </span> 版本更新
+						<span class="fz15 z9 fr mr10">ZLB1.0</span>
+
+					</li>
+					<li class="mui-table-view-cell">
+
+						<span class="df_iuy_df f_b">
+                <i class="f_i dsf_iuus bg"></i>
+                </span> 客服电话
+
+						<span class="fr ls">
+                    <i class="f_i tel_phone_d mr5"></i>
+                        021-6695007
+                    </span>
+					</li>
+
+				</ul>
+			</section>
+			<p class="cen z6 pt20">
+				copyright © 2017 上海猪灵网络科技有限公司
+			</p>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			mui.init({
+				beforeback: function() {
+					//获得列表界面的webview  
+					var list = plus.webview.currentWebview().opener();
+					//触发列表界面的自定义事件（refresh）,从而进行数据刷新  
+					console.log(JSON.stringify(list))
+					mui.fire(list, 'ref_dfresh');
+					return true;
+				}
+			});
+			var km = new Vue({
+				el: '#setting_install',
+				data: {
+					yhg_s: ""
+				},
+				methods: {
+
+					qingchu: function() {
+						var sd_sdf = this
+						plus.cache.clear(function() {
+							mui.toast("清理成功");
+							mui.back();
+							//							localStorage.clear()
+							//							var ws = plus.webview.currentWebview();
+							//							ws.close();
+							//							mui.openWindow({
+							//								url: 'register.html',
+							//								id: "register",
+							//								show: {
+							//									aniShow: "pop-in", //动画
+							//									duration: 500 //持续时间
+							//								}
+							//							});
+						});
+						plus.cache.calculate(function(size) {
+							km.yhg_s = parseFloat(size / 1024 / 1024).toFixed(2) + "MB"
+						});
+					}
+				},
+				created: function() {
+
+				}
+
+			})
+
+			// 扩展API加载完毕后调用onPlusReady回调函数 
+			document.addEventListener("plusready", onPlusReady, false);
+			// 扩展API加载完毕，现在可以正常调用扩展API 
+			function onPlusReady() {
+				plus.cache.calculate(function(size) {
+					km.yhg_s = parseFloat(size / 1024 / 1024).toFixed(2) + "MB"
+				});
+			}
+		</script>
+	</body>
+
+</html>

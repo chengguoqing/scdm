@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+            * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .target {
+            position: relative;
+        }
+
+        .placeholder {
+            position: absolute;
+            display: block;
+            width: 100px; 
+            height: 50px; 
+            top: -50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div style="height: 50px;background:grey;position:fixed;top:0;left:0;right:0;z-index:100;"></div>
+    <div style="height:200px;background:green;"></div><a href="#hehe">click me</a>
+    <div style="height:600px;background:pink;"></div>
+    <a name="hehe" class="target">
+        <span class="placeholder"></span> I am here. You can see me.</a>
+    <div style="height:600px;background:purple;"></div>
+    <div style="height:600px;background:yellow;"></div>
+</body>
+
+</html>

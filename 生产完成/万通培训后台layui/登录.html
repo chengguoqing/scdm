@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>万通培训</title>
+
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="dlkjhg_sdf"></div>
+    <div class="pr ds_d_sdfxcvx">
+
+        <div class="denglg_sdf pl30 pr30 fr pr show">
+            <p class="cf mt20 layui-row ">
+                <span class="fl mt5">登录:</span>
+                <a class="ls fz18 fr sd_sd_sdgfx">微信登录</a>
+            </p>
+            <div class="layui-row mt30">
+                <ul class="dsf_ddf_df">
+                    <li>
+                        <input type="text" placeholder="用户名">
+                        <i class="layui-icon dsf_d_dsf"></i>
+                    </li>
+                    <li>
+                        <input type="password" placeholder="密码">
+                        <img src="images/password.png" class="dsf_d_dsf">
+                    </li>
+                    <li>
+                        <button class="layui-btn w100   layui-btn-normal">登录</button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="denglg_sdf pl30 pr30 fr pr ">
+            <i class="layui-icon ls sdf_sdsddv b sd_sd_sdgfx">ဆ</i>
+            <p class="cen fz20 pt20">
+                微信登录
+            </p>
+            <p class="mt10">
+                <img src="images/qc.png" class="w100 dsf_d_sdgfx">
+            </p>
+
+            <p class="cen mt10 pm5">
+                请使用微信扫描二维码登录
+            </p>
+
+        </div>
+        <div class="ov">
+            <p class="fz26 cf">
+                [万通手机维修培训平台]
+            </p>
+
+            <p class="cf mt5">
+                欢迎使用 万通手机维修培训平台
+            </p>
+            <p class="mt20 cf fz12 dsf_d_dfgfx">
+                <img src="images/right.png" class="roght_dsdf cz">智能管理<br>
+                <img src="images/right.png" class="roght_dsdf cz">便捷高效<br>
+                <img src="images/right.png" class="roght_dsdf cz">多屏互动<br>
+                <img src="images/right.png" class="roght_dsdf cz">安全易用<br>
+                <img src="images/right.png" class="roght_dsdf cz">稳定快速
+            </p>
+            <p class="cf fz16 mt20">
+                任何疑问？
+                <a class="ml10 fz14">前往 》</a>
+            </p>
+        </div>
+        <p class="qc"></p>
+
+        <p class="btm pt20 mt20 cf cen">
+            © 2014-2017 zihan blog
+        </p>
+    </div>
+
+    <script src="layui.js"></script>
+    <script>
+        layui.use(['element', "layer", "form"], function() {
+            var $ = layui.jquery
+            $(".sd_sd_sdgfx").on("click",function(){
+                $(".denglg_sdf").addClass("show")
+                $(this).parents(".denglg_sdf").removeClass("show")
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>

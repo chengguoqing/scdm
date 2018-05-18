@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>修改登录密码</title>
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+			body {
+				background: #fff
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<section id="xiugai">
+			<header class="mui-bar mui-bar-nav asd_uy_dftx">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+				<h1 class="mui-title red">{{title}}</h1>
+
+			</header>
+
+			<div class="mui-content ">
+				<section class="  ">
+					<ul class="mui-table-view mt0">
+						<li class="mui-table-view-cell">
+
+							<span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+							<p class="fz16 z3 ov df_juhgg_er">
+								<input type="password" placeholder="旧密码" v-model="form.jpaw">
+
+							</p>
+
+						</li>
+						<li class="mui-table-view-cell">
+
+							<span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+							<p class="fz16 z3 ov df_juhgg_er">
+								<input type="password" placeholder="请设置6-20位密码" v-model="form.npaw">
+
+							</p>
+
+						</li>
+						<li class="mui-table-view-cell">
+
+							<span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+							<p class="fz16 z3 ov df_juhgg_er">
+								<input type="password" placeholder="再次确认密码" v-model="form.qpaw">
+
+							</p>
+
+						</li>
+					</ul>
+
+					<p class="pd">
+						<a @tap="submit" class="mui-btn mui-btn-red w100 pt10 pm10 fz16 mt20 cen yj4">
+							提交
+						</a>
+					</p>
+				</section>
+
+			</div>
+		</section>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/page/user/xiugai.js"></script>
+	</body>
+
+</html>

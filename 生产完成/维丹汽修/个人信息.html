@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <ul class="mui-table-view mt10">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right dsf_df_dggxx" href="#share_pp">
+                头像
+                <img src="img/dsf_a.png" class="yj dsf_df_fgxxc fr mr20">
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="修改名字.html">
+              名字
+                
+                <span class="zd fr mr20">巴萨</span>
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+
+            电话
+
+            <span class="zd fr ">135381903272</span>
+
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="我的二维码.html">
+              我的二维码
+                
+                <span class="zd fr mr20 sdf_dsfdf_dgx"><img src="img/erweima.jpg"></span>
+            </a>
+        </li>
+    </ul>
+
+
+    <ul class="mui-table-view mt10">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="修改性别.html">
+              性别
+                
+                <span class="zd fr mr20">男</span>
+            </a>
+        </li>
+        <li class="mui-table-view-cell select_po">
+            <a class="mui-navigate-right">
+              地区
+                
+                <span class="zd fr mr20">四川绵阳</span>
+            </a>
+        </li>
+
+    </ul>
+    <div id="share_pp" class="mui-popover mui-popover-bottom mui-popover-action ">
+        <section class="sdfds_fgf_dggxv">
+            <ul class="mui-table-view sdf_dfdgxc">
+                <li class="mui-table-view-cell">
+                    <a href="#share_pp" class="z14"> 拍照</a>
+
+                </li>
+                <li class="mui-table-view-cell">
+
+                    <a href="#share_pp" class="z14">从手机相册选择</a>
+
+                </li>
+                <li class="mui-table-view-cell">
+
+                    <a href="#share_pp" class="z14"> 保存图片</a>
+
+                </li>
+            </ul>
+
+
+            <ul class="mui-table-view sdf_dfdgxc ab">
+                <li class="mui-table-view-cell">
+
+                    <a href="#share_pp" class="z14"> 取消</a>
+
+                </li>
+
+            </ul>
+        </section>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/city.data.js"></script>
+    <script>
+        $(function() {
+            var picker = new mui.PopPicker({
+                "layer": [2]
+            });
+            picker.setData(cityData)
+            $(".select_po").on("tap", function() {
+                var hjhg = $(this)
+                picker.show(function(rl) {
+                    $(hjhg).find("span.mr20").text(rl[0].text + "" + rl[1].text)
+                })
+            })
+        })
+
+    </script>
+</body>
+
+</html>

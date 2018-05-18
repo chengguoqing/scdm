@@ -1,0 +1,39 @@
+<!--我的订单-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav asd_uy_dftx">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+			<h1 class="mui-title z3">我的订单</h1>
+
+		</header>
+		<div class="mui-content " id="order_list">
+
+			<section class="pr dsf_d_sdsf bgff btm">
+				<span class="dsf_sdf"></span>
+				<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary z6 fz14 ">
+					<a class="mui-control-item " v-for="(cn,idx) in caidan" :class="(tabindex+1)==idx?'mui-active':''" :data-wid='cn.url+"?id="+cn.id'>{{cn.name}}({{cn.num}})</a>
+				</div>
+
+			</section>
+
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/webviewGroup.js"></script>
+		<script src="../js/page/user/order_list.js"></script>
+	</body>
+
+</html>

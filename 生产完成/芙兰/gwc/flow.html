@@ -1,0 +1,118 @@
+<!--购物车-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+			.mui-table-view-cell:after, 
+			.mui-table-view:after,
+			.mui-table-view:before {
+				display: none !important
+			}
+			.dsf_jg_ewte{
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav asd_uy_dftx bbm">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3 dsf_jg_ewte " ></a>
+			<h1 class="mui-title z3">购物车</h1>
+
+		</header>
+		<div class="mui-content " id="gwc_id_sd">
+
+			<section v-for="(gs,idx) in gwc_lis">
+				<section class="pd pt10 pm10 bgff">
+					<i class="dx fz22 red icon-bugouxuan  cz" :class="!gs.cls||'icon-gou3'" @tap="sd_iydr(idx)"> </i>
+					<i class="dx  icon-dianpu cz fz20 ml5"></i>
+					<span class="z9 fz14">{{gs.name}}</span>
+					<span class="fr z6 fz12 blm mt2 pl10" @tap="bianji_s(idx)"> {{gs.bianji==""?'编辑':"完成"}}</span>
+				</section>
+
+				<ul class="mui-table-view dsf_jhj_s bgff" :class="!gs.bianji||'act'">
+					<!--            li加act编辑-->
+					<li class="mui-table-view-cell " v-for="(l_s,ied) in gs.list_s">
+						<div class="mui-slider-right mui-disabled" @tap="delect(idx,ied)">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+
+						<div class="mui-slider-handle h100">
+							<p class="sd_iyh_juher fl">
+								<i class="dx fz22 red icon-bugouxuan  cz" :class="!l_s.cls||'icon-gou3'" @tap="gx_jhs(idx,ied)"> </i>
+							</p>
+							<section class="ov  pl10">
+								<img :src="l_s.img" class="jhgf_sdrx fl">
+								<section class="ov pl10 pr">
+									<p class="dianer df_h_sderx">
+										{{l_s.title}}
+									</p>
+									<p class="z9 fz12">
+										颜色:{{l_s.yanse}} 尺码:{{l_s.cima}}
+									</p>
+									<p class="fz12 red">
+										{{l_s.xjia}}
+										<del class="z9 ml5">{{l_s.yjia}}</del>
+										<span class="fr z9">X{{l_s.jian}}</span>
+									</p>
+
+									<!--                            编辑框-->
+									<section class="bj_iu_sdf">
+										<div class="mui-numbox zidiy_sefx mt10" data-numbox-min='1'>
+											<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+											<input id="test" class="mui-input-numbox" type="number" value="1" />
+											<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+										</div>
+										<p class="mt10 fz12" @tap="tanchui_sd">
+											颜色:杂色 尺码:标准码 <i class="mui-icon mui-icon-arrowdown fz16"></i>
+										</p>
+
+									</section>
+								</section>
+								<p class="qc"></p>
+							</section>
+							<p class="qc"></p>
+						</div>
+					</li>
+
+				</ul>
+
+			</section>
+			<section class="dibu_ssff box pl10">
+				<section class="box_b pr5">
+					<section class="sd_jgh_serttx fz14">
+						<i class="dx fz22 red icon-bugouxuan  cz" :class="!quanxun_s||'icon-gou3'"></i>
+						<span class="fz16">全选</span>
+						<span class="red fr f_b">总计：4800.00</span>
+					</section>
+
+				</section>
+
+				<section class="box_a tr jinziun">
+					<!--
+                  <a class=" mui-btn mui-btn-red qujuiesd">
+    去结算
+        </a>
+-->
+					<a class=" mui-btn mui-btn-red qujuiesd" @tap="zhu('queren')">
+						去结算
+					</a>
+				</section>
+			</section>
+
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/page/gwc/index.js"></script>
+	</body>
+
+</html>

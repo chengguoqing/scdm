@@ -1,0 +1,677 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        #container .highcharts-grid-line,
+        .highcharts-yaxis,
+        #container .highcharts-yaxis-labels,
+        .highcharts-credits,
+        .highcharts-background,
+        .highcharts-legend,
+        .highcharts-button {
+            display: none !important
+        }
+
+        .highcharts-plot-border {
+            border: 1px dashed red !important
+        }
+
+        #containsan {
+            width: 100%;
+            height: 250px;
+        }
+
+        #container {
+            width: 110%;
+            height: 280px;
+            position: relative;
+            left: -50px;
+
+
+            max-width: 420px;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        .mui-table-view-cell:after {
+            left: 60px;
+        }
+
+        .mui-table-view:after {
+            display: none
+        }
+
+        .highcharts-tick {
+            stroke: #D3B872 !important
+        }
+
+        .highcharts-axis-line {
+            stroke: #D3B872 !important
+        }
+
+        #containsan .highcharts-axis-line,
+        #containsan .highcharts-grid-line {
+            stroke: #F49090 !important
+        }
+
+        .highcharts-area {
+            fill: rgba(255, 255, 255, 0.3);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">芙兰会员</h1>
+
+    </header>
+    <div class="mui-content ">
+
+        <section class="df_iy_srtxc btm mui-row cen ">
+            <p class="mui-col-xs-6 brm act">
+                解读与提升
+            </p>
+            <p class="mui-col-xs-6  ">
+                变化趋势
+            </p>
+        </section>
+
+        <!--        解读与提升-->
+        <section class="dsfds_sd_sf show">
+            <section class="dsf_ertiy_dsrtx ab pr">
+                <div id="containsan"></div>
+                <section class="cf fz16 sdf_jh_sf">
+                    <p>芙兰值</p>
+                    <p class="fz32">13018</p>
+                </section>
+            </section>
+
+            <section class="pt10 pm10 cen fz16">
+                <span class="df_u_sf cz f_b mr5"></span> 如何提高芙兰值 <span class="df_u_sf cz f_b ml5"></span>
+            </section>
+
+            <section class="bgff pd dsf_sd_serttxc ">
+                <p class="pt10 pm10 z3">
+
+                    <span class="fz16 hui_ksdf">会员福利</span>
+                    <a  class="z3 fr df_iyg_s_srt">
+                        <i class="mui-icon mui-icon-arrowup"></i>
+                    </a>
+                </p>
+
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media pl0">
+
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-z112 fz18"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">实名认证</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                <span class="ls">+100</span>芙兰值
+                            </p>
+                            <span class="fz12 z9 dsf_juh_srtx">已完成</span>
+                        </div>
+
+                    </li>
+                    <li class="mui-table-view-cell mui-media pl0">
+
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-weixin fz24"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">绑定微信</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                <span class="ls">+100</span>芙兰值
+                            </p>
+                            <span class="fz12 z9 dsf_juh_srtx">已完成</span>
+                        </div>
+
+                    </li>
+                    <li class="mui-table-view-cell mui-media pl0">
+
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-telphone fz24"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">绑定手机</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                <span class="ls">+100</span>芙兰值
+                            </p>
+                            <span class="fz12 z9 dsf_juh_srtx">已完成</span>
+                        </div>
+
+                    </li>
+                </ul>
+
+
+
+
+
+            </section>
+
+
+            
+            <section class="bgff pd dsf_sd_serttxc mt10 ab">
+                <p class="pt10 pm10 z3">
+
+                    <span class="fz16 hui_ksdf">消费购物</span>
+                    <a class="z3 fr df_iyg_s_srt">
+                        <i class="mui-icon mui-icon-arrowup"></i>
+                    </a>
+                </p>
+
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media pl0">
+                        <a class="mui-navigate-right sdf_jigh_drtx">
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-xiaofei fz20"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">购物</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                购物越多（实际支付金额），获取芙兰值越多
+                            </p>
+                            <span class="fz12 z3 dsf_juh_srtx ab">去购物</span>
+                        </div>
+</a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media pl0">
+ <a class="mui-navigate-right sdf_jigh_drtx">
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-xinpin fz22"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">购买新品类</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                1个品类<span class="red">+10</span>芙兰值
+                            </p>
+                            <span class="fz12 z3 dsf_juh_srtx ab">去购买</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media pl0">
+ <a class="mui-navigate-right sdf_jigh_drtx">
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-chongzhi fz22"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">充值</p>
+                            <p class="fz12  dsf_d_sdggx">
+                               充值送金额2倍的芙兰值
+                            </p>
+                            <span class="fz12 z3 dsf_juh_srtx ab">去充值</span>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+
+
+            </section>
+            
+            
+            
+            
+            
+            <section class="bgff pd dsf_sd_serttxc mt10 ab">
+                <p class="pt10 pm10 z3">
+
+                    <span class="fz16 hui_ksdf">更多互动</span>
+                    <a  class="z3 fr df_iyg_s_srt">
+                        <i class="mui-icon mui-icon-arrowup"></i>
+                    </a>
+                </p>
+
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media pl0">
+                        <a class="mui-navigate-right sdf_jigh_drtx">
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-tupian fz20"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">去晒单</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                <span class="red">+5</span> 京享值（每日最多150分且近半年订单有效）
+                            </p>
+                            <span class="fz12 z3 dsf_juh_srtx ab">去晒单</span>
+                        </div>
+</a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media pl0">
+ <a class="mui-navigate-right sdf_jigh_drtx">
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-biji fz22"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">订单评价</p>
+                            <p class="fz12  dsf_d_sdggx">
+                                <span class="red">+2</span> 京享值（每日最多60分且近半年订单有效）
+                            </p>
+                            <span class="fz12 z3 dsf_juh_srtx ab">去评价</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media pl0">
+ <a class="mui-navigate-right sdf_jigh_drtx">
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-57 fz22"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">回答问题</p>
+                            <p class="fz12  dsf_d_sdggx">
+                               <span class="red">+2</span> 京享值（每日最多50分）
+                            </p>
+                            <span class="fz12 z3 dsf_juh_srtx ab">去回答</span>
+                        </div>
+                        </a>
+                    </li>
+                     <li class="mui-table-view-cell mui-media pl0">
+
+                        <p class="mui-media-object mui-pull-left iu_iu_sdf">
+                            <i class="dx icon-fenxiang fz22"></i>
+                        </p>
+                        <div class="mui-media-body">
+                            <p class="fz16 z0">分享商品或活动</p>
+                            <p class="fz12  dsf_d_sdggx">
+                               <span class="red">+2</span> 京享值（每日最多50分）
+                            </p>
+                          
+                        </div>
+                    
+                    </li>
+                </ul>
+
+
+
+
+
+            </section>
+        </section>
+
+        <!--        变化趋势-->
+        <div class="dsfds_sd_sf ">
+
+
+            <section class="dsf_ertiy_dsrtx">
+
+                <div id="container"></div>
+            </section>
+
+
+
+
+            <section class="pt15 pm15 mui-row cen">
+                <section class="mui-col-xs-6">
+                    <p class="fz28 z3">99182</p>
+                    <p class="z3 mt10">
+                        上期芙兰值
+                    </p>
+                    <p class="fz12 ">
+                        2016-11-01至2017-11-01
+                    </p>
+                </section>
+
+                <section class="mui-col-xs-6">
+                    <p class="fz28 z3 ye">10036</p>
+                    <p class="z3 mt10">
+                        本期芙兰值
+                    </p>
+                    <p class="fz12 ">
+                        2016-11-01至2017-11-01
+                    </p>
+                </section>
+            </section>
+            <section class="bgff pt20  ">
+                <p class="cen">
+                    <i class="dx icon-xiaofei fz18 ye"></i>
+                    <br>
+                    <span class="z3 fz16">消费</span>
+                </p>
+                <section class="pd  bbm mt10 fz14 tr pm10">
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            $93161.00
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            购买金额
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            ￥92785.00 <i class="dx icon-down_er z9 fz12"></i>
+                        </div>
+                    </div>
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            83天
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            购买天数
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            91天 <i class="dx icon-down_er act z9 fz12"></i>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <p class="cen mt20">
+                    <i class="dx icon-duihua fz18 ye"></i>
+                    <br>
+                    <span class="z3 fz16">活跃</span>
+                </p>
+
+                <section class="pd  bbm mt10 fz14 tr pm10">
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            评价商品
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                    </div>
+
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            参与晒单
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                    </div>
+
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            回答问题
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                    </div>
+
+
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            99999次
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            京东支付
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            99999次<i class="dx icon-down_er act z9 fz12"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            分享转发
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            0次
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+
+
+
+
+                <p class="cen mt20">
+                    <i class="dx icon-zuanshi fz18 ye"></i>
+                </p>
+
+                <section class="pd  bbm mt10 fz14 tr pm10">
+                    <div class="mui-row df_iyh_rosf">
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            五星
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            信誉
+                        </div>
+                        <div class="mui-col-xs-4 dsf_jug_sdrt ">
+                            五星
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+
+                <p class="cen mt20">
+                    <i class="dx icon-ArtboardCopy fz18 ye"></i><br>
+                    <span class="z3 fz16">其他</span>
+                </p>
+
+                <section class="pd  bbm mt10 fz14 tr pm10">
+                    <div class="mui-row df_iyh_rosf">
+
+                        <div class="mui-col-xs-12 cen dsf_jug_sdrt ">
+                            每月购物3天 <span class="ye">+30</span>
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+<!--底部-->
+    <section class="mui-row dsf_df_sff cen">
+        <a class="mui-col-xs-3 " href="index.html">
+            <p class="dsf_kj_s">
+            <i class="dx icon-ziyuan fz24 cz"></i>
+            </p>
+            <p class="fz12">
+            会员首页
+            </p>
+        </a>
+          <a class="mui-col-xs-3 act" href="变化趋势.html">
+            <p class="dsf_kj_s">
+            <i class="dx icon-tisheng fz24 cz"></i>
+            </p>
+            <p class="fz12">
+            提升京享值
+            </p>
+        </a>
+        <a class="mui-col-xs-3" href="会员福利.html">
+            <p class="dsf_kj_s">
+            <i class="dx icon-fuli fz24 cz"></i>
+            </p>
+            <p class="fz12">
+            会员福利
+            </p>
+        </a>
+        
+        <a class="mui-col-xs-3" href="会员福利.html">
+            <p class="dsf_iy_sdf fz15">
+                PLUS<br>
+                <span class="fz14">会员</span>
+            </p>
+        </a>
+    </section>
+
+
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts-more.js"></script>
+    <script>
+        var sd_sd = [17817, 17142, 15588, 15423, 18036]//解读与提升的数据
+        $(function() {
+            $('#containsan').highcharts({
+
+                chart: {
+                    type: 'area',
+                    polar: true
+                },
+                title: {
+                    text: '预算与支出',
+                    x: -80,
+                    style: {
+                        display: "none"
+                    }
+
+                },
+                pane: {
+                    size: '80%',
+                    center: ['67%', '50%'],
+
+                },
+                xAxis: {
+                    categories: ['消费', '活跃', '账户', '充值', '信誉'],
+                    tickmarkPlacement: 'on',
+                    lineWidth: 0,
+                    labels: {
+                        style: {
+                            color: "#fff"
+                        },
+                        formatter: function() {
+                            return this.value;
+                        }
+                    }
+                },
+                yAxis: {
+                    gridLineInterpolation: 'polygon',
+                    lineWidth: 0,
+                    min: 0,
+                    labels: {
+                        style: {
+                            display: "none"
+                        },
+                    }
+                },
+                tooltip: {
+                    shared: true,
+                    pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+                },
+                legend: {
+                    align: 'right',
+                    verticalAlign: 'top',
+                    y: 70,
+                    layout: 'vertical'
+                },
+                series: [{
+                    color: "#fff",
+                    data: sd_sd,
+                    stickyTracking: false,
+                    pointPlacement: 'on'
+                }]
+            });
+
+
+            $(".df_iy_srtxc p").on("click", function() {
+                var idx = $(this).index()
+                $(".df_iy_srtxc p").removeClass("act")
+                $(this).addClass("act")
+                $(".dsfds_sd_sf").removeClass("show").eq(idx).addClass("show")
+            })
+
+            
+            
+//            折叠按钮触发
+            $(".df_iyg_s_srt").on("click",function(){
+                    $(this).parents(".dsf_sd_serttxc").toggleClass("act")
+            })
+            
+        });
+
+
+
+   var sd_sder = [17817, 17142, 15588, 15423, 13018]//变化趋势数据
+        $('#container').highcharts({
+            title: {
+                text: '对数折线图',
+                style: {
+                    display: "none"
+                }
+            },
+            xAxis: {
+                categories: ["9月", "10月", "11月", "12月", "当前"],
+                tickInterval: 1,
+                labels: {
+                    style: {
+                        color: "#D3B872"
+                    },
+                    formatter: function() {
+                        console.log(this)
+                        return this.value;
+                    }
+                }
+
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true,
+                        color: "#333",
+                        formatter: function() {
+                            if ("当前" == this.key) {
+
+                                return " <span class='ff_u_sdrtc'>" + this.y + "</span> <span class='sd_uy_srtcf yj'><span></span></span>";
+                            } else {
+                                return this.y;
+                            }
+
+
+                        },
+                        useHTML: true
+                    }
+                }
+            },
+            series: [{
+                data: sd_sder,
+                pointStart: 0,
+                lineWidth: 1, //线条宽度
+                color: "#fff",
+                stickyTracking: true,
+            }]
+        });
+
+    </script>
+
+</body>
+
+</html>

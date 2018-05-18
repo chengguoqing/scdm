@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <title>
+        个人中心</title>
+    <style>
+        body {
+            background: #EFEFF4
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="app">
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <section class="mui-title pd ">
+                意见建议
+
+            </section>
+
+            <span class="mui-btn-link mui-pull-right cf ">提交</span>
+        </header>
+
+        <div class="mui-content ">
+            <section class="pd pt10 pm10 zc fz16">
+                问题和意见
+                <a class="fr zc" href="#topPopover">
+              快捷输入 <i class="fa fa-angle-down"></i>
+              </a>
+            </section> 
+            <p class="pd pt10 pm10 bgff ">
+                <textarea class="fz16 mpt0" rows="4" placeholder="请输入回复内容" v-text="pingl.yijian_text"></textarea>
+            </p>
+
+
+            <section class="ssd_iuy_srow">
+                <p class="pd pt10 pm10 fz16 z14 zc">
+
+
+                    问题和意见
+                </p>
+
+                <section class="pd pt10 pm10 bgff">
+                    <p class="yj4 df_xsd_Xrttxc" v-for="(i_m,idx) in pingl.img_iu">
+                        <i class="fa fa-times-circle red fz18 closse_icosdf" v-on:click="rem_img(idx)"></i>
+                        <img v-bind:src="i_m">
+                    </p>
+
+                    <p class="yj4 df_xsd_Xrttxc up_xsImg">
+                        <img src="../img/sdf_a.jpg">
+                    </p>
+
+
+                    <p class="qc"></p>
+
+                </section>
+            </section>
+
+            <section class="ssd_iuy_srow">
+                <p class="pd pt10 pm10 fz16 z14 zc">
+
+
+                    电话/邮箱
+                </p>
+
+                <ul class="mui-table-view sd_uyu_ul mt0   ">
+
+                    <li class="mui-table-view-cell">
+
+                        <section class="ov">
+                            <input class="br0" placeholder="（选填，方便我们联系您）">
+                        </section>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="ssd_iuy_srow mt10">
+
+                <section class="ov red dg_xsd_xrtx pd">
+                    <span class=" pt10 pm10 fz16 z14 zc mr10">应用评分</span>
+                    <i class="fa fa-star-o fz18 zc"></i>
+                    <i class="fa fa-star-o fz18 zc"></i>
+                    <i class="fa fa-star-o fz18 zc"></i>
+                    <i class="fa fa-star-o fz18 zc"></i>
+                    <i class="fa fa-star-o fz18 zc"></i>
+                </section>
+
+
+
+
+            </section>
+
+
+
+            <div id="topPopover" class="mui-popover">
+                <div class="mui-popover-arrow"></div>
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view">
+
+
+                            <li class="mui-table-view-cell" v-for="yj in pingl.yijian" v-on:click="xiug_uj(yj)">
+                                <a href="#" v-text="yj"></a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <input type="file" id="ssd_ooie" onchange="previewFile()">
+    </section>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script>
+        var piuy_pl = {}
+        piuy_pl.hx = 0; //红色星星的个数  默认0个
+        piuy_pl.img_iu = []; //图片
+        piuy_pl.yijian = ['界面显示错乱', '启动缓慢,卡出翔了', '偶发性崩溃', 'UI无法直视,丑哭了']; //初始化快捷输入的提示
+        piuy_pl.yijian_text = ""
+
+        var km = new Vue({
+            el: '#app',
+            data: {
+                pingl: piuy_pl
+            },
+            methods: {
+                rem_img: function(x) {
+                    this.pingl.img_iu.splice(x, 1); //删除指定数组下标
+                },
+                xiug_uj: function(x) { //修改意见下拉列表点击事件
+                    mui('#topPopover').popover('toggle'); //隐藏弹出层
+                    this.pingl.yijian_text = x
+
+                }
+
+            }
+
+        })
+
+        $(".dg_xsd_xrtx .fa").on("click", function() {
+            var idx = ($(this).index() - 1);
+            console.log(idx)
+            $(".dg_xsd_xrtx .fa").removeClass('fa-star').addClass("zc").addClass("fa-star-o")
+            for (var i = 0; i <= idx; i++) {
+                $(".dg_xsd_xrtx .fa").eq(i).removeClass("zc").removeClass("fa-star-o").addClass('fa-star')
+            }
+            km.pingl.hx = (idx + 1)
+        })
+
+
+        $(".up_xsImg").on("click", function() {
+            $("#ssd_ooie").click()
+        })
+
+
+        function previewFile() {
+            var file = document.querySelector('#ssd_ooie').files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                km.pingl.img_iu.push(reader.result)
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {}
+        }
+
+    </script>
+
+</body>
+
+</html>

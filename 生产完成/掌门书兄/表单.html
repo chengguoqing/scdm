@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <form class="mui-input-group sdf_sdsdfgx">
+        <div class="mui-input-row fl sdf_d_ssdf">
+            <label class="fz15">分类</label>
+            <select class="fz15 pl10 fdf_dfggxc">
+                   <option>请选择分类</option>
+                <option>流行</option>
+                  <option>考研</option>
+                  <option>笔记</option>
+                  <option>传记</option>
+                <option>杂志</option>
+            </select>
+
+        </div>
+        <div class="mui-input-row fl sdf_d_ssdf">
+            <label class="fz16">地址</label>
+            <input type="text" class="mui-input-clear fz15 " placeholder="请输入地址" value="深圳">
+        </div>
+
+        <p class="qc"></p>
+        <div class="mui-input-row  ">
+            <label class="fz16">书名</label>
+            <input type="text" class="mui-input-clear fz15 " placeholder="请输入书名">
+        </div>
+        <div class="mui-input-row  ">
+            <label class="fz16">作者</label>
+            <input type="text" class="mui-input-clear fz15 " placeholder="请输入作者">
+        </div>
+        <div class="mui-input-row  ">
+            <label class="fz16">出版社</label>
+            <input type="text" class="mui-input-clear fz15 " placeholder="请输入出版社">
+        </div>
+        <p class="bgff bbm">
+            <textarea placeholder="图书简介" class="sdf_df_sd fz15" rows="3"></textarea>
+        </p>
+
+        <p class="pd pt10 pm10">
+          <span class="z14 fz16">图书照片</span>  好看的照片更快被兑换哦
+        </p>
+        <section class="bgff pd pt10 pm10">
+
+            <span class="sdfds_sd_sdf up">
+                <img src="img/sdf_a.jpg"  class="bg">
+            </span>
+
+
+            <p class="qc"></p>
+
+            <section class="dsf_sd_sfd ">
+                <p tion class="dsf_sd_sfd">
+                    <p class="fz12">
+                        免费共享(系统默认)
+                    </p>
+                <p class="ls fz12 sdf_sd_df"><span>切换为平台托管></span></p>
+            </section>
+
+            <section class="dsf_sd_sfd show">
+                <p class="fz12">
+                    平台托管(需要兑换者支付保证金，请选择书原价的约三折)
+                </p>
+                <p class="ls fz12 sdf_sd_df">
+                    <span>切换为免费共享></span>
+                    <select class="dsf_sd_sdgfx">
+                    <option>9元</option>
+                            <option>19元</option>
+                            <option>29元</option>
+                    </select>
+                </p>
+            </section>
+        </section>
+
+
+        <section class="mt40 pd sweexf_sdf_Sdfgx">
+            <p class="mui-col-xs-6 fl">
+                <button>取消</button>
+            </p>
+               <p class="mui-col-xs-6 fl tr">
+                <button>确定</button>
+            </p>
+            
+            <p class="qc"></p>
+        </section>
+
+    </form>
+
+    <input type="file" onchange="previewFile()" id="ssd_ooie"><br>
+ <!--底部-->
+    <section class="hggfsdf_sd box cen">
+        <a class="box_a fz12 act">
+            <p class="dsf_df_dsfg">
+                <i class="f_i df_asddf"> </i>
+            </p>
+            附近
+        </a>
+        <a class="box_a fz12">
+            <p class="dsf_df_dsfg">
+                <i class="f_i df_asddf ab"> </i>
+            </p>
+            书库
+        </a>
+        <a class="box">
+            <i class="f_i adsfsf_sd"></i>
+        </a>
+        <a class="box_a fz12">
+            <p class="dsf_df_dsfg">
+                <i class="f_i df_asddf ac"> </i>
+            </p>
+            消息
+        </a>
+        <a class="box_a fz12 ">
+            <p class="dsf_df_dsfg">
+                <i class="f_i df_asddf ad"> </i>
+            </p>
+            我的
+        </a>
+
+    </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/city.data.js"></script>
+    <script>
+        $(".sdfds_sd_sdf.up").on("click", function() {
+            $("#ssd_ooie").click()
+        })
+
+        $('body').on("click", ".sdf_sd_sdfx", function() {
+            $(this).parents(".sdfds_sd_sdf").remove()
+        })
+
+        $(".sdf_sd_df span").on("click", function() {
+            $(".dsf_sd_sfd").addClass("show")
+            $(this).parents(".dsf_sd_sfd").removeClass("show")
+        })
+
+        function previewFile() {
+            var file = document.querySelector('#ssd_ooie').files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                $(".sdfds_sd_sdf.up").before('   <span class="sdfds_sd_sdf"> <img src="' + reader.result + '" class="bg"> <i class="fa fa-close red sdf_sd_sdfx"></i> </span>')
+
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                $("#dfd_ssd").attr("src", "")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

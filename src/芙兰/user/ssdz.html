@@ -1,0 +1,69 @@
+<!--管理收货地址    -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理收货地址 </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body {}
+
+    </style>
+</head>
+
+<body>
+    <section id="ssdz">
+    	<header_p :title="bito"></header_p>
+       
+                <div class="mui-content mui-scroll-wrapper pm50">
+            <div class="mui-scroll">
+                
+                
+                
+            <section class="guanli_dis pd  pt10 mb10" v-for="(di,idx) in dizi">
+                <p class="pt10 z3 fz16">
+                {{di.shr}} <span class="red ml10 fz14" v-if="!di.moren">默认地址</span>
+                </p>
+                <p class="z6 mt5">
+                {{di.dizhi +'-'+di.xiangxi}}
+                </p>
+            
+                <section class="btm mt10  df_ng_btnsf">
+                    <span @tap="she_sd(idx)" class="fl">
+                         <i class="dx icon-bugouxuan fz20 cz " :class="di.moren||'act'"></i>
+                    <span class="z9 fz14">设为默认地址</span>
+                    </span>
+               
+                    <p class="fr hg_e_settxc">
+                    	<span style="opacity: 0;">{{di.title=(ty==1?'发货':'收货')+'地址编辑'}}{{ di.ty=ty}}</span>
+                        <a class="mui-btn " @tap="zhu('bianjishdz','',{bianji:di})"><i class="dx icon-biji"></i> 编辑</a>
+                        <a class="mui-btn " @tap="delect(idx)"><i class="mui-icon mui-icon-closeempty fz22"></i> 删除</a>
+                    </p>
+                    <p class="qc"></p>
+                </section>
+            </section>
+            
+        </div>
+
+        </div>
+        
+        
+          <a class="mui-btn mui-btn-red fz16 pt10 pm10 fabuliyu_ser" @tap="zhu('bianjishdz','',{bianji:{title:'添加'+(ty==1?'发货':'收货')+'地址',ty:ty,ad_d:true}})">
+            添加新地址
+        </a>
+    </section>
+
+    <script src="../js/mui.min.js"></script>
+    
+    <script src="../js/vue.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/ssdz.js"></script>
+</body>
+
+</html>

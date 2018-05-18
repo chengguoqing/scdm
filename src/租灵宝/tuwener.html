@@ -1,0 +1,90 @@
+<!--添加子产品-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>定位信息发布</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			body {
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">添加子产品与定位</h1>
+		</header>
+		<div class="mui-content" id="tuwener">
+			<div class="mui-input-group dsf_d_sdffgxc pr10">
+				<div class="mui-input-row">
+					<label>名称：</label>
+					<input type="text" class="mui-input-clear" v-model="name">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row mui-row">
+					<label>价格：</label>
+					<p class="mui-col-xs-4 ">
+						<input type="number" class="mui-input-clear w100er" v-model="budgetprice" >
+					</p>
+					<p class="mui-col-xs-1 cen z0 sd_juty_sdfx">元/</p>
+					<p class="mui-col-xs-4 dsf_s_sdrtx">
+						<input placeholder="台/小时"  v-model="measure_unit" type="text"/>
+					</p>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row mui-row">
+					<label>状态：</label>
+					<p class="mui-col-xs-4 dsf_s_sdrtx">
+						<select v-model="rentstatus">
+							<option>请选择</option>
+							<option v-for="sd in sdd_sd" :value="sd.text">{{sd.value}}</option>
+						</select>
+						<i class="f_i down_icon_dr"></i>
+					</p>
+				</div>
+				<div class="mui-input-row">
+					<label>定位器：</label>
+					<input type="text" class="mui-input-clear" placeholder="输入定位器编码" v-model="locationsn">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>城市区域：</label>
+					<input type="text" placeholder="请选择" @tap="xsd_sdgfx" v-model="sheng_a" readonly />
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>详细位置：</label>
+					<input type="text" class="mui-input-clear" placeholder="" id="suggestId" v-model="searchaddr" @keyup="dfd_sdf">
+					<p class="qc"></p>
+				</div>
+			</div>
+			<div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+			<section class="pd mt10"> 
+				<section class="diru_sd_sdr" id="allmap"></section> 
+			</section>
+			
+				<section class="pd mt20 mui-row">
+				<p class="mui-col-xs-6 pr10">
+					<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20" @tap="we_oiu_s" >确定</button>
+				</p>
+				<p class="mui-col-xs-6 pl10" @tap="quxiao">
+					<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20">取消</button>
+				</p>
+			</section>
+			<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=KIpwmISmRtIMMssrIQ4NF9ji"></script>
+			<script src="js/mui.min.js"></script>
+			<script src="js/mui.picker.min.js"></script>
+			<script src="js/vue.min.js"></script>
+			<script src="js/base.js"></script>
+			<script src="js/city.data.js"></script>
+			<script src="js/page/tuwener.js"></script>
+	</body>
+
+</html>

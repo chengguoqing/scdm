@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <title>
+餐桌管理</title>
+<style>
+    body{
+        background: #EFEFF4
+    }
+    </style>
+</head>
+ 
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <section class="mui-title pd ">
+         评论管理
+        
+        </section>
+    </header>
+    
+    <div class="mui-content ">
+        <!--   菜品列表--> 
+      <section class="ssd_iuu_xsf bgff">
+             <p class="act mui-col-xs-3"> 全部</p>
+            <p class="mui-col-xs-3">好评</p>
+            <p class="mui-col-xs-3">中评</p>
+            <p class="br0 mui-col-xs-3">差评</p>
+            <section class="qc"></section>
+      </section>
+            
+             <ul class="sd_iuy_xsffx ">
+           <li class=" pt10  bgff">
+              <section class="bbm pd pm10 pr">
+               <img src="../img/neus.jpg" class="sd_ouy_xerx yj fl ab">
+               <section class="ov pl10">
+                     <p class="fz16 z14 ">微距科技 张强
+<span class="fz12 fr">2017-04-11 17:15
+</span>
+                   </p>
+                     <p class="red mt5">
+                       <i class="fa fa-star fz18"></i>
+                            <i class="fa fa-star fz18"></i>
+                            <i class="fa fa-star fz18"></i>
+                            <i class="fa fa-star fz18"></i>
+                         <i class="fa fa-star-o fz18 zc"></i>
+                         
+                         <span class="zc ml10">4分</span>
+                         <span class="ls_2 fr">审核通过</span>
+                     </p>
+                     <p class="mt10">
+                       好评！店铺装修很好，很好吃的哦
+                     </p>
+                   <section class="mt10">
+                     <i class="fa fa-thumbs-o-up fz32 zc fl"></i>
+                       <span class="fz12 sd_xsdf_Xdfrx">小鸡炖蘑菇</span>
+                        <span class="fz12 sd_xsdf_Xdfrx">农家小炒肉</span>
+                       
+                       <p class="qc"></p>
+                   </section>
+                   
+                   <p class="mt10">
+                   <img src="../img/neus.jpg" class="sd_sserxr">
+                   </p>
+                   
+               </section>
+              <p class="qc"></p>
+              </section>
+              <section class="sd_uyt_xsfx cen ">
+                  <p class="mui-col-xs-4 fl">
+                      查看订单
+                  </p>
+                     <p class="mui-col-xs-4 fl">
+                      审核
+                  </p>
+                 <a class="mui-col-xs-4 fl" href="comment-replay.html">
+                        回复
+                    </a>
+                    
+              </section>
+              
+              <p class="qc"></p>
+           </li>
+           
+            </ul>
+
+        
+    </div>
+    <nav class="mui-bar mui-bar-tab sdfdd_xssd">
+        <a class="mui-tab-item mui-active">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">主页</span>
+        </a>
+
+        <a class="mui-tab-item">
+            <span class="mui-icon mui-icon-email"></span>
+            <span class="mui-tab-label">动态</span>
+        </a>
+        <a class="mui-tab-item">
+            <span class="mui-icon mui-icon-gear"></span>
+            <span class="mui-tab-label">切换店铺</span>
+        </a>
+    </nav>
+       <script src="../js/jquery-1.11.3.min.js"></script>
+   <script src="../js/mui.min.js"></script>
+   <script src="../js/base.js"></script>
+   <script>
+      $(function(){
+    
+          $(".ssd_iuu_xsf  p").on("click",function(){
+              $(this).parent().find("p").removeClass("act")
+              $(this).addClass("act")
+          })
+      })
+    </script>
+    </body>
+    
+</html>

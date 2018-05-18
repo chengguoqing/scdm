@@ -1,0 +1,67 @@
+<!--邀请码-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>邀请码</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/weui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #FAF9FE;
+        }
+
+        .dsf_d_sdtxcc {
+            width: 223px;
+            height: 223px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="center cashShow cen">
+
+            <h4>
+                <p class="fz22 z3 mt40">扫码支付邀请码</p>
+                <p style="font-size: 12px;color: #575757;">点击右上角分享到朋友圈</p>
+            </h4>
+
+            <!--        <img style="width: 223px;" class=" mt20 br" src="img/qrGen"/>-->
+            <p class="f_b dsf_d_sdtxcc" id="pic_ewm"></p>
+
+
+            <div class="btm_x mt30" />
+
+            <h3 class="fz16 z6 mt30">
+                长按选择 "识别图中二维码" 快速注册
+            </h3>
+            <h5 class="fz14 ye mt10">
+                二维码收款，支持信用卡，秒到账
+            </h5>
+        </div>
+
+
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode('pic_ewm', {
+            text: 'http://duxinggj.com',
+            width: 223,
+            height: 223,
+            colorDark: '#000000',
+            colorLight: '#ffffff'
+        });
+
+    </script>
+</body>
+
+</html>

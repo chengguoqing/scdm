@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<style type="text/css">
+			body,
+			html,
+			#allmap {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+			
+			#l-map {
+				height: 100%;
+				width: 78%;
+				float: left;
+				border-right: 2px solid #bcbcbc;
+			}
+			
+			#r-result {
+				height: 100%;
+				width: 20%;
+				float: left;
+			}
+			
+			.dsf_d_sdfxc {
+				position: absolute;
+				right: 0px;
+				top: 60px;
+				z-index: 99;
+				width: 80px;
+			}
+			
+			#allmap {
+				margin-top: 45px;
+			}
+			
+			.dsf_d_dsfgf {
+				position: fixed;
+				left: 0px;
+				top: 4px;
+				width: 100%;
+			}
+			
+			.dsf_dsdffeddfr {
+				border-radius: 20px;
+				background: #F1F3F8;
+				height: 35px;
+				overflow: hidden;
+			}
+			
+			.dsfdr_ddfxc {
+				width: 100px;
+				padding: 0px;
+				height: 100%;
+				text-indent: 15px;
+				background: #F1F3F8;
+			}
+			
+			.sd_sd_Sdfer {
+				height: 100%;
+			}
+			
+			.sd_sd_Sdfer i {
+				top: 13px;
+			}
+			
+			.sd_uy_sd.ab {
+				line-height: 35px;
+				padding-top: 0px;
+				background: #F1F3F8;
+			}
+			
+			.sd_uy_sd.ab input {
+				margin: 0 !important;
+				background: #F1F3F8 !important;
+			}
+			
+			.sd_uy_sd.ab .sef_jinsd {
+				top: 12px;
+			}
+		</style>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=KIpwmISmRtIMMssrIQ4NF9ji"></script>
+		<title>添加多个标注点</title>
+	</head>
+
+	<body>
+		<section class="pd dsf_d_dsfgf" id="map_sdfgx">
+			<section class="dsf_dsdffeddfr cen">
+				<span class="pr sd_sd_Sdfer ">
+					<i class="f_i down_icon_dr"></i>
+				<select class="dsfdr_ddfxc" v-model="sd_sd_id" @change="hsd_sdf">
+					<option  value="0">请选择分类</option>
+					<option v-for="sf in sd_sdf" :value="sf.id">{{sf.name}}</option>
+				</select>
+				</span>
+
+			</section>
+
+		</section>
+		<img src="img/ddf_as.png" class="dsf_d_sdfxc" />
+		<div id="allmap">加载中。。。</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/base.js"></script>
+	</body>
+
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var km = new Vue({
+		el: '#map_sdfgx',
+		data: {
+			sd_sdf: "",
+			sd_sd_id: 0, //分类id
+
+		},
+		methods: {
+			hsd_sdf: function(e) {
+				var sd_sdf = this
+				map.clearOverlays()
+				dfduty(ssd_sd, function(p1, p2) {
+					var querySellListOnMap = {}
+					querySellListOnMap.Services = "goodmap.querySellListOnMap"
+					querySellListOnMap.catid = sd_sdf.sd_sd_id
+					querySellListOnMap.minlng = p1.lng
+					querySellListOnMap.minlat = p1.lat
+					querySellListOnMap.maxlng = p2.lng
+					querySellListOnMap.maxlat = p2.lat
+					m_ajax(querySellListOnMap, function(data) {
+						if(data.list.length <= 0) {
+							return
+						}
+						data.list.map(function(a) {
+							addMarker(point, a);
+						})
+					})
+				})
+
+			}
+		},
+		created: function() {
+			var sd_sdf = this
+			var getgoodlog = {}
+			getgoodlog.Services = "goodmap.getgoodlog"
+			m_ajax(getgoodlog, function(data) {
+				console.log(data)
+				sd_sdf.sd_sdf = data
+			})
+		}
+
+	})
+
+	var map = new BMap.Map("allmap");
+	//	var point = new BMap.Point(121.469889, 31.240751);
+
+	function dfduty(ssd_sd, tusd) {
+		var point = new BMap.Point(ssd_sd.lng, ssd_sd.lat);
+		map.centerAndZoom(point, 12);
+		var mk = new BMap.Marker(ssd_sd);
+		map.addOverlay(mk);
+		map.panTo(ssd_sd);
+		var sw = ssd_sd;
+		var b = map.getBounds();
+		var p1 = b.getSouthWest();
+		var p2 = b.getNorthEast();
+		tusd(p1, p2)
+
+	}
+
+	var geolocation = new BMap.Geolocation();
+	geolocation.getCurrentPosition(function(r) {
+		if(this.getStatus() == BMAP_STATUS_SUCCESS) {
+			map.centerAndZoom(r.point, 12);
+			var ssd_sd = r.point
+
+			dfduty(ssd_sd, function(p1, p2) {
+				var sd_sds = {}
+				sd_sds.Services = "goodmap.getgoodlist"
+				sd_sds.minlng = p1.lng
+				sd_sds.minlat = p1.lat
+				sd_sds.maxlng = p2.lng
+				sd_sds.maxlat = p2.lat
+				sd_sds.catid = 0
+				m_ajax(sd_sds, function(data) {
+					console.log(JSON.stringify(data))
+					data.map(function(a, b) {
+						var point = new BMap.Point(a.lng, a.lat);
+						addMarker(point, a);
+					})
+
+				})
+			})
+		} else {
+			alert('failed' + this.getStatus());
+		}
+	}, {
+		enableHighAccuracy: true
+	})
+
+	// 编写自定义函数,创建标注
+	function addMarker(point, op) {
+		var myIcon = ""
+		if(op.rentstatus == 1) {
+			myIcon = new BMap.Icon("img/lahshs.png", new BMap.Size(22, 22));
+		} else {
+			myIcon = new BMap.Icon("img/lahsh.png", new BMap.Size(22, 22));
+		}
+
+		var marker = new BMap.Marker(point, {
+			icon: myIcon
+		});
+		map.addOverlay(marker);
+		marker.addEventListener("click", function() {
+			var sContent = '<p class="fz16 z14">' + op.name + '<p><p class="fz12"><i class="f_i dsf_jsf"></i> 租金： <span class="ye">' + op.budgetprice + '</span></p><p class="fz12"><span class="fl  dian"><i class="f_i dsf_jsf ab"></i> <span>' + op.adder + '</span></span></p>';
+			var infoWindow = new BMap.InfoWindow(sContent);
+			map.openInfoWindow(infoWindow, point); //开启信息窗口
+		})
+
+	}
+</script>

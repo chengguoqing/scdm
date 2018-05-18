@@ -1,0 +1,200 @@
+<!--我的资料-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.df_ds_sdfxc:after {
+				display: none;
+			}
+			
+			#dsfds_dsdrx {
+				white-space: normal !important
+			}
+		</style>
+	</head>
+
+	<body>
+		<section id="my_profile">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">我的资料</h1>
+			</header>
+			<div class="mui-content">
+				<img id="sd_sdf_sd" style="display: none;" />
+				<ul class="mui-table-view mt0">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							头像
+							<img :src="user.logo" class="dsf_iuyu_sdf" @tap="tuoui">
+						</a>
+					</li>
+					<li class="mui-table-view-cell" >
+						<a class="mui-navigate-right" @tap="ssd_sd_sdfs">
+							姓名
+							<span class="z9 fr mr15 fz14">
+                    {{user.realname}}
+                    </span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" v-if="user.groupid==3">
+						<a class="mui-navigate-right" @tap="df_s_sdfgfx">
+							职位
+							<span class="z9 fr mr15 fz14">
+                        {{user.position}}
+
+                    </span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="xsd_sdgfx">
+						<a class="mui-navigate-right">
+							所在地
+
+							<span class="z9 fr mr15 fz14"> 
+                    {{user.area}}
+ 
+                    </span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="#share_pp" v-if="">
+							<span class="fl">详细地址</span>
+
+							<p class="z9  mr15 fz14 ov tr" id="dsfds_dsdrx">
+								{{user.address}}
+
+							</p>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							联系电话
+							<span class="z9 fr mr15 fz14">
+                    {{user.mobile}}
+                    </span>
+						</a>
+
+				</ul>
+
+				<section class="pd mt20 mui-row" >
+					<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20" @tap="tijiaosdf">确定</button>
+
+				</section>
+
+			</div>
+
+			<div id="share_pp" class="mui-popover mui-popover-bottom mui-popover-action">
+				<section class="pd ">
+					<section class="pd pt10 pm10 bgff">
+						<p class=" tr pm10">
+							<a class="mui-icon mui-icon-close z6" href="#share_pp"> </a>
+
+						</p>
+						<textarea placeholder="请输入详情地址" rows="4" id="user_namedf" class="fz15" v-model="user.address"></textarea>
+
+					</section>
+
+				</section>
+			</div>
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/city.data.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			mui.init({
+				beforeback: function() {
+					//获得列表界面的webview  
+					var list = plus.webview.currentWebview().opener();
+					//触发列表界面的自定义事件（refresh）,从而进行数据刷新  
+					console.log(JSON.stringify(list))
+					mui.fire(list, 'ref_dfresh');
+					return true;
+				}
+			});
+			var picker_re = new mui.PopPicker({
+				"layer": [3]
+			});
+			picker_re.setData(dsdd_sd)
+
+			var self = {}
+			try {
+				self = plus.webview.currentWebview();
+			} catch(e) {
+
+			}
+
+			var km = new Vue({
+				el: '#my_profile',
+				data: {
+					user: ""
+				},
+				methods: {
+					ssd_sd_sdfs:function(){
+						var ddf_sd=prompt("请输入姓名")
+						if(ddf_sd){
+							this.user.realname=ddf_sd
+						}
+					},
+					df_s_sdfgfx:function(){
+						var ddf_sd=prompt("请输入职位")
+						if(ddf_sd){
+							this.user.position=ddf_sd
+						}
+					},
+					xsd_sdgfx: function() {
+						var sd_ds = this
+						document.activeElement.blur()
+						picker_re.show(function(rl) {
+							sd_ds.user.area = rl[0].text + ">" + rl[1].text + (rl[2].text ? '>' + rl[2].text : '')
+							sd_ds.user.level1 = rl[0].value
+							sd_ds.user.level2 = rl[1].value
+							sd_ds.user.level3 = rl[2].value
+						})
+					},
+					tijiaosdf: function() {
+				
+						var batchupdateprofile = {}
+						batchupdateprofile.Services = "user.batchupdateprofile"
+						batchupdateprofile.usertoken = getusertoken()
+						batchupdateprofile = assign_dsdf(batchupdateprofile, this.user)
+						console.log(JSON.stringify(batchupdateprofile)) 
+						m_post(batchupdateprofile, function(data) {
+							mui.back()
+						})
+					},
+					tuoui: function() {
+				
+				
+						var sd_osd = this
+						sc.xz("头像", function(url) {
+							sd_osd.user.logo = url
+						})
+					}
+
+				},
+				created: function() {
+					var viewprofile = {},
+						sd_sd = this
+					viewprofile.Services = "user.viewprofile"
+					viewprofile.usertoken = getusertoken()
+					m_ajax(viewprofile, function(data) {
+						sd_sd.user = data
+						sd_sd.sheng_a
+					})
+
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

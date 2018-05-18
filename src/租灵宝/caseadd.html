@@ -1,0 +1,76 @@
+<!--添加案例-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加案例</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">添加案例</h1>
+		</header>
+		<div class="mui-content" id="caseadd">
+			<div class="mui-input-group dsf_d_sdffgxc pr10">
+				<div class="mui-input-row">
+					<label>	案例名：</label>
+					<input type="text" class="mui-input-clear" v-model="t_aa.name">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>工程地点：</label>
+					<input type="text" class="mui-input-clear" v-model="t_aa.adder">
+					<p class="qc"></p>
+				</div>
+				
+
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>简述：</label>
+					<textarea rows="4" v-model="t_aa.brief"></textarea>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label class="sd_d_sdfx">图片：
+                 
+                  </label>
+					<section class="fl">
+						<span class="dsf_ds_dsfdrf pr" @tap="yesd_d('形象照片')">
+                      <img :src="t_aa.Image?t_aa.Image:'img/add_icon.png'" class="fm">
+                      <img  src="img/close-circled.png" class="close_oius_sd" v-if="t_aa.Image" @tap="d_sd_d(2,$event)"/>
+                  </span>
+					<p class="qc"></p>
+				</div>
+
+			</div>
+			<p class="fz154 pd pt10 pm10 z9">
+				详情描述：
+			</p>
+
+			<section class="bgff">
+				<script id="editor" type="text/plain" style="width:100%;height:200px;"></script>
+
+			</section>
+			<p class="pd mt20" @tap="add_btn">
+				<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20">添加</button>
+			</p>
+
+		</div>
+		<script src="js/mui.min.js"></script>
+
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script type="text/javascript" charset="utf-8" src="fuwenben/ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="fuwenben/ueditor.all.min.js"></script>
+		<script src="js/page/caseadd.js"></script>
+
+
+	</body>
+
+</html>

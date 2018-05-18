@@ -1,0 +1,91 @@
+<!--我要收款-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我要收款</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/weui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #EFEFEF;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="pd">
+        <p class="cen mt20">
+            <img src="img/dianpu.png" class="sd_sdf_d yj cz">
+            <span class="fz18 z3 ml5">小明擦擦地</span>
+        </p>
+
+        <section class="br mt30 yj4 bgff">
+            <div class="pd bbm">
+                <span class="fz40 fl">￥</span>
+                <p class="ov dsf_sd_sd fz20 z3 pl10">
+
+                </p>
+                <p class="qc"></p>
+            </div>
+            <p class="pt5 pm5 pd tr">
+                支付改变生活
+            </p>
+
+
+        </section>
+
+    </section>
+
+    <section class="jianp_sds cen">
+        <section class="sdf_uy_srrtx fl">
+
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span class="er">0</span>
+            <span>.</span>
+        </section>
+
+
+        <section class="ov dsf_sd_wersd">
+            <span>&lt;</span>
+            <p>确认<br>支付</p>
+        </section>
+
+
+    </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function() {
+//            键盘数字点击事件
+            $(".sdf_uy_srrtx span").on("click", function() {
+                var text_s = $(this).text().trim()
+                 if ($(".dsf_sd_sd").text().indexOf(".")  < 0) {
+                    $(".dsf_sd_sd").append(text_s)
+                }else if(text_s!="."){
+                     $(".dsf_sd_sd").append(text_s)
+                }
+
+            })
+            
+            $(".dsf_sd_wersd span").on("click",function(){//回退按钮触发
+                var sd_sf=$(".dsf_sd_sd").text()
+                    $(".dsf_sd_sd").text(sd_sf.substring(0,sd_sf.length-1))
+            })
+        })
+
+    </script>
+</body>
+
+</html>

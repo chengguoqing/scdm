@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>存款</title>
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/mui.picker.min.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<section id="chunkuan">
+			<header class="mui-bar mui-bar-nav asd_uy_dftx">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+				<h1 class="mui-title red">存款</h1>
+
+				<p class="qc"></p>
+
+			</header>
+
+			<section class="sd_ih_err_d pt10 ab ac">
+
+				<section class="mui-row pd mt10 cen">
+					<section class="mui-col-xs-6 pl0">
+						<i class="dx icon-yue ye fz32 f_b df_jh_rt "></i>
+						<section class=" pl10 tl f_b">
+							<p class="ye">主账户余额</p>
+							<p class="ye">
+								<span class="fz18">0.30</span>
+								<span class="fz12">RMB</span>
+							</p>
+						</section>
+						<p class="qc"></p>
+					</section>
+
+					<section class="mui-col-xs-6 pl0">
+						<i class="dx icon-yinhangqia ye fz32 f_b df_jh_rt"></i>
+						<section class="f_b pl10 tl">
+							<p class="ye">总财富</p>
+							<p class="ye">
+								<span class="fz18">104.72</span>
+								<span class="fz12">RMB</span>
+							</p>
+						</section>
+						<p class="qc"></p>
+					</section>
+				</section>
+
+			</section>
+
+			<div class="mui-content  mui-scroll-wrapper quyu_we_ert">
+				<div class="mui-scroll">
+
+					<div class="hg_neo_ser  bgff   fz16 z3 mui-row">
+
+						<p class="mui-col-xs-3 f_b  z3 pl10">
+							充值金额
+						</p>
+						<p class="f_b mui-col-xs-6">
+							<input type="number" class="num_inputd" v-model="nmu_s">
+						</p>
+						<section class="mui-col-xs-3 tr  f_b  pr10">
+							<i class="dx icon--jia add_icon_sd" @tap="nmu_s+=100"></i>
+							<span class="bgred cf d_sd_dertxc yj4 ml10" @tap="nmu_s+=1000">+K</span>
+						</section>
+
+					</div>
+					<section class="btm pl10 bgff pt5 mui-row pm20">
+						<p class="mui-col-xs-3 pr10" v-for="(ce,idx) in  czje">
+							<span class="yuan_jgh_s" :class="ce.cls" @tap="ding_drt(idx)">
+                        {{ce.num}}元
+                        </span>
+						</p>
+					</section>
+
+					<p class="pd pt5 pm5 z3">
+						<i class="dx icon-jiugongge-copy z3"></i> 网银支付
+					</p>
+					<section class="pd pt20  mui-row bgff dsf_sd_srtxc">
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer ac">
+                                <i class="dx icon-nongye fz32"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								中国农业农业
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer ad">
+                                <i class="dx icon-beijingyinhang fz36"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								北京银行
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer ae">
+                                <i class="dx icon-104100000004 fz32"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								中国银行
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer af">
+                                <i class="dx icon-jiansheyinhang fz32"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								中国建设银行
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer ag">
+                                <i class="dx icon-guangdayinxing-copy fz34"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								光大银行
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer ah">
+                                <i class="dx icon-xingyeyinhang fz24"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								兴业银行
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3">
+							<p class="cen ">
+								<span class="hg_d_sdfer ai">
+                                <i class="dx icon-zhaoshangyinhang fz32"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								招商银行
+							</p>
+
+						</a>
+					</section>
+					<p class="pd pt5 pm5 z3">
+						<i class="dx icon-jiugongge-copy z3"></i> 线下支付
+					</p>
+					<section class="pd pt20 pm10 mui-row bgff">
+						<a class="mui-col-xs-3" @tap="tanchu('支付宝')">
+							<p class="cen ">
+								<span class="hg_d_sdfer">
+                                <i class="dx icon-zhifubao fz32"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								支付宝
+							</p>
+
+						</a>
+
+						<a class="mui-col-xs-3" @tap="tanchu('QQ钱包')">
+							<p class="cen ">
+								<span class="hg_d_sdfer bgff z3">
+                                <i class="dx icon-QQqianbaozhifu fz32"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								QQ钱包
+							</p>
+
+						</a>
+
+					</section>
+
+					<p class="pd pt5 pm5 z3">
+						<i class="dx icon-jiugongge-copy z3"></i> 线下支付
+					</p>
+
+					<section class="pd pt20 pm10 mui-row bgff">
+
+						<section class="mui-col-xs-3" @tap="zhu('zhaunzhang','slide-in-bottom',{jiner:nmu_s})">
+							<p class="cen ">
+								<span class="hg_d_sdfer ab">
+                                <i class="dx icon-minsheng fz40"></i>
+                            </span>
+							</p>
+							<p class="fz12 z3 cen mt5">
+								中国民生银行
+							</p>
+
+						</section>
+
+					</section>
+
+				</div>
+			</div>
+
+			<!--    支付下拉弹出-->
+
+			<div id="zhifu_s" class="mui-popover mui-popover-bottom mui-popover-action ">
+				<section class="bghs pd pt10 pm10 cen pr">
+					<a class="dx icon-kefu-tuichu- red colose_icon" href="#zhifu_s"></a>
+					<span class="red b">{{sd_hg_s}}</span>
+					<span class="red fz14 zhifuwc">支付完成</span>
+				</section>
+				<section class="bgff pd">
+					<p class="z3 fz16 cen pt20 pm10">
+						支付金额:{{nmu_s}}
+					</p>
+					<p class="cen">
+						该笔充值为您添加随机尾数，方便快速到账。
+					</p>
+					<section class="mui-row mt10">
+						<img :src="qc_img" class="chong_iconsd fl">
+						<section class="ov pl10 fz14 z6 mt30">
+							<i class="dx icon-warningAlert red"></i> 点击下方按钮将图片保存到
+							<span class="b  z3">相册</span> 打开{{sd_hg_s}} <span class="b  z3"> 扫码相册二维码</span> 完成支付。如无法充值，请联系客服。
+						</section>
+
+					</section>
+
+					<p class="mt20 cen red pd fz13 pm40">
+						<a class="mui-btn mui-btn-red" @tap="baocun_s">保存二维码 前往支付</a>
+					</p>
+
+				</section>
+			</div>
+
+		</section>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/page/zijin/chunkuan.js"></script>
+	</body>
+
+</html>

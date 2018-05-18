@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>所有游戏</title>
+
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+        <h1 class="mui-title red">所有游戏</h1>
+
+    </header>
+    <div class="mui-content " id="suoyouyx">
+        <section class="shou_khg_sd pd ">
+            <div class="mui-input-row mui-search">
+                <input type="search" class="mui-input-clear" placeholder="搜一搜，海量赚钱游戏">
+            </div>
+        </section>
+        <section class="pr dsf_d_sdsf bgff">
+            <span class="dsf_sdf"></span>
+            <div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary fz14 z9">
+                <a class="mui-control-item" v-for="(cn,idx) in caidan" :class="idx==0?'mui-active':''" :data-wid="cn.url+'?id='+cn.id">{{cn.name}} </a>
+              
+            </div>
+
+
+
+        </section>
+
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script  src="js/webviewGroup.js"></script>
+    <script src="js/base.js"></script>
+    
+    <script src="js/page/suoyouyx.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!--注册-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">注册</h1>
+	</header>
+	<div class="mui-content">
+	    
+
+    <p class="ds_d_dgf">
+        <img src="img/logo.png">
+    </p>
+
+    <section class="pd mt20 ">
+        <section class="pr dsf_d_sdsf">
+            <span class="dsf_sdf"></span>
+            <div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary dfs_d_dfgx">
+                <a class="mui-control-item mui-active" href="#item1">快速注册 </a>
+                <a class="mui-control-item de_jyh_d">已有账号？<span class="ls">去登录</span>  </a>
+
+            </div>
+            <section class="mui-control-content  mui-active" id="item1">
+            	<section class="mt20">
+            		
+            		<yanzhen :tishi="'手机号'" :ty_pe="0" @tijiao="tijiao"></yanzhen>
+            	</section>
+            	
+                <ul class="dsf_fort">
+                 <li class="mui-input-row">
+                        <input type="text" placeholder="手机验证码" class="dsf_s_sdf mui-input-clear" v-model="mobilecode">
+                    </li>
+                    <li class="mui-input-row">
+                        <input type="password" placeholder="设置密码(6-12位字母数字组合）" class="dsf_s_sdf mui-input-password" v-model="password" @keyup="mimaqiang">
+                    </li>
+                    <li class="mui-row">
+                        <p class="mui-col-xs-9 fl dsf_d_df" id="dsf_d_df">
+                            <span></span><span></span><span></span>
+                        </p>
+                        <p class="ov cen">密码强度</p>
+
+                    </li>
+                    <li class="mui-input-row">
+                        <input type="password" placeholder="确认密码" class="dsf_s_sdf mui-input-password" v-model="repassword">
+                    </li>
+                    <li class="mui-input-row mui-checkbox mui-left">
+                        <span class="pr f_b df_d_dfgxc cz">
+                        
+                   <input name="checkbox" value="Item 2" type="checkbox" checked>
+                        </span>
+                        <span class="fz12 z6">我已阅读并同意<a class="ls" @tap="zhu('login_er','slide-in-bottom')">《租灵宝使用协议》</a></span>
+
+                    </li>
+
+                    <li class=" pr pt10">
+                        <button type="button" class="mui-btn mui-btn-primary w100 fz16 yj20 pt wdf_dfg" @tap="register">立即注册</button>
+                    </li>
+                </ul>
+
+
+
+
+            </section>
+        </section>
+    </section>
+
+
+	</div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/component/yanzhen.js"></script>
+    <script src="js/page/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商家服务</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #F2F2F2;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!--头部-->
+    <div class="bgff">
+        <div class="sd_dsdf_sdff wd">
+
+            <div class="fl dsf_sdfgxc">
+                <img src="img/logo.png" class="logo_dfs fl">
+                <p class="fl fz18 ls pl10 dsf_df_dsgfgx">
+                    <span class="b">神仙眼，一看就到</span><br>
+                    <span class="fz16"> shenxianyan.com</span>
+
+                </p>
+            </div>
+            <span class="fr fg_df_dgfgx">
+          <a class="ddsf_dfggxc">登录</a>   |     <a href="注册.html">前往注册</a>
+            </span>
+        </div>
+
+        <!-- 登录-->
+        <div class="sd_df_dfggx">
+            <div class="sd_df_df_dggx">
+                <div class="sd_df_dfgxc">
+                    <p class="fz20">登录
+
+                        <i class="fa fa-close fr fz20 dsf_drf_dggx zc"></i>
+                    </p>
+
+                    <div class="sd_dtgdf_dg mt10">
+                        <p class="df_df_dggx">
+                            <i class="fa fa-user zc  sdf_d_sfg"></i>
+                            <input type="text" placeholder="请输入账号">
+                        </p>
+                        <p class="df_df_dggx btm">
+                            <i class="fa fa-lock zc  sdf_d_sfg"></i>
+                            <input type="password" placeholder="请输入密码">
+                        </p>
+
+                    </div>
+
+
+                    <p class="mt10 ddfd_df">
+                        <span>      <i class="f_i chshdf_sdff"></i>
+                      记住账号</span>
+                        <a class="fr">登录遇到问题</a>
+
+                    </p>
+
+                    <p class="mt20">
+                        <button class="yj4 dfg_dsd_dfgx">登录</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wd bgff pt50 mt70 pm100">
+        <p class="cen fz28">
+           重设新密码
+        </p>
+        <div class="sddf_dgghdx">
+            <ul class="sd_df_dgf_fg pt10">
+                
+                <li>
+                    <label>
+                密码
+                </label>
+                    <div class="ov">
+                        <input type="password" class="dsf_df_sfgxc" id="paw_a">
+                        <p class="red fz15 mt5 dfsdsf_dfgxc">
+
+                        </p>
+                        <p class="zc fz15 mt5">
+                            字母、数字或者英文符号，最短8位，区分大小写
+                        </p>
+
+                    </div>
+                    <p class="qc"></p>
+                </li>
+
+
+                <li>
+                    <label>
+                确认新密码
+                </label>
+                    <div class="ov pm10">
+                        <input type="password" class="dsf_df_sfgxc" id="paw_b">
+                        <p class="red fz15 mt5 dfsdsf_dfgxc">
+
+                        </p>
+                        <p class="zc fz15 mt5">
+                            密码：必须包含数字和字母组合，长度为8到16位
+                        </p>
+     <p class="mt50 ">
+                    <a href="#" class="sd_df_df yj4">完成</a>
+                    </p>
+                    </div>
+                    <p class="qc"></p>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+     $("#paw_a").on("blur", function() {
+                var sd_df = $(this).val()
+                dsfsd(sd_df.length < 8, $(this), "密码长度不足8位")
+            })
+            $("#paw_b").on("blur", function() {
+                var sd_df = $(this).val()
+                dsfsd(sd_df.length < 8, $(this), "密码长度不足8位")
+            })
+
+            $("#paw_b").on("blur", function() {
+                var sd_df = $(this).val(),
+                    sd_sdf = $("#paw_a").val()
+                dsfsd(sd_df != sd_sdf, $(this), "两次输入的密码不一致")
+            })
+    </script>
+    </body>
+</html>

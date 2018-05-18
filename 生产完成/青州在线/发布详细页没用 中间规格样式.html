@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>测试啊测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">发布房产信息</h1>
+    </header>
+    <div class="mui-content" id="app">
+        <ul class="mui-table-view mt0">
+            <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    标题
+                </p>
+                <p class="ov">
+                    <input placeholder="选填" class="br0">
+                </p>
+                <p class="qc"></p>
+            </li>
+            <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    内容描述：
+                </p>
+                <p class="qc"></p>
+                <textarea placeholder="内容描述（可以文字和语音录入，语音请讲普通话）" class="asd_xsdfrx" rows="5"></textarea>
+            </li>
+
+        </ul>
+
+        <section class="pd pt10 pm10 bgff mt10 ffd_ddf_xdsdfx">
+            <p class="ssd_iy_Xssf awe" v-for="(sd,ide) in ssd_xsd.imgsd">
+                <img v-bind:src="sd" class="ssd_Xssd_xf">
+                <i class="fa fa-times-circle red fz24 sdfsd_xssdfx" v-on:click="ddedx(ide)"></i>
+            </p>
+            
+            <p class="ssd_iy_Xssf" v-on:click="sdf_xd">
+                <img src="img/sdf_a.jpg" class="ssd_Xssd_xf">
+            </p>
+
+
+
+            <p class="qc"></p>
+
+        </section>
+
+        <ul class="mui-table-view mt10">
+            <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    联系人:
+                </p>
+                <p class="ov">
+                    <input placeholder="请输入您的称呼" class="br0">
+                </p>
+                <p class="qc"></p>
+            </li>
+            <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    电话号码:
+                </p>
+                <p class="ov">
+                    <input placeholder="请输入您的电话号码" class="br0">
+                </p>
+                <p class="qc"></p>
+            </li>
+
+        </ul>
+
+        <ul class="mui-table-view mt10">
+            <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    是否置顶:
+                </p>
+                <p class="ov">
+                    <a href="#share_pp" class="z14"><input placeholder="请选择置顶" class="br0" readonly v-bind:value="ssd_xsd.sdfds">
+                    </a>
+                </p>
+                <p class="qc"></p>
+            </li>
+            <li class="mui-table-view-cell">
+
+
+                <span class="z14  fz16">塞福利(可提高阅读量和转发量)</span>
+
+                <div class="mui-switch ddf_xssdffx">
+                    <div class="mui-switch-handle "></div>
+                </div>
+
+                <p class="qc"></p>
+            </li>
+
+        </ul>
+        
+        <section class="fg_sdddfgfx" v-bind:class="ssd_xsd.ssd_x">
+          <ul class="mui-table-view mt10 " >
+            <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    福利金额:
+                </p>
+                <p class="ov">
+                    <input placeholder="1至200元，达100元将置顶1天" class="br0 w100 dsf_xsdsfggx" >
+                    
+                </p>
+                <p class="qc"></p>
+            </li>
+                <li class="mui-table-view-cell">
+                <p class="z14 dfs_xsdff fz16">
+                    分成几份:
+                </p>
+                <p class="ov">
+                    <input placeholder="几成几份(至少1份)" class="br0 w100" >
+                    
+                </p>
+                <p class="qc"></p>
+            </li>
+               <li class="mui-table-view-cell">
+
+
+                <span class="z14  fz16">是否平均分配福利</span>
+
+                <div class="mui-switch ">
+                    <div class="mui-switch-handle "></div>
+                </div>
+
+                <p class="qc"></p>
+            </li>
+              <li class="mui-table-view-cell">
+
+
+                <span class="z14  fz16">是否开启口令模式</span>
+
+                <div class="mui-switch ssdx_xsd">
+                    <div class="mui-switch-handle "></div>
+                </div>
+
+                <p class="qc"></p>
+            </li>
+              
+              <li class="mui-table-view-cell" v-if="ssd_xsd.kdf">
+                <p class="z14 dfs_xsdff fz16">
+                    福利金额:
+                </p>
+                <p class="ov">
+                    <input placeholder="请在正文中写出口令" class="br0 w100" >
+                    
+                </p>
+                <p class="qc"></p>
+            </li>
+              
+              
+        </ul>
+        
+        <p class="pd tr pt10 pm10">
+    福利服务费(5%):0元 
+        </p>
+</section>
+        <p class="pd mt40 sd_xssd_xdtgfxc">
+
+            <button type="button" class="mui-btn mui-btn-red pt10 pm10 w100">确认发布</button>
+        </p>
+
+        <input type="file" onchange="previewFile()" id="ssd_ooie"><br>
+
+
+
+        <!--置顶弹出层-->
+        <div id="share_pp" class="mui-popover mui-popover-bottom mui-popover-action ">
+            <section class="ssd_hhyg_d ">
+                <p class="pt10 pm10 fz16 cf cen bgred">
+                    请选择置顶
+                </p>
+                <ul class="cen bgff">
+                    <li class="btm pt10 pm10 " v-for="(ssd,idx) in ssd_xsd.zsd_s" v-on:click="sdf_xsd(idx)">
+                        {{ssd}}
+                    </li>
+                </ul>
+
+              <p class="btm  cen mt10 bgff z14 fz16">
+                    <a href="#share_pp" class="z14 sds_xsdfxf pt10 pm10">取消置顶</a>
+                </p>
+            </section>
+
+        </div>
+
+
+
+    </div>
+    
+    <!--<section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+     <script src="js/base.js"></script>
+    <script>
+        var ssd_xsd = {}
+        ssd_xsd.imgsd = [];
+        ssd_xsd.zsd_s = [" 置顶一天(收费0.1元)", " 置顶一周(收费0.5元)", " 置顶一月(收费1元)"]
+        ssd_xsd.sdfds = ""
+        ssd_xsd.ssd_x="";//是否显示塞福利
+        ssd_xsd.kdf=false;//是否显示口令
+        var km = new Vue({
+            el: '#app',
+            data: {
+                ssd_xsd: ssd_xsd
+            },
+            methods: {
+                sdf_xd: function() {
+                                       
+                    $(".ffd_ddf_xdsdfx").addClass("act");
+                    $("#ssd_ooie").click();
+                },
+                ddedx: function(x) {
+
+                    ssd_xsd.imgsd.splice(x, 1)
+                },
+                sdf_xsd: function(x) {
+                    
+                    ssd_xsd.sdfds = ssd_xsd.zsd_s[x]
+                    mui('#share_pp').popover('toggle');
+                }
+            }
+        })
+    
+       mui('.ddf_xssdffx').each(function() { //循环所有toggle
+          
+            this.addEventListener('toggle', function(event) {
+              var sd_x=event.detail.isActive ? "act" : ''
+           
+                 km.ssd_xsd.ssd_x=sd_x
+                 setTimeout(function(){
+                      $(".dsf_xsdsfggx").focus() 
+                },100)
+            
+               console.log(1)
+                 
+            });
+        });
+          mui('.ssdx_xsd').each(function() { //循环所有toggle
+          
+            this.addEventListener('toggle', function(event) {
+              var sd_x=event.detail.isActive ? true : false
+           
+                 km.ssd_xsd.kdf=sd_x
+                 
+            });
+        });
+        
+       
+
+        function previewFile() {
+            var file = document.querySelector('#ssd_ooie').files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                km.ssd_xsd.imgsd.push(reader.result)
+                
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {}
+        }
+
+    </script>
+</body>
+
+</html>

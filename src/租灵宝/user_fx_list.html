@@ -1,0 +1,73 @@
+<!--分类列表-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>分类列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<section id="user_fx_list">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title"><span v-text="tit_le"></span></h1>
+			</header>
+			<div class="mui-content">
+				<section class="pd bgff pt10 btm pm10">
+					<div class="mui-input-row mui-search pr">
+						<input type="search" class="mui-input-clear" placeholder="" v-model="ser_sd" @blur="ss_dd_sdf" id="strName">
+					</div>
+				</section>
+
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper xiy_zuysdf ab">
+					<div class="mui-scroll"> 
+
+						<ul class="mui-table-view mt5 df_d_dsdfxc bgff" id="dsf_d_dfg">
+
+							<li class="mui-table-view-cell" v-for="(cn,idx) in idf_df">
+								<div class="mui-slider-right mui-disabled">
+									<a class="mui-btn mui-btn-primary fz18" @tap="bianji_sd(cn.good_id) ">编辑</a>
+									<a class="mui-btn mui-btn-yellow fz18" @tap="sanchu(cn.good_id,idx)">删除</a>
+								</div>
+								<div class="mui-slider-handle">
+									<p class="fz15 z0 dian">{{cn.name}} <span class="ye" v-if="cn.is_verify==1"> [已审核]</span><span class="z9" v-else="">[未审核]</span></p>
+									<section class="mui-row mt5">
+										<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_jsf"></i> <span class="ye">{{cn.budgetprice}}</span>
+										</p>
+										<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_jsf ad"></i> {{cn.updatetimestr}}
+										</p>
+
+									</section> 
+								</div>
+							</li>
+
+						</ul>
+
+						<section class="cen mt40 ds_d_dd_dfw" id="ds_d_dd_dfw">
+							<img src="img/meiyou.png" class="df_dd_drt" />
+							<p class="ls fz20">
+								暂无记录！
+							</p>
+						</section>
+					</div>
+				</div>
+
+				<p class="bgff dsf_ddf_df" @tap="tinaji(sd_ids)">
+					<i class="f_i add_iconsd"></i>
+					<span class="ye fz16">添加信息</span>
+				</p> 
+
+			</div>
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/user_fx_list.js"></script>
+	</body>
+
+</html>

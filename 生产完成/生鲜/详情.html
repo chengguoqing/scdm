@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <!--        banner-->
+    <section class="banner_sdf ab">
+        <section class="pd ds_iy_sddffx">
+            <i class="f_i dsf_bklickj"></i>
+            <p class="fr">
+                <i class="f_i dsf_bklickj ab"></i>
+                <span class="pr ml10">
+                    <span class="fz12 dfs_iyu_sdrttxc yj">2</span>
+                <i class="f_i dsf_bklickj ac"></i>
+                </span>
+            </p>
+        </section>
+        <div class="swiper-container df_sd_sdgxc">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> <img src="img/bannde.png"> </div>
+                <div class="swiper-slide"> <img src="img/bannde.png"></div>
+                <div class="swiper-slide"> <img src="img/bannde.png"></div>
+            </div>
+            <!--            <div class="swiper-pagination"></div>-->
+            <p class="sd_uy_hjghsd yj">
+                <span>1</span>/<span></span>
+            </p>
+        </div>
+    </section>
+    <section class="sdf_iytiyd pr">
+
+        <section class="mt0 pt10  df_d_drtxc pr">
+            <span class="cf fz22">￥25.8</span>
+            <del class="cf fz14">￥48</del>
+
+
+        </section>
+        <p class="fz12  df_drttyc ab ">
+
+            <button type="button" class="mui-btn cz">最新</button>
+            <button type="button" class="mui-btn cz">热销</button>
+            <button type="button" class="mui-btn  cz">秒杀</button>
+
+        </p>
+        <section class="df_uyt_dsrtt khgf_ds_sff cen ab">
+            <p class="cen fz12 z3 mt5">距离结束还有</p>
+            <p class="mt5">
+                <span class="dojy_sd fz12">22</span>:
+                <span class="dojy_sd fz12">55</span>:
+                <span class="dojy_sd fz12">52</span>
+            </p>
+
+        </section>
+
+    </section>
+
+
+    <section class="dsf_ubottd box cen">
+        <a href="#" class="box_a">
+            <p class="dsf_uiy_df">
+                <i class="f_i dfsdf_ad"></i>
+            </p>
+            <span class="fz12 z6">客服</span>
+        </a>
+        <a href="#" class="box_a">
+            <p class="dsf_uiy_df">
+                <i class="f_i dfsdf_ad ab"></i>
+            </p>
+            <span class="fz12 z6">券市场</span>
+        </a>
+        <a href="#" class="box_a">
+            <p class="dsf_uiy_df">
+                <i class="f_i dfsdf_ad ac"></i>
+            </p>
+            <span class="fz12 z6">收藏</span>
+        </a>
+        <a href="#" class="box_a">
+            <p class="dsf_uiy_df">
+                <i class="f_i dfsdf_ad ad"></i>
+            </p>
+            <span class="fz12 z6">购物车</span>
+        </a>
+        <a href="#" class="box_a dsf_rftsdt fz16">
+        加入购物车
+        </a>
+    </section>
+
+
+
+
+    <section class="czjz df_iy_sdffg">
+        <section class="czjz_a ">
+            <section class="sdf_g_sdf yj4  bgff pr">
+                <i class="f_i close_iconsd ab" onclick="mask.close()"></i>
+                <p class="pd   pt10 z3">
+                    智利XL级车厘子智利XL级车厘子 智利XL级车厘子500g
+                </p>
+                <img src="img/bannde.png" class="w100 mt10">
+                <section class="pd pt5 mui-row pm10">
+                    <img src="img/qc_.png" class="er_dsfgfxc fl">
+                    <section class="ov pl10">
+                        <p class="red fz22 mt10">￥25.8</p>
+                        <p class="z3 fz12 mt10">
+                            长安识别二维码查看详情
+                        </p>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/swiper3.07.min.js"></script>
+    <script src="js/base.js"></script>
+
+    <script>
+        var mask = mui.createMask(function() {
+            $(".df_iy_sdffg").removeClass("shower")
+        });
+        $(".dsf_bklickj.ab").on("click", function() {
+            mask.show()
+            $(".df_iy_sdffg").addClass("shower")
+        })
+
+
+        $(".sd_uy_hjghsd span").eq(1).text($(".df_sd_sdgxc .swiper-slide").length)
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 5000,
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            onSlideChangeEnd: function(swiper) {
+                $(".sd_uy_hjghsd span").eq(0).text(swiper.activeIndex + 1)
+
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

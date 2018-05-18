@@ -1,0 +1,1 @@
+"use strict";!function(a,b){var c={id:"#cardArea",sid:".card-item"};b.fn.cardArea=function(a){var a=b.extend({},c,a);return this.each(function(){b(a.id).find(a.sid).on("mouseenter",function(){b(this).addClass("active").siblings().removeClass("active")})})}}(window,jQuery);

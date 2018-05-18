@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/cssamin.css" rel="stylesheet" />
+    <title>确认下单</title>
+    <style>
+        body {
+            background: #EFEFF4;
+        }
+        .dsfds_sd_xdrfx{
+    padding: 0px 15px !important
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">订单操作菜单</h1>
+    </header>
+
+    <div class="mui-content  a-fadein" id="app">
+        <section class="pd pt10 pm10 bgff">
+            <ul>
+                <li>
+                    <p class="mui-col-xs-3 fz15 tr  fl">下单时间:</p>
+                    <p class="ov z14 fz16 pl10">03-25 12:14</p>
+                    <p class="qc"></p>
+                </li>
+                <li class="mt5">
+                    <p class="mui-col-xs-3 fz15 tr  fl">下单用户:</p>
+                    <p class="ov z14 fz16 pl10">他说微信昵称</p>
+                    <p class="qc"></p>
+                </li>
+                <li class="mt5">
+                    <p class="mui-col-xs-3 fz15 tr  fl">就餐桌台:</p>
+                    <p class="ov z14 fz16 pl10">客满楼</p>
+                    <p class="qc"></p>
+                </li>
+                <li class="mt5">
+                    <p class="mui-col-xs-3 fz15 tr  fl">订单状态:</p>
+                    <p class="ov z14 fz16 pl10">已确认</p>
+                    <p class="qc"></p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="   pd bgff mt10">
+            <ul class="sd_dff_xdfrtx mui-table-view" id="OA_task_2">
+                <li class="pt10 pm10 bbm">
+                    <p class="mui-col-xs-8 fl fz16 z14">
+                        名称
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        数量
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        小计
+                    </p>
+                    <p class="qc"></p>
+                </li>
+
+
+         	<li class="pt10 pm10 bbm mui-table-view-cell" v-for="jkm in sd_iuux.gwc">
+   
+					<div class="mui-slider-left mui-disabled dsf_xsd_xdrftx">
+						<a class="mui-btn mui-btn-red  dsfds_sd_xdrfx">划菜</a>
+				        <a class="mui-btn mui-btn-yellow dsfds_sd_xdrfx">催菜</a>
+						<a class="mui-btn mui-btn-primary dsfds_sd_xdrfx">赠菜</a>
+				        <a class="mui-btn mui-btn-yellow dsfds_sd_xdrfx">退菜</a>
+					</div>
+					<div class="mui-slider-handle">
+						<p class="mui-col-xs-8 fl fz16 z14">
+                        {{jkm.name}}
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        
+                        <input type="number" v-bind:value="jkm.sd_p" class="sd_xsd_xdttx">
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        {{'￥'+(jkm.sd_p*jkm.dj)}}
+                    </p>
+                    <p class="qc"></p>
+                    </div>
+                
+                    <section class="mt10 btm df_xsd_xsrtx" v-if="jkm.type==2">
+                        <p class="pt10 pm10 bbm" v-for="sdf in jkm.tc_iius">{{sdf.name+"x"+(sdf.num*jkm.sd_p)}}</p>
+                    </section>
+                    <section class="mt10 btm df_xsd_xsrtx" v-if="jkm.type==1">
+                        <p class="pt10 pm10 bbm" v-for="sdf in jkm.guige" v-if="sdf.num>0">{{sdf.name+"x"+(sdf.num*jkm.sd_p)}}</p>
+                    </section>
+					
+				</li>
+        
+            </ul>
+
+            <section class="mui-col-xs-4 fr pm20">
+                <section class="sd_iuy_row mt10">
+                    <p class="mui-col-xs-6 z14 fz15 fl">
+                        合计:
+                    </p>
+                    <p class="ov z14 cen">￥{{sd_iuux.zj}}</p>
+                    <p class="qc"></p>
+                </section>
+                <section class="sd_iuy_row mt5">
+                    <p class="mui-col-xs-6 z14 fz15 fl pr">
+                        <a class="red dfd_xsd_xdrfx">【删除】</a>现金:
+                    </p>
+                    <p class="ov z14 cen">￥40</p>
+                    <p class="qc"></p>
+                </section>
+                <section class="sd_iuy_row mt5">
+                    <p class="mui-col-xs-6 z14 fz15 fl">
+                        待付:
+                    </p>
+                    <p class="ov z14 cen">￥40</p>
+                    <p class="qc"></p>
+                </section>
+            </section>
+
+
+            <p class="qc"></p>
+
+        </section>
+
+
+
+        <!--底部-->
+        <section class="sd_iuiu_dsf bgff mt10 pt10 pm10">
+            <p class="mui-col-xs-3 cen dsf_xsd_xsfxerrt z14 fz16">
+                <img src="../../img/neus.jpg"><br> 加菜
+            </p>
+            <p class="mui-col-xs-3 cen dsf_xsd_xsfxerrt z14 fz16" v-on:click="cdan">
+                <img src="../../img/neus.jpg"><br> 结账
+            </p>
+            <p class="mui-col-xs-3 cen dsf_xsd_xsfxerrt z14 fz16"  v-on:click="yhjm">
+                <img src="../../img/neus.jpg"><br> 优惠减免
+            </p>
+            <p class="mui-col-xs-3 cen dsf_xsd_xsfxerrt z14 fz16">
+                <img src="../../img/neus.jpg"><br> 催单
+            </p>
+            <p class="qc"></p>
+            <p class="cen mt10">
+                <i class="fa fa-times red fz26"></i>
+            </p>
+        </section>
+
+        <section class="sds_uyy_xd">
+            <p class="yj4 dsfd_ssffx">
+                <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+            </p>
+        </section>
+
+
+        <!--  优惠减免 弹出层-->
+        <section class="sd_iuy_xsff_xrf a-fadeinB">
+         <ul class="sd_iuy_Xsdsff">
+            
+                 
+             
+              <li class="btm pt10 pm10" onclick="mask.close()">免单</li>
+                   <li class="btm pt10 pm10"  onclick="mask.close()">优惠减免</li>
+                   <li class="btm pt10 pm10"  onclick="mask.close()">满100减4</li>
+                   <li class="btm pt10 pm10"  onclick="mask.close()">95折优惠</li>
+         </ul>
+     
+      </section>
+
+    </div>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/base.js"></script>
+    <script>
+        var sd_iuux = ""
+        try {
+            sd_iuux = JSON.parse(localStorage.gwcw)
+        } catch (e) {
+          
+        }
+        var qsd_iu = {}
+        qsd_iu.h_sd = ""; //呼叫服务员的内容 
+        qsd_iu.mr_h_sd = [{
+                "name": "加茶",
+                "acl": ""
+            },
+            {
+                "name": "拿纸巾",
+                "acl": ""
+            },
+            {
+                "name": "催菜",
+                "acl": ""
+            },
+            {
+                "name": "结账",
+                "acl": ""
+            }
+        ]
+        var km = new Vue({
+            el: '#app',
+            data: {
+                sd_iuux: sd_iuux,
+                qsd_iu: qsd_iu
+            },
+            methods: {
+                cdan: function(x) { //呼叫服务员按钮触发
+                   window.location.href="cash-pay.html"
+                },
+                shg_sd: function(x) {
+                    if (qsd_iu.mr_h_sd[x].acl == "act") {
+                        qsd_iu.mr_h_sd[x].acl = ""
+                    } else {
+                        qsd_iu.mr_h_sd[x].acl = "act"
+                    }
+                    var sd_iu = []
+                    $(qsd_iu.mr_h_sd).map(function() {
+                        if (this.acl == "act") {
+                            sd_iu.push(this.name)
+                        }
+                    })
+
+                    qsd_iu.h_sd = sd_iu.join("-")
+
+                },yhjm:function(){
+                     $(".sd_iuy_xsff_xrf").removeClass("a-fadeoutB")
+                    $(".sd_iuy_xsff_xrf").addClass("show")
+                    mask.show()
+                }
+            }
+        })
+        
+        
+      
+        var mask = mui.createMask(function() {
+            $(".sd_iuy_xsff_xrf").addClass("a-fadeoutB")
+            setTimeout(function(){
+                   $(".sd_iuy_xsff_xrf").removeClass("show")
+            },1000)
+        });
+       
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!--账户明细  -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>账户明细 </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body {}
+
+    </style>
+</head>
+
+<body>
+    <section id="zhanghumx">
+        <header_p :title="'账户余额'"></header_p>
+        <section class="pd pt10 pm10 bgff z6 df_jh_swertx btm">
+            账户余额 <span class="red fz28">0.00</span>
+        </section>
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper dsf_kjh_dert">
+            <div class="mui-scroll">
+
+                <ul class="mt10 bgff pd">
+                    <li class=" blm pt10 pm10 pl20 pr bbm" v-for="sd in sd_sdf">
+                        <span class="yj bgred fd_yiansdf"></span>
+                        <p>
+                            增加 <span class="red">3</span>
+                        </p>
+                        <p class="mt5">
+                            2017-10-19
+                        </p>
+
+                        <p class="mt5">
+                            签到获得积分
+                        </p>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/zhanghumx.js"></script>
+</body>
+
+</html>

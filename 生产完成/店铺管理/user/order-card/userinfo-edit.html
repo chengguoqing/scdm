@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/cssamin.css" rel="stylesheet" />
+    <title>确认下单</title>
+    <style>
+        body {
+            background: #EFEFF4;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">会员信息</h1>
+        <span class="mui-btn-link mui-pull-right cf ">关闭</span>
+    </header>
+    <div class="mui-content  a-fadein " id="app">
+
+
+        <ul class="mui-table-view sd_uyu_ul mt0   ">
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf z14 fz16 am">
+
+                    昵称：
+                </p>
+                <section class="ov">
+                    <input class="br0" placeholder="请输入昵称" type="text">
+                </section>
+            </li>
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf z14 fz16 am">
+
+                    姓名：
+                </p>
+                <section class="ov">
+                    <input class="br0" placeholder="请输入姓名" type="text">
+                </section>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" v-on:click="xb_xs">
+                    <p class="ssd_uuy_xsf z14 fz16 am">
+
+                        性别：
+                    </p>
+                    <span class="fr mr20 zc">{{sd_iu_s.xb}}</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <ul class="mui-table-view sd_uyu_ul mt10   ">
+            <li class="mui-table-view-cell">
+                <p class="ssd_uuy_xsf z14 fz16 am">
+
+                    手机号码：
+                </p>
+                <section class="ov">
+                    <input class="br0" placeholder="请输入手机号码" type="tel">
+                </section>
+            </li>
+
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" v-on:click="sr_sd">
+                    <p class="ssd_uuy_xsf z14 fz16 am">
+
+                        生日：
+                    </p>
+                    <span class="fr mr20 zc">{{sd_iu_s.sr}}</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <p class="pd mt100">
+            <button class="w100 bgred fz16 pt10 pm10">保存</button>
+        </p>
+
+
+    </div>
+   <section class="sds_uyy_xd">
+        <p class="yj4 dsfd_ssffx">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+        </p>
+    </section>
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js"> </script>
+    <script src="../../js/mui.picker.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/base.js"></script>
+    <script>
+        var picker = new mui.PopPicker();
+        var dtPicker = new mui.DtPicker({
+            "type": "date",
+            "beginYear": "1950" //开始时间
+        });
+
+        /*  picker.setData([jhg, jhg])
+          $(".select_po").on("tap", function() {
+              var hjhg = $(this)
+              picker.show(function(rl) {
+                  $(hjhg).val(rl[0].text)
+              })
+          })*/
+
+        var sd_iu_s = {}
+        sd_iu_s.xb = "男"
+        sd_iu_s.sr = "请选择"
+        var km = new Vue({
+            el: '#app',
+            data: {
+                sd_iu_s: sd_iu_s
+            },
+            methods: {
+                xb_xs: function() { //性别
+                    picker.layer = [1]
+                    picker.setData(['男', '女']);
+                    picker.show(function(rl) {
+                        sd_iu_s.xb = rl[0]
+                    })
+
+                },
+                sr_sd: function() { //生日
+                    dtPicker.show(function(rs) {
+                          sd_iu_s.sr=rs.text
+                    })
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

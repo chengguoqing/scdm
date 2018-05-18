@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>店员管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/mui.zoom.css">
+    <link rel="stylesheet" href="../css/swiper3.07.min.css">
+    <link rel="stylesheet" href="../css/mui.picker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .mui-backdrop {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="mui-bar dsf_xdsdfx mui-bar-nav dxddsdf_dder_xr">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left cf">
+
+            <span class="fz16 dsf_xsd_xrf">返回</span>
+        </a>
+        <h1 class="mui-title cf">
+
+            店员管理
+        </h1>
+
+    </header>
+
+    <div class="mui-content">
+
+        <div class="mui-input-row bgff dsf_xsd_xrrx mt10">
+            <label>提现金额</label>
+            <input type="number" placeholder="用于核销秒杀和五折卡">
+        </div>
+
+        <p class="pd tr pt10 pm110">
+            此核销密码用于给用户核销秒杀和五折卡
+        </p>
+        <section class="pd bgff pt10 pm10 ">
+            <p class="z14 fz16 pm10">
+                店员权限
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf ">
+                <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf">
+                    </span>
+                <span class="sd_xdf_flisf">
+                    福利管理
+                    </span>
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf "> <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf"></span>
+                <span class="sd_xdf_flisf">
+                    秒杀管理
+                    </span>
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf "> <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf"></span>
+                <span class="sd_xdf_flisf">
+                    活动管理
+                    </span>
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf "> <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf"></span>
+                <span class="sd_xdf_flisf">
+                    店员管理
+                    </span>
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf "> <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf"></span>
+                <span class="sd_xdf_flisf">
+                    修改商家资料
+                    </span>
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf "> <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf"></span>
+                <span class="sd_xdf_flisf">
+                    客户管理
+                    </span>
+            </p>
+            <p class="mui-col-xs-6 fl df_xsdf_xrtxf "> <span class="sd_xsf_xdttxc">
+                    <i class="df_iuu_xsf_xf"></i>
+                    <img src="../img/succ.png" class="sd_xsdf_xrfrtgxf"></span>
+                <span class="sd_xdf_flisf">
+                    减价管理
+                    </span>
+            </p>
+
+
+            <p class="qc"></p>
+        </section>
+
+        <p class="pd pt10 pm10 tr">
+            请认真选择店员所拥有的权限
+        </p>
+
+        <p class="pd mt40">
+            <a class="mui-btn w100 pt10 pm10 fz16 cf sdd_xsd_xrrgfxc">确定</a>
+        </p>
+
+
+    </div>
+
+
+    <!--二维码弹出层-->
+    <section class="yj4 bgff sd_qcI_xrrtv pr aw">
+        <img src="../img/close.png" class="sd_xsd_xrtxxc" onclick="mask.close()">
+        <p class="pd pt10 pm10 bbm cen fz16">
+           <span class="ls">请用需要添加店员的微信扫一扫</span> 
+        </p>
+        <p class="dsf_xsd_xdf_xr cen">
+            <img src="../img/1497416008.png">
+        </p>
+       
+    </section>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        var mask = mui.createMask(function() {
+            $(".sd_qcI_xrrtv").removeClass("show")
+        });
+
+        $(".sdd_xsd_xrrgfxc").on("click", function() {
+            mask.show()
+            $(".sd_qcI_xrrtv").addClass("show")
+        })
+
+        $(function() {
+            $(".df_xsdf_xrtxf").on("click", function() {
+                $(this).toggleClass("act")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

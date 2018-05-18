@@ -1,0 +1,40 @@
+<!--  我的收藏-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 我的收藏</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav bbm">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3"> 我的收藏</h1>
+
+    </header>
+
+
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper "  > 
+				<div class="mui-scroll akoisd_sd"  id="wdsc"> 
+
+					<list_tu_p :df_sd_sd="df_sd_sd" :shouchang="'true'" @scc="scc"></list_tu_p>
+
+				</div>
+			</div>
+
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/list_tu_p.js"></script>
+    <script src="../js/page/user/wdsc.js"></script>
+</body>
+
+</html>

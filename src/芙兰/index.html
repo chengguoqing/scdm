@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+
+		<nav class="mui-bar mui-bar-tab fz14">
+			<a class="mui-tab-item mui-active" data-href="index_er.html">
+				<p class="df_re_suy"> <span class=" dx icon-zhuye fz20 "></span></p>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" data-href="catalog.html">
+				<p class="df_re_suy"> <span class="dx icon-fenlei fz22"></span></p>
+				<span class="mui-tab-label">分类</span>
+			</a>
+
+			<a class="mui-tab-item" data-href="article_cat_list.html">
+				<p class="df_re_suy"> <span class="dx icon--xuanxiang-bangqiu fz22"></span></p>
+
+				<span class="mui-tab-label">店主圈</span>
+			</a>
+			<a class="mui-tab-item" data-href="gwc/flow.html">
+				<p class="df_re_suy">
+					<span class=" dx icon-cart fz22"></span>
+				</p>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" data-href="user/user_center.html">
+				<p class="df_re_suy"> <span class=" dx icon-wode fz20"></span></p>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+
+		<script src="js/mui.min.js"></script>
+		<script>
+			var subpagestyle = {
+				"top": "0px",
+				"bottom": "50px"
+			}
+			mui.init()
+			var self = "";
+			mui.plusReady(function() {
+				self = plus.webview.currentWebview();
+				self.id = "duxinggj"
+				var sub = plus.webview.create("index_er.html", "index_er.html", subpagestyle)
+				self.append(sub);
+
+				mui('.mui-bar-tab').on('tap', 'a', function(e) {
+					var targetTab = this.getAttribute('data-href')
+
+					show_web(targetTab)
+
+				})
+			})
+
+			function show_web(targetTab, idx) {
+				var sd_sdrt = plus.webview.getWebviewById(targetTab)
+				if(sd_sdrt) {
+					plus.webview.show(targetTab)
+				} else {
+					var sub = plus.webview.create(targetTab, targetTab, subpagestyle)
+					self.append(sub);
+				}
+				try {
+					document.querySelector(".mui-tab-item.mui-active").classList.remove("mui-active");
+					document.querySelector(".mui-tab-item:nth-child("+idx+")").classList.add("mui-active");
+				} catch(e) {
+
+				}
+			}
+		</script>
+	</body>
+
+</html>

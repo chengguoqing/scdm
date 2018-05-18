@@ -1,0 +1,110 @@
+<!--详情-详情-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>详情</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/pi_cs.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<section id="goods">
+			<div class="mui-content ">
+
+				<section class=" bgff pd pt10  btm ds_yt_setxc">
+					<p class="fz16 z3 cen">
+						商品信息
+					</p>
+
+					<section class="mui-row fz14  mt20">
+						<label class="z9 mui-col-xs-3">商品名称:</label>
+						<p class="ov z6 dianer">
+							2017【Miss覃】冬季新款韩版半高领水貂毛中长款显瘦打底针织衫撞色毛衣裙
+						</p>
+					</section>
+					<section class="mui-row fz14 btm">
+						<label class="z9 mui-col-xs-3">商品编号:</label>
+						<p class="ov z6">
+							7LC2MY837
+						</p>
+					</section>
+
+					<section class="mui-row fz14 btm">
+						<label class="z9 mui-col-xs-3">商品品牌：</label>
+						<p class="ov z6">
+							Miss覃
+						</p>
+					</section>
+					<section class="mui-row fz14 btm">
+						<label class="z9 mui-col-xs-3">商品重量:</label>
+						<p class="ov z6">
+							900克
+						</p>
+					</section>
+
+				</section>
+
+				<section class="mt5 bgff pd pt10  btm ds_yt_setxc ">
+					<p class="fz16 z3 cen">
+						商品详情
+					</p>
+					<section class="df_srttxc mt10">
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922969246655.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (1).jpg"></p>
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922969640322.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (2).jpg"></p>
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922970497357.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (3).jpg"></p>
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922970391216.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (4).jpg"></p>
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922970818473.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (5).jpg"></p>
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922970571219.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (6).jpg"></p>
+						<p style="margin-bottom: 10px;"><img src="http://flan1688.com/includes/ueditor/php/../../../bdimages/upload1/20171222/1513922970511961.jpg" style="float:none;" title="2017MISS覃冬季毛衣裙2 (7).jpg"></p>
+
+					</section>
+
+				</section>
+
+			</div>
+		</section>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/swiper3.07.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/components/banner.js"></script>
+		<script src="../js/page/shangping.js">
+		</script>
+		<script>
+			mui.plusReady(function(){
+				var ws = plus.webview.currentWebview();
+			ws.setPullToRefresh({
+				support: true,
+				height: '50px',
+				range: '200px',
+				contentdown: {
+					caption: '下拉跳转商品'
+				},
+				contentover: {
+					caption: '释放立即跳转'
+				},
+				contentrefresh: {
+					caption: '正在跳转...'
+				}
+			}, function() {
+					plus.webview.currentWebview().parent().evalJS("km.sdf_df(0);");
+				ws.endPullToRefresh();
+			});
+
+			document.addEventListener("plusscrollbottom", function() {
+				plus.webview.currentWebview().parent().evalJS("km.sdf_df(2);");
+			}, false);
+				
+			})
+			
+		</script>
+	</body>
+
+</html>

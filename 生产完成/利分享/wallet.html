@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>钱包</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <section class="bgff">
+        <section class="bbm">
+            <section class="mui-col-xs-6 fl pt10 pm10 cen fz16 dsf_xdf_xdfgfx act">
+                <span class="sd_xdfgfgx"> 佣金</span>
+            </section>
+            <section class="mui-col-xs-6 fl pt10 pm10 cen fz16 dsf_xdf_xdfgfx">
+                <span class="sd_xdfgfgx">积分</span>
+            </section>
+
+            <p class="qc"></p>
+        </section>
+        <!--佣金-->
+        <section class="sd_xff_xcfgx show">
+            <section class="df_xd_xfghc">
+                <section class="sdfxf_dsf_row fz16 mt15">
+                    到账银行
+                    <span class="ls  ml20">中国银行（8870）</span>
+                </section>
+                <section class="sdfxf_dsf_row fz16 mt30">
+
+                    提现金额
+                </section>
+
+                <section class="sdfxf_dsf_row fz26 mt20 z14">
+                    ￥
+                    <span class="dsf_xdf_xf ">10</span>
+                </section>
+
+                <section></section>
+
+                <section class="btm bbm mt40 pt10 pm10">
+                    <span class="fl">备注</span>
+                    <p class="ov">
+                        <input type="text" placeholder="请写备注" class="sd_xd_xfgx fz16">
+                    </p>
+                    <p class="qc"></p>
+                </section>
+
+                <p class="mt10 fz12">
+                    预计T+15工作日到账，可提现金额<span class="fz16 ye">50.00</span>元<br> 合伙人佣金100元，分享客佣金150元
+                    <br> 冻结金额50.00元
+
+                </p>
+
+                <p class="mt15">
+                    <button type="button" class="mui-btn mui-btn-yellow w100 fz16 ">提 交</button>
+                </p>
+
+
+            </section>
+
+
+            <section class="btm bbm mt15 cen">
+                <section class="mui-col-xs-4 fl pt10 pm10">
+                    <p class="fz12">待确认</p>
+                    <p class="z14 fz20 mt5">
+                        ￥200
+                    </p>
+                </section>
+                <section class="mui-col-xs-4 fl pt10 pm10">
+                    <p class="fz12">有效订单</p>
+                    <p class="z14 fz20 mt5">
+                        0
+                    </p>
+                </section>
+                <section class="mui-col-xs-4 fl pt10 pm10">
+                    <p class="fz12">有效订单金额</p>
+                    <p class="z14 fz20 mt5">
+                        ￥200
+                    </p>
+                </section>
+
+                <p class="qc"></p>
+            </section>
+
+            <p class="pt10 pm10  cen fz14 mui-col-xs-6 fl">
+                <a href="#" class="ye"> 查看更多 ></a>
+            </p>
+            <p class="pt10 pm10  cen fz14 mui-col-xs-6 fl">
+                <a href="#" class="ye"> 历史明细 ></a>
+            </p>
+
+            <p class="qc"></p>
+
+        </section>
+        <!--积分-->
+        <section class="sd_xff_xcfgx ">
+            <section class="df_xd_xfghc">
+                <section class="sdfxf_dsf_row fz16 mt15">
+                    到账银行
+                    <span class="ls  ml20">中国银行（8870）</span>
+                </section>
+                <section class="sdfxf_dsf_row fz16 mt30">
+
+                    提现金额
+                </section>
+
+                <section class="sdfxf_dsf_row fz26 mt20 z14">
+                    ￥
+                    <span class="dsf_xdf_xf ">10</span>
+                </section>
+
+                <section></section>
+
+                <section class="btm bbm mt40 pt10 pm10">
+                    <span class="fl">备注</span>
+                    <p class="ov">
+                        <input type="text" placeholder="请写备注" class="sd_xd_xfgx fz16">
+                    </p>
+                    <p class="qc"></p>
+                </section>
+
+                <p class="mt10 fz12">
+                    预计T+15工作日到账，可提现积分<span class="fz16 ye">1000</span>分<br> 合伙人积分1000分，个人积分150分(不可提现)
+                    <br> 100积分=1元
+
+                </p>
+
+                <p class="mt15">
+                    <button type="button" class="mui-btn mui-btn-yellow w100 fz16 ">提 交</button>
+                </p>
+
+
+            </section>
+
+            <p class="pt10 pm10  cen fz14  btm mt20">
+                <a href="#" class="ye"> 历史明细 ></a>
+            </p>
+
+            <p class="qc"></p>
+
+        </section>
+    </section>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+    $(".dsf_xdf_xdfgfx").on("click",function(){
+        $("title").text($(this).text())
+    })
+    </script>
+</body>
+
+</html>

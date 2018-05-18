@@ -1,0 +1,112 @@
+<!--我的留言-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的留言</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="liuyan">
+        <header_p :title="'我的留言'"></header_p>
+
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper btm">
+            <div class="mui-scroll">
+
+                <ul>
+
+                    <li class="mui-card mb10" v-for="ly in liuyan">
+                        <div class="mui-card-header  red dsf_jh_set">
+                            <span class="ti">投诉</span>
+                            <span class="z9 fz12 fr">
+                    2017-10-19 15:31:02
+                    </span>
+                        </div>
+                        <div class="mui-card-content">
+                            <div class="mui-card-content-inner">
+                                标题：标题标题标题标题
+                                <p class="mt5">
+                                    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+            </div>
+
+        </div>
+
+
+        <a class="mui-btn mui-btn-red fz16 pt10 pm10 fabuliyu_ser" href="#share_pp">
+            发布留言
+        </a>
+        
+    <div id="share_pp" class="mui-popover mui-popover-bottom mui-popover-action ">
+        <section class="bgff">
+            <p class="bgred cf pd pt10 pm10 fz16">
+            发布留言
+                <a class="dx icon-cha fr fz20 cf" href="#share_pp "></a>
+            </p>
+            
+            
+            <section class="pd">
+                <p class="z3 fz16 pt20">
+                留言类型
+                </p>
+                
+                <section class="df_jh_ertxc mt10">
+                    
+                    <span  class="fz15 " v-for="(le,idx) in liu_le" @tap="leixin_s(idx)">
+                        <i class="dx icon-bugouxuan fz20 cz " :class="le.cls"></i>
+                        {{le.name_s}}
+                    </span>
+                
+                
+                </section>
+                
+                
+                <section class="mt20 mui-row sdf_jih_ertcc">
+                    <p class="z3 mui-col-xs-3  fz16">
+                    留言主题
+                    </p>
+                    <section class="ov pr">
+                        <input type="text"  placeholder="*主题" v-model="liuyaner.zhuti">
+                                 
+                    </section>
+                    
+                    
+                </section>
+                
+                <p class=" mt10 fz16 z3">
+                留言内容
+                </p>
+                <textarea placeholder="请输入留言内容" class="liuyan_sert mt10" rows="3" v-model="liuyaner.neilong"></textarea>
+                
+                <p class="pm10">
+            <a class="mui-btn mui-btn-red w100 fz16 pt10 pm10" @tap="fabuliuyan">提交留言</a>
+                </p>
+            </section>
+        
+        </section>
+</div>
+        
+    </section>
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/liuyan.js"></script>
+</body>
+
+</html>

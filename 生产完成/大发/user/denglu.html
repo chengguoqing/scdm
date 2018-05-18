@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>用户登录</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+        <h1 class="mui-title red">用户登录</h1>
+
+    </header>
+
+    <section class="user_box_login" id="denglu">
+        <p class="cen logo_iuy_s">
+            <img src="../img/login_logo.png">
+        </p>
+
+        <section class="pd mt10 fg_user_box">
+            <form action="">
+                <section class="sd_rowsd">
+                    <i class="dx icon-ren"> </i>
+                    <input type="text" placeholder="用户名" v-model="form.user">
+                </section>
+
+                <section class="sd_rowsd">
+                    <i class="dx icon-mima ab"> </i>
+                    <input type="password" placeholder="密码" v-model="form.paw">
+                </section>
+
+                <p class="mt20">
+                    <button type="button" class="user_submit" @tap="denglu_btn">登录</button>
+                </p>
+            </form>
+
+            <section class="mt40 pd mkhj_sd_sd">
+                <a class="cf fz14 wjmi">忘记密码</a>
+
+                <a class="cf fz14 fr" @tap="zhu('zhuce')">免费开户</a>
+            </section>
+
+        </section>
+    </section>
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/denglu.js"></script>
+
+</body>
+
+</html>

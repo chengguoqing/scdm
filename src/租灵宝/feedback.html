@@ -1,0 +1,136 @@
+<!--建议反馈-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>建议反馈</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">建议反馈</h1>
+		</header>
+		<div class="mui-content" id="feedback">
+			<p class="ds_d_dgf">
+				<img src="img/logo.png">
+			</p>
+
+			<section class="pd mt20 ">
+				<section class="pr dsf_d_sdsf">
+					<span class="dsf_sdf"></span>
+					<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary dfs_d_dfgx">
+						<a class="mui-control-item mui-active" href="#item1">建议反馈 </a>
+
+					</div>
+				</section>
+				<section class="mui-control-content  mui-active" id="item1">
+					<ul class="dsf_fort">
+						<li class="mui-input-row">
+							<input type="text" placeholder="描述您的问题或建议" class="dsf_s_sdf mui-input-clear" v-model="dsfdf_a">
+						</li>
+
+						<li class="mui-input-row">
+							<input type="email" placeholder="emali" class="dsf_s_sdf mui-input-clear" v-model="dsfdf_b" r>
+						</li>
+						<li class="mui-input-row">
+							<input type="text" placeholder="联系人" class="dsf_s_sdf mui-input-clear" v-model="dsfdf_c">
+						</li>
+						<li class="mui-input-row">
+							<input type="tel" placeholder="联系电话" class="dsf_s_sdf mui-input-clear" v-model="dsfdf_d" >
+						</li>
+						<li class="mui-input-row">
+							<textarea placeholder="请描述您的问题或建议详情，我们将尽快处理，
+感谢谢您的反馈！" rows="5" class="br fz14" v-model="dsfdf_e"></textarea>
+						</li>
+						<li class=" pr pt10">
+							<button type="button" class="mui-btn mui-btn-primary w100 fz16 yj20 pt wdf_dfg" @tap="daoji">确定</button>
+						</li>
+					</ul>
+				</section>
+
+			</section>
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			var km = new Vue({
+				el: '#feedback',
+				data: {
+					user: "",
+					dsfdf_a: "", //描述您的问题或建议
+					dsfdf_b: "", //方便回访时间
+					dsfdf_c: "", //联系人
+					dsfdf_d: "", //联系电话
+					dsfdf_e: "" //问题或建议详情
+
+				},
+				methods: {
+				
+					daoji: function() {
+						if(!this.dsfdf_a) {
+							alert("问题或建不能为空");
+							return;
+						}
+						if(!this.dsfdf_b) {
+							alert("emali不能为空");
+							return;
+						}
+						if(!this.dsfdf_c) {
+							alert("联系人不能为空");
+							return;
+						}
+						if(!this.dsfdf_d) {
+							alert("联系电话不能为空");
+							return;
+						}
+						if(!yanza.phone(this.dsfdf_d)) {
+							alert("手机号格式错误");
+							return
+						}
+						if(!this.dsfdf_e) {
+							alert("或建议详情不能为空");
+							return;
+						}
+						var feedback={}
+						feedback.Services="message.feedback"
+						feedback.h_display=1
+						feedback.type=2
+						feedback.title=this.dsfdf_a//标题
+						feedback.email=this.dsfdf_b//email
+						feedback.realname=this.dsfdf_c//联系人
+						feedback.mobile=this.dsfdf_d//联系手机
+						feedback.question=this.dsfdf_e
+						m_post(feedback,function(data){
+							alert("提交成功")
+							mui.back()
+						})
+				
+	
+					}
+				},
+				created: function() {
+					try {
+						this.user = getuser()
+					} catch(e) {
+						this.zhu('register')
+					}
+					this.dsfdf_c=this.user.realname
+					this.dsfdf_d=this.user.mobile
+				}
+
+			})
+		</script>
+
+	</body>
+
+</html>

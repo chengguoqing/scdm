@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>所有游戏</title>
+
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view" id="youxilist">
+                <li class="mui-table-view-cell mui-media" v-for="ya in youxidata">
+                    <a class="pr">
+                        <section class="mui-media-object mui-pull-left f_b df_jg_ertyc pr">
+                            <span class="bgred cf dsf_igh_rrttc">{{ya.type}}</span>
+                            <img :src="ya.img">
+                        </section>
+
+                        <div class="mui-media-body">
+                            <p class="fz16 red">{{ya.name}}</p>
+                            <p class="fz12 mt5 dsf_d_sdggx">{{ya.jiesao}} </p>
+                        </div>
+
+
+                        <i class="dx icon-warningAlert dsf_hg_sdff fz20"></i>
+                        <i class="dx icon-wujiaoxing dsf_hg_sdff fz20 ab"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/page/youxilist.js"></script>
+
+</body>
+
+</html>

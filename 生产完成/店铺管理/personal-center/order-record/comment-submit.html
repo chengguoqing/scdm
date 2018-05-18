@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <title>点餐首页</title>
+    <style>
+        body {
+            background: #EFEFF4
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="app">
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <section class="mui-title pd ">
+                添加评论
+
+            </section>
+            <span class="mui-btn-link mui-pull-right cf ">提交</span>
+        </header>
+        <div class="mui-content ">
+            <section class="ssd_iuy_srow">
+                <p class="pd pt10 pm10 fz16 z14">
+
+                    商品评价
+                </p>
+
+                <ul class="mui-table-view sd_uyu_ul mt0   ">
+                    <li class="mui-table-view-cell pr">
+                        <p class="ssd_uuy_xsf z14 fz16 tl">
+
+                            红烧排骨饭
+                        </p>
+                        <section class="ov red dg_xsd_xrtx">
+                            <!--   <i class="fa fa-star fz18" ></i>-->
+                            <i class="fa fa-star-o fz18 zc"></i>
+                            <i class="fa fa-star-o fz18 zc"></i>
+                            <i class="fa fa-star-o fz18 zc"></i>
+                            <i class="fa fa-star-o fz18 zc"></i>
+                            <i class="fa fa-star-o fz18 zc"></i>
+                        </section>
+
+                    </li>
+                    <li class="mui-table-view-cell pr">
+                        <p class="ssd_uuy_xsf z14 fz16 tl">
+
+                            红烧排骨饭
+                        </p>
+                        <section class="ov ">
+                            <span class="sd_iuty_xsrrtx">
+                     <i class="fa fa-thumbs-o-up fz20 "></i>
+                     
+                      <i class="fa fa-thumbs-o-down fz20"></i>
+                      </span>
+                        </section>
+
+                    </li>
+                    <li class="mui-table-view-cell pr">
+                        <p class="ssd_uuy_xsf z14 fz16 tl">
+
+                            红烧排骨饭
+                        </p>
+                        <section class="ov ">
+                            <span class="sd_iuty_xsrrtx">
+                     <i class="fa fa-thumbs-o-up fz20 "></i>
+                     
+                      <i class="fa fa-thumbs-o-down fz20"></i>
+                      </span>
+                        </section>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <section class="ssd_iuy_srow">
+                <p class="pd pt10 pm10 fz16 z14">
+
+                    写点什么
+                </p>
+
+                <p class="bgff pd pt10 pm10">
+                    <textarea class="ssd_iuyu_Xsd br0 fz14" placeholder="至少输入10个字，您的建议很重要，来点评一下吧！" rows="4"></textarea>
+                </p>
+            </section>
+
+            <section class="ssd_iuy_srow">
+                <p class="pd pt10 pm10 fz16 z14">
+
+
+                    有图有真相
+                </p>
+
+                <section class="pd pt10 pm10 bgff">
+                    <p class="yj4 df_xsd_Xrttxc" v-for="(i_m,idx) in pingl.img_iu">
+                        <i class="fa fa-times-circle red fz18 closse_icosdf" v-on:click="rem_img(idx)"></i>
+                        <img v-bind:src="i_m">
+                    </p>
+
+                    <p class="yj4 df_xsd_Xrttxc up_xsImg">
+                        <img src="../../img/sdf_a.jpg">
+                    </p>
+ 
+
+                    <p class="qc"></p>
+
+                </section>
+            </section>
+
+
+        </div>
+    </section>
+    <input type="file" id="ssd_ooie" onchange="previewFile()">
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script>
+        var piuy_pl = {}
+        piuy_pl.hx = 0; //红色星星的个数  默认0个
+        piuy_pl.img_iu=[];//图片
+
+        var km = new Vue({
+            el: '#app',
+            data: {
+                pingl: piuy_pl
+            },
+            methods: {
+               rem_img:function(x){
+                   this.pingl.img_iu.splice(x, 1); //删除指定数组下标
+               }
+            }
+
+        })
+
+        $(".dg_xsd_xrtx .fa").on("click", function() {
+            var idx = $(this).index();
+            $(".dg_xsd_xrtx .fa").removeClass('fa-star').addClass("zc").addClass("fa-star-o")
+            for (var i = 0; i <= idx; i++) {
+                $(".dg_xsd_xrtx .fa").eq(i).removeClass("zc").removeClass("fa-star-o").addClass('fa-star')
+            }
+            km.pingl.hx = (idx + 1)
+        })
+
+
+        $(".up_xsImg").on("click",function(){
+            $("#ssd_ooie").click()
+        })
+
+
+        function previewFile() {
+            var file = document.querySelector('#ssd_ooie').files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                km.pingl.img_iu.push(reader.result)
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+            }
+        }
+
+    </script>
+</body>
+
+</html>

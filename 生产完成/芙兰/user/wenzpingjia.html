@@ -1,0 +1,54 @@
+<!--文章评价-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>文章评价</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="wenzpingjia">
+        <header_p :title="'文章评价'"></header_p>
+    
+
+<div class="mui-scroll-wrapper pt45">
+        <div class="mui-scroll">
+
+        <ul class="mui-table-view mt0 ">
+            <li class="mui-table-view-cell " v-for="(ss,idx) in sd_iys">
+                <div class="mui-slider-right mui-disabled ds_jgh_wert">
+                      <a class="mui-btn mui-btn-yellow" @tap="zhu('/article_cat_xq')">查看</a>
+                    <a class="mui-btn mui-btn-red" @tap="dele_sd(idx)">删除</a>
+                </div>
+
+                <div class="mui-slider-handle h100">
+                    <p class="dianer z3">
+                        {{ss.text}}
+                    </p>
+                    <p class="fz12 tr  mt5 pt5">
+                            {{ss.time}}
+                    </p>
+                </div>
+
+
+            </li>
+        </ul>
+
+    </div>
+        </div>
+        </section>
+
+<script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/wenzpingjia.js"></script>
+</body>
+
+</html>

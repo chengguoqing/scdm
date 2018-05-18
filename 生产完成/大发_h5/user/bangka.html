@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>绑定卡管理</title>
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<style>
+			body {
+				background: #fff
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav asd_uy_dftx">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+			<h1 class="mui-title red">绑定卡管理</h1>
+
+		</header>
+
+		<div class="mui-content " id="bangka">
+
+			<ul class="mui-table-view mt0">
+				<li class="mui-table-view-cell add_yhkd">
+					<a class="mui-navigate-right">
+						<span class="fl sjh_icosdr "><i class="dx icon-add  fz24 cz"></i></span>
+						<p class="fz16 z3 ov df_juhgg_er">
+							添加银行卡1
+
+						</p>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell" @tap="zhu('addka')">
+
+					<span class="fl sjh_icosdr "><i class="dx icon-yinhangqia  fz24 cz"></i></span>
+					<p class="fz16 z3 ov df_juhgg_er">
+						交通银行[602224664464]
+
+					</p>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<span class="fl sjh_icosdr "><i class="dx icon-yinhangqia  fz24 cz"></i></span>
+					<p class="fz16 z3 ov df_juhgg_er">
+						交通银行[602224664464]
+
+					</p>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<span class="fl sjh_icosdr "><i class="dx icon-yinhangqia  fz24 cz"></i></span>
+					<p class="fz16 z3 ov df_juhgg_er">
+						交通银行[602224664464]
+
+					</p>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<span class="fl sjh_icosdr "><i class="dx icon-yinhangqia  fz24 cz"></i></span>
+					<p class="fz16 z3 ov df_juhgg_er">
+						交通银行[602224664464]
+
+					</p>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<span class="fl sjh_icosdr "><i class="dx icon-yinhangqia  fz24 cz"></i></span>
+					<p class="fz16 z3 ov df_juhgg_er">
+						交通银行[602224664464]
+
+					</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script>
+			mui(".mui-table-view").on("tap", ".add_yhkd", function() {
+				zhu('addka')
+			})
+		</script>
+	</body>
+
+</html>

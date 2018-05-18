@@ -1,0 +1,165 @@
+<!--实名认证-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>实名认证</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">会员认证</h1>
+		</header>
+		<div class="mui-content" id="authentication">
+			<div class="mui-input-group dsf_d_sdffgxc pr10">
+				<div class="mui-input-row">
+					<label>企业名称：</label>
+					<input type="text" class="mui-input-clear" v-model="company">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>企业性质：</label>
+					<input type="text" class="mui-input-clear" v-model="industry">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>所在地区：</label>
+					<input type="text" placeholder="请选择" @tap="xsd_sdgfx" v-model="sheng_a" readonly />
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>企业地址：</label>
+					<input type="text" class="mui-input-clear" v-model="address">
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>联系电话：</label>
+					<input type="tel" class="mui-input-clear" v-model="mobile">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>法人证件：</label>
+					<input type="number" class="mui-input-clear" v-model="idnumber">
+					<p class="qc"></p>
+				</div>
+
+			</div>
+
+			<div class="mui-input-group dsf_d_sdffgxc pr10 mt10 ">
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label class="sd_d_sdfx ab">企业营业执照：
+                  <p>（副本）</p>
+                  </label>
+					<section class="fl">
+						<span class="dsf_ds_dsfdrf pr" @tap="yesd_d('企业营业执照',1)">
+                      <img :src="license?license:'img/add_icon.png'" class="fm">
+                      <img  src="img/close-circled.png" class="close_oius_sd" v-if="license" @tap="d_sd_d(1,$event)"/>
+                  </span>
+					</section>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label class="sd_d_sdfx ab">身份证正面：
+                  <p>（法人）</p>
+                  </label>
+					<section class="fl">
+						<span class="dsf_ds_dsfdrf pr" @tap="yesd_d('身份证正面',2)">
+                      <img :src="idcardfaceimg?idcardfaceimg:'img/add_icon.png'" class="fm">
+                      <img  src="img/close-circled.png" class="close_oius_sd" v-if="idcardfaceimg" @tap="d_sd_d(2,$event)"/>
+                  </span>
+
+					</section>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label class="sd_d_sdfx ab">身份证背面：
+                  <p>（法人）</p>
+                  </label>
+					<section class="fl">
+						<span class="dsf_ds_dsfdrf pr" @tap="yesd_d('身份证背面',3)">
+                      <img :src="idcardbackimg?idcardbackimg:'img/add_icon.png'" class="fm">
+                      <img  src="img/close-circled.png" class="close_oius_sd" v-if="idcardbackimg" @tap="d_sd_d(3,$event)"/>
+                  </span>
+
+					</section>
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label class="sd_d_sdfx ab ls">
+                    <i class="f_i wenhao_icon"></i> 图片要求：
+                  </label>
+					<section class="ov z6 fz14">
+						1、请您上传有效证件图片，大小不超过120kb。 2、 证件扫描件，图片完整（不缺少边线）、信 息清晰可辨、不得做任何修改。
+
+					</section>
+					<p class="qc"></p>
+				</div>
+
+			</div>
+
+			<section class="pd pt10 pm10 bgff mt10 fz14 z6" v-if="topay==0">
+				<p>温馨提示：</p>
+				贵公司于<span class="ls"> {{createtimestr}}</span> 申请成为<span class="ls">[企业认证会员] </span>
+				<p class="z6">您尚需支付认证费<span class="ls"> {{money}}</span>元/年方可完成认证。</p>
+				如有疑问，请联系客服咨询，谢谢！
+				<p class="ye">付费后认证信息将不可修改，请您核实确认!</p>
+
+			</section>
+
+<section v-if="is_verify!=1">
+		<section  class="pd mt20 mui-row" v-if="topay==0">
+				
+				<p class="pr10">
+					<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20" @tap="lijizhifu">立即支付</button>
+				</p>
+			</section>
+			
+			<section class="pd mt20 mui-row" v-else>
+				<p class="mui-col-xs-6 pr10">
+					<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20" @tap="quer_sdf">确定</button>
+				</p>
+				<p class="mui-col-xs-6 pl10">
+					<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20" @tap="close">取消</button>
+				</p>
+			</section>
+			</section>
+	
+
+			<!--            认证成功弹出层-->
+			<section class="dsf_iuy_ddertx" id="dsf_iuy_ddertx">
+				<p class="cen mt30">
+					<i class="f_i dsf_sucesdf"></i>
+				</p>
+				<p class="cen z3 fz18 mt20">
+					认证提交成功
+				</p>
+				<p class="cen mt20">
+					您选择的是企业会员认证<br> 尚需支付：
+					<span class="ls">3800元/年</span> 年度认证费
+				</p>
+				<p class="mt20 cen pd">
+					<button class="mui-btn-green yj20 dsf_sdftd" @tap="lijizhifu">
+                        <i class="f_i weix_sd_icon"></i>
+                        微信支付年费</button>
+				</p>
+			</section>
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/city.data.js"></script>
+		<script src="js/page/authentication.js"></script>
+	</body>
+
+</html>

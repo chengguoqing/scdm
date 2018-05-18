@@ -1,0 +1,408 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="腾讯,社区,开放平台" />
+<meta name="Keywords" content="腾讯社区开放平台、开放平台、腾讯社区" />
+<title>网页游戏、社交游戏专区 - 腾讯游戏</title>
+<link rel="stylesheet" type="text/css" href="/html/css/selectarea.css"  charset="gb2312"/>
+<link rel="stylesheet" type="text/css" href="http://openwebgame.qq.com/style_manage/GetStyleData.php?iAppId=1105795944&action=custom&datatype=css"/>
+
+
+<script type="text/javascript" charset="gb2312">
+var iAppId = "1105795944";
+</script>
+<style>
+
+/*add by filedwu*/
+/*.wy_serList li{ position:static}*/
+/*add by filedwu*/
+#theServiceList{padding:18px;width:700px;border:#660099 1px solid;height:425px; overflow:hidden;overflow-y:auto; position:relative;}
+/*.wy_serverT { border:#d5ba94 1px solid;}
+.wy_serverT div { background:#eedbad; color:#70502c}*/
+.wy_serverT .wy_lastLogin { color:#70502c}
+.serSortstag { color:#70502c; font-size:12px; line-height:22px; width:100%; text-align:left; font-weight:bold}
+.txidnt { text-indent:11px; margin-bottom:4px}
+.servrlishad {}
+/*.wy_serverT { position:static}*/
+
+.wy_banner {display:none}
+.wy_lastLogin{display:none}
+.wlop_area{display:none}
+.wlop_area_tab{display:none}
+.display_checkbox {margin:0px 0px 0px 0px}
+    .w717{
+        height: 500px;
+        overflow: auto;
+        position: relative
+    }
+    #zjdl{
+        position: relative
+    }
+    #sevlist{
+        position: relative
+    }
+ 
+</style>
+</head>
+<script type="text/javascript">
+var page_type = '2';
+var isNew = '1';
+</script>
+<body>
+
+<div class="w717" >
+    <div class="wy_name s_sp"><b class="fl mt6 wy_favicon"></b><h3 class="fl stroke">应用ID:1105795944</h3></div>
+    <div class="wy_box s_bd">
+        <div class="wy_fastinfo c"><ul class="wy_notice"><li><i class="wyico1 wy_ico"></i><em id="notice"> 恭喜本应用隆重发布</em></li></ul><p class="wy_like fr"><!--iframe src="http://open.qzone.qq.com/like?url=http%3A%2F%2Fuser.qzone.qq.com%2F706290408&width=400&height=30&type=button_num" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width:160px;height:30px;border:none;overflow:hidden;"></iframe--></p><p class="fr"><!--a href="#" class="wy_wb fl c"><i class="wyico2 wy_ico fl"></i><b class="fl">寻侠</b></a><a href="#" class="fl txt_a1 plr5">立即收听</a--></p></div>
+        <div class="wy_navbox mb10"><ul class="c"><li><a  class="wyNav wycur s_sp">选择服务器</a></li><!--li><a href="#" class="wyNav s_sp">邀请好友</a></li><li><a href="#" class="wyNav s_sp">游戏介绍</a></li><li><a href="#" class="wyNav s_sp">进入官网</a></li><li><a href="#" class="wyNav s_sp">游戏充值</a></li><li><a href="#" class="wyNav s_sp">论坛</a></li--></ul></div>
+        <div class="wy_banner bd_b mb10"><p class="wy_banner_pic"></p></div>
+        <!--推荐\最近服务器列表-->
+        <div id="zjdl">
+            <div class="wy_serverT"><div><h4>推荐服务器</h4><a href="#" class="wy_lastLogin"><span onclick="">点击查看所有服务器</span></a></div></div>
+            <div class="wy_recommend">
+                <div class="wy_recommend_btn">
+                        <a id="login_qzone_btn" href="javascript:loginNew(1105795944,95,'release');"><em>不删档30区</em>
+                                                <span>进入游戏</span></a>
+            </div>                <div class="wy_serStatus">
+                    <p>我们根据您使用的网络环境为您推荐左侧服务器</p>
+                    <i class="wy_ico_b wy_ico"></i><b>繁忙</b><i class="wy_ico_c wy_ico"></i><b>拥挤</b><i class="wy_ico_o wy_ico"></i><b>畅通</b><i class="wy_ico_m wy_ico"></i><b>维护</b>
+                </div>
+            </div>
+            <!--<div class="tabMenu">
+             <ul class="c"><li><strong>推荐服务器</strong></li></ul>
+             </div>
+            -->
+            <div class="tabCnt zjtj_server">
+                <ul class="wy_serList zltj_server c">
+                <li>
+        <a href="javascript:loginNew(1105795944,95,'release');">
+            <em class="fl">不删档30区</em>
+            <b class="wy_ico_o wy_ico"></b>            <b class="wy_ico_new wy_ico"></b><b class="wy_ico_j wy_ico"></b>        </a>
+    </li>
+            </ul>            </div>
+            <div class="tabbox_x c">
+                <div class="wy_serverT"><div><h4>最近登录服务器</h4></div></div>
+                <div class="tabMenu">
+                    <ul class="c">
+                        <li id="dlnav0" onClick="settab('dlnav',0,2)" class="hover"><b>上次登录</b></li>
+                        <li id="dlnav1" onClick="settab('dlnav',1,2)"><b>我的服务器</b></li>
+                    </ul>
+                </div>
+                <div class="tabCnt">
+                    <div id="con_dlnav_0">
+                        <ul class="wy_serList zjdl_list c">
+            用户未登录或登录已失效
+        </ul>
+                    </div>
+                    <div id="con_dlnav_1" style="display:none">
+                        <ul class="wy_serList zjdl_list c">
+            用户未登录或登录已失效
+        </ul>
+                        <div style="padding:10px;float:right;">本栏目最多显示5个我最近登录过的服务器</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--推荐\最近服务器列表End-->
+        <!--所有服务器列表-->
+        <div id="sevlist">
+            <div class="wy_serverT"><div><h4 id="font1">所有服务器</h4>
+                    <a href="#" class="wy_lastLogin zjdl"><span onclick="zjdllist()">返回首页</span></a></div></div>
+<div class="tabbox_x c">
+    <!--div class="wy_serStatus"><i class="wy_ico_b wy_ico"></i><b>繁忙</b><i class="wy_ico_c wy_ico"></i><b>拥挤</b><i class="wy_ico_o wy_ico"></i><b>畅通</b><i class="wy_ico_m wy_ico"></i><b>维护</b></div-->
+    <div class="tabMenu">
+        <ul class="c">
+                                                <li id="daqu0" onclick="settabcls_new('daqu',0,2,3)" class="hover" >测试大区</li>
+                                                <li id="daqu1" onclick="settabcls_new('daqu',1,2,16)"  >开发区</li>
+                                            </ul>
+    </div>
+    <div class="tabCnt">
+                                                <div id="con_daqu_0" >
+             <ul class="wy_serList c">
+                                                             <li>
+                    <a href="javascript:loginNew(1105795944,37,'release');">
+                        <em class="fl">不删档1区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,39,'release');">
+                        <em class="fl">不删档2区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,41,'release');">
+                        <em class="fl">不删档3区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,43,'release');">
+                        <em class="fl">不删档4区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,45,'release');">
+                        <em class="fl">不删档5区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,47,'release');">
+                        <em class="fl">不删档6区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,49,'release');">
+                        <em class="fl">不删档7区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,51,'release');">
+                        <em class="fl">不删档8区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,53,'release');">
+                        <em class="fl">不删档9区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,55,'release');">
+                        <em class="fl">不删档10区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,57,'release');">
+                        <em class="fl">不删档11区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,59,'release');">
+                        <em class="fl">不删档12区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,61,'release');">
+                        <em class="fl">不删档13区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,63,'release');">
+                        <em class="fl">不删档14区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,65,'release');">
+                        <em class="fl">不删档15区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,67,'release');">
+                        <em class="fl">不删档16区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,69,'release');">
+                        <em class="fl">不删档17区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,71,'release');">
+                        <em class="fl">不删档18区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,73,'release');">
+                        <em class="fl">不删档19区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,75,'release');">
+                        <em class="fl">不删档20区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,77,'release');">
+                        <em class="fl">不删档21区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,79,'release');">
+                        <em class="fl">不删档22区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,81,'release');">
+                        <em class="fl">不删档23区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,83,'release');">
+                        <em class="fl">不删档24区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,85,'release');">
+                        <em class="fl">不删档25区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,87,'release');">
+                        <em class="fl">不删档26区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,89,'release');">
+                        <em class="fl">不删档27区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,91,'release');">
+                        <em class="fl">不删档28区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,93,'release');">
+                        <em class="fl">不删档29区</em>
+                        <b class="wy_ico_o wy_ico"></b>                                            </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:loginNew(1105795944,95,'release');">
+                        <em class="fl">不删档30区</em>
+                        <b class="wy_ico_o wy_ico"></b>                        <b class="wy_ico_new wy_ico"></b><b class="wy_ico_j wy_ico"></b>                    </a>
+                </li>
+                                                <!--li><a href="#">电信七区<b class="wy_ico_o wy_ico"></b><b class="wy_ico_new wy_ico"></b><b class="wy_ico_j wy_ico"></b></a></li-->
+                        </ul>
+        </div>
+                                        <div id="con_daqu_1" style="display:none">
+             <ul class="wy_serList c">
+                         </ul>
+        </div>
+                                <em id="sFrom" style="display:none">qzone</em>
+    </div>
+</div>
+<script>
+//新的异步加载方式
+function settabcls_new(name,cursel,n,nodeid){
+    for(i=0;i<n;i++){
+        if(i==cursel){
+            $("#"+name+i).addClass("hover");
+            $("#con_"+name+"_"+i).css("display","block");
+            
+            if ($("#con_"+name+"_"+i+">ul>li").length == 0) {
+            	var skey = CookieManager.getCookie("skey");
+                var ACSRFToken = getACSRFToken(skey);
+            	var sUrl = 'http://openwebgame.qq.com/app/GetServerNode.php?appid=1105795944&nodeid='+nodeid+'&t='+Math.random() + "&g_tk=" + ACSRFToken;
+            	FileLoadManager.ajaxRequest({
+                    'url': sUrl,
+                    'showLoadingStr': '',
+                    'onLoadSuccessEvent':function(){
+                    	var result = window['Wlop_Server_Node'];
+                    	if (result.ret != 0) {
+                    		alert('数据加载失败，请重试！');return;
+                    	}
+                    	var _html = '';
+                    	for (var j=0;j<result.data.length;j++) {
+                    		var node = result.data[j];
+                    		if (node.iStatus == 0) {
+                    			_html += '<li><a href="javascript:alert(\'您好，感谢您对我们产品的支持，您选择的当前服务器暂不可用，请稍后再试，或者尝试其他的服务器，感谢！\');"><em class="fl">'+node.sName+'</em><b class="wy_ico_m wy_ico"></b></a></li>';
+                    		} else {
+                    			_html += '<li>';
+                    			if (node.sAttrValue.type == 1) {
+                    				_html += '<a href="javascript:loginNewUnion('+node.iAppId+','+node.iNodeId+',\'release\');">';
+                    			} else {
+                    				_html += '<a href="javascript:loginNew('+node.iAppId+','+node.iNodeId+',\'release\');">';
+                    			}
+                    			_html += '<em class="fl">'+node.sName+'</em>';
+                    			if (node.sAttrValue.iBusyStatus == 0) {
+                    				_html += '<b class="wy_ico_o wy_ico"></b>';
+                    			} else if (node.sAttrValue.iBusyStatus == 1) {
+                    				_html += '<b class="wy_ico_c wy_ico"></b>';
+                    			} else if (node.sAttrValue.iBusyStatus == 2) {
+                    				_html += '<b class="wy_ico_b wy_ico"></b>';
+                    			}
+                    			if (node.sAttrValue.iIsNew == 1) {
+                    				_html += '<b class="wy_ico_new wy_ico"></b>';
+                    			}
+                    			if (node.sAttrValue.iIsRecommend == 1) {
+                    				_html += '<b class="wy_ico_j wy_ico"></b>';
+                    			}
+                    			_html += '</a></li>'; 
+                    			
+                    		} 
+                    	}
+                    	$("#con_"+name+"_"+cursel+">ul").empty().append(_html);
+                    	
+                    	if(sFrom == "3366"){
+                    		wlop_setHeight();
+                    	}
+                    },
+                    'onLoadErrorEvent': function(){
+                    	alert('数据加载失败，请重试！');return;
+                    }
+                });
+            }
+            
+        }else{
+            $("#"+name+i).removeClass("hover");
+            $("#con_"+name+"_"+i).css("display","none");
+        }
+    }
+	if(sFrom == "3366"){
+		wlop_setHeight();
+	}
+}
+
+
+</script>        </div>
+        <!--所有服务器列表End-->
+    </div>
+</div>
+<script type="text/javascript" src="http://openwebgame.qq.com/html/js/loginmanagerv2.js?onlyCookie=1" charset="gb2312"></script>
+<script type="text/javascript" charset="utf-8" src="http://qzonestyle.gtimg.cn/open/fusion/fullscreen.js"></script>
+
+<script type="text/javascript">
+//用于最近登录和所有服务器间切换
+function serlist()
+{
+	document.getElementById("sevlist").style.display="block";
+	document.getElementById("zjdl").style.display="none";
+}
+function zjdllist()
+{
+	document.getElementById("zjdl").style.display="block";
+	document.getElementById("sevlist").style.display="none";
+}
+//用于切换大区的class变化
+function settab(name,cursel,n){
+	for(i=0;i<n;i++){
+		var menu=document.getElementById(name+i);
+		var con=document.getElementById("con_"+name+"_"+i);
+		menu.className=i==cursel?"hover":"";
+		con.style.display=i==cursel?"block":"none"; 
+	}
+}
+function changeTab(id) {
+       var i=0;
+       var total = 0;
+                   total = 2;
+       
+       for( i=0; i<=total; i++ ){
+          var daqu = "daqu_"+i;
+          var area_server = "area_"+i;
+          $("#"+daqu).attr("class","");
+          $("#"+area_server).css('display','none');
+       }
+       select_daqu = "daqu_"+id;
+       select_area_server = "area_"+id;
+       $("#"+select_daqu).attr("class","hover");
+       $("#"+select_area_server).css('display','block');
+}
+
+</script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/milo/util/jquery-1.11.3.min.js" charset="gb2312"></script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/basic.js" charset="gb2312"></script>
+<script type="text/javascript" src="/html/js/fajax-min.js" charset="gb2312"></script>
+<script type="text/javascript" src="/html/js/CommWebGameSelect.js" charset="utf-8"></script>
+</body>
+</html>

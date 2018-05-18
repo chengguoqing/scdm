@@ -1,0 +1,88 @@
+<!--定位信息发布-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>定位信息发布</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+     <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">定位信息发布</h1>
+    </header>
+    <div class="mui-content" id="tuwen">
+        <div class="mui-input-group dsf_d_sdffgxc pr10">
+            <div class="mui-input-row">
+                <label>名称：</label>
+                <input type="text" class="mui-input-clear" v-model="name">
+                <p class="qc"></p>
+            </div>
+            <div class="mui-input-row">
+                <label>分类：</label>
+                <p class="siuut_d_sdf" @tap="dingwe">
+                    {{cat_text}}
+                    <i class="mui-icon mui-icon-arrowright right_dsdff"></i>
+                </p>
+                <p class="qc"></p>
+            </div>
+            <div class="mui-input-row">
+                <label>关键词：</label>
+                <input type="text" class="mui-input-clear" placeholder="多个请用“,”隔开" v-model="keyword">
+                <p class="qc"></p>
+            </div>
+
+            <div class="mui-input-row dsf_d_dsdfg">
+                <label>简要描述：</label>
+                <textarea rows="5" v-model="brief"></textarea>
+                <p class="qc"></p>
+            </div>
+
+            <div class="mui-input-row dsf_d_dsdfg">
+                <label class="sd_d_sdfx">添加图片：
+                  <p>（限5张）</p>
+                  </label>
+                <section class="ov">
+                	 <span class="dsf_ds_dsfdrf pr mr10 fl mt10" v-for="(d_p,idx) in gallery">
+                      <img :src="d_p.small" class="fm">
+                      <img  src="img/close-circled.png" class="close_oius_sd" @tap="san_uiuy_s(idx,d_p.gallery_id)"/>
+                  </span>
+                  
+                    <span class="dsf_ds_dsfdrf pr mr10 fl mt10" @tap="shangc_sd('添加图片')" >
+                      <img src="img/add_icon.png" class="fm">
+                  </span>
+                
+
+                </section>
+                <p class="qc"></p>
+            </div>
+        </div>
+
+        <p class="fz154 pd pt10 pm10 z9">
+           	 详情描述：
+        </p> 
+        <section class="bgff">
+            <script id="editor" type="text/plain" style="width:100%;height:200px;"></script>
+        </section>
+        <p class="pd mt20" @tap="next_yi_s"> 
+       	 <button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20">下一步</button>
+        </p>
+    </div>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/fenlei.js"></script>
+    <script type="text/javascript" charset="utf-8" src="fuwenben/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="fuwenben/ueditor.all.min.js"> </script>
+    <script src="js/page/tuwen.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!-- 收货地址编辑 -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 收货地址编辑 </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="bianjishdz">
+        <header_p :title="title_s"></header_p>
+
+
+        <div class=" mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+
+                <section class="pd ">
+                    <ul class="qing_sddf_s m">
+                        <li class="pd pt20">
+
+                            <p class="mt20">
+                                <input type="text" placeholder="收货人" v-model="cu.shr">
+                            </p>
+                            <p class="">
+                                <input type="email" placeholder="电子邮件" v-model="cu.email">
+                            </p>
+                            <p class="pr" @tap="xz_qydf">
+                                <i class="mui-icon mui-icon-arrowdown down_icond"></i>
+                                <input type="text" placeholder="请选择地区" readonly v-model="cu.dizhi">
+                            </p>
+                            <p>
+                                <input type="text" placeholder="详细地址" v-model="cu.xiangxi">
+                            </p>
+                            <p>
+                                <input type="tel" placeholder="联系方式" v-model="cu.tel">
+                            </p>
+
+                            <p class="">
+                                <input type="number" placeholder="邮政编码" v-model="cu.yb">
+                            </p>
+                            <section class="mui-row pm10">
+
+                                <a class="mui-btn mui-btn-red w100 pt10 pm10" @tap="baocun_sd">保存</a>
+
+
+                            </section>
+
+                        </li>
+
+                    </ul>
+                </section>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/city.data.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/header_p.js"></script>
+    <script src="../js/page/user/bianjishdz.js"></script>
+</body>
+
+</html>

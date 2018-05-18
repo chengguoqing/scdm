@@ -1,0 +1,1 @@
+"use strict";var km=new Vue({el:"#fenxiao",data:{},methods:{},mounted:function(){}});

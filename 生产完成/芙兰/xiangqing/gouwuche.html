@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>详情</title>
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+	<style>
+		body{
+			background: #fff;
+		}
+	</style>
+</head>
+
+	<body>
+	<section id="gouwuche" class="bgff">
+        <section class="pd bgff pt10 pm10">
+            <section class="mui-row">
+                <section class="xq_touxingad yj4 fl">
+                    <img src="https://m.flan1688.com/images/201712/thumb_img/3940_thumb_P_1514076787838.jpg">
+                </section>
+                <section class="ov pl10 pr">
+                    <a class="mui-icon mui-icon-close cloe_icon_sdf z9 fz28" @tap="close_s"></a>
+                    <p class="z3 mt40">
+                        价格：159.00
+                    </p>
+                    <p class="z3 mt5"> 
+                        库存:17件
+                    </p>
+                    <p class="z3 mt5">
+                        颜色：米色 尺码：L
+                    </p>
+                </section>
+            </section>
+
+            <section class="btm mt10 pt10 fenlei_uiy_sr">
+                <span v-for="(fi,idx) in fenlei" :class="idx==0?'act':''" :data-idx="idx">{{fi.name}}</span>
+            </section>
+            <section class="btm mt10 pr df_jh_drdsrtxt">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view fz14 df_jh_drtxc">
+                            <li class="mui-table-view-cell box" v-for="sd in 8">
+                                <p class="box_a kd z3 ">M</p>
+                                <p class="box_a kd z3">库存：4</p>
+                                <section class="box_b tr">
+                                    <div class="mui-numbox zidiy_sefx " data-numbox-min='1'>
+                                        <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                                        <input id="test" class="mui-input-numbox" type="number" value="1" />
+                                        <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                                    </div>
+                                </section>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <p class="tr mt10">
+                共<span class="red"> 0 </span>件
+                <span class="ml5">共</span>
+                <span class="red">0</span> 元
+            </p>
+
+        </section>
+        
+        <p class="tijiao_btn_sd">
+        <a class="mui-btn mui-btn-red w100 pt10 pm10 fz16">提交</a>
+        </p>
+       
+    </section>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/page/xiangqing/gouwuche.js"></script>
+	</body>
+
+</html>

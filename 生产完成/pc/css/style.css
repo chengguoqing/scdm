@@ -1,0 +1,360 @@
+
+html,body{
+    min-width: 1400px;
+}
+
+.df_iyt_sdrx{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+      min-width: 1400px;
+  
+}
+.df_iyt_sdrx .swiper-container,.df_iyt_sdrx .swiper-slide,.df_iyt_sdrx .swiper-wrapper{
+    height: 100%;
+}
+.df_ds_sddffx{
+    right: 60px !important;
+}
+.swiper-pagination-bullet{
+    background: #E2CBB0;
+    opacity: 1;
+    height: 12px;
+    width: 12px;
+    margin-bottom: 10px !important;
+}
+.swiper-pagination-bullet-active{
+    height:20px;
+    border-radius: 20px;
+}
+.down_sddf{
+    width: 50px;
+    height: 27px;
+    background-position: -115px -94px;
+    position: absolute;
+    right: 40px;
+    top: 40%;
+    z-index: 100;
+    cursor: pointer
+}
+.down_sddf.ab{
+    background-position: -26px -93px;
+    top: 65%
+}
+.tao_uyt_sd{
+    position: fixed;
+    height: 160px;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    line-height: 160px;
+    overflow: hidden;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.dsf_s_dsf_sdfgx{
+    margin-left: 700px;
+    position: relative;
+    top: 40px;
+}
+.dsf_s_dsf_sdfgx a{
+    margin-right: 30px;
+    font-size: 18px;
+    color: #000000;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.dsf_s_dsf_sdfgx a.act{
+    background: #E0DED2;
+    color: #fff
+}
+
+.fullSlide li{
+    margin-top: 0 !important;
+}
+.cp_sd_sdgfx{
+    height: 800px;
+    background:url(../img/piai_a.jpg) center center;
+}
+.dsf_d_dftt{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.dsf_d_dftt a{
+    padding: 4px 15px;
+    border-radius: 20px;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.dsf_d_dftt a.act{
+    background: #E0DED2;
+}
+
+.dsf_s_sdftxcc{
+    height: 165px;
+    line-height: 165px;
+    text-align: center
+}
+
+.dsf_d_sdftx .col-xs-3{
+    margin-top: 20px;
+}
+
+
+.dsf_uy_sdrcc{
+    height: 310px;
+    background:url(../img/bottom_s.jpg) center center;
+    line-height: 310px;
+    text-align: center
+}
+
+.ding_sdrtx{
+    cursor: pointer
+}
+
+.cp_sd_sdgfx.ab{
+    height: 800px;
+    background: url(../img/piai_b.jpg) center center;
+    margin-top: 160px;
+}
+
+.df_d_s_df_dr{
+    border-top: 1px solid #E1E0E0;
+    width: 240px;
+    text-align: center;
+    margin: auto
+    
+}
+.df_d_s_df_dr span{
+    font-size: 28px;
+    color: #393939;
+    background: #fff;
+    padding: 2px 10px;
+    position: relative;
+    bottom: 20px;
+}
+
+.sdfg_s_sdfxx{
+    height: 240px;
+}
+.sdfg_s_sdfxx img{
+    height: 100%;
+}
+.dsf_neiwe{
+    width: 240px
+}
+
+.dsf_iyt_sde{
+    line-height: 1.5;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+.dsf_d_sd_rtx,.df_d_s_df_dr.ab span{
+    background: #F0EFEA
+}
+.pm80{
+    padding-bottom: 80px;
+}
+.dsf_dd_srr5tx{
+    height: 556px;
+    line-height: 556px;
+}
+.dsf_d_sffxc{
+    line-height: 1.5
+}
+.cp_sd_sdgfx.ac{
+    height: 630px;
+    background: url(../img/dsfd_a.jpg)center center no-repeat #F0EFEA ;
+}
+.dsf_ds_sdrtx{
+    width: 1020px;
+    height: 660px;
+}
+
+.dsf_dsdsdrtx{
+    width: 34px;
+    height: 131px;
+    background-position: -208px -93px;
+}
+.fz50{
+    font-size: 50px;
+}
+.dsf_ds_sdr_ls{
+    height: 300px;
+    border: 1px solid #EBEBEB;
+    border-left: 4px solid #EBEBEB;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 225px;
+}
+
+.dsf_ds_sdr_ls p{
+    font-family:'SimSun';
+}
+.dfs_d_sdsd li{
+    margin-top: 150px;
+}
+.df_ewe_we{
+    width: 55px;
+    height: 50px;
+    background-position: -316px -62px;
+}
+
+.df_ewe_we.ab{
+    width: 55px;
+    height: 44px;
+    background-position: -405px -75px;
+}
+.cp_sd_sdgfx.ar{
+    height: 1080px;
+    background:url(../img/dasfds_a.jpg) center center;
+}
+
+.dsf_sd_sd{
+    height: 736px;
+    background: url(../img/dsfs_a.jpg) center center;
+}
+.dsf_sd_sd.ab{
+    height: 741px;
+    background: url(../img/dsfs_b.jpg) center center;
+}
+.dsf_sd_sd.ac{
+    height: 1048px;
+    background: url(../img/dsfs_c.jpg) center center;
+}
+
+
+
+.dsf_d_sdftx .col-xs-3{
+    position: relative;
+    height: 197px;
+    cursor: pointer
+}
+.dsf_d_sdftx .col-xs-3:hover .cen.fz16.pt5.pm5.dian{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    line-height: 197px;
+        transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+}
+
+
+
+
+
+ .fullSlide {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    overflow: hidden
+}
+
+.fullSlide .bd {
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.fullSlide .bd ul {
+    width: 100% !important;
+}
+.fullSlide .bd li a {
+    display: block;
+    height: 100%;
+}
+.fullSlide .bd,.fullSlide .bd ul{
+    height: 100%;
+
+}
+.fullSlide .bd li {
+    width: 100% !important;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+.fullSlide .hd {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    left: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    _filter: alpha(opacity=60);
+
+}
+
+.fullSlide .hd ul {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.fullSlide .hd ul li {
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 60px;
+    height: 4px;
+    margin: 5px;
+    background: #9A1816;
+    overflow: hidden;
+    line-height: 9999px;
+    opacity: 0.5
+}
+
+.fullSlide .hd ul .on {
+    
+opacity: 1
+}
+.aiiyt_zsd{
+    width: 35px;
+    height: 35px;
+    background-position: -30px -75px;
+    cursor: pointer
+
+}
+
+.aiiyt_zsd_b{
+    background-position: -95px -75px;
+}
+
+.df_dsdsdss_r{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.df_dsdsdss_r li{
+            background-size: 100% ;
+            background-repeat: no-repeat;
+            background-position: 50%;
+}
+*/
+
+
+

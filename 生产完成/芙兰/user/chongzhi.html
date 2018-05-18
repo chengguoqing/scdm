@@ -1,0 +1,152 @@
+<!--充值-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body{
+           
+        }
+    </style>
+</head>
+
+<body>
+    <section id="chongzhi">
+
+        <header class="mui-bar mui-bar-nav sd_hjg_ert">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left cf"></a>
+            <h1 class="mui-title cf">芙兰充值卡</h1>
+
+            <section class="tip_rightbtn">
+                <a class="mui-btn">规则</a>
+                <a class="mui-btn">明细</a>
+            </section>
+        </header>
+
+
+
+        <div class="mui-content mui-scroll-wrapper botn_sdff">
+            <div class="mui-scroll">
+                <section class="pd top_e_drttxc">
+                    <p class="pt10 pm10">
+                        <i class="dx icon-qia cf fz24 cz"></i>
+                        <span class="cf ml5">绑定充值卡</span>
+                    </p>
+
+
+                    <section class="chibgz_kasr pd pr">
+                        <p class="cf fz18 pt10">
+                            芙兰商城
+                        </p>
+                        <section class="dsf_uy_sdf ">
+                            <img src="../img/user68.jpg" class="yj dfsg_iy_drtx fr">
+                            <section class="ov dsf_iy_sd tr pr10">
+                                <p class="cf fz14">u135CYBX0372</p>
+                                <p class="zc fz12">注册会员</p>
+                            </section>
+                        </section>
+                        <p class="zc cen mt30">
+                            账户内余额(元)
+                        </p>
+                        <p class="cf fz30 cen mt10">
+                            0.00
+                        </p>
+
+
+                        <p class="cen mt10">
+                            <a class="dsf_uiy_df fz12 cf">立即使用<i class="mui-icon mui-icon-arrowright fz12"></i></a>
+                        </p>
+
+
+                    </section>
+                </section>
+
+                <section class="pd bbm s_khj_u_ertx mui-row bgff">
+
+                    <p class="fl">
+
+                        <i class="dx icon-laba ls"></i>
+                        <span class="ls ml5">规则公告</span>
+                    </p>
+                    <section class="ov pl10 dian fz14 z6 sdf_d_sdttxc">
+                        <gundong :items="toudiao"></gundong>
+                    </section>
+                </section>
+                <section class="bgff pd mui-row f_jh_ertxc">
+                    <section class="mui-col-xs-6 df_jhg_er_er" v-for="(sd,idx) in cz_sdf" @tap="sdhng_s(idx)">
+                        <section class="chong_neo cz_w w100 " :class="sd.cls">
+                            <section class="cz_a pr">
+                                <section class="jg_tbnghtop tl ">
+
+                                    <i class="dx icon-dingdan cf fz20"></i>
+                                    <span class="shg_sertxc">
+                            赠{{sd.zm}}元
+                            </span>
+                                </section>
+
+                                <p class="cf mt20">
+                                    <span>￥</span>
+                                    <span class="fz30">{{sd.mum}}</span>
+                                </p>
+                                <p class="cf df_khj_nsd">
+
+                                    {{sd.zs}}<br> {{sd.zp}}
+
+
+                                </p>
+                                
+                                <img src="../img/xuanzhong.png" class="xujygh_sdf">
+                                
+                                
+                            </section>
+                        </section>
+
+                    </section>
+
+
+                </section>
+
+            </div>
+        </div>
+ 
+        
+        <section class="df_iy_sdr">
+        <section class="hg_sd_sfgf pd pt5 pm5 mui-row">
+            <p class="mui-col-xs-8 dian">
+            <img src="../img/success.png" class="suse_sffx cz">
+            <span class="cf ml5">充值卡仅限芙兰商城使用，我知道了</span>
+            </p>    
+            <p class="mui-col-xs-4 tr">
+                 <a class="fr  xia" href="#">规则详情</a>
+            </p> 
+       
+        </section>
+        <div class="hg_iy_s box">
+            <p class="box_a cen fz16">
+            <span class="red">芙兰充值卡</span>
+            </p>
+            <p class="box_a hgf_sbtn sd_dd_sf">
+            <a class="mui-btn mui-btn-red ">立即充值<i class="mui-icon mui-icon-arrowright"></i></a>
+            </p>
+        </div>
+            <div id="zf_button" style="display:none"></div> 
+    </section>
+        
+        
+
+    </section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/gundong.js"></script>
+    <script src="../js/page/user/chongzhi.js"></script>
+</body>
+
+</html>

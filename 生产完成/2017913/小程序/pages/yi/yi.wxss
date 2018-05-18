@@ -1,0 +1,38 @@
+/* pages/yi/yi.wxss */
+.dsf_uy_sdd text{
+  border-left: 8rpx solid #009137;
+  padding-left: 20rpx;
+}
+.sd_iyu_sdf{
+  width: 100%;
+  height: 450rpx;
+}
+.dsf_d_dsfxc{
+  line-height: 1.9
+}
+.dsf_d_dsfxc text{
+  display: block;
+   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.sdf_d_dsfgxc{
+  border: 1px dashed #E0E0E0;
+}
+.df_d_sdggxc{
+  width: 530rpx;
+}
+.dsf_d_sdggx{
+  width: 325rpx;
+  height: 325rpx;
+  float: left;
+  margin-top: 20rpx;
+}
+.dsf_d_sdggx:nth-child(2n){
+  float: inherit;
+  float: right
+}
+.dsfd_dsfdsgx{
+  width: 100%;
+  height: 400rpx;
+}

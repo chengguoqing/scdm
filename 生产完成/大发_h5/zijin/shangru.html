@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提款</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<section id="shangru">
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+        <h1 class="mui-title red">{{hg_sd.name}}</h1>
+
+    </header>
+    <div class="mui-content " >
+
+
+        <section class="sd_ih_err_d pt10 ab">
+
+
+            <section class="mui-row pd mt10 cen">
+                <section class="mui-col-xs-6 pl0">
+                    <i class="dx icon-yue ye fz32 f_b df_jh_rt "></i>
+                    <section class=" pl10 tl f_b">
+                        <p class="ye">主账户余额</p>
+                        <p class="ye">
+                            <span class="fz18">0.30</span>
+                            <span class="fz12">RMB</span>
+                        </p>
+                    </section>
+                    <p class="qc"></p>
+                </section>
+
+                <section class="mui-col-xs-6 pl0">
+                    <i class="dx icon-yinhangqia ye fz32 f_b df_jh_rt"></i>
+                    <section class="f_b pl10 tl">
+                        <p class="ye">总财富</p>
+                        <p class="ye">
+                            <span class="fz18">104.72</span>
+                            <span class="fz12">RMB</span>
+                        </p>
+                    </section>
+                    <p class="qc"></p>
+                </section>
+            </section>
+
+        </section>
+
+
+        <form class="mui-input-group">
+            <div class="mui-input-row pr">
+                <label>平台余额</label>
+              <span class="fr mt10 mr20">{{hg_sd.num}}</span>
+            </div>
+              <div class="mui-input-row pr">
+                <label> 转入转出</label>
+
+                <div class="mui-switch  mui-active" id="mySwitch">
+                    <div class="mui-switch-handle"></div>
+                </div>
+            </div>
+
+            <div class="mui-input-row pr">
+                <label>转账金额</label>
+                <input type="number" class="mui-input-clear" placeholder="请输入转账金额"  v-model="form.zcje">
+            </div>
+        </form>
+
+
+        <p class="pd" @tap="tijiao">
+            <a class="mui-btn mui-btn-red w100 pt10 pm10 fz16 mt60 cen yj4">
+          转入{{hg_sd.name}}
+            </a>
+        </p>
+
+    </div> 
+</section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/vue.js"> </script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/zijin/shangru.js"></script>
+</body>
+
+</html>

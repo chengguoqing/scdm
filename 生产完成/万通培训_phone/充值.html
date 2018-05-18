@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="mui-input-group mt20">
+        <div class="mui-input-row fz16">
+            <label>
+收货地址</label>
+            <input type="text" class="mui-input-clear fz16 select_po" placeholder="--省份--市--区--" readonly>
+        </div>
+        <div class="mui-input-row fz16">
+            <label>
+
+详细地址</label>
+            <input type="text" class="mui-input-clear fz16" placeholder="请输入详细地址">
+        </div>
+        <div class="mui-input-row fz16">
+            <label>
+
+邀请码</label>
+            <input type="text" class="mui-input-clear fz16" placeholder="请输入邀请码 ">
+        </div>
+
+    </div>
+
+    <p class="pt10 pm10 fz16 cen z3">
+        开通时长
+    </p>
+
+    <div class="mui-input-group ">
+        <div class="mui-input-row fz16 dsf_d_sdfgx act">
+            <label>
+
+12个月</label>
+            <span class="red">
+          ￥900
+          </span>
+            <img src="img/u2491.png" class="dsf_iuut_sdf">
+        </div>
+        <div class="mui-input-row fz16 dsf_d_sdfgx">
+            <label>
+
+6个月</label>
+            <span class="red">
+          ￥600
+          </span>
+            <img src="img/u2491.png" class="dsf_iuut_sdf">
+        </div>
+    </div>
+    
+    <p class="mt60 pd">
+        <button class="w100 mui-btn-success pt10 pm10 fz16">微信支付</button>
+    </p>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/city.data.js"></script>
+    <script>
+        $(function() {
+            var picker = new mui.PopPicker({
+                "layer": [3]
+            });
+
+
+            picker.setData(cityData3)
+            $(".select_po").on("tap", function() {
+                var hjhg = $(this)
+                picker.show(function(rl) {
+                    $(hjhg).val(rl[0].text + "-" + rl[1].text + "-" + (rl[2].text ? rl[2].text : ''))
+                })
+            })
+
+            $(".dsf_d_sdfgx").on("click", function() {
+                $(".dsf_d_sdfgx").removeClass("act")
+                $(this).addClass("act")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

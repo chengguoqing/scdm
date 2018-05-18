@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="UTF-8"><title></title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="renderer" content="webkit"><link href="css/bootstrap.min.css" rel="stylesheet"><link href="css/jquery.datetimepicker.css" rel="stylesheet"><link href="css/font-awesome.min.css" rel="stylesheet"><link href="css/base.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet"><style>.searchable-select-input {
+            display: none
+        }</style></head><body><div class="dsf_d_ddffx show"><div class="sdf_d_ddfxc yj4 ov bgff pr"><i class="fa fa-close fz26 dsf_d_sdffx"></i><p class="dsf_d_ddfx"><img src="img/dsf_dsd.jpg"></p><div class="mt20 pl20"><div class="col-xs-6"><ul class="sdf_ds_sdfx"><li><p class="fz14 z6 fl">预约医师：</p><div class="fl pl10"><div class="dsf_d_sdfx yj4"><span class="ml5">张三</span><select class="dsf_d_ddf"><option value="张三">张三</option><option value="张三1">张三1</option><option value="张三2">张三2</option><option value="张三3">张三3</option></select><span class="dsf_d_sdf"><i class="fa fa-sort-down"></i></span></div></div><p class="qc"></p></li><li class="mt10"><p class="fz14 z6 fl">预约时间：</p><div class="fl pl10"><div class="dsf_d_sdfx yj4"><input type="text" class="dsf_ds_sdfgfx" id="stat_time_a"> <span class="dsf_d_sdf"><i class="fa fa-sort-down"></i></span></div><p class="qc"></p></div></li></ul></div><div class="col-xs-6"><ul class="sdf_ds_sdfx"><li class=""><p class="fz14 z6 fl sdf_d_sdf">联 系 人：</p><div class="fl pl10"><div class="dsf_d_sdfx yj4"><input type="text" class="dsf_ds_sdfgfx" placeholder="如：王四"></div></div><p class="qc"></p></li><li class="mt10"><p class="fz14 z6 fl">联系电话：</p><div class="fl pl10"><div class="dsf_d_sdfx yj4"><input type="text" class="dsf_ds_sdfgfx" placeholder="如：王四"></div></div><p class="qc"></p></li></ul></div><p class="qc"></p></div><p class="mt15 cen"><button class="dsf_d_ddffgxc yj4">立即预约</button></p></div></div><script src="js/jquery-1.11.3.min.js"></script><script src="js/jquery.datetimepicker.full.js"></script><script>$(function() {
+            $(".dsf_d_ddf").on("change", function() {
+                var sd_s = $(this).val()
+                $(this).prev().text(sd_s)
+            })
+
+
+            $('#stat_time_a').datetimepicker({
+                  lang:"ch",
+                format: 'Y-m-d', //时间格式
+                timepicker: false 
+
+
+            })
+            
+            $(".dsf_d_sdffx,.dsf_d_ddffgxc").on("click",function(){
+                $(".dsf_d_ddffx").removeClass("show")
+            })
+        })</script></body></html>

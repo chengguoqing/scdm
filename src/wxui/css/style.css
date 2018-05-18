@@ -1,0 +1,83 @@
+p{
+    font-size: 14px;
+    color: #666
+}
+.df_iyt_sr{
+    width: 220px;
+}
+.ds_ytg_yi{
+    height: 28px;
+}
+.df_s_srrtx{
+    text-indent: 2px;
+}
+.d_sr_srtxc{
+    white-space:nowrap; 
+}
+.btm_x{
+    border-top: 1px dashed #666;
+}
+.sd_sdf_d{
+    width: 35px;
+    position: relative;
+    bottom: 3px;
+}
+.dsf_sd_sd{
+    line-height: 60px;
+}
+.jianp_sds{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background: #fff;
+    min-height: 200px;
+    width: 100%;
+}
+
+
+
+.sdf_uy_srrtx{
+    width: 75%;
+}
+.sdf_uy_srrtx span{
+    width: 33.3%;
+    float: left;
+    line-height: 50px;
+    border-top: 1px solid #D2D2D2;
+    border-right: 1px solid  #D2D2D2;
+    color: #333;
+    font-size: 20px;
+}
+.sdf_uy_srrtx span.er{
+    width: 66.6%;
+}
+.dsf_sd_wersd span{
+    line-height: 50px;
+    border-top: 1px solid  #D2D2D2;
+    display: block;
+}
+.dsf_sd_wersd p{
+    background: #05BC00;
+    color: #fff;
+    height: 153px;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 50px;
+}
+.sdf_uy_srrtx span:active,.dsf_sd_wersd span:active{
+    background: #f8f8f8
+}
+.dsf_sd_sd p:active{
+    opacity: 0.8
+}
+
+
+
+
+
+
+
+
+
+
+

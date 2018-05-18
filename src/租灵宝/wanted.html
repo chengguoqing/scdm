@@ -1,0 +1,84 @@
+<!--求租-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<section id="wanted">
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" v-if="!sd_sddr"></a>
+        <h1 class="mui-title" v-text="tyys"></h1>
+    </header>
+    <div class="mui-content" >
+        <section class="pd bgff box pt10 pm10">
+            <p class="box_a gff_sd">
+                <span class="dsfdf_d  yj20" data-lk="1">最新</span>
+            </p>
+            <p class="box_a gff_sd">
+                <span class="dsfdf_d  yj20" data-lk="2">热门</span>
+            </p>
+            <p class="box_a gff_sd">
+                <span class="dsfdf_d  yj20 "data-lk="3" >金额<i class="f_i dsf_sdfgx" :class="sd_sdfs"></i></span>
+            </p>
+            <p class="box_a tr dsf_d_dgfgx" @tap="fensd_sdf">
+                <span class="dsfdf_d  yj20">分类筛选</span>
+            </p>
+
+        </section>
+
+        <section class="pd bgff pt10 btm pm10">
+            <div class="mui-input-row mui-search pr">
+                <input type="search" class="mui-input-clear" placeholder="" @blur="sd_ddf" v-model="sd_dsds" id="strName">
+            </div>
+        </section>
+
+
+		<section class="cen mt40 ds_d_dd_dfw" id="ds_d_dd_dfw">
+					<img src="img/meiyou.png" class="df_dd_drt" />
+					<p class="ls fz20">
+						暂无记录！
+					</p>
+				</section>
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper xiy_zuysdf">
+            <div class="mui-scroll" id="dsf_s_sdf">
+                <ul class="dfsd_df mt5 " id="dsf_d_dfg" >
+                    <li class="pd pt10 pm10 pd bgff" v-for="aq in qiu_a" @tap="tuausdf(aq.id)"> 
+                            <p class="fz15 z0 dian" v-text="aq.name"></p>
+                            <p class="fz12"> <i class="f_i dsf_jsf"></i> 预算： <span class="ye" v-text="aq.budgetprice"></span>
+                            </p>
+                            <p class="fz12"> 
+                            	<i class="f_i dsf_sdgx ab"></i> 工期：<span>{{aq.leasetime}}</span>
+                                <span class="fr"><i class="f_i dsf_jsf ac"></i>    
+                                   信用指数：{{aq.credit}}%       <span class="ml5" :class="aq.is_verify==1?'ye':''">{{aq.is_verify==1?'已认证':'未认证'}}</span>  
+                                </span>
+                            </p>
+                    </li>
+                       
+                  
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/fenlei.js"></script>
+    <script src="js/page/wanted.js"></script>
+</body>
+
+</html>

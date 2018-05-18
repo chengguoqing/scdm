@@ -1,0 +1,56 @@
+<!--店主圈-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>店主圈</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/pi_cs.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<div id="article_cat_list" class="mui-slider">
+
+			<section class="fulan_top">
+				<header class="mui-bar mui-bar-nav asd_uy_dftx  bbm pr">
+					<img src="img/ss.png" class="ss_icondsf"  @tap="zhu('searchindex','slide-in-bottom')">
+
+					<h1 class="mui-title z3 dsf_s_sdgf">
+                    <img src="img/top.jpg" class="cz">
+                </h1>
+					<img src="img/sys.png" class="ss_icondsf_b" @tap="zhu('saoma')">
+
+				</header>
+
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted quyu_srtx ab">
+
+					<div class=" mui-scroll ">
+
+						<a class="mui-control-item" v-for="(cn,idx) in caidan" :class="idx==0?'mui-active':''" :data-wid="cn.url+cn.id">
+							{{cn.name}}
+						</a>
+					</div>
+				</div>
+
+				<p>
+
+				</p>
+			</section>
+			<p class="cen df_kh_drtxf">
+				<img src="img/jiazai.png" />
+			</p>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/webviewGroup.js"></script>
+		<script src="js/page/article_cat_list.js"></script>
+	</body>
+
+</html>

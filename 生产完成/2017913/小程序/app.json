@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/san/san",
+    "pages/er/er",
+    "pages/yi/yi",
+    "tem/moban"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "独行工匠",
+    "navigationBarTextStyle": "black"
+  }
+}

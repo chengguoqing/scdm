@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>商家设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/mui.zoom.css">
+    <link rel="stylesheet" href="../css/swiper3.07.min.css">
+    <link rel="stylesheet" href="../css/mui.picker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .mui-backdrop {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="mui-bar dsf_xdsdfx mui-bar-nav dxddsdf_dder_xr">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left cf">
+
+            <span class="fz16 dsf_xsd_xrf">返回</span>
+        </a>
+        <h1 class="mui-title cf">
+
+            商家设置
+        </h1>
+
+    </header>
+
+    <div class="mui-content">
+
+        <section class="pd pt10 pm10 bgff pr">
+            <p class="sd_xsd_xdffgg  fl pr">
+                <img src="../img/banner.jpg">
+                <span class="sd_xsdf_xrtxv">
+                  已到期
+                  </span>
+            </p>
+            <section class="ov pl10">
+                <p class="z14 fz16 mt10">
+                    锅微生活
+                </p>
+                <p class="mt10 fz14">
+                    <a class="fz14 zc">修改资料</a>
+
+                    <span class="ml10 pl10 brl">我要续费</span>
+
+
+                </p>
+            </section>
+            <span class="fz16 dsf_xsdf_xrtxc zc">
+                    预览
+                <i class="fa fa-angle-right fz20"></i>
+                </span>
+
+            <p class="qc"> </p>
+        </section>
+
+        <p class="pd pt10 pm10 fz15">
+            商家信息
+        </p>
+        <ul class="mui-table-view ">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+              
+                        状态：已到期
+                        <span class="red fz14 fr mr30">我要续费</span>
+               
+                </a>
+            </li>
+
+        </ul>
+
+        <p class="pd pt10 pm10 fz15">
+            提醒设置
+        </p>
+        <ul class="mui-table-view ">
+            <li class="mui-table-view-cell">
+                客户关注了通知我
+                <div class="mui-switch mui-switch-mini  mui-active">
+                    <div class="mui-switch-handle"></div>
+                </div>
+
+            </li>
+            <li class="mui-table-view-cell">
+                客户购买了今日秒杀通知我
+                <div class="mui-switch mui-switch-mini  mui-active">
+                    <div class="mui-switch-handle"></div>
+                </div>
+
+            </li>
+            <li class="mui-table-view-cell">
+                活动报名了通知我
+                <div class="mui-switch mui-switch-mini  mui-active">
+                    <div class="mui-switch-handle"></div>
+                </div>
+
+            </li>
+            <li class="mui-table-view-cell">
+                天天减价报名（付款）了通知我
+                <div class="mui-switch mui-switch-mini  mui-active">
+                    <div class="mui-switch-handle"></div>
+                </div>
+
+            </li>
+        </ul>
+
+        <p class="pd pt10 pm10 fz15">
+            提醒设置
+        </p>
+        <ul class="mui-table-view ">
+            <li class="mui-table-view-cell">
+                固定【我的】为商家中心
+                <div class="mui-switch mui-switch-mini ">
+                    <div class="mui-switch-handle"></div>
+                </div>
+
+            </li>
+
+        </ul>
+
+
+        <ul class="mui-table-view mt40">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+              
+                        状态：正常显示（2018-5-28到期）
+                        <span class="red fz14 fr mr30">我要续费</span>
+               
+                </a>
+            </li>
+
+        </ul>
+
+
+
+
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script>
+        mui('.mui-content .mui-switch').each(function() { //循环所有toggle
+
+            this.addEventListener('toggle', function(event) {
+                if (event.detail.isActive) {
+                    mui.toast('设置成功');
+                } else {
+                   mui.toast('取消提现成功');
+                }
+            });
+        })
+
+    </script>
+
+</body>
+
+</html>

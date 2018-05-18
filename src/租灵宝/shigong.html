@@ -1,0 +1,67 @@
+<!--我的施工项目-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的施工项目</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的施工项目</h1>
+		</header>
+		<div class="mui-content" id="shigong">
+			<section class="pd bgff df_dsdfr_w pt10 pm10">
+				<p class="df_dsdfr gff_sd f_b" v-for="(sz,idx) in sd_sdzs">
+					<span class="dsfdf_d  yj20" v-text="sz.name" :class="sz.cls" @tap="fenlei_sd(idx)"> </span>
+				</p>
+
+			</section>
+
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper xiy_zuysdf ab ac">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mt5 df_d_dsdfxc" id="dsf_d_dfg">
+						<li class="mui-table-view-cell" v-for="(mn,idx) in mare_list">
+							<div class="mui-slider-right mui-disabled">
+								<a class="mui-btn mui-btn-primary fz18" @tap="bianji(mn.id)">编辑</a>
+									<a class="mui-btn mui-btn-yellow fz18" @tap="sanchu(mn.id,idx)">删除</a>
+							</div>
+							<div class="mui-slider-handle">
+								<p class="fz15 z0 dian">{{mn.name}}</p>
+								<section class="mui-row mt5">
+									<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_jsf"></i> 租金: <span class="ye">{{mn.budget}}</span>
+									</p>
+									<p class="fz12 mui-col-xs-6"> <i class="f_i dsf_sdgx ab"></i> 时间: <span class="">{{mn.time}} </span>
+									</p>
+
+								</section>
+							</div>
+						</li>
+					</ul>
+
+					<section class="cen mt40 ds_d_dd_dfw" id="ds_d_dd_dfw">
+						<img src="img/meiyou.png" class="df_dd_drt" />
+						<p class="ls fz20">
+							暂无记录！
+						</p>
+					</section>
+				</div>
+			</div>
+
+			<p class="bgff dsf_ddf_df" @tap="zhu('shigongadd')">
+				<i class="f_i add_iconsd"></i>
+				<span class="ye fz16">添加施工项目需求</span>
+			</p>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/shigong.js"></script>
+	</body>
+
+</html>

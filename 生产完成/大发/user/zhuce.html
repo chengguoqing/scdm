@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>注册账号</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+        <h1 class="mui-title red">注册账号</h1>
+
+    </header>
+
+    <div class="mui-content " id="zhuce">
+        <ul class="mui-table-view mt0">
+
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-ren  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="text" placeholder="账号（必填，长度6到12位）" v-model="form.user">
+
+                </p>
+
+            </li>
+
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-ren  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="text" placeholder="真实姓名（必填，涉及结款）" v-model="form.name">
+
+                </p> 
+
+            </li>
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="password" placeholder="登录密码（长度6到30位）" v-model="form.paw">
+
+                </p>
+
+            </li>
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="password" placeholder="再次确认密码" v-model="form.qpaw">
+
+                </p>
+
+            </li>
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-youjian  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="email" placeholder="邮箱(用于找回账户密码)" v-model="form.email">
+
+                </p>
+
+            </li>
+
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-qq  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="text" placeholder="QQ(用于找回账户密码)" v-model="form.qq">
+
+                </p>
+
+            </li>
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-dianhua fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="tel" placeholder="手机(用于找回账户密码)" v-model="form.phone">
+
+                </p>
+
+            </li>
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-promotion-index fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="text" placeholder="请输入推广码(可不填写)" v-model="form.tuiguang">
+
+                </p>
+
+            </li>
+
+
+            <li class="mui-table-view-cell">
+
+                <span class="fl sjh_icosdr ">
+                    <span class="dx sd_jug_xs yj ">
+                    
+                    </span>
+                </span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    设置取款密码(不设置同登录密码)
+
+                </p>
+
+            </li>
+            <li class="mui-table-view-cell ds_sdsrtxc aa">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="password" placeholder="取款密码（6到30位数字或字母）" v-model="form.qukm">
+
+                </p>
+
+            </li>
+
+            <li class="mui-table-view-cell ds_sdsrtxc ab">
+
+                <span class="fl sjh_icosdr mt2"><i class="dx icon-mima  fz24 cz"></i></span>
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="password" placeholder="再次确认密码" v-model="form.qqukm">
+
+                </p>
+
+            </li>
+
+            <li class="mui-table-view-cell pr">
+
+
+                <p class="fz16 z3 ov df_juhgg_er">
+                    <input type="text" placeholder="验证码" v-model="form.yzm">
+
+                </p>
+
+                <img src="data:image/png;base64,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" class="yzma_sdrtc">
+
+            </li>
+
+        </ul>
+        <section class="pd">
+       <p @tap="zhuce" class=" mui-btn-red w100 pt10 pm10 fz16 mt20 cen yj4">
+          注册
+            </p>
+               
+    
+
+            <p class="red mt40 cen fz16 pm40" @tap="zhu('denglu')">
+                已有账号？登陆
+            </p>
+        </section>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/zhuce.js"></script>
+</body>
+
+</html>

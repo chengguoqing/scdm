@@ -1,0 +1,31 @@
+{
+	"index.html": {
+		"refer": [
+			"cebian.html",
+			"xiaoxi/index.html",
+			"indexzh.html",
+			"lishijl/index.html",
+			"zijin/index.html"
+		],
+		"resources": [
+			"indexzh.html"
+		]
+	},
+	"xiaoxi/index.html": {
+		"resources": [
+			"xiaoxi/huodongtg.html"
+		],
+		"refer": [
+			"xiaoxi/huodongtg.html",
+			"xiaoxi/gonggao.html"
+		]
+	},
+	"lishijl/index.html": {
+		"resources": [
+			"lishijl/chunkuan.html"
+		],
+		"refer": [
+			"lishijl/chunkuan.html"
+		]
+	}
+}

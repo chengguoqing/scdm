@@ -1,0 +1,264 @@
+<!--用户中心-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+
+        <h1 class="mui-title z3">用户中心</h1>
+
+    </header>
+    
+    <div class=" mui-content mui-scroll-wrapper" id="user_center">
+        <div class="mui-scroll">
+        	
+        	
+        <section class="user_tio_sdf">
+            <p class="cf tr pt10 pd">
+            	<span @tap="zhu('profile')"> 
+            		
+            		<i class="dx icon-build cf fz18 cz"></i> 
+                		设置
+            	</span>
+                
+            </p>
+            <section class="mui-row pd ">
+                <img src="../img/5850f0a8Nfc8055c3.png" class="yj user_icon_er fl">
+                <section class="ov cf fz16 pl20 s_iu_kiu_s">
+                    u135CYBX0372
+                    <i class="dx icon-wode fz14"></i>
+                </section>
+            </section>
+        </section>
+
+        <section class="bgff mt10">
+            <p class="pd pt10 pm10  z3">
+                全部订单
+                <span class="fz12 z9 fr">
+                    查看全部订单
+                <i class="mui-icon mui-icon-arrowright fz16"></i>
+                </span>
+            </p>
+            <section class="mui-row cen btm pt20 pm10">
+                <a class=" mui-col-xs-3" v-for="qd in qbdd" @tap="zhu('order_list','',{cn_id:qd.id})">
+                    <p class="pr ds_jh_erxc">
+                        <span class="pr">
+                           <span class="yj jh_sd_rtxc">{{qd.num}}</span>
+                        <i class="dx  fz32" :class="qd.icon"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12">
+                        {{qd.name}}
+                    </p>
+                </a>
+          
+               
+            </section>
+
+        </section>
+
+
+
+        <section class="bgff mt10">
+            <p class="pd pt10 pm10  z3">
+                我的资产
+                <span class="fz12 z9 fr">
+                    全部资产/充值
+                <i class="mui-icon mui-icon-arrowright fz16"></i>
+                </span>
+            </p>
+            <section class="mui-row cen btm  pm10 s_jhg_drtxcr">
+                <a class=" mui-col-xs-3" @tap="zhu('hongbao')">
+                    <p class="pr ds_jh_erxc red">
+                        <span class="pr">
+                        
+                        <i class="dx icon-hongbao fz32"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12 red">
+                        红包
+                    </p>
+                </a>
+                <a class=" mui-col-xs-3" @tap="zhu('chongzhi')">
+                    <p class="pr ds_jh_erxc ">
+                        <span class="pr">
+                        
+                        <i class="dx icon-chongzhi1 fz32"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12 ">
+                        在线充值
+                    </p>
+                </a>
+                <a class=" mui-col-xs-3" @tap="zhu('fenxiao')">
+                    <p class="pr ds_jh_erxc ">
+                        <span class="pr">
+                        
+                        <i class="dx icon-qian fz24"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12 ">
+                        我的分销
+                    </p>
+                </a>
+                <a class=" mui-col-xs-3" @tap="zhu('zijingl')">
+                    <p class="pr ds_jh_erxc ">
+                        <span class="pr">
+                        
+                        <i class="dx icon-qian1 fz30"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12 ">
+                        余额：￥999
+                    </p>
+                </a>
+                <a class=" mui-col-xs-3" @tap="zhu('tuihuo')">
+                    <p class="pr ds_jh_erxc ">
+                        <span class="pr">
+                        
+                        <i class="dx icon-shouhou fz30"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12 ">
+                        退换/售后
+                    </p>
+                </a>
+                    <a class=" mui-col-xs-3" @tap="zhu('yijiandaima')">
+                    <p class="pr ds_jh_erxc ">
+                        <span class="pr">
+                        
+                        <i class="dx  icon-yijiandaifa fz30"></i>
+                        </span>
+
+                    </p>
+                    <p class="fz12 ">
+                        一键代发
+                    </p>
+                </a>
+                
+               
+            </section>
+        </section>
+
+        <ul class="mui-table-view mt10">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" @tap="zhu('zhaq')">
+                    <i class="dx icon-zhanghaoanquan qian_sdfx yj4 fz24 cz"></i>
+                    <span class="z3 fz15   ml5">账号安全</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell" @tap="zhu('fenxiao')">
+                <a class="mui-navigate-right">
+                    <i class="dx icon-wodefenxiao qian_sdfx yj4  cz"></i>
+                    <span class="z3 fz15   ml5">我的分销</span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell" @tap="zhu('pingjia')">
+                <a class="mui-navigate-right">
+                    <i class="dx icon-liuyan qian_sdfx yj4 fz18 cz ac"></i>
+                    <span class="z3 fz15   ml5">评价/晒单</span>
+                    <span class="fz12 z9 fr mr20 mt2">
+                查看评价/晒单
+                </span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell" @tap="zhu('wdsc')">
+                <a class="mui-navigate-right">
+                    <i class="dx icon-aixin qian_sdfx yj4 fz18 cz ad"></i>
+                    <span class="z3 fz15   ml5">我的收藏</span>
+                    <span class="fz12 z9 fr mr20 mt2">
+             商品收藏
+                </span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <ul class="mui-table-view mt10">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" @tap="zhu('ssdz','',{title:'管理收货地址',ty:0})">
+                    <i class="dx icon-map qian_sdfx yj4 fz20 cz ab"></i>
+                    <span class="z3 fz15   ml5">收货地址</span>
+
+                    <span class="fz12 z9 fr mr20 mt2">
+          添加/修改
+                </span>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" @tap="zhu('ssdz','',{title:'管理发货地址',ty:1})">
+                    <i class="dx icon-map qian_sdfx yj4 fz20 cz ab"></i>
+                    <span class="z3 fz15   ml5">发货地址</span>
+
+                    <span class="fz12 z9 fr mr20 mt2">
+          添加/修改
+                </span>
+                </a>
+            </li>
+
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" @tap="zhu('liuyan')">
+                    <i class="dx icon-biji qian_sdfx yj4  cz ae"></i>
+                    <span class="z3 fz15   ml5">我的留言</span>
+
+
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" @tap="zhu('wenzpingjia')">
+                    <i class="dx icon-biji qian_sdfx yj4  cz ae"></i>
+                    <span class="z3 fz15   ml5">我的评论</span>
+
+
+                </a>
+            </li>
+        </ul>
+
+        <ul class="mui-table-view mt10">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    <i class="dx icon-tuichu qian_sdfx yj4  cz af"></i>
+                    <span class="z3 fz15   ml5">注销登录</span>
+
+
+                </a>
+            </li>
+        </ul>
+
+
+
+        <section class="pd pt10 pm10 mt10 bgff cen fz14 df_uiydrtxc ab">
+            <a class="z6 dsf_ds_sd">登录</a>
+            <a class="z6 dsf_ds_sd">注册</a>
+            <a class="z6 dsf_ds_sd" @tap="dingbu">回顶部</a>
+            <p class="fz12 mt5">
+                © 2005-2017 芙兰服装批发网 版权所有，并保留所有权利。
+            </p>
+        </section>
+
+  </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/user_center.js"></script>
+</body>
+
+</html>

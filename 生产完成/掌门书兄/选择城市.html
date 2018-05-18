@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="pd pt10  bgff">
+
+
+        <div class="mui-indexed-list-search mui-input-row mui-search df_dsf_sd_sff  pr">
+            <input type="search" id="dsf_sdfx" class="mui-input-clear mui-indexed-list-search-input" placeholder="城市名">
+        </div>
+    </section>
+
+    <p class="pd pt5 pm5">
+        热门
+    </p>
+    <section class="pd bgff">
+        <p class="fz12 pt10 pm10">
+            当前定位
+        </p>
+        <span class="sdf_dd_d">深圳</span>
+        <p class="qc"></p>
+
+        <p class="fz12  pm10 ">
+            热门城市
+        </p>
+        <span class="sdf_dd_d">深圳</span>
+        <span class="sdf_dd_d">深圳</span>
+        <span class="sdf_dd_d">深圳</span>
+
+        <span class="sdf_dd_d">深圳</span>
+        <span class="sdf_dd_d">深圳</span>
+
+        <span class="sdf_dd_d">深圳</span>
+        <span class="sdf_dd_d">深圳</span>
+        <span class="sdf_dd_d">深圳</span>
+        <p class="qc"></p>
+    </section>
+
+    <section class="sdfds_dd_sdfx">
+
+
+
+    </section>
+
+    <section class="sdf_sdd_sdfx">
+        <p class="ye">热门</p>
+
+        <section class="dfd_sdfgfd"></section>
+
+    </section>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/cheng.js"></script>
+    <script>
+        df_df_d(ddg_s)
+        $("#dsf_sdfx").on("keyup", function() {
+
+            var sd_sd = $(this).val().trim(),
+                sdf_dds = []
+
+            if (!sd_sd) {
+                df_df_d(ddg_s)
+                return;
+            }
+            ddg_s.map(function(a) {
+                a.ctrl.map(function(b) {
+                    if (b.indexOf(sd_sd) > -1) {
+                        sdf_dds.push(a)
+                    }
+                })
+            })
+
+            try {
+                sdf_dds.map(function(a) {
+                    var sd_sdf = []
+                    a.ctrl.map(function(b) {
+                        if (b.indexOf(sd_sd) > -1) {
+                            sd_sdf.push(b)
+                        }
+                    })
+                    a.ctrl = sd_sdf
+                })
+
+                var sd_Sdf = []
+                sd_Sdf.push(sdf_dds[0])
+                df_df_d(sd_Sdf)
+            } catch (e) {
+
+            }
+
+        })
+
+
+
+        function df_df_d(sd_dfx) {
+            $(".dfd_sdfgfd").empty()
+            $(".sdfds_dd_sdfx").empty()
+            sd_dfx.map(function(a) {
+
+                var sd_sd = ""
+                $(".dfd_sdfgfd").append('<p class="cen"> <a class="ye" href="#' + a.id + '">' + a.id + '</a> </p>')
+                a.ctrl.map(function(b) {
+                    sd_sd += '<li class="pd pt10 pm10 bbm fz15">' + b + '</li>'
+                })
+                $(".sdfds_dd_sdfx").append('<section id="' + a.id + '"> <p class="pd pt5 pm5"> ' + a.id + ' </p> <ul class="bgff"> ' + sd_sd + '</ul> </section>')
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>

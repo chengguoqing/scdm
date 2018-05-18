@@ -1,0 +1,34 @@
+<import src="/tem/moban.wxml" />
+<!-- 引入头部 -->
+<template is="top" />
+<view class='pt120 pd'>
+  <view class='fz28 z6 mb20'>为您找到相关约10000</view>
+
+  <view class='btm pt20 pm20' wx:for="111111">
+    <view class='fz34 mb20'>Acfun弹幕视频网-认证你就输了</view>
+    <image src='/img/dsf_adfa.jpg' class='dsf_iuy_df fl'></image>
+    <view class='ov pl10 fz26 zd dianliu'>
+      介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍
+    </view>
+    <view class='qc pt20'>
+      <navigator class='sdf_iyrow pl60 fz26'>
+        <view class='dsf_d_sdf f_b dian cz'>链接链接链接链接链接</view>
+        <text class=''>2017-9-13</text>
+      </navigator>
+      <navigator class='sdf_iyrow pl60 fz26'>
+        <view class='dsf_d_sdf f_b dian cz'>链接链接链接链接链接链接链接</view>
+        <text class=''>2017-9-13</text>
+      </navigator>
+
+    </view>
+
+  </view>
+
+
+
+
+
+  <template is="bottom" />
+
+
+</view>

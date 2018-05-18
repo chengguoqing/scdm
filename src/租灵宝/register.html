@@ -1,0 +1,113 @@
+<!--登录-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content">
+
+			<p class="ds_d_dgf">
+				<img src="img/logo.png">
+			</p>
+
+			<section class="pd mt20 ">
+				<section class="pr dsf_d_sdsf">
+					<span class="dsf_sdf"></span>
+					<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary dfs_d_dfgx">
+						<a class="mui-control-item mui-active" href="#item1">账户密码登录 </a>
+						<a class="mui-control-item" href="#item2">手机动态码登录</a>
+
+					</div>
+					<section id="register">
+						<section class="mui-control-content  mui-active" id="item1">
+							<ul class="dsf_fort">
+								<li class="mui-input-row">
+									<input type="tel" placeholder="用户名/已验证手机" class="dsf_s_sdf mui-input-clear" v-model="zmobile">
+								</li>
+								<li class="mui-input-row">
+									<input type="password" placeholder="请输入密码" class="dsf_s_sdf mui-input-password" v-model="zpassword">
+								</li>
+						<li class="mui-input-row pr sdf_d_dfgf">
+                        <input type="text" placeholder="请输入验证码" class="dsf_s_sdf  mui-input-clear" id="input">
+                     <!--   <img src="img/yzma.png" class="sdf_d_sdfgx">-->
+                        <input type = "button" id="code"  class="sdf_d_sdfgx" onclick="createCode()"/>  
+                    </li>
+								<li class=" pr " @tap="dengl_ddf">
+									<button type="button" class="mui-btn mui-btn-primary w100 fz16 yj20 pt wdf_dfg">登 录</button>
+								</li>
+								<li class="mui-input-row mui-checkbox mui-left">
+									<span class="pr f_b df_d_dfgxc cz">
+                        
+                   <input name="checkbox" value="Item 2" type="checkbox" checked>
+                        </span>
+									<span class="fz12 z6">一个月内免登录</span>
+									<a class="fz12 fr z6 dsf_luys" @tap="zhu('login')">
+										<i class="fa fa-mobile fz20 cz dsf_dffx"></i> 快速注册
+									</a>
+								</li>
+							</ul>
+
+						</section>
+						<section class="mui-control-content" id="item2">
+							<ul class="dsf_fort">
+								<li class="mui-input-row pr ds_dfgfc">
+									<input type="tel" placeholder="已验证手机" class="dsf_s_sdf mui-input-clear" v-model="smobile">
+									<span class="fz12 dsf_d_dfgx" @click="yasd_d">
+                        {{s_ddff}}
+                        </span>
+								</li>
+								<li class="mui-input-row">
+									<input type="text" placeholder="手机验证码" class="dsf_s_sdf mui-input-clear" v-model="smobilecode">
+								</li>
+								<li class=" pr " @tap="dsf_dsdgf">
+									<button type="button" class="mui-btn mui-btn-primary w100 fz16 yj20 pt wdf_dfg">登 录</button>
+								</li>
+								<li class="mui-input-row mui-checkbox mui-left">
+									<span class="pr f_b df_d_dfgxc cz">
+                        
+                   <input name="checkbox" value="Item 2" type="checkbox" checked>
+                        </span>
+									<span class="fz12 z6">一个月内免登录</span>
+									<a class="fz12 fr z6 dsf_luys" @tap="zhu('login')">
+										<i class="fa fa-mobile fz20 cz dsf_dffx"></i> 快速注册
+									</a>
+								</li>
+
+							</ul>
+						</section>
+					</section>
+					<section class="mt20">
+						<p class="dsf_dfgxds">
+							<span>没有账号，使用其他方式登录</span>
+						</p>
+
+						<p class="mt20">
+							<button type="button" class="mui-btn  mui-btn-success w100 fz16 yj20 pt wdf_dfg">
+                          <i class="fa fa-weixin cf fz26 cz mr10"></i>微信一键登录</button>
+						</p>
+
+					</section>
+				</section>
+			</section>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/page/register.js"></script>
+	</body>
+
+</html>

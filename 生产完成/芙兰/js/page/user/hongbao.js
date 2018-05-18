@@ -1,0 +1,1 @@
+"use strict";function pullupRefresh(){for(var a=0;a<10;a++)km.hongbao.push("");this.endPullupToRefresh(!1)}var km=new Vue({el:"#hongbao",data:{hongbao:["","","","","","",""]},methods:{},mounted:function(){}});mui.init({pullRefresh:{container:"#pullrefresh",up:{contentrefresh:"正在加载...",callback:pullupRefresh}}});

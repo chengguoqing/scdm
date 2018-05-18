@@ -1,0 +1,180 @@
+{
+	"lease.html": {
+		"resources": [
+			"js/page/lease.js",
+			"js/mui.picker.min.js",
+			"js/fenlei.js",
+			"img/meiyou.png",
+			"css/mui.picker.min.css",
+			"fonts/mui.ttf",
+			"img/xbt.png",
+			"css/base.css",
+			"css/swiper3.07.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/vue.min.js",
+			"js/base.js",
+			"js/mui.min.js"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"js/base.js",
+			"img/xbt.png",
+			"css/base.css",
+			"css/swiper3.07.min.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/vue.min.js",
+			"index_r.html"
+		],
+		"refer": [
+			"lease.html",
+			"user_center.html",
+			"index_r.html",
+			"fujing.html",
+			"wanted.html"
+		]
+	},
+	"user_center.html": {
+		"resources": [
+			"img/user_bg.jpg",
+			"js/page/user_center.js",
+			"js/base.js",
+			"img/xbt.png",
+			"css/base.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/vue.min.js",
+			"img/dfd_a.png"
+		],
+		"refer": [
+			"my_profile.html",
+			"user_fx_list.html",
+			"register.html"
+		]
+	},
+	"index_r.html": {
+		"resources": [
+			"js/component/media_list.js",
+			"js/component/graphic_list.js",
+			"js/swiper3.07.min.js",
+			"js/page/index.js",
+			"js/component/banner.js",
+			"js/component/top_menu.js",
+			"css/swiper3.07.min.css",
+			"css/base.css",
+			"css/style.css",
+			"js/vue.min.js",
+			"js/base.js",
+			"img/xbt.png",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"lease_details.html"
+		]
+	},
+	"fujing.html": {
+		"resources": [
+			"js/vue.js",
+			"img/ddf_as.png",
+			"css/mui.css",
+			"img/lahsh.png",
+			"img/xbt.png"
+		]
+	},
+	"wanted.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"js/fenlei.js",
+			"img/meiyou.png",
+			"js/page/wanted.js",
+			"css/mui.picker.min.css",
+			"img/xbt.png",
+			"js/base.js",
+			"css/swiper3.07.min.css",
+			"css/base.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/vue.min.js"
+		]
+	},
+	"my_profile.html": {
+		"resources": [
+			"js/city.data.js"
+		]
+	},
+	"user_fx_list.html": {
+		"resources": [
+			"js/page/user_fx_list.js",
+			"js/base.js",
+			"css/base.css",
+			"js/vue.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"img/meiyou.png",
+			"css/mui.min.css",
+			"css/style.css"
+		],
+		"refer": [
+			"tuwen.html"
+		]
+	},
+	"tuwen.html": {
+		"resources": [
+			"fuwenben/themes/default/css/ueditor.css",
+			"fuwenben/third-party/zeroclipboard/ZeroClipboard.js",
+			"fuwenben/themes/iframe.css",
+			"fuwenben/third-party/codemirror/codemirror.js",
+			"fuwenben/ueditor.all.min.js",
+			"fuwenben/third-party/codemirror/codemirror.css",
+			"fuwenben/themes/default/images/icons.png",
+			"fuwenben/lang/zh-cn/zh-cn.js",
+			"img/add_icon.png",
+			"js/page/tuwen.js",
+			"img/close-circled.png",
+			"fuwenben/ueditor.config.js",
+			"css/base.css",
+			"js/mui.picker.min.js",
+			"fonts/mui.ttf",
+			"js/fenlei.js",
+			"css/style.css",
+			"js/vue.min.js",
+			"js/base.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/mui.picker.min.css"
+		],
+		"refer": [
+			"tuwensan.html"
+		]
+	},
+	"register.html": {
+		"resources": [
+			"js/page/register.js",
+			"img/logo.png",
+			"fonts/fontawesome-webfont.woff",
+			"fonts/mui.ttf",
+			"js/base.js",
+			"css/base.css",
+			"css/swiper3.07.min.css",
+			"js/mui.min.js",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/vue.min.js"
+		]
+	},
+	"lease_details.html": {
+		"resources": [
+			"js/page/lease_details.js"
+		]
+	}
+}

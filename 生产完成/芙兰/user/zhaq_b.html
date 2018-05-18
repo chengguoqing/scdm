@@ -1,0 +1,139 @@
+<!--账号安全-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>账号安全</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav bbm">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">账号安全</h1>
+
+    </header>
+    <div class="mui-content " id="zhaq_b">
+        <section class="bgff pd pt10 pm10"> 
+            <p class="z3 fz16">
+                {{s_sdr}}
+            </p>
+            <section class="btm mt10">
+
+                <section class="mui-row buzou_s cen" :class="'buzou'+buzou">
+                    <section class="mui-col-xs-4">
+                        <section class="jindu_ner">
+                            <span>1</span>
+                            <p class="mt2">验证身份</p>
+                        </section>
+
+                    </section>
+                    <section class="mui-col-xs-4">
+                        <section class="jindu_ner">
+                            <span>2</span>
+                            <p class="mt2">设置新密码</p>
+                        </section>
+
+                    </section>
+                    <section class="mui-col-xs-4 ">
+                        <section class="jindu_ner">
+                            <i class="dx icon-gou3"></i>
+                            <p class="mt2">完成</p>
+                        </section>
+
+                    </section>
+
+
+
+                </section>
+
+                <section class="dsf_jh_we " :class="buzs[0]">
+
+                    <form class="mui-input-group mt20">
+                        <div class="mui-input-row pr">
+                            <label>验证方式</label>
+                            <select class="yj_s_rtxc">
+            <option>已验证的手机号码</option>
+        </select>
+                            <i class="mui-icon mui-icon-arrowdown mt5 z9"></i>
+                        </div>
+                        <div class="mui-input-row">
+                            <label>手机号</label>
+                            <input type="tel" value="135****0372" readonly>
+                        </div>
+                        <div class="mui-input-row pr">
+                            <label>验证码</label>
+                            <input type="number" placeholder="请输入验证码" v-model="none_for.yzm">
+                            <a class="mui-btn mui-btn-red hq_yadrttc" @tap="huoquyanz" v-if="djs">
+                              
+                                获取验证码</a>
+                               <a class="mui-btn mui-btn-red hq_yadrttc acm" v-else>
+                                     {{djs_time+'S后重发'}}
+                            </a>
+                        </div>
+                    </form>
+                    <p class="mt40">
+                        <a class="mui-btn mui-btn-red fz16 w100 " @tap="submit(1)">提交</a>
+
+                    </p>
+                </section>
+
+                <section class="dsf_jh_we " :class="buzs[1]">
+                    <form class="mui-input-group mt20">
+                        <div class="mui-input-row">
+                            <label>设置密码</label>
+                            <input type="password" class="mui-input-clear" placeholder="请输入密码" v-model="mima_a.paw">
+                        </div>
+                        <div class="mui-input-row">
+                            <label>确认密码</label>
+                            <input type="password" class="mui-input-clear" placeholder="请在输入一次密码" v-model="mima_a.qpaw">
+                        </div>
+                    </form>
+                    <p class="mt40">
+                        <a class="mui-btn mui-btn-red fz16 w100 " @tap="submit(2)">提交</a>
+
+                    </p>
+                </section>
+
+
+                <section class="dsf_jh_we " :class="buzs[2]">
+
+                    <section class="cen mt20 z3 dsf_jgh_ertx ">
+                        <span class="pr">
+                              <i class="dx icon-gou red fz22"></i>
+                            新密码设置成功<br>
+                          请您牢记新密码
+                          </span>
+
+
+                    </section>
+
+                    <p class="mt40">
+                        <a class="mui-action-back mui-btn mui-btn-red fz16 w100 ">返回账户安全中心</a>
+
+                    </p>
+
+                </section>
+
+
+
+
+            </section>
+
+        </section>
+
+
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/zhaq_b.js"></script>
+    
+</body>
+
+</html>

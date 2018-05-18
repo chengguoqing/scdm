@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .mui-search.mui-active:before {
+            top: 28px;
+            left: 18px;
+        }
+
+      
+
+
+        .mui-popup-buttons .mui-popup-button-bold{
+            background: #DD433B !important;
+            color: #fff !important  
+        }
+        .mui-popup-buttons .mui-popup-button {
+            background: #FAFAFA;
+            color: #333
+           
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="mui-bar mui-bar-nav asd_uy_dftx ">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">服务订单详情</h1>
+
+    </header>
+    <div class="mui-content ">
+
+        <section class="bgff mt10">
+            <div class="mui-card-header fz16">审核留言</div>
+            <div class="mui-card-content">
+                <div class="mui-card-content-inner dsf_sd_d ">
+                    <p class="diansan z3 df_df_drftxc">
+                        情爱的客户，很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉很抱歉
+                    </p>
+
+                </div>
+
+                <p class="btm pt10 pm10 cen fz14 dsf_sfd_s ">
+                    显示全部<i class="mui-icon mui-icon-arrowdown fz16"></i>
+                </p>
+            </div>
+        </section>
+
+        <section class="bgff mt10">
+            <div class="mui-card-header fz16">问题描述
+                <a class="mui-btn mui-btn-outlined quxi_sqde">补充问题</a>
+            </div>
+            <div class="mui-card-content">
+                <div class="mui-card-content-inner dsf_sd_d ">
+                    <p class=" z3 df_df_drftxc">
+                        问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊问题啊布局遮到了啊
+                    </p>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="bgff mt10">
+            <div class="mui-card-header fz16">服务xx
+            </div>
+            <div class="mui-card-content">
+                <div class="mui-card-content-inner dsf_sd_d ">
+                    <ul class="dsf_iyu_dsdxc">
+                        <li class="mui-row">
+                            <p class="mui-col-xs-3 ">服务类型：</p>
+                            <p class="ov z3">
+                                退货
+                            </p>
+                        </li>
+                        <li class="mui-row">
+                            <p class="mui-col-xs-3 ">退款方式：</p>
+                            <p class="ov z3">
+                                原返
+                            </p>
+                        </li>
+                        <li class="mui-row">
+                            <p class="mui-col-xs-3 ">商品返回：</p>
+                            <p class="ov z3">
+                                快递至京东
+                            </p>
+                        </li>
+                        <li class="mui-row">
+                            <p class="mui-col-xs-3 ">联系人：</p>
+                            <p class="ov z3">
+                                周建辉
+                            </p>
+                        </li>
+                        <li class="mui-row">
+                            <p class="mui-col-xs-3 ">联系电话：</p>
+                            <p class="ov z3">
+                                186****7932
+                            </p>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+                <section class="btm pt10 pm10 tr pd">
+
+                    <a class="mui-btn mui-btn-outlined quxi_sqde">催一下</a>
+
+                    <a class="mui-btn mui-btn-outlined quxi_sqde tijiao ">
+                        <span>提交</span>
+                    </a>
+
+                    <a class="mui-btn mui-btn-outlined quxi_sqde quxiao ">
+
+                        <span>取消申请</span>
+                    </a>
+
+                </section>
+
+
+            </div>
+        </section>
+
+
+
+
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script>
+        $(function() {
+            $(".dsf_sfd_s").on("click", function() {
+                $(this).toggleClass("act")
+                if ($(this).hasClass("act")) {
+                    $(".df_df_drftxc").removeClass("diansan")
+                } else {
+                    $(".df_df_drftxc").addClass("diansan")
+                }
+            })
+
+            $(".tijiao").on("click", function() {
+                $(this).remove()
+                $(".quxiao").addClass("act")
+                mui.alert("您的信息已提交，感谢您的支持！", " ", "提交成功")
+            })
+            $(".quxiao").on("click", function() {
+                mui.confirm("确定取消本次售后申请吗？", " ", "", function(e) {
+                    if (e.index == 1) {
+                       alert("点击了确认按钮")
+                    } 
+                })
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

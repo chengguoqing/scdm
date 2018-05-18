@@ -1,0 +1,99 @@
+<!-- 填写收货地址 -->
+
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> 填写收货地址 </title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/mui.picker.min.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link href="../css/base.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<section id="consignee">
+
+
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">填写收货地址</h1>
+		</header>
+				<div class=" mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<section class="pd ">
+							<ul class="qing_sddf_s">
+								<li class="pd" v-for="(cu,idx) in chengshu">
+									<p class="cen pt30 fz16 z3">
+										请先添加收货地址
+									</p>
+									<p class="mt20">
+										<input type="text" placeholder="收货人" v-model="cu.name">
+									</p>
+									<p class="pr" @tap="xz_qydf(idx)">
+										<i class="mui-icon mui-icon-arrowdown down_icond"></i>
+										<input type="text" placeholder="请选择地区" readonly v-model="cu.diqu">
+									</p>
+									<p>
+										<input type="text" placeholder="详细地址" v-model="cu.xiangxi">
+									</p>
+									<p>
+										<input type="tel" placeholder="手机（必填）" v-model="cu.phone">
+									</p>
+									<section class="mui-row pm10">
+										<p class="mui-col-xs-6 pr10">
+											<a class="mui-btn mui-btn-red w100 pt10 pm10">配送至这个地址</a>
+										</p>
+										<p class="mui-col-xs-6 pl10">
+											<a class="mui-btn mui-btn-red w100 pt10 pm10">删除</a>
+										</p>
+									</section>
+
+								</li>
+								<li class="pd">
+									<p class="cen pt30 fz16 z3">
+										请先添加收货地址
+									</p>
+									<p class="mt20">
+										<input type="text" placeholder="收货人" v-model="new_sd.name">
+									</p>
+									<p class="pr" @tap="xz_qydf">
+										<i class="mui-icon mui-icon-arrowdown down_icond"></i>
+										<input type="text" placeholder="请选择地区" readonly v-model="new_sd.diqu">
+									</p>
+									<p>
+										<input type="text" placeholder="详细地址" v-model="new_sd.xiangxi">
+									</p>
+									<p>
+										<input type="tel" placeholder="手机（必填）" v-model="new_sd.phone">
+									</p>
+									<section class="mui-row pm10">
+
+										<a class="mui-btn mui-btn-red w100 pt10 pm10" @tap="xingzheng">新增收货地址</a>
+
+									</section>
+
+								</li>
+							</ul>
+
+						</section>
+					</div>
+				</div>
+
+		</section>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.picker.min.js"></script>
+		<script src="../js/city.data.js"></script>
+		<script src="../js/vue.js"></script>
+		<script src="../js/base.js"></script>
+		<script src="../js/components/header_p.js"></script>
+		<script src="../js/page/gwc/consignee.js"></script>
+	</body>
+
+</html>

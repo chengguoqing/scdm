@@ -1,0 +1,119 @@
+<!--详情-商品-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>详情</title>
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/pi_cs.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+<style>
+	.df_sd_sdgxc .swiper-slide{
+		padding-top: 0px;
+	}
+</style>
+</head>
+
+<body>
+    <section id="goods">
+        <div class="mui-content ">
+            <section class="sd_jhj_ertx pr">
+                <banner :banner="banner"></banner>
+            </section>
+            <section class="bgff pl10 pt10  mui-row">
+                <section class="mui-col-xs-10 fz16 pr5 brm">
+                    2017【Miss覃】冬季新款韩版半高领水貂毛中长款显瘦打底针织衫撞色毛衣裙
+
+                </section>
+                <section class="mui-col-xs-2  cen" onclick="shareSystem()">
+                    <i class="dx icon-fenxiang2 fz22 z9"></i>
+                    <p class="fz12 ">
+                        分享
+                    </p>
+                </section>
+            </section>
+            <section class="pd bgff  pt5">
+                <span class="red fz14">现货</span>
+                <span class="fr fz14 z9">
+                商品编号:7LC2MY837		          
+                </span>
+                <p class="qc"></p>
+                <section class="box mt5">
+                    <p class="box_b red fz15">
+                        注册会员:<span class="fz18">￥98.00</span>
+                    </p>
+                    <p class="box_a">
+                        131人评价
+                    </p>
+                    <p class="box_a tr">
+                        <i class="dx icon-aixin yeer"></i> 416人
+                    </p>
+                </section>
+
+                <p class="mt10">
+                    <span class="yj4 kh_khhsdr">闪电发货</span>
+                </p>
+
+                <section class="btm mt10">
+
+                    <p class="mt10">
+                        <span class="yj4 kh_khhsdr ab">满包邮</span>
+                        <span class="z3 ml5">满588全国包邮</span>
+                    </p>
+                    <p class="mt10">
+                        <span class="yj4 kh_khhsdr ab">芙兰币</span>
+                        <span class="z3 ml5">购买可获得98.00个芙兰币</span>
+                    </p>
+                </section>
+
+                <p class="btm mt10">
+                    <img src="../img/fulan1.jpg" class="w100">
+                </p>
+                <img src="../img/fulan2.jpg" class="w100">
+
+            </section>
+
+        </div>
+    </section>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/swiper3.07.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/banner.js"></script>
+    <script src="../js/page/shangping.js">
+
+
+    </script>
+    <script>
+    		mui.plusReady(function(){
+        var ws = plus.webview.currentWebview();
+        ws.setPullToRefresh({
+            support: true,
+            height: '50px',
+            range: '200px',
+            contentdown: {
+                caption: '下拉刷新'
+            },
+            contentover: {
+                caption: '释放立即刷新'
+            },
+            contentrefresh: {
+                caption: '正在刷新...'
+            }
+        }, function() {
+            ws.endPullToRefresh();
+        });
+
+        document.addEventListener("plusscrollbottom", function() {
+            plus.webview.currentWebview().parent().evalJS("km.sdf_df(1);");
+        }, false);
+})
+    </script>
+</body>
+
+</html>

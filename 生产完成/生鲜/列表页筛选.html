@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+
+
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        .mui-popover {
+            position: fixed !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <section class="sd_iuy_sdtx mui-row">
+        <p class="mui-col-xs-3 foi " data-href="share_pp">
+            新品 <i class="f_i d_dfdfsd"></i>
+        </p>
+        <p class="mui-col-xs-3 foi">
+            销量
+        </p>
+        <p class="mui-col-xs-3 foi  jiage bb">
+            价格 <i class="f_i d_dfdfsd ab"></i>
+        </p>
+        <p class="mui-col-xs-3 foi " data-href="saixuan_pup">
+            筛选 <i class="f_i d_dfdfsd ac"></i>
+        </p>
+    </section>
+
+
+
+
+    <ul class="mui-table-view mt40">
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <img class="mui-media-object mui-pull-left sd_ds_srt yj" src="img/case_img.jpg">
+                <div class="mui-media-body">
+                    <p class="fz16 z0">智利XL级车厘子500g</p>
+                    <p class="fz12 mt5 df_drttyc">
+
+                        <button type="button" class="mui-btn mui-btn-success mui-btn-outlined cz">最新</button>
+                        <button type="button" class="mui-btn mui-btn-warning  mui-btn-outlined cz">热销</button>
+                        <button type="button" class="mui-btn mui-btn-danger  mui-btn-outlined cz">秒杀</button>
+                        <span>
+                        超级大超级甜
+                        </span>
+                    </p>
+                    <section class="  df_d_drtxc pr">
+                        <span class="ye fz22">￥25.8</span>
+                        <del class="z9 fz14">￥48</del>
+
+
+                    </section>
+                </div>
+                <p class="dsf_d_dfgx ">
+                    <i class="f_i zjan_icon cz"></i>
+                    <span class="z9">99%好评</span>
+
+                </p>
+                <i class="f_i dsf_d_derfgx"></i>
+            </a>
+        </li>
+
+
+    </ul>
+
+
+
+    <p class="cen mt10">
+        弹窗不知道怎么触发
+    </p>
+    <button type="button" class="mui-btn mui-btn-primary" onclick="show_pup('aa')">弹窗1</button>
+    <button type="button" class="mui-btn mui-btn-primary" onclick="show_pup('ab')">弹窗2</button>
+    <button type="button" class="mui-btn mui-btn-primary" onclick="show_pup('ac')">分享提示</button>
+
+    <i class="f_i dou_dsftcc"></i>
+
+    <footer class="dsf_iy_foe btm box cen">
+        <a href="#" class="box_a">
+            <p class="dsf_uy_sd">
+                <i class="f_i sdf_dsd"></i>
+            </p>
+            <span class="fz12">首页</span>
+        </a>
+        <a href="#" class="box_a">
+            <p class="dsf_uy_sd">
+                <i class="f_i sdf_dsd ab"></i>
+            </p>
+            <span class="fz12">团购</span>
+        </a>
+        <a href="#" class="box_a">
+            <p class="dsf_uy_sd">
+                <i class="f_i sdf_dsd ac"></i>
+            </p>
+            <span class="fz12">购物车</span>
+        </a>
+        <a href="#" class="box_a">
+            <p class="dsf_uy_sd">
+                <i class="f_i sdf_dsd ad"></i>
+            </p>
+            <span class="fz12">我的</span>
+        </a>
+    </footer>
+
+    <!--    新品弹出层-->
+
+    <div class=" df_d_dfttc  " id="share_pp">
+        <p class="dsf_iy_dfg act">
+            综合排序 <i class="mui-icon mui-icon-checkmarkempty"></i>
+        </p>
+        <p class="dsf_iy_dfg">
+            新品优先 <i class="mui-icon mui-icon-checkmarkempty"></i>
+        </p>
+        <p class="dsf_iy_dfg">
+            评论数从高到低 <i class="mui-icon mui-icon-checkmarkempty"></i>
+        </p>
+
+    </div>
+
+
+    <!--    弹窗1-->
+    <section class="dsf_iyuy_df aa">
+        <section class="dsf_puip_sd">
+            <i class="f_i close_iconsd"></i>
+            <p class="cen mt15">
+                <i class="f_i kulings"></i>
+            </p>
+            <p class="pd fz16 mt15 z3 dfs_d_drttx">
+                亲爱的家人，您购买的<span class="ye">1款</span>商品已 下架/暂时无法为您结算！
+            </p>
+
+            <button type="button" class="mui-btn mui-btn-success df_d_dsrtxc">返回购物袋</button>
+        </section>
+    </section>
+
+    <!--    弹窗2-->
+    <section class="dsf_iyuy_df ab ">
+        <section class="dsf_puip_sd ab">
+            <i class="f_i close_iconsd"></i>
+            <p class="fz16 z0 cen mt60 ">
+                您确定要删除吗？
+            </p>
+            <p class="df_d_dsrtxc mui-row">
+                <button type="button" class="mui-btn mui-col-xs-6 bghs lise_s">取消</button>
+                <button type="button" class="mui-btn mui-btn-success mui-col-xs-6">返回购物袋</button>
+            </p>
+
+        </section>
+    </section>
+
+    <!--    分享提示-->
+    <img src="img/femxihg_sd.png" class="dsf_iyuy_df ac ">
+
+    <!--    筛选-->
+    <section class="saixuan_pup" id="saixuan_pup" onclick="resaixuan()"> </section>
+    <section class="saixuan_p_ms gd">
+        <section class="sai_xuan_row">
+            <section class="pd mt20 pr">
+                <p class=" jzhh dsf_drtxc fl">
+                    <i class="f_i df_df_dsfgfx"></i>
+                    <span class="ml5 z3">全部分类</span>
+                </p>
+                <p class=" dian  ls fl df_iy_drtxc fl">
+
+                </p>
+                <p class=" dd_dftxtydcf">
+                    <i class="f_i dsf_eruy_s"></i>
+                </p>
+            </section>
+            <p class="qc"></p>
+            <section class="jg_iyu_kjus pl10 mui-row mt10 pm10">
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 富士苹果
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian">
+                    <i class="f_i success_icon cz"></i> 山东红富士苹果2
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian">
+                    <i class="f_i success_icon cz"></i> 柚子
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian">
+                    <i class="f_i success_icon cz"></i> 香梨
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian">
+                    <i class="f_i success_icon cz"></i> 香蕉香蕉
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian">
+                    <i class="f_i success_icon cz"></i> 橘子
+                </p>
+
+
+            </section>
+        </section>
+
+        <section class="sai_xuan_row btm ">
+            <section class="pd mt10 pr">
+                <p class=" jzhh dsf_drtxc fl">
+                    <i class="f_i df_df_dsfgfx ab"></i>
+                    <span class="ml5 z3">价格区间</span>
+                </p>
+
+            </section>
+            <p class="qc"></p>
+
+            <section class=" pl10 mui-row mt10 pm10">
+                <p class="yj4 jg_juyh_dcsre dian ab">
+                    <input type="text" placeholder="最低价" class="fz15">
+                </p>
+                <span class="fl df_d_drt z6">-</span>
+                <p class="yj4 jg_juyh_dcsre dian ab">
+                    <input type="text" placeholder="最低价" class="fz15">
+                </p>
+                <p class="yj4 jg_juyh_dcsre  dian ac jg_hgsdfx">
+                    <i class="f_i success_icon cz"></i> 0-20元
+                    <br>
+                    <span class="fz12">24%选择</span>
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ac jg_hgsdfx">
+                    <i class="f_i success_icon cz"></i> 20-50元
+                    <br>
+                    <span class="fz12">24%选择</span>
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ac jg_hgsdfx">
+                    <i class="f_i success_icon cz"></i> 50-100元
+                    <br>
+                    <span class="fz12">24%选择</span>
+                </p>
+
+
+
+            </section>
+
+        </section>
+
+
+        <section class="sai_xuan_row btm ">
+            <section class="pd mt10 pr">
+                <p class=" jzhh dsf_drtxc fl">
+                    <i class="f_i df_df_dsfgfx ac"></i>
+                    <span class="ml5 z3">重量</span>
+                </p>
+
+                <p class=" dd_dftxtydcf act">
+                    <span class="fz12 mr5">全部</span><i class="f_i dsf_eruy_s"></i>
+                </p>
+
+            </section>
+            <p class="qc"></p>
+
+            <section class="dsf_iuiu_ddf pl10 mui-row mt10 pm10">
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+                <p class="yj4 jg_juyh_dcsre dian ">
+                    <i class="f_i success_icon cz"></i> 1kg以下
+                </p>
+
+            </section>
+
+        </section>
+
+        <section class="bouu_bnt">
+            <button class="aa">重置</button>
+              <button class="ab" onclick="resaixuan()">确定</button>
+        </section>
+    </section>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/swiper3.07.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        var mask = mui.createMask(function() {
+            $(".sd_iuy_sdtx p.foi").removeClass("act")
+            $(".df_d_dfttc").removeClass("show")
+        });
+
+
+        $(function() {
+            $(".sd_iuy_sdtx .foi").on("click", function() {
+                mask.close()
+                $(".sd_iuy_sdtx p.foi").removeClass("act")
+                var shiw_d = $(this).attr("data-href")
+                if (shiw_d) {
+                    mask.show()
+                    $("#" + shiw_d).addClass("show")
+                    if(shiw_d=="saixuan_pup"){
+                        $(".saixuan_p_ms").addClass("act")
+                    }
+                }
+                $(this).addClass("act")
+                if ($(this).hasClass("jiage")) {
+                    $(this).toggleClass("bb")
+                }
+            })
+
+
+            $(".dsf_iy_dfg ").on("click", function() {
+                $(".dsf_iy_dfg ").removeClass("act")
+                $(this).addClass("act")
+                mask.close()
+            })
+
+            //            关闭按钮触发
+            $(".close_iconsd,.lise_s,.dsf_iyuy_df.ac").on("click", function() {
+                $(".dsf_iyuy_df").removeClass("show")
+            })
+
+
+            $(".jg_iyu_kjus .jg_juyh_dcsre").on("click", function() {
+                $(this).toggleClass("act")
+                var sd_sff = []
+                $(".jg_iyu_kjus .jg_juyh_dcsre.act").map(function() {
+                    sd_sff.push($(this).text().trim())
+                })
+                $(".df_iy_drtxc").text(sd_sff.join(","))
+            })
+
+            $(".dd_dftxtydcf").on("click", function() {
+                $(this).toggleClass("act")
+                if ($(this).hasClass("act")) {
+                    $(".dsf_iuiu_ddf").removeClass("act")
+
+                } else {
+                    $(".dsf_iuiu_ddf").addClass("act")
+                }
+            })
+
+            $(".dsf_iuiu_ddf .jg_juyh_dcsre").on("click", function() {
+                $(".dsf_iuiu_ddf .jg_juyh_dcsre").removeClass("act")
+                $(this).addClass("act")
+
+            })
+            $(".jg_hgsdfx").on("click", function() {
+                $(".jg_hgsdfx").removeClass("act")
+                $(this).addClass("act")
+            })
+            
+//            重置按钮触发
+            $(".bouu_bnt button.aa").on("click",function(){
+                $(".jg_juyh_dcsre").removeClass("act")
+                  $(".df_iy_drtxc").text("")
+            })
+
+        })
+
+        //        显示弹出层
+        function show_pup(xd) {
+            $(".dsf_iyuy_df." + xd).addClass("show")
+        }
+        
+        function resaixuan(){
+            $("#saixuan_pup").removeClass("show")
+             $(".saixuan_p_ms").removeClass("act")
+                   mask.close()
+        }
+
+    </script>
+
+</body>
+
+</html>

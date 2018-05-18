@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<div id="app_slider" class="mui-slider">
+
+			<section class="fulan_top">
+				<section class="fu_dings pr">
+					<img src="img/icosousuo.png" class="icosousuo" @tap="zhu('searchindex','slide-in-bottom')">
+					<img src="img/logo.png" class="logo_icon cz">
+					<img src="img/saoma2.png" class="saoma2" @tap="zhu('saoma')">
+				</section>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted quyu_srtx">
+
+					<div class=" mui-scroll ">
+
+						<a class="mui-control-item" v-for="(cn,idx) in caidan" :class="idx==0?'mui-active':''" :data-wid="cn.url+cn.id">
+							{{cn.name}}
+						</a>
+					</div>
+				</div>
+
+				<p>
+
+				</p>
+			</section>
+			<p class="cen df_kh_drtxf">
+				<img src="img/jiazai.png" />
+			</p>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/webviewGroup.js"></script>
+		<script src="js/page/index.js"></script>
+	</body>
+
+</html>

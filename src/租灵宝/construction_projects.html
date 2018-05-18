@@ -1,0 +1,128 @@
+<!--施工项目详情-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>施工项目详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">施工项目-详情页面</h1>
+		</header>
+		<div class="mui-content" id="construction_projects">
+			<section class="bgff">
+				<section class="pd pt10 ">
+					<p class="fz16 z3 ">
+						{{hg_sd.name}}
+					</p>
+
+					<section class="mt15">
+						<p class="fz12">
+							<span class="sdf_label">租 金：</span>
+							<span class="ye">{{hg_sd.budget}}</span>
+						</p>
+						<p class=" mt5 fz12">
+							<span class="sdf_label">有效期：</span>{{hg_sd.time}} 至 {{hg_sd.deadline}}
+							<span class="fr">浏览： {{hg_sd.total_click}}人</span>
+						</p>
+					</section>
+				</section>
+
+				<section class="mt10 btm pt10 pd ">
+					<section class="mui-row">
+						<section class="mui-col-xs-6">
+							<img :src="hg_sd.logo" class="yj df_iy_ddfg fl">
+							<p class="fl pl10 z3 mt10">
+								{{hg_sd.realname}}
+
+							</p>
+						</section>
+						<section class="mui-col-xs-6 fz14 z6 pt10">
+							电话:
+							<a class="ye">{{hg_sd.mobile}}</a>
+						</section>
+					</section>
+				</section>
+
+				<p class="mt10 z3 fz14 z6 dsf_d_dsdgfx btm pd pt10 pm10">
+					工程名称：{{hg_sd.projectname}}<br> 工程类型：{{hg_sd.type}}
+					<br> 投标截止：{{hg_sd.deadline}}<br> 项目编号：{{hg_sd.projectcode}}
+					<br> 招标编号：{{hg_sd.biddingcode}}
+					<br> 招标方式：{{hg_sd.method}}
+					<br> 开标时间：{{hg_sd.time}}<br> 所在区域：{{hg_sd.areaer}}
+					<br> 详细地址：{{hg_sd.address}}
+				</p>
+
+			</section>
+
+			<section class="mt10 bgff">
+				<p class="pt10 pm10 fz16 z3 sdf_d_sdfggx">
+					<span class="pd pm10">项目详情</span>
+				</p>
+
+				<section class="dsf_sd_sdfg pd pt20" v-html="hg_sd.content"></section>
+
+			</section>
+
+			<button class="mui-btn mui-btn-primary fz16 dsf_sdddgx" @tap="sd_iy_d(hg_sd.projectname,hg_sd.id)">
+        <i class="f_i dsf_iuysd"></i>立即预约
+        </button>
+
+		</div>
+
+		<p onclick="window.location.href='XXX'"></p>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script>
+			var self = {}
+			var km = new Vue({
+				el: '#construction_projects',
+				data: {
+					hg_sd: ""
+				},
+				methods: {
+
+					sd_iy_d: function(title, id) {
+						if(getusertoken()) {
+							this.zhu('appointment', 'slide-in-bottom', {
+								'title': title,
+								't_id': id
+							})
+						} else {
+							this.zhu("register", "")
+						}
+
+					}
+				},
+				created: function() {
+					var sd_sdf = this
+					mui.plusReady(function() {
+						try {
+							self = plus.webview.currentWebview();
+						} catch(e) {
+							self.i_d = 70
+						}
+						var view = {}
+						view.Services = "project.view"
+						view.id = self.i_d
+						m_ajax(view, function(data) {
+							sd_sdf.hg_sd = data
+						})
+					})
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

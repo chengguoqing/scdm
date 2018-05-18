@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>绑定卡管理</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+        <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left red"></a>
+        <h1 class="mui-title red">绑定卡管理</h1>
+
+    </header>
+
+    <div class="mui-content " id="addka">
+<form class="mui-input-group">
+    <div class="mui-input-row">
+        <label>开户姓名</label>
+        <input type="text" class="mui-input-clear" placeholder="请输入开户姓名"  v-model="form.name">
+    </div>
+        <div class="mui-input-row">
+        <label>银行卡号</label>
+        <input type="text" class="mui-input-clear" placeholder="请输入银行卡号" v-model="form.yhkh">
+    </div>
+            <div class="mui-input-row" @tap="chengshi">
+              
+        <label>开户城市</label>
+        <input type="text" class="mui-input-clear" placeholder="请选择开户城市" readonly   v-model="form.khcs" >
+                  <i class="mui-icon mui-icon-arrowdown down_ssrtxc"></i>
+    </div>
+    
+              <div class="mui-input-row" @tap="khyh_t">
+        <label>开户银行</label>
+        <input type="text" class="mui-input-clear" placeholder="请选择开户银行" readonly  v-model="form.khyh"  >
+                   <i class="mui-icon mui-icon-arrowdown down_ssrtxc"></i>
+    </div>
+    
+                 <div class="mui-input-row">
+        <label>开户支行</label>
+        <input type="text" class="mui-input-clear" placeholder="请输入开户支行"  v-model="form.khzh" >
+                     
+    </div>
+  
+</form>
+
+     <p class="pd" @tap="submit">
+                <a class="mui-btn mui-btn-red w100 pt10 pm10 fz16 mt60 cen yj4">
+          提交
+            </a>
+            </p>
+    </div>
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/city.data.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/user/addka.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        img {
+            background: url(../img/jiazaier.png) center center no-repeat;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="pullrefresh">
+
+            <section class="banner_sddf pr">
+                <banner :banner="banner"></banner>
+            </section>
+
+            <section class="bgff pt10 pm20 mui-row">
+                <section class="dsf_uiy_dftx" v-for="sd in inde_f">
+                    <img :src="sd.img" class="fm">
+                    <p class="fz12 z3" v-text="sd.name"></p>
+                </section>
+
+            </section>
+
+            <section class="btm bgff pd pt5 pm5">
+
+                <img src="../img/Headlines.jpg" class="brm toutia_sd fl">
+                <section class="ov pl10">
+                    <gundong :items="toudiao"></gundong>
+                </section>
+
+                <p class="qc"></p>
+            </section>
+
+            <section class="mui-row bgff pt10  btm pm10">
+                <section class="mui-col-xs-6 dsf_jhkh_as mb0 auq"  @tap="zhu('../category')">
+                    <img src="http://m.flan1688.com/mobile/data/afficheimg/1511643146696902433.jpg" class="w100">
+                </section>
+                <section class="mui-col-xs-6 dsf_jhkh_as mb0 auq"  @tap="zhu('../category')">
+                    <img src="http://m.flan1688.com/mobile/data/afficheimg/1511653835367835025.png" class="w100">
+                </section>
+            </section>
+            <section class="pd pt10 pm10 fz16">
+                超级品牌日
+                <span class="fr z9 fz14">
+                <span class="cz">更多</span>
+                <i class="mui-icon mui-icon-arrowright fz16 cz"></i>
+                </span>
+            </section>
+            <section class="mui-row">
+                <p class="mui-col-xs-5 br sdf_ut_sr" @tap="zhu('../category')">
+                    <img src="http://m.flan1688.com/mobile/data/afficheimg/1512063076872998539.jpg">
+                </p>
+                <section class="mui-col-xs-7 mui-row bgff"  @tap="zhu('../category')">
+                    <p class="jhg_sdrt mui-col-xs-6" v-for="jm in 6">
+                        <img src="http://m.flan1688.com/data/brandlogo/1511657061819135472.jpg">
+                    </p>
+                </section>
+            </section>
+
+            <section class="pd pt10 pm10 fz16">
+                年终大促
+                <span class="fr z9 fz14">
+                <span class="cz">更多</span>
+                <i class="mui-icon mui-icon-arrowright fz16 cz"></i>
+                </span>
+            </section>
+
+            <section class="bgff mui-row pd pt10 btm">
+                <list_tu :item="sd" v-for="sd in nzdcx"></list_tu>
+            </section>
+
+            <section class="pd pt10 pm10 fz16">
+                刚刚上架
+
+            </section>
+
+            <list_tu_p :df_sd_sd="df_sd_sd"></list_tu_p>
+
+        </div>
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/swiper3.07.min.js"></script>
+    <script src="../js/components/banner.js"></script>
+    <script src="../js/components/gundong.js"></script>
+    <script src="../js/components/list_tu.js"></script>
+    <script src="../js/components/list_tu_p.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/page/com_index.js"></script>
+
+</body>
+
+</html>

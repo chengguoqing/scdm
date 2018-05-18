@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.sd_h_eretxc {
+				position: relative;
+				z-index: 999;
+			}
+			
+			.sd_h_eretxc span {
+				padding: 10px 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header class="mui-bar mui-bar-nav asd_uy_dftx">
+			<a class="dx icon-hanbao red hanao_sdrrx f_b " id="caidna_s"></a>
+
+			<h1 class="mui-title z3">
+            <img src="img/logo.png" class="logo_sdsrtc">
+        </h1>
+			<span class="fr red sd_h_eretxc fz15">
+            <span  class="denglu">登录</span>
+			<span class="zhuce">注册</span>
+			</span>
+
+		</header>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" data-href="indexzh.html">
+				<span class="sd_juy_ertc">
+		    		  <i class="dx icon-shouye fz18"></i>
+		    	</span>
+
+				<span class="mui-tab-label df_sdrtxdfcv">首页</span>
+			</a>
+			<a class="mui-tab-item " data-href="zijin/index.html">
+				<span class="sd_juy_ertc">
+		    		  <i class="dx icon-zijinguanli fz22"></i>
+		    	</span>
+
+				<span class="mui-tab-label df_sdrtxdfcv">资金管理</span>
+			</a>
+			<a class="mui-tab-item " data-href="xiaoxi/index.html">
+				<span class="sd_juy_ertc">
+		    		  <i class="dx icon-iconset0401 fz22"></i>
+		    	</span>
+
+				<span class="mui-tab-label df_sdrtxdfcv">我的消息</span>
+			</a>
+			<a class="mui-tab-item " data-href="lishijl/index.html">
+				<span class="sd_juy_ertc">
+		    		  <i class="dx icon-lishijilu fz24"></i>
+		    	</span>
+
+				<span class="mui-tab-label df_sdrtxdfcv">历史记录</span>
+			</a>
+			<a class="mui-tab-item " data-href="kefu/index.html">
+				<span class="sd_juy_ertc">
+		    		  <i class="dx icon-kehufuwukefu fz24"></i>
+		    	</span>
+
+				<span class="mui-tab-label df_sdrtxdfcv">客户服务</span>
+			</a>
+		</nav>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init()
+			var self = "";
+			var subpagestyle = {
+				"top": "45px",
+				"bottom": "50px"
+			}
+			mui(".sd_h_eretxc").on("tap", ".denglu", function() {
+
+				zhuer('user/denglu.html')
+			})
+
+			mui(".sd_h_eretxc").on("tap", ".zhuce", function() {
+
+				zhuer('user/zhuce.html')
+			})
+
+			var menu = "",
+				mask = mui.createMask(function() {
+					main.setStyle({
+						left: '0',
+						transition: {
+							duration: 150
+						}
+					});
+
+					try {
+						menu.setStyle({
+							left: '-70%',
+							transition: {
+								duration: 150
+							}
+						});
+
+					} catch(e) {
+
+					}
+
+					showMenu = false
+				}),
+				showMenu = false,
+				main = ""
+			mui.plusReady(function() {
+				self = plus.webview.currentWebview();
+
+				var sub = plus.webview.create("indexzh.html", "indexzh.html", subpagestyle)
+				self.append(sub);
+
+				main = plus.webview.currentWebview();
+				//				setTimeout(function() {
+				menu = mui.preload({
+					id: 'cebian.html',
+					url: 'cebian.html',
+					styles: {
+						left: 0,
+						width: '70%',
+						zindex: 9997
+					}
+				});
+				//				}, 300)
+
+				document.getElementById("caidna_s").addEventListener('tap', openMenu);
+				window.addEventListener("swiperight", openMenu);
+				//主界面向左滑动，若菜单已显示，则关闭菜单；否则，不做任何操作；
+				window.addEventListener("swipeleft", mask.close());
+
+				window.addEventListener("tap", function() {
+					cloisd()
+				});
+
+				mui('.mui-bar-tab').on('tap', 'a', function(e) {
+					var targetTab = this.getAttribute('data-href')
+
+					var sd_sdrt = plus.webview.getWebviewById(targetTab)
+					if(sd_sdrt) {
+						plus.webview.show(targetTab)
+					} else {
+						var sub = plus.webview.create(targetTab, targetTab, subpagestyle)
+						self.append(sub);
+					}
+
+				})
+
+			})
+
+			/**
+			 * 显示菜单菜单
+			 */
+			function openMenu(e) {
+				try {
+					e.stopPropagation();
+				} catch(e) {
+
+				}
+
+				if(!showMenu) {
+					document.getElementById("caidna_s").classList.remove("icon-hanbao")
+					document.getElementById("caidna_s").classList.add("icon-kefu-tuichu-")
+					//侧滑菜单处于隐藏状态，则立即显示出来；
+					//显示完毕后，根据不同动画效果移动窗体；
+					menu.show('none', 0, function() {
+						main.setStyle({
+							left: '70%',
+							transition: {
+								duration: 150
+							}
+						});
+						menu.setStyle({
+							left: '0%',
+							transition: {
+								duration: 150
+							}
+						});
+					});
+					//显示遮罩
+					//					mask.show();
+					showMenu = true;
+				} else {
+					cloisd()
+				}
+			}
+
+			function zhuer(url, don, zhi) {
+				mui.openWindow({
+					url: url,
+					id: url,
+					show: {
+						aniShow: don ? don : "pop-in", //动画
+						duration: 300 //持续时间
+					},
+					extras: zhi
+				});
+			}
+
+			function cloisd() {
+				document.getElementById("caidna_s").classList.remove("icon-kefu-tuichu-")
+				document.getElementById("caidna_s").classList.add("icon-hanbao")
+				main.setStyle({
+					left: '0',
+					transition: {
+						duration: 150
+					}
+				});
+				menu.setStyle({
+					left: '-70%',
+					transition: {
+						duration: 150
+					}
+				});
+				try {
+					menu.hide();
+				} catch(e) {
+
+				}
+
+				showMenu = false
+			}
+		</script>
+	</body>
+
+</html>

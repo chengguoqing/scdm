@@ -1,0 +1,139 @@
+<!--添加信息-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">添加信息</h1>
+		</header>
+		<div class="mui-content" id="post_message">
+			<div class="mui-input-group dsf_d_sdffgxc pr10">
+				<div class="mui-input-row">
+					<label>名称：</label>
+					<input type="text" class="mui-input-clear" v-model="name">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row" @tap="fenleis">
+					<label>分类：</label>
+					<input type="text" class="mui-input-clear" v-model="sd_ss_a" readonly >
+					<!--<p class="siuut_d_sdf  dsf_s_sdfvgx ov pt0 df_dssdsdfsdfg">
+						<span class="pr dsf_d_sdfc f_b cz">
+                    	<span class="dsf_ds_sdgfx fz14" v-if="!layer1">{{sd_sdds_a}}</span>
+						<select class="cz fz14" :class="!layer1?'sjg_sdf':''" v-model="layer1" @change="hgfs_a(1)">
+							<option>选择分类</option>
+							<option v-for="sa in sd_ss_a" v-text="sa.name" :value="sa.cat_id"></option>
+						</select>
+						<i class="f_i down_icon_dr"></i>
+						</span>
+
+						<span class="pr dsf_d_sdfc f_b cz" v-if="layer1">
+                    		<span class="dsf_ds_sdgfx fz14" v-if="!layer2||dsf_dss_a=='a'">{{sd_sdds_b}}</span>
+						<select class="cz fz14" :class="!layer2?'sjg_sdf':''" v-model="layer2" @change="hgfs_a(2)">
+							<option>选择分类</option>
+							<option v-for="sa in sd_ss_b" v-text="sa.name" :value="sa.cat_id"></option>
+						</select>
+						<i class="f_i down_icon_dr"></i>
+						</span>
+						<span class="pr dsf_d_sdfc f_b cz" v-if="sd_ss_c.length>1||dsf_dss_b=='a'">
+                    		<span class="dsf_ds_sdgfx fz14" v-if="!layer3||dsf_dss_b=='a'">{{sd_sdds_c}}</span>
+						<select class="cz fz14" :class="!layer3?'sjg_sdf':''" v-model="layer3" @change="hgfs_a(3)">
+							<option>选择分类</option>
+							<option v-for="sa in sd_ss_c" v-text="sa.name" :value="sa.cat_id"></option>
+						</select>
+						<i class="f_i down_icon_dr"></i>
+						</span>
+					</p>-->
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>需求：</label>
+					<input type="text" class="mui-input-clear" placeholder="机械材料规格型号" v-model="model">
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>施工地点：</label>
+					<input type="text" class="mui-input-clear" v-model="mapaddr">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>单位：</label>
+					<input type="text" class="mui-input-clear" v-model="measure_unit">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>时间：</label>
+					<input type="text" class="mui-input-clear" v-model="leasetime" readonly @tap="tytew_sd">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>意向价格：</label>
+					<input type="number" class="mui-input-clear" v-model="budgetprice">
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row">
+					<label>求租数量：</label>
+					<input type="number" class="mui-input-clear" v-model="number">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>联系人：</label>
+					<input type="text" class="mui-input-clear" v-model="contacts">
+					<p class="qc"></p>
+				</div>
+				<div class="mui-input-row">
+					<label>联系电话：</label>
+					<input type="tel" class="mui-input-clear" v-model="mobile">
+					<p class="qc"></p>
+				</div>
+
+				<div class="mui-input-row dsf_d_dsdfg">
+					<label>简要描述：</label>
+					<textarea rows="5" v-model="brief"></textarea>
+					<p class="qc"></p>
+				</div>
+
+			</div>
+
+			<p class="fz154 pd pt10 pm10 z9">
+				详情描述：
+			</p>
+
+			<section class="bgff">
+				<script id="editor" type="text/plain" style="width:100%;height:200px;">
+				
+				</script>
+
+			</section>
+
+			<p class="pd mt20" @tap="uyt_tis">
+				<button class="w100 mui-btn-yellow pt10 pm10 fz16 yj20">确定</button>
+			</p>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/fenlei.js"></script>
+		<script type="text/javascript" charset="utf-8" src="fuwenben/ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="fuwenben/ueditor.all.min.js"></script>
+		<script src="js/page/post_message.js"></script>
+	
+
+	</body>
+
+</html>

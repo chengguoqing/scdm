@@ -1,0 +1,67 @@
+<!--详情-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>详情</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/pi_cs.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<section id="xq_index">
+			<header class="mui-bar mui-bar-nav asd_uy_dftx">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+				<h1 class="mui-title z3 box fz14 df_iy_ert">
+                <a class="box_a " v-for="(cn,idx) in caidan" :data-wid="cn.url" :class="idx==0?'act':''">
+                    <span>{{cn.name}}</span>
+                </a>
+           
+                <a class="box_a" @tap="zhu('gwc/flow','',{'ht':'true'})">
+                    <span class="pr">
+                    <i class="dx icon-cart fz24 z6"></i>
+                    <span class=" fz12 dfs_uhg_drtx">99</span>
+                    </span>
+                </a>
+            </h1>
+
+			</header>
+
+			<footer class="xq_footr_ds box cen">
+				<a class="box_a pt5 brm">
+					<i class="dx icon-zhuye z9 fz20"></i>
+					<p>首页</p>
+				</a>
+				<a class="box_a pt5 brm">
+					<i class="dx icon-liuyan z9 fz22"></i>
+					<p>客服</p>
+				</a>
+				<a class="box_a pt5 brm">
+					<i class="dx icon-star01 z9 fz22"></i>
+					<p>收藏</p>
+				</a>
+				<p class="box_c dsf_jh_drrt">
+					<a class="mui-btn mui-btn-red ligm" @tap="sd_jg_df">立即购买</a>
+					<a class="mui-btn mui-btn-yellow jiarugwc" @tap="sd_jg_df">加入购物车</a>
+				</p>
+			</footer>
+
+		</section>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/swiper3.07.min.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/webviewGroup.js"></script>
+		<script src="js/page/xiangqing/index.js"></script>
+
+	</body>
+
+</html>

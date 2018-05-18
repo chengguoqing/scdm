@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet" />
+    <link href="../../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../../css/base.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/cssamin.css" rel="stylesheet" />
+    <title>高级设置</title>
+    <style>
+        body {
+            background: #EFEFF4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">确认订单</h1>
+    </header>
+    <div class="mui-content  a-fadein" id="app">
+
+        <section class=" pt10  pd bgff">
+            <ul class="sd_dff_xdfrtx sds_xssd_xdsdfx">
+                <li class="pt10 pm10 bbm">
+                    <p class="mui-col-xs-8 fl fz16 z14">
+                        名称
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        数量
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        小计
+                    </p>
+                    <p class="qc"></p>
+                </li>
+
+
+                <li class="pt10 pm10 bbm" v-for="jkm in sd_iuux.gwc">
+                    <p class="mui-col-xs-8 fl fz16 z14">
+                        {{jkm.name}}
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        {{jkm.sd_p}}
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 z14">
+                        {{'￥'+(jkm.sd_p*jkm.dj)}}
+                    </p>
+                    <p class="qc"></p>
+                    <section class="mt10 btm df_xsd_xsrtx" v-if="jkm.type==2">
+                        <p class="pt5 pm5" v-for="sdf in jkm.tc_iius">{{sdf.name+"x"+(sdf.num*jkm.sd_p)}}</p>
+                    </section>
+
+                </li>
+
+
+
+
+
+            </ul>
+
+        </section>
+
+        <section class="pd mt10 bgff btm">
+
+            <ul class="sd_dff_xdfrtx">
+                <li class="pt10 pm10 bbm">
+                    <p class="mui-col-xs-7 fl fz14 z14">
+                        附加费用2元/人<span class="zc">（饭、餐具）</span>
+                    </p>
+                    <p class="mui-col-xs-2 fl cen fz16 red ">
+                        ￥{{fjf.jiage}}
+                    </p>
+                    <p class="mui-col-xs-3 fl cen fz16 z14">
+
+                        <span class="ssd_uiyt_xd aa  d_xsd_xrrtxc" v-bind:class="fjf.num>0?'act':''">
+                                    <i class="mui-icon mui-icon-minus red" v-on:click="fjf.num--"></i>
+                                    <span class="fz12 z14 df_xsdsf_xdfx">{{fjf.num}}</span>
+                        <i class="mui-icon mui-icon-plus red" v-on:click="fjf.num++"></i>
+                        </span>
+                    </p>
+                    <p class="qc"></p>
+                </li>
+                <li class="pt10 pm10 ">
+                    <span class="fr">合计：<span class="red">￥{{sd_iuux.zj+(fjf.num*fjf.jiage)}}</span></span>
+
+                    <p class="qc"></p>
+                </li>
+
+            </ul>
+
+
+
+        </section>
+
+        <div id="topPopover" class="mui-popover">
+            <div class="mui-popover-arrow"></div>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell" v-for="yj in  df_iu.tishi" v-on:click="xiug_uj(yj)">
+                            <a href="#" v-text="yj"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <leixing></leixing>
+        <!--底部-->
+        <footer class="sd_uyty_xsdx ">
+            <a class="mui-btn mui-action-back">继续点菜</a>
+            <a class="mui-btn bgred" href="../order-list.html">确认下单</a>
+        </footer>
+        <section class="sds_uyy_xd">
+            <p class="yj4 dsfd_ssffx">
+                <i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>
+            </p>
+        </section>
+    </div>
+
+
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../js/mui.min.js"></script>
+    <script src="../../js/mui.picker.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/base.js"></script>
+    <script src="../../js/commer/lexixing.js"></script>
+    <script>
+        var sd_oii = {}
+        sd_oii.tishi = ['界面显示错乱', '启动缓慢,卡出翔了', '偶发性崩溃', 'UI无法直视,丑哭了']; //初始化快捷输入的提示
+        sd_oii.yijian_text = ""
+
+        sd_oii.text_xd = ""
+
+        var sd_iuux = ""
+        try {
+            sd_iuux = JSON.parse(localStorage.gwcw)
+        } catch (e) {
+            window.location.href = "../order-index.html"
+        }
+        var km = new Vue({
+            el: '#app',
+            data: {
+                df_iu: sd_oii,
+                sd_iuux: sd_iuux,
+                fjf: {
+                    "jiage": 4,
+                    "num": 1
+                } //附加费 
+            },
+            methods: {
+                xiug_uj: function(x) {
+                    mui('#topPopover').popover('toggle'); //隐藏弹出层
+                    sd_oii.yijian_text = x
+                }
+            },
+            created: function() {
+                $("#app").addClass("show")
+
+            }
+        })
+
+
+        $(".sds_xsd_xdsdfx label").on("click", function() {
+            var inx = $(this).index()
+            $(".sd_iuy_xsdxs").removeClass("show").eq(inx).addClass("show")
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>发信息付款</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/mui.min.css">
+     <link rel="stylesheet" href="css/mui.zoom.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/mui.picker.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div#__MUI_PREVIEWIMAGE {
+    z-index: 999999;
+}
+    </style>
+    
+
+</head>
+
+<body>
+    <header class="mui-bar dsf_xdsdfx mui-bar-nav dsf_xssd_xsdffx  asee_xsrrx ">
+       <section class="dsf_xsd_xrfa">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left cf">
+
+            <span class="fz16 ">返回</span>
+        </a>
+        <h1 class="mui-title cf">
+
+            招聘求职
+        </h1>
+        
+        <a class="mui-pull-right fz14 sd_xsdd_xsxfr">
+分类 <i class="fa fa-angle-down df_xssdf_xf gd"></i>
+
+        </a>
+        </section>
+        <section class="  mt40 dsf_xsd_xrfb">
+            <p class="dsf_xssd_xsxdfx pr">
+                <input type="text" placeholder="找工作 找房子">
+                  <i class="fa fa-search fz22 df_xsdfxdf"></i>
+            </p>
+       
+            <p class="qc"></p>
+        </section>
+        
+        
+        
+             <section class="ssd_xsdf_xdf pl10 btm ">
+                   <p class="pt10 pm10 z14">
+                       选择分类
+                   </p>
+               <ul class="ssd_xssd_xdf">
+                  <li>
+                       <a href="http://duxinggj.com" class="act">首页</a>
+                   </li>
+                   <p class="qc"></p>
+                   <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                    <li>
+                       <a href="http://duxinggj.com">随手拍</a>
+                   </li>
+                   
+               </ul>
+                  <p class="qc"></p>
+                   
+            </section>
+            
+            
+      
+
+    </header>
+
+    <div class="mui-content " id="app">
+
+       <section class="sd_xsddf_xrttx pt10">
+        <ul class="ssd_xssd_xdf pd mtdfd_xsdfx">
+                  <li>
+                       <a href="http://duxinggj.com" >全职招聘</a>
+                   </li>
+                      <li>
+                       <a href="http://duxinggj.com" >兼职招聘</a>
+                   </li>
+                      <li>
+                       <a href="http://duxinggj.com" class="acb">找工作</a>
+                   </li>
+                   
+        </ul>
+        <p class="qc"></p>
+ 
+        <section class="box cen bgff pt5 pm5 pr bbm  sds_ssdf_xsd ">
+            <section class="box_a brm fz15 pt5 pm5 dsf_xsdfxr" v-for="(s_xx,idx) in s_sfx" v-on:click="sd_uy(idx)">
+                <span v-text="s_xx.name"></span>
+                <i class="fa fa-caret-down gd "></i>
+            </section>
+            
+            
+            <section class="sd_iuy_xsdrtx  bgff" v-bind:class="[dd_i.type,dd_i.ssd_iuyxxf]">
+                <ul class="sd_jhh_ssdf ">
+                    <li class=" btm tl pd zc fz14" v-for="(jh,idx) in dd_i.yiji" v-on:click="sd_iu(idx,jh.text)">
+                       <a href="#" class="ssd_xsdfxc pt10 pm10"> {{jh.text}}
+                        <i class="fa fa-angle-right fr fz20 "></i>
+                        </a>
+                    </li>
+                     
+                </ul>
+                
+                     <ul class="sd_jhh_ssdf " v-if="dd_i.type=='ac'">
+                    <li class=" btm tl pd zc fz14" v-for="jh in dd_i.erji" v-on:click="er_i(jh.text);">
+                          
+                           <a href="#" class="ssd_xsdfxc pt10 pm10"> {{jh.text}}
+                        </a>
+                       
+                    </li>
+                </ul>
+                
+                <p class="qc"></p>
+                
+            </section>
+            
+        </section>
+        </section>
+        
+        
+        <div class="sd_uyt_xsfx ">
+            <ul>
+                <li class="pd pt10 pm10 mb10 bgff">
+                    <img src="img/banner.jpg" class="sd_iuy_xsffx fl">
+                    <section class="ov pl10 pr">
+                        <p class="dian fz15 ls_2">
+                            东诚教育专升本
+                        </p>
+                        <p class="mt5">
+                            <span class="fz12 dfs_xsd_xfx yj4">
+                                置顶
+                            </span>
+                            <span class="fz12 ml10">
+                                2017-03-18
+                            </span>
+                        </p>
+                        <span class="sd_iuy_xsf yj4 fz14 ">
+                            宠物狗
+                        </span>
+
+                    </section>
+
+                    <p class="qc"></p>
+                    <p class="sd_iuy_xsfx pt10 pm10">
+                        <span class="sd_sa">
+                            五险一金
+                        </span>
+                        <span class="sd_sa ab">
+                            包吃
+                        </span>
+                        <span class="sd_sa ac">
+                            包住
+                        </span>
+                        <span class="sd_sa ad">
+                            年底双薪
+                        </span>
+                    </p>
+                    <p class="z14 fz15">
+                        教师资格证面试报名开始啦
+                    </p>
+                    <p class="diansan pr">
+                        面试直通班880结构化试讲答辩2天精讲无限课时模拟 面试直通班880结构化试讲答辩2天精讲无限课时模拟 面试直通班880结构...
+                        <span class="red  ">[5图]</span>
+                    </p>
+                    <section class=" pt10 pm5">
+                        <ul class="sd_uiuyy_xsdfx">
+
+                            <li style="background-image: url('img/banner.jpg');" >
+                                <img src="img/banner.jpg" data-preview-src="" data-preview-group="1">
+                              </li>
+                    <li style="background-image: url('img/banner.jpg');" >
+                                <img src="img/banner.jpg" data-preview-src="" data-preview-group="1">
+                              </li>
+                               <li style="background-image: url('img/banner.jpg');" >
+                                <img src="img/banner.jpg" data-preview-src="" data-preview-group="1">
+                              </li>
+                              
+                              
+                            <li style="background-image: url('img/banner.jpg');">
+                               <img src="img/banner.jpg" data-preview-src="" data-preview-group="1">
+                                <p class="ss_xsdffdd">+1</p>
+                            </li>
+
+                        </ul>
+
+                        <p class="qc"></p>
+
+                    </section>
+                                
+                    <section class="mt5 dsf_xsd_xsdf pd pt10 pm10 ">
+                        <img src="img/banner.jpg" class="sd_iuy_xsfsd fl" >
+                        <section class="ov pl10 pr">
+                            <p class="z14 fz15">型男地带名牌服装1</p>
+                            <p class="mt5 dian mui-col-xs-10">
+                                <i class="fa fa-map-marker fz20"></i>
+                                <span>
+                                    安徽省合肥市巢湖市力和地方
+                                </span>
+                            </p>
+
+                            <img src="img/dff_tel.jpg" class="sd_ijhd_xdffx">
+
+                        </section>
+
+                        <p class="qc"></p>
+                    </section>
+                    <section class=" mt10 btm pt10  pr pl30">
+                        <img src="img/jb_sdf.png" class="sd_iuy_xsdfxx fl">
+                        <span class="zc  fz14">1.00  <span>福利已抢完</span></span>
+
+
+
+                        <span class="zc fz14 fr">
+                           
+                           <i class="fa fa-eye fz16"></i> 114
+                           
+                            <i class="fa fa-share-alt fz16 ml10"></i> 4
+                       </span>
+
+                    </section>
+
+
+                </li>
+                
+                <li class="pd pt10 pm10 mb10 bgff">
+                    <img src="img/banner.jpg" class="sd_iuy_xsffx fl">
+                    <section class="ov pl10 pr">
+                        <p class="dian fz15 ls_2">
+                            东诚教育专升本
+                        </p>
+                        <p class="mt5">
+                            <span class="fz12 dfs_xsd_xfx yj4">
+                                置顶
+                            </span>
+                            <span class="fz12 ml10">
+                                2017-03-18
+                            </span>
+                        </p>
+                        <span class="sd_iuy_xsf yj4 fz14 ">
+                            宠物狗
+                        </span>
+
+                    </section>
+
+                    <p class="qc"></p>
+                    <p class="sd_iuy_xsfx pt10 pm10">
+                        <span class="sd_sa">
+                            五险一金
+                        </span>
+                        <span class="sd_sa ab">
+                            包吃
+                        </span>
+                        <span class="sd_sa ac">
+                            包住
+                        </span>
+                        <span class="sd_sa ad">
+                            年底双薪
+                        </span>
+                    </p>
+                    <p class="z14 fz15">
+                        教师资格证面试报名开始啦
+                    </p>
+                    <p class="diansan pr">
+                        面试直通班880结构化试讲答辩2天精讲无限课时模拟 面试直通班880结构化试讲答辩2天精讲无限课时模拟 面试直通班880结构...
+                        <span class="red  ">[5图]</span>
+                    </p>
+                    <section class=" pt10 pm5">
+                        <ul class="sd_uiuyy_xsdfx">
+
+                            <li style="background-image: url('img/banner.jpg');" >
+                                <img src="img/banner.jpg" data-preview-src="" data-preview-group="2">
+                              </li>
+                    <li style="background-image: url('img/banner.jpg');" >
+                                <img src="img/banner.jpg" data-preview-src="" data-preview-group="2">
+                              </li>
+                               <li style="background-image: url('img/banner.jpg');" >
+                                <img src="img/banner.jpg" data-preview-src="" data-preview-group="2">
+                              </li>
+                              
+                              
+                            <li style="background-image: url('img/banner.jpg');">
+                               <img src="img/banner.jpg" data-preview-src="" data-preview-group="2">
+                                <p class="ss_xsdffdd">+1</p>
+                            </li>
+
+                        </ul>
+
+                        <p class="qc"></p>
+
+                    </section>
+                                
+                    <section class="mt5 dsf_xsd_xsdf pd pt10 pm10 ">
+                        <img src="img/banner.jpg" class="sd_iuy_xsfsd fl" >
+                        <section class="ov pl10 pr">
+                            <p class="z14 fz15">型男地带名牌服装1</p>
+                            <p class="mt5 dian mui-col-xs-10">
+                                <i class="fa fa-map-marker fz20"></i>
+                                <span>
+                                    安徽省合肥市巢湖市力和地方
+                                </span>
+                            </p>
+
+                            <img src="img/dff_tel.jpg" class="sd_ijhd_xdffx">
+
+                        </section>
+
+                        <p class="qc"></p>
+                    </section>
+                    <section class=" mt10 btm pt10  pr pl30">
+                        <img src="img/jb_sdf.png" class="sd_iuy_xsdfxx fl">
+                        <span class="zc  fz14">1.00  <span>福利已抢完</span></span>
+
+
+
+                        <span class="zc fz14 fr">
+                           
+                           <i class="fa fa-eye fz16"></i> 114
+                           
+                            <i class="fa fa-share-alt fz16 ml10"></i> 4
+                       </span>
+
+                    </section>
+
+
+                </li>
+
+
+            </ul>
+        </div>
+        
+        
+        
+   
+        
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.zoom.js"></script>
+    <script src="js/mui.previewimage.js"></script>
+    <script src="js/city.data.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        
+        var mask=mui.createMask(function(){
+            dd_i.ssd_iuyxxf=""
+              $(".dsf_xsdfxr i").removeClass("act")
+        });//callback为用户点击蒙版时自动执行的回调；
+     
+
+        
+        
+        $(function(){
+           /* 分类按钮触发*/
+            $(".sd_xsdd_xsxfr").on("click",function(){
+                $(this).parents(".dsf_xssd_xsdffx").toggleClass("act")
+            })
+            
+            $(".dsf_xsdfxr").on("tap",function(){
+                $(".dsf_xsdfxr i").removeClass("act")
+                $(this).find("i").addClass("act")
+            })
+        })
+        
+       
+          var dd_i={"yiji":[],"erji":[],"type":"",sdx_a:0,ssd_iuyxxf:''};//菜单
+              
+            var s_sfx=[{"id":0,"name":"深圳市"},{"id":1,"name":"招聘求职"},{"id":2,"name":"默认排序"}],
+                paix=[{"id":0,"text":"默认排序"},{"id":1,"text":"综合排序"},{"id":2,"text":"好评优先"},{"id":3,"text":"最新发布"},{"id":4,"text":"人气优先"}],
+                qiuz=[{"id":0,"text":"求职类型1"},{"id":1,"text":"求职类型2"},{"id":2,"text":"求职类型3"},{"id":3,"text":"求职类型4"},{"id":4,"text":"求职类型5"}]
+               
+               var km = new Vue({
+                el: '#app',
+                data: {
+                  dd_i:dd_i,//菜单
+                  s_sfx:s_sfx,//菜单分类
+                },
+                methods: {
+                  sd_iu:function(x,y){
+                      var sd_idxfu=dd_i.sdx_a 
+                      if(sd_idxfu==0){
+                          dd_i.erji=cityData[x].children;
+                          dd_i.type="ac";
+                          
+                          return
+                      }
+                       dd_i.ssd_iuyxxf=""
+                       s_sfx[dd_i.sdx_a].name=y
+                       mask.close()
+                          $(".dsf_xsdfxr i").removeClass("act")
+                  },
+                    er_i:function(x){
+                        s_sfx[dd_i.sdx_a].name=x
+                        dd_i.ssd_iuyxxf=""
+                        mask.close()
+                    $(".dsf_xsdfxr i").removeClass("act")
+                    },
+                    sd_uy:function(x){
+                           mask.show();
+                        dd_i.sdx_a=parseInt(x);
+                        dd_i.type=""
+                         dd_i.ssd_iuyxxf="show"
+                        switch(x){
+                            case 0:dd_i.yiji=cityData;;break;
+                            case 1:dd_i.yiji=qiuz; break;
+                            case 2:dd_i.yiji=paix;break;
+                        }
+                    }
+                    
+                }
+            })
+               
+               
+               
+               
+        </script>
+   
+    </div>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>银行转账</title>
+
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <style>
+        .mui-input-row label {
+            width: 30%
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="dx red hanao_sdrrx f_b icon-kefu-tuichu- mui-action-back" id="caidna_s"></a>
+        <h1 class="mui-title red">银行转账</h1>
+
+    </header>
+    <div class="mui-content " id="zhaunzhang">
+        <section class="bgff">
+            <p class="pt20 cen z3 ">
+                请向下面账号转账
+                <span class="red fz24 b">¥{{jiner}}</span>
+            </p>
+            <form class="mui-input-group mt20">
+                <div class="mui-input-row">
+                    <label class="fl fz16 z9">收款姓名：</label>
+                    <p class="ov z3 fz16 duhg_namef">
+                        独行工匠
+                    </p>
+                </div>
+                <div class="mui-input-row">
+                    <label class="fl fz16 z9">收款账号：</label>
+                    <p class="ov z3 fz16 duhg_namef">
+                        6216914301512264
+                    </p>
+                </div>
+                <div class="mui-input-row">
+                    <label class="fl fz16 z9">收款银行：</label>
+                    <p class="ov z3 fz16 duhg_namef">
+                        中国民生银行
+                    </p>
+                </div>
+                <div class="mui-input-row">
+                    <label class="fl fz16 z9">银行支行：</label>
+                    <p class="ov z3 fz16 duhg_namef">
+                        洛阳新区支行
+                    </p>
+                </div>
+            </form>
+        </section>
+
+        <p class="pd pt10 pm10 fz16">
+            转账信息
+        </p>
+
+        <form class="mui-input-group ">
+            <div class="mui-input-row">
+                <label class="fl fz16 z9">银行卡姓名：</label>
+                <p class="ov z3 fz16 duhg_namef">
+                    独行工匠
+                </p>
+            </div>
+
+
+            <div class="mui-input-row" @tap="zzfs_sdf">
+                <label class="fl fz16 z9">转账方式：</label>
+                <p class="ov z3 fz16 duhg_namef">
+                    请选择转账方式
+                    <i class="mui-icon mui-icon-arrowdown z9 down_icon_w"></i>
+                </p>
+            </div>
+
+
+            <section v-if="is_cheng">
+
+                <div class="mui-input-row" @tap="xzcs">
+                    <label class="fl fz16 z9">支行城市：</label>
+                    <p class="ov z3 fz16 duhg_namef">
+
+                        {{chengshi||'请选择支行城市'}}
+                        <i class="mui-icon mui-icon-arrowdown z9 down_icon_w"></i>
+                    </p>
+                </div>
+                <div class="mui-input-row">
+                    <label class="fl fz16 z9">支行地址：</label>
+                    <p class="ov z3 fz16 duhg_namef">
+                        <input type="text" class="w100 fz16" placeholder="请输入详细地址" v-model="xiangxi">
+                    </p>
+                </div>
+
+            </section>
+ 
+        </form>
+ 
+        <p class="pd" @tap="zzwc_btn">
+            <a class="mui-btn mui-btn-red w100 pt10 pm10 fz16 mt60 cen yj4">
+          转账完成点这里
+            </a>
+        </p>
+
+        <section class="yj4 s_jgh_hgf_ser" :class="is_zzfs">
+            <p class="cen pt15 pm15 z3 fz16 b">
+                转账方式
+            </p>
+            <section class=" btm bbm  pr d_hg_erttxc">
+                <div class="mui-scroll-wrapper ">
+                    <div class="mui-scroll">
+                        <p class="sjg_er_dsrt pd ab " v-for="(zs,idx) in zzfs" @tap="dih_kjh(idx)" :class="zs.cls">
+                            {{zs.name}}
+                            <i class="dx icon-gouxuan fr"></i>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="mui-row bottom_btn">
+                <p class="mui-col-xs-6 cen red fz16 brm" @tap="close_s">
+                    取消
+                </p>
+                <p class="mui-col-xs-6 cen red fz16" @tap="close_s">
+                    确认
+                </p>
+            </section>
+
+        </section>
+
+        
+            <load :isshow="jiazais" :text="'正在申请线下转账，请稍后...'"></load>
+    
+
+    </div>
+
+
+
+
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/city.data.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/components/load.js"></script>
+    <script src="../js/page/zijin/zhaunzhang.js"></script>
+
+
+</body>
+
+</html>

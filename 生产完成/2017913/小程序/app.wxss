@@ -1,0 +1,64 @@
+/**app.wxss**/
+@import 'bass.wxss';
+
+page {
+  font-family: 'Microsoft Yahei';
+  background: #F5F5F5;
+}
+/* 头部 */
+.toubu_df{
+  height: 90rpx;
+  background: #39BC30;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
+}
+.logo_iisd{
+  width: 47px;
+  height: 15px;
+  float: left;
+  margin-top: 30rpx;
+}
+.dsf_uy_dsdf{
+  width: 550rpx;
+  float: left;
+  padding-left: 20rpx;
+  height: 100%;
+}
+.dsf_ds_dsdf{
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 10rpx;
+}
+.dsf_d_dsdfx{
+  max-width: 100rpx;
+}
+.dfs_d_sd{
+  padding-top: 20rpx;
+}
+.sdf_f_ddfgfgx{
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+}
+.sdf_f_ddfgfgx input{
+  background: #fff;
+  font-size: 30rpx;
+  height: 70rpx;
+  width: 400rpx;
+  padding-left: 80rpx !important;
+}
+.dsf_d_dfggx{
+  width: 100rpx;
+}
+.dsf_ssd_sdf{
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+}
+.sdf_iuy_sd{
+  width: 40rpx;
+  height: 30rpx;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的等级</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="pd bgff pt10 pm10">
+
+        <img src="img/toux.png" class="yj user_icon_df fl">
+        <p class="ov pl20  z14 fz16 pt15">
+            happy <span class="ml10 zd">普通分享客</span>
+        </p>
+
+        <p class="qc"></p>
+
+    </section>
+
+    <section class="mt10  bgff dsf_xd_xgx">
+        <section class="pd pt10 pm10 bbm">
+            <i class="f_i sddu_Xdf fl"></i>
+            <p class="ml10 fz16 ov xwdsf_xd_xfgx">普通分享客</p>
+            <p class="qc"></p>
+        </section>
+
+        <section class="pd pt10 pm10">
+            <p class="fz16 z14">等级详情</p>
+
+            <p class="zd mt5">
+                <span class="yj sd_xdgfgcv"></span> 申请即为普通分享客，分销数量默认30个商品
+            </p>
+        </section>
+    </section>
+    <section class="sd_xdf_xdgfg ">
+
+        <a class="mui-btn mui-btn-yellow w100 fz16 pt10 pm10 df_xdf_xggx">￥36.00/年     升级到高级分享客  </a>
+
+
+    </section>
+    
+    <section class="sd_xdff_xfgx bgff pd">
+      <section class="pd pt10 pm10 bbm">
+            <i class="f_i sddu_Xdf fl"></i>
+            <p class="ml10 fz16 ov xwdsf_xd_xfgx">高级分享客  <span class="ml10 ye">￥36.00/年</span></p>
+            <p class="qc"></p>
+        </section>
+                <section class="pd pt10 pm10">
+            <p class="fz16 z14">等级详情</p>
+
+
+            <p class="zd mt10"> <span class="yj sd_xdgfgcv"></span>利分享消费大于300元（不限积分和现金）</p>
+            <p class="zd mt5"> <span class="yj sd_xdgfgcv"></span>缴费36元</p>
+            <p class="zd mt5"> <span class="yj sd_xdgfgcv"></span>有效期1年</p>
+            <p class="zd mt5"> <span class="yj sd_xdgfgcv"></span>店铺商品数量不受限制</p>
+
+
+        </section>
+        
+        
+        <p class="mt30 pm30">
+        <a class="mui-btn mui-btn-yellow fz16 pt10 pm10 w100" onclick="mask.close()">立即支付</a>
+        </p>
+    </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script>
+    var mask=mui.createMask(function(){
+              $(".sd_xdff_xfgx").removeClass("show")
+    });
+        
+        
+        $(function(){
+            $(".df_xdf_xggx").on("click",function(){
+                mask.show()
+                $(".sd_xdff_xfgx").addClass("show")
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/cssamin.css" rel="stylesheet" />
+    <link href="../css/swiper3.07.min.css" rel="stylesheet" />
+    <title>确认下单</title>
+    <style>
+        body {
+            background: #EFEFF4;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="mui-content  a-fadein" id="app">
+
+        <div class="order_list">
+
+            <div class="mui-content  a-fadein">
+                <section class="pd pt10 pm10 bgff">
+                    <ul>
+                        <li>
+                            <p class="df_xsff_xrtx fz15 tl  fl">下单时间:</p>
+                            <p class="ov z14 fz16 pl10">03-25 12:14</p>
+                            <p class="qc"></p>
+                        </li>
+                        <li class="mt5">
+                            <p class="df_xsff_xrtx fz15 tl  fl">下单用户:</p>
+                            <p class="ov z14 fz16 pl10">他说微信昵称<a class="red">【发送消息】</a></p>
+                            <p class="qc"></p>
+                        </li>
+                        <li class="mt5">
+                            <p class="df_xsff_xrtx fz15 tl  fl">就餐桌台:</p>
+                            <p class="ov z14 fz16 pl10">客满楼</p>
+                            <p class="qc"></p>
+                        </li>
+                        <li class="mt5">
+                            <p class="df_xsff_xrtx fz15 tl  fl">订单状态:</p>
+                            <p class="ov z14 fz16 pl10">已确认</p>
+                            <p class="qc"></p>
+                        </li>
+                    </ul>
+                </section>
+
+                <dingdan :sd_iuux="sd_iuux" class="mt10"></dingdan>
+                <section class="bgff btm">
+                    <section class="mui-col-xs-4 fr pm20">
+                        <section class="sd_iuy_row mt10">
+                            <p class="mui-col-xs-5 cen z14 fz15 fl">
+                                合计:
+                            </p>
+                            <p class="ov z14 cen">￥{{sd_iuux.zj}}</p>
+                            <p class="qc"></p>
+                        </section>
+                        <section class="sd_iuy_row mt5">
+                            <p class="mui-col-xs-5 cen z14 fz15 fl">
+                                现金:
+                            </p>
+                            <p class="ov z14 cen">￥40</p>
+                            <p class="qc"></p>
+                        </section>
+                        <section class="sd_iuy_row mt5">
+                            <p class="mui-col-xs-5 cen z14 fz15 fl">
+                                待付:
+                            </p>
+                            <p class="ov z14 cen">￥40</p>
+                            <p class="qc"></p>
+                        </section>
+                    </section>
+
+
+                    <p class="qc"></p>
+                </section>
+
+                <dindandi :sd_iuux="sd_iuux"></dindandi>
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/swiper3.07.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/commer/syt.js"></script>
+    <script src="../js/commer/lexixing.js"></script>
+    <script src="../js/commer/jianpan.js"></script>
+    <script src="../js/commer/dingdan.js"></script>
+    <script src="../js/commer/dindandi.js"></script>
+    <script>
+        var sd_iuux = ""
+        var km = new Vue({
+            el: '#app',
+            data: {
+                sd_iuux: sd_iuux
+            },
+            created: function() {
+                if (!localStorage.gwcw) {
+                    this.hf("/sr_order_index")
+                }
+                if (!localStorage.xisds) {
+                    var sd_Xsffx = JSON.parse(localStorage.gwcw)
+                    sd_Xsffx.gwc.forEach(function(a, b) {
+                        sd_Xsffx.gwc[b].act = ""
+                        sd_Xsffx.gwc[b].cd_dd = [{
+                            name: "划菜",
+                            "type": "0"
+                        }, {
+                            name: "催菜",
+                            "type": "0"
+                        }, {
+                            name: "赠菜",
+                            "type": "0"
+                        }, {
+                            name: "退菜",
+                            "type": "0"
+                        }]
+                    });
+                    localStorage.xisds = JSON.stringify(sd_Xsffx);
+
+                }
+
+                var xisds = JSON.parse(localStorage.xisds);
+                this.sd_iuux = xisds
+            }
+        })
+
+    </script>
+</body>
+
+</html>

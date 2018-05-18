@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/swiper3.07.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<section id="app_index">
+			<!--top-->
+			<top_menu :kmhd="'idx'"></top_menu>			
+			<!--        banner-->
+			<section class="index_banner pr mt45">
+				<banner :ba_r="banner"></banner>
+			</section>
+
+			<section class=" pt10 pm10 mui-row bgff">
+				<section class="mui-col-xs-6 brm pl10" @tap="sdf_jfssd">
+					<i class="f_i sdf_sdsd fl"></i>
+					<section class="ov pl10">
+						<p class="fz16 z3 wdsf_Sdf">供需发布</p>
+						<p class="fz12 mt2">
+							一对一全程服务 <span></span>
+						</p>
+					</section>
+				</section>
+				<section class="mui-col-xs-6 pl10" @tap="zhu('construction_item')">
+					<i class="f_i sdf_sdsd fl ab"></i>
+					<section class="ov pl10">
+						<p class="fz16 z3 wdsf_Sdf">施工项目</p>
+						<p class="fz12 mt2">
+							最新招标项目信息
+						</p>
+					</section>
+				</section>
+			</section>
+
+			<section class=" mt5 bgff mui-row cen pm10">
+				<a class="mui-block mui-col-xs-4 " v-for="sf in sd_df" @tap="df_wedf(sf.lx,sf.name)">
+					<i class="f_i dsf_sd_sdf" :class="sf.cls"></i>
+					<p class="z0 mt5">{{sf.name}}</p>
+				</a>
+
+			</section>
+ 
+			<!--    周转材料--> 
+			<graphic_list :title="'周转材料'" :jixie="multdisplay"></graphic_list>
+			
+
+			<!--    机械设备-->
+			<meiti :title="'机械设备'" :jixie="jixie"></meiti>
+
+	
+			
+		</section>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/swiper3.07.min.js"></script>
+		<script src="js/vue.min.js"></script>
+		<script src="js/base.js"></script>
+		<script src="js/component/top_menu.js"></script>
+		<script src="js/component/banner.js"></script>
+		<script src="js/component/media_list.js"></script>
+		<script src="js/component/graphic_list.js"></script>
+		<script src="js/page/index.js"></script>
+
+	</body>
+
+</html>

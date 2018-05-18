@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../css/mui.min.css" rel="stylesheet" />
+    <link href="../css/mui.picker.min.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <title>
+餐桌管理</title>
+<style>
+    body{
+        background: #EFEFF4
+    }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <section class="mui-title pd ">
+          <section class="box yj4 df_xsd_xcdfx">
+              <a class="box_a act">
+满减设置
+</a>
+                 <a class="box_a">折扣设置
+</a>
+          </section>
+        
+        </section>
+        <span class="mui-btn-link mui-pull-right cf fz30 add_zsddf">+</span>
+    </header>
+    
+    <div class="mui-content ">
+   <!--     满减设置-->
+        <section class="sd_Xsddx show">
+         <ul class="sd_iuy_xsffx ahj">
+           <li class=" pt20  bgff">
+              <section class="bbm pd pm10 pr">
+               <p class="z14 fz16">
+                   满100减20
+                  <span class="zc fr fz14">
+                   编辑
+                      <i class="fa fa-angle-right fz16"></i>
+                   </span>
+                        
+                  </p>
+               <p class="ls_2 mt10">
+                   启用中
+               </p>  
+              
+              </section>
+              <section class="sd_uyt_xsfx cen ">
+                  <p class="mui-col-xs-6 fl">
+                      删除
+                  </p>
+                     <p class="mui-col-xs-6 fl">
+                      禁用
+                  </p>
+              </section>
+              
+              <p class="qc"></p>
+           </li>
+        </ul>
+        </section>
+        
+     <!--   折扣设置-->
+             <section class="sd_Xsddx">
+         <ul class="sd_iuy_xsffx ahj">
+           <li class=" pt20  bgff">
+              <section class="bbm pd pm10 pr">
+               <p class="z14 fz16">
+                   满100减20
+                  <span class="zc fr fz14">
+                   编辑
+                      <i class="fa fa-angle-right fz16"></i>
+                   </span>
+                        
+                  </p>
+               <p class="ls_2 mt10">
+                   启用中
+               </p>  
+              
+              </section>
+              <section class="sd_uyt_xsfx cen ">
+                  <p class="mui-col-xs-6 fl">
+                      删除
+                  </p>
+                     <p class="mui-col-xs-6 fl">
+                      禁用
+                  </p>
+              </section>
+              
+              <p class="qc"></p>
+           </li>
+        </ul>
+        </section>
+    </div>
+    
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/base.js"></script>
+    <script>
+      $(function(){
+          var sds_x=0
+          $(".df_xsd_xcdfx a").on("click",function(){
+              var idx=$(this).index()
+              sds_x=idx
+              $(".df_xsd_xcdfx a").removeClass("act").eq(idx).addClass("act")
+              $(".sd_Xsddx").removeClass("show").eq(idx).addClass("show")
+          })
+          
+          /*加号点击触发*/
+          $(".add_zsddf").on("tap",function(){
+              var ssd_xsdf='discount-edit.html'
+              if(sds_x==0){
+                  ssd_xsdf='discount-edit.html'
+              }else{
+                    ssd_xsdf='discount-rate.html'
+              }
+              window.location.href=ssd_xsdf
+          })
+          
+      })
+    </script>
+    </body>
+    
+</html>
