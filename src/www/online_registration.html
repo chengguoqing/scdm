@@ -1,0 +1,157 @@
+<!--培训报名-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>培训报名</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">培训报名</h1>
+
+    </header>
+    <div class="mui-content " id="seek_apper">
+<section class="sd_jh_deertd">
+
+        <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted fg_jh_dfeert bbm pr">
+            <div class="mui-scroll bbm">
+                <section class="f_b " v-for="sd in caidan" :class="sd.cls" @click="sd_df(sd)">
+                    {{sd.name}}
+                </section>
+
+
+
+            </div>
+            <span class="sd_jh_ddfrg"><i class="f_i add_icon_er"></i></span>
+        </div>
+      
+        
+        </section>
+        <ul>
+            <li class="bbm pt10 pm10 pd">
+                <img src="img/ferng_s.jpg" class="fl ferng_s">
+                <section class="ov pl10 ">
+                        <p class="dianer z3">
+                    埃及东方舞初级埃及埃
+及东方舞初级
+                        </p>
+                    <p>
+                        <i class="f_i xinxisdrr mr5" v-for="sd in 5"></i>
+                    </p>
+                    <p class="red fz16">
+                        ￥600
+                    </p>
+                    <p class="z9 fz14">
+                    已报名：20人
+                    </p>
+                </section>
+                
+                
+                <p class="qc"></p>
+                
+            </li> <li class="bbm pt10 pm10 pd">
+                <img src="img/ferng_s.jpg" class="fl ferng_s">
+                <section class="ov pl10 ">
+                        <p class="dianer z9">
+                    埃及东方舞初级埃及埃
+及东方舞初级
+                        </p>
+                    <p>
+                        <i class="f_i xinxisdrr mr5 ab" v-for="sd in 5"></i>
+                    </p>
+                    <p class="red fz16">
+                        ￥600  <span class="fz14 fr z9">已结束</span>
+                    </p>
+                   
+                </section>
+                
+                
+                <p class="qc"></p>
+                
+            </li>
+        
+        </ul>
+        
+
+
+    </div>
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#seek_apper',
+            data: {
+                caidan:[
+                    {
+                        name:"篮球",
+                        cls:"act"
+                    },  {
+                        name:"羽毛球",
+                        cls:""
+                    },  {
+                        name:"乒乓球",
+                        cls:""
+                    },  {
+                        name:"跑步",
+                        cls:""
+                    },  {
+                        name:"网球",
+                        cls:""
+                    },  {
+                        name:"瑜伽",
+                        cls:""
+                    }, {
+                        name:"篮球",
+                        cls:""
+                    },  {
+                        name:"羽毛球",
+                        cls:""
+                    },  {
+                        name:"乒乓球",
+                        cls:""
+                    },  {
+                        name:"跑步",
+                        cls:""
+                    },  {
+                        name:"网球",
+                        cls:""
+                    },  {
+                        name:"瑜伽",
+                        cls:""
+                    }
+                ]
+            },
+            methods: {
+                sd_df:function(sd){
+                    this.caidan.map(function(a){
+                        a.cls=""
+                    })
+                    sd.cls="act"
+                }
+            },
+            mounted: function() {
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+.lunbo_dsd{
+    height: 13rem;
+    overflow: hidden;
+}
+.dsf_jh_deert{
+    bottom: 40px !important;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.swiper-pagination-bullet{
+    background: #fff;
+    opacity: 0.5
+}
+
+.swiper-pagination-bullet-active{
+       opacity: 1
+}
+.sdf_jh_dert{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 100
+}
+
+.bhg_zhutde{
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 35px;
+    border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+    line-height: 35px;
+    
+}
+.bhg_zhutde span.sd_dr{
+color: #fff;
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.bhg_zhutde span.sd_dr.act{
+
+    color: #333;
+    padding-top: 5px;
+    margin-top: -15px;
+     padding-right: 20px;
+    position: relative;
+    top: 12px;
+    overflow: hidden;
+}
+
+.bhg_zhutde span.act:after {
+    content: " ";
+    position: absolute;
+    right: 7px;
+    top: 0;
+    height: 100%;
+    width: 150%;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg);
+}
+#header{
+    z-index: 100;
+    padding-top: 30px;
+    height: 70px;
+    
+}
+.sdf_jh_deet{
+ height: 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.2);
+    padding-left: 10px;
+    
+}
+.dsf_jh_der{
+    line-height: 30px;
+}
+.dsfer_jh_der{
+    width: 40px;
+    height: 40px;
+    background-position: -84px -7px;
+}
+
+.sdf_erjh_dert{
+    height: 85px !important;
+    padding-top: 14px;
+}
+.sd_jh_cer{
+  display: inline-block;
+    width: 70px;
+    height: 100px;
+    text-align: center;
+    
+}
+.sd_jh_cer p.z6{
+    margin-top: 2px;
+}
+.dsfer_jh_der.ab{
+    background-position: -137px -7px;
+}
+.dsfer_jh_der.ac{
+    background-position: -192px -8px;
+}
+.dsfer_jh_der.ad{
+    background-position: -248px -6px;
+}
+.dsfer_jh_der.ae{
+    background-position: -305px -8px;
+}
+.dsf_jh_dr{
+    line-height: 1.6
+}
+.dfer_jh_der{
+    padding-top: 7px;
+}
+
+
+.dfer_jh_der[style='background-color: rgb(247, 247, 247);'] .cf{
+   color: #333 !important
+}
+.dfer_jh_der[style='background-color: rgb(247, 247, 247);'] .sdf_jh_deet {
+    border: 1px solid #e0e0e0;
+    color: #666;
+} 
+
+
+
+
+
+

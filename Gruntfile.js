@@ -1,5 +1,5 @@
-var ljsd = "生产完成/测试2018",
-    ty = "phone"
+var ljsd = "生产完成/健身助手",
+    ty = "www"
 
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
@@ -16,6 +16,17 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [ljsd + '/css/style.css', ljsd + '/css/base.css']
+            }
+        },
+        apidoc: {
+            mypp: {
+                src: "app/",
+                dest: "apidoc/",
+                options: {
+                    debug: true,
+                    includeFilters: [".*\\.js$"],
+                    excludeFilters: ["node_modules/"]
+                }
             }
         },
         cssmin: {
@@ -101,7 +112,7 @@ module.exports = function (grunt) {
                     }, {
                         expand: true,
                         cwd: ljsd + '/js', //js目录下
-                        src: ['page/*.js','page/**/*.js', "components/*.js"], //所有js文件
+                        src: ['page/*.js', 'page/**/*.js', "components/*.js"], //所有js文件
                         dest: ljsd + '/js' //输出到此目录下
                     }
 
@@ -118,11 +129,17 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/' + ty + '/js', //js目录下
-                    src: ['page/*.js','page/**/*.js', "components/*.js"], //所有js文件
+                    src: ['page/*.js', 'page/**/*.js', "components/*.js"], //所有js文件
                     dest: ljsd + '/js' //输出到此目录下
              }]
             }
         },
+//        apidoc: {
+//            myapp: {
+//                src: "app/",
+//                dest: "apidoc/"
+//            }
+//        }
     });
     grunt.loadNpmTasks('grunt-babel');
 
@@ -135,7 +152,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-postcss')
+  grunt.loadNpmTasks('apidoc');
+//    grunt.loadNpmTasks('grunt-apidoc')
     //    grunt.registerTask('default', ["babel"]);
     //     ""
-    grunt.registerTask('default', [ "imagemin","cssmin", "postcss:dist", "htmlbuild", "copy", "babel", "uglify"]);
+    //    grunt.registerTask('default', ['cssmin','copy','uglify',"htmlbuild"]);
+    grunt.registerTask('default', ['apidoc']);
 }

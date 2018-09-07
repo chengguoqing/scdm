@@ -1,0 +1,100 @@
+<!--票务-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>票务</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">票务</h1>
+
+    </header>
+    <div class="mui-content " id="seek_apper">
+        <section class="sd_jh_deertd">
+
+            <section class="mui-row bbm">
+                <section class="mui-col-xs-3 cen z6 fz16 pt10 pm10 df_drr_drrt" v-for="sd in caidans" :class="sd.cls" @click="sd_drtt(sd)">
+                        {{sd.name}}
+                </section>
+            </section>
+
+        </section>
+        
+        <section class="pl10 pt10 mui-row">
+                <section class="mui-col-xs-6 pr10 mb10" v-for="sd in 10">
+                    <section>
+                        <img src="img/sd_dre_er.jpg" class="w100 sd_dre_er kx">
+                        <section class="cf_hj_dett">
+                        <p class="dian z3 fz15">秦皇古道滑雪平日成人秦皇古道滑雪平日成人</p>
+                        <p class="fz12 z9">
+                        <span class="red fz14">￥68元</span>
+                            <span>(下单立减20元)</span>
+                        </p>
+                        <p class="fz12 z6 dian">
+                            <i class="f_i map_iconrttd cz"></i> 秦皇古道滑雪平日成人秦皇古道滑雪平日成人
+                        </p>
+                            </section>
+                    </section>
+                
+            </section>
+        
+        </section>
+        
+        
+    </div>
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#seek_apper',
+            data: {
+                caidans:[
+                    {
+                        name:"电竞",
+                        cls:"act"
+                    },{
+                        name:"体育",
+                        cls:""
+                    },{
+                        name:"游展",
+                        cls:""
+                    },{
+                        name:"其他",
+                        cls:""
+                    }
+                ]
+            },
+            methods: {
+                sd_drtt:function(sd){
+                    this.caidans.map(function(a){
+                        a.cls=""
+                    })
+                    sd.cls="act"
+                }
+            },
+            mounted: function() {
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title> 个人中心 </title>
+		<link href="css/mui.min.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<section id="app">
+			<!--	<a :href="sd_dd" download="ssd_jh_dr" class="mui-btn mui-btn-primary">下载</a>-->
+2
+			<audio controls="controls" controls="false" autoplay="true">
+				<source :src="sd_dd"  type="audio/mpeg" name="fdsfdsfd"/>
+			</audio>
+
+		</section>
+
+		<script src="js/vue.js"></script>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			var km = new Vue({
+				el: '#app',
+				data: {
+					sd_dd: ""
+				},
+				methods: {
+
+				},
+				created: function() {
+					this.sd_dd = window.location.search.split("url_e=")[1].split("&")[0]
+
+				}
+			})
+		</script>
+
+	</body>
+
+</html>

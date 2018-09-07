@@ -1,0 +1,165 @@
+<!--约教练-->
+<!doctype html>
+<html>
+
+<head> 
+    <meta charset="UTF-8">
+    <title>约教练</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">约教练</h1>
+
+    </header>
+    <div class="mui-content " id="seek_apper">
+<section class="sd_jh_deertd">
+
+        <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted fg_jh_dfeert bbm pr">
+            <div class="mui-scroll bbm">
+                <section class="f_b " v-for="sd in caidan" :class="sd.cls" @click="sd_df(sd)">
+                    {{sd.name}}
+                </section>
+
+
+
+            </div>
+            <span class="sd_jh_ddfrg"><i class="f_i add_icon_er"></i></span>
+        </div>
+    
+    
+    
+        </section>
+        
+        <ul>
+            <li class="pd bbm pt10 pm10">
+            <img src="img/user_icon.png" class="yj user_iconser fl mt10">
+                <section class="ov pl10">
+                    <i class="f_i sex_icon"></i>
+                    <span class="fz16">贾梦琪</span>
+                    <span class="sd_hjgh_der">舞蹈</span>
+                    <p class="fz12 z6 mt2">其他</p>
+                    <p class="fz12">接单：0 <span class="ml20">综合评分:0</span></p>
+                </section>
+                
+                <p class="qc"></p>
+            </li>
+            
+                    <li class="pd bbm pt10 pm10">
+            <img src="img/user_icon.png" class="yj user_iconser fl mt10">
+                <section class="ov pl10">
+                    <i class="f_i sex_icon ab"></i>
+                    <span class="fz16">贾梦琪</span>
+                    <span class="sd_hjgh_der">舞蹈</span>
+                    <p class="fz12 z6 mt2">其他</p>
+                    <p class="fz12">接单：0 <span class="ml20">综合评分:0</span></p>
+                </section>
+                
+                <p class="qc"></p>
+            </li>
+            <li class="pd bbm pt10 pm10">
+            <img src="img/user_icon.png" class="yj user_iconser fl mt10">
+                <section class="ov pl10">
+                    <i class="f_i sex_icon"></i>
+                    <span class="fz16">贾梦琪</span>
+                    <span class="sd_hjgh_der">舞蹈</span>
+                    <p class="fz12 z6 mt2">其他</p>
+                    <p class="fz12">接单：0 <span class="ml20">综合评分:0</span></p>
+                </section>
+                
+                <p class="qc"></p>
+            </li>
+            
+                    <li class="pd bbm pt10 pm10">
+            <img src="img/user_icon.png" class="yj user_iconser fl mt10">
+                <section class="ov pl10">
+                    <i class="f_i sex_icon ab"></i>
+                    <span class="fz16">贾梦琪</span>
+                    <span class="sd_hjgh_der">舞蹈</span>
+                    <p class="fz12 z6 mt2">其他</p>
+                    <p class="fz12">接单：0 <span class="ml20">综合评分:0</span></p>
+                </section>
+                
+                <p class="qc"></p>
+            </li>
+        </ul>
+        
+        
+    </div>
+    
+ <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#seek_apper',
+            data: {
+                caidan:[
+                    {
+                        name:"篮球",
+                        cls:"act"
+                    },  {
+                        name:"羽毛球",
+                        cls:""
+                    },  {
+                        name:"乒乓球",
+                        cls:""
+                    },  {
+                        name:"跑步",
+                        cls:""
+                    },  {
+                        name:"网球",
+                        cls:""
+                    },  {
+                        name:"瑜伽",
+                        cls:""
+                    }, {
+                        name:"篮球",
+                        cls:""
+                    },  {
+                        name:"羽毛球",
+                        cls:""
+                    },  {
+                        name:"乒乓球",
+                        cls:""
+                    },  {
+                        name:"跑步",
+                        cls:""
+                    },  {
+                        name:"网球",
+                        cls:""
+                    },  {
+                        name:"瑜伽",
+                        cls:""
+                    }
+                ]
+            },
+            methods: {
+                sd_df:function(sd){
+                    this.caidan.map(function(a){
+                        a.cls=""
+                    })
+                    sd.cls="act"
+                }
+            },
+            mounted: function() {
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

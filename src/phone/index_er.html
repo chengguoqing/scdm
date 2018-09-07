@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title> 个人中心 </title>
+		<link href="css/mui.min.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<section id="app">
+
+			<section class="mui-row pd pt10 sdf_jh_deer">
+				<p class="mui-col-xs-9">
+					<input type="text" class="fz16 " placeholder="请小可爱输入歌曲名称">
+				</p>
+				<p class="mui-col-xs-3 pl10">
+					<button class="w100 mui-btn-primary">搜索</button>
+				</p>
+			</section>
+			<ul class="mui-table-view mt10">
+				<li class="mui-table-view-cell" v-for="sd in sd_dd">
+					<a class="mui-navigate-right fz14" v-html="sd.FileName"  @click="get_utl(sd.FileHash,sd.AlbumID,sd.FileName)">
+
+					</a>
+				</li>
+
+			</ul>
+		</section>
+
+		<script src="js/vue.js"></script>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			var km = new Vue({
+				el: '#app',
+				data: {
+					sd_dd: ""
+				},
+				methods: {
+					get_utl: function(FileHash, AlbumID,name_e) {
+						name_e=name_e.replace('<em>',"")
+						name_e=name_e.replace('</em>',"")
+					
+						$.ajax({
+							type: 'get',
+							url: 'http://duxinggj.com/kugou',
+							data: {
+								'FileHash': FileHash,
+								"AlbumID": AlbumID
+
+							},
+							contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+							dataType: 'json',
+							success: function(data) {
+								var s_ddfrrt = JSON.parse(data).data.play_url
+								window.location.href="xiazai.html?url_e="+s_ddfrrt+"&name_e="+name_e
+							}
+						});
+					}
+
+				},
+				created: function() {
+
+				}
+			})
+
+			function downloadFile(url) {
+				try {
+					var elemIF = document.createElement("a");
+					elemIF.href = url;
+					elemIF.download=true
+					document.body.appendChild(elemIF);
+				} catch(e) {
+					zzrw.alert("下载异常！");
+				}
+			}
+
+			function jQuery1124009219312090870657_1531121973066(data) {
+				km.sd_dd = data.data.lists
+			}
+
+			function duxingd(date) {
+				console.log(date);
+			}
+		</script>
+		<script src="http://songsearch.kugou.com/song_search_v2?callback=jQuery1124009219312090870657_1531121973066&keyword=海阔天空&page=1&pagesize=30&userid=-1&clientver=&platform=WebFilter&tag=em&filter=2&iscorrection=1&privilege_filter=0&_=1531121973068"></script>
+		<script src="http://www.kugou.com/yy/index.php?r=play/getdata&hash=498FFD010763B5B7F6B5DC637FD760E8&album_id=973001&_=1531123840125"></script>
+
+	</body>
+
+</html>

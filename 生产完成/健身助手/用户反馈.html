@@ -1,0 +1,102 @@
+<!--用户反馈-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户反馈</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/swiper3.07.min.css" rel="stylesheet" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">用户反馈</h1>
+
+    </header>
+    <section class="mui-content " id="seek_apper">
+        
+        <section class="pl10 pt10">
+                <p class="fz15 z3">反馈类型</p>
+            <section class="mui-row">
+                <section class="mui-col-xs-4 pr10" v-for="sd in sd_ddfgf">
+                    <a class="dfd_drtt" :class="sd.cls" @click="dfdsf(sd)">{{sd.name}}</a>
+                </section>
+            
+            </section>
+            
+            </section>
+        <section class="pd mt10">
+            <section class="pr">
+                <textarea placeholder="选择问题类型帮助我们更快处理您的反馈！" rows="9" class="dsf_h_deert" v-model="sdsd_jh_de"></textarea>
+            
+                <p class="dsf_jh_deer z6">
+                {{sdsd_jh_de.length}}/300字
+                </p>
+            </section>
+        
+        </section>
+        
+        
+        
+        <a class="mui-btn mui-btn-red tuichuer_e">提交</a>
+        
+
+    </section>
+
+
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        new Vue({
+            el: '#seek_apper',
+            data: {
+                is_sdf:"mui-active",
+                sdsd_jh_de:"",
+                sd_ddfgf:[
+                    {
+                        cls:"act",
+                        name:"功能异常"
+                    }, {
+                        cls:"",
+                        name:"体验问题"
+                    }, {
+                        cls:"",
+                        name:"功能建议"
+                    }, {
+                        cls:"",
+                        name:"其他"
+                    },
+                ]
+            },
+            methods: {
+                dfdsf:function(sd){
+                    this.sd_ddfgf.map(function(a){
+                        a.cls=""
+                    })
+                    sd.cls="act"
+                }
+            },
+            mounted: function() {
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

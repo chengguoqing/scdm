@@ -24,33 +24,9 @@ var s = {
     }
 }
 $(function () {
-    $(".dsf_iuy_sdr").on("click", function () {
-
-        $(".dsf_uy_sd").toggleClass("show")
-    })
-    $(".dfs_d_dertx").on("click", function () {
-        $(".df_juyg_s_sd").addClass("show")
-        $(".df_juyg_s_sd input").focus()
-    })
-    $(".df_juyg_s_sd input").on("blur", function () {
-        $(".df_juyg_s_sd").removeClass("show")
-    })
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $(".duo_icond").addClass("show")
-        } else {
-            $(".duo_icond").removeClass("show")
-        }
-    })
-    $(".duo_icond").on("click",function(){
-         $("html,body").animate({scrollTop:0},200);
-    })
-    $(".df_ut_ddtxc a").on("click",function(){
-            $(".df_ut_ddtxc a").removeClass("act")
-        $(this).addClass("act")
-    })
-
+   $(".hanbao").on("click",function(){
+       $(".dsf_jhhg_der").toggleClass("act")
+   })
 })
 
 

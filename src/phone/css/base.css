@@ -308,12 +308,7 @@ html {
     border: 0
 }
 
-em {
-    font-size: 20px;
-    margin-right: 6px;
-    position: relative;
-    top: 8px
-}
+
 
 .tm5 {
     opacity: .5;
@@ -956,10 +951,6 @@ textarea {
     padding: 0
 }
 
-em {
-    color: red
-}
-
 .cons_log_a {
     background: #fceee8;
     width: 95%;
@@ -1087,9 +1078,7 @@ a:hover {
     padding-right: 0
 }
 
-.mui-input-row input {
-    width: 73%!important
-}
+
 
 .mui-content {
     background: 0 0

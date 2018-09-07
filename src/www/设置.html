@@ -1,0 +1,83 @@
+<!--设置-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/iconfont.css" rel="stylesheet" />
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+   <style>
+        body{
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav asd_uy_dftx">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left z3"></a>
+        <h1 class="mui-title z3">设置</h1>
+
+    </header>
+    <section class="mui-content " id="seek_apper">
+
+        <ul class="mui-table-view mt0 fz16">
+
+            <li class="mui-table-view-cell">
+                <span>自动登录</span>
+                <div class="mui-switch mui-switch-mini  " :class="is_sdf" @tap="is_sdf?is_sdf='':is_sdf='mui-active'">
+                    <div class="mui-switch-handle"></div>
+                </div>
+            </li>
+                <li class="mui-table-view-cell">
+     <a class="mui-navigate-right">
+                <span>新消息通知</span>
+                    </a>
+            </li>
+               <li class="mui-table-view-cell">
+
+                <span>清理缓存</span>
+                   <span class="fr z9 fz14">20M</span>
+             
+            </li>
+               <li class="mui-table-view-cell">
+     <a class="mui-navigate-right">
+                <span>关于健身伙伴</span>
+                    </a>
+            </li>
+        </ul>
+        
+        <a class="mui-btn mui-btn-red tuichuer_e">退出登录</a>
+        
+
+    </section>
+
+
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        new Vue({
+            el: '#seek_apper',
+            data: {
+                is_sdf:"mui-active"
+            },
+            methods: {
+
+            },
+            mounted: function() {
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>
